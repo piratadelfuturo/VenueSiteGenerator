@@ -52,11 +52,13 @@
                 <environment type="stage">
                     <urls>
                         <url>www.challengerpiaza.dev/{localization}</url>
+                        <url>cp-pmg.echo.mx/{localization}</url>
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
                         <url>challengerpiaza.dev/{localization}</url>
+                        <url>cp-pmg.echo.mx/{localization}</url>
                     </urls>
                 </environment>
             </environments>

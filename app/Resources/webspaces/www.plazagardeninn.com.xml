@@ -52,11 +52,13 @@
                 <environment type="stage">
                     <urls>
                         <url>www.plazagardeninn.dev/{localization}</url>
+                        <url>pg-pmg.echo.mx/{localization}</url>
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
                         <url>plazagardeninn.dev/{localization}</url>
+                        <url>pg-pmg.echo.mx/{localization}</url>
                     </urls>
                 </environment>
             </environments>

@@ -52,11 +52,13 @@
                 <environment type="stage">
                     <urls>
                         <url>www.plazacentreville.dev/{localization}</url>
+                        <url>pc-pmg.echo.mx/{localization}</url>                        
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
                         <url>plazacentreville.dev/{localization}</url>
+                        <url>pc-pmg.echo.mx/{localization}</url>
                     </urls>
                 </environment>
             </environments>

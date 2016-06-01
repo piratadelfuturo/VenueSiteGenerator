@@ -51,11 +51,13 @@
                 <environment type="stage">
                     <urls>
                         <url>www.plazaantique.dev/{localization}</url>
+                        <url>pa-pmg.echo.mx/{localization}</url>
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
                         <url>plazaantique.dev/{localization}</url>
+                        <url>pa-pmg.echo.mx/{localization}</url>
                     </urls>
                 </environment>
             </environments>
