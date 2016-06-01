@@ -1,0 +1,9 @@
+imports:
+    - { resource: sulu.yml }
+    - { resource: security.yml }
+    - { resource: ../config.yml }
+    - { resource: ../widgets.yml }
+
+# Assetic Configuration
+assetic:
+    bundles:        [ ClientWebsiteBundle ]

@@ -1,0 +1,30 @@
+sudo: true
+
+language: php
+
+env:
+    global:
+        - secure: "Uft74EqqtZ2NOYECsx8bq8RaN8L40S12X9rFqsVLrbV2E8ru8ijL4mZNcRYYSSG5L6jR27wvlalTbzxBRWT1LnAt15AreCmuq/m9tj3yyXMNkX6dASVpw/qxTlgeAwGP26iFe4zgKubmyQXZroK8iIN4/HimRwYaADSeQ4j8QyQ="
+        - secure: "UmFds85SDbGAGgayw75iXegyElb68BVjT+rwwaUDtokreSgUytnj6+puFcomYtE5SiHmhZbcDZs2f4jBh0GlmDCULBIsj2i3B+qUdt0S3k6yNUhqEM6FoEmrFeiD0hK3PUW267LJEhZjgQfjkAhRGoF6RpLQFrvZFi9ldbS207c="
+        - SAUCE_CONNECT_READY_FILE=/tmp/sauce-connect-ready
+        - LOGS_DIR=/tmp/sulu/logs
+        - DB=mysql
+        - BEHAT_PROFILE=travis
+
+script: ./tests/runtests.sh
+
+php:
+    - 5.5
+    - 7.0
+
+before_script: ./tests/beforetests.sh
+
+after_script:
+    - ./tests/travis_print_logs.sh
+    - cat app/logs/admin/prod/prod.log
+    - cat app/logs/website/prod/prod.log
+
+notifications:
+    slack:
+        secure: "HpxoOrrbweDdr3VZTFmnpf01uHe081+ufrUv10HL0A4tZSlWavW7E40agv8GzvVuiDsteAPvTW99Pn0CDqApZqVvzJcdLP32QhahtZO6xSbG6MpfopJrlcWKQ47R/1zKz+1erDsK4KqdMAjicfOKTINqGiMh8MTNQFdENZK7NpA="
+

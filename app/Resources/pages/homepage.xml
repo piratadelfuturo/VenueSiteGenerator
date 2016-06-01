@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>homepage</key>
+
+    <view>ClientWebsiteBundle:templates:complex</view>
+    <controller>SuluWebsiteBundle:Default:index</controller>
+    <cacheLifetime>2400</cacheLifetime>
+
+    <meta>
+        <title lang="fr">Homepage</title>
+        <title lang="en">Homepage</title>
+    </meta>
+
+    <properties>
+        <section name="highlight">
+            <properties>
+                <property name="title" type="text_line" mandatory="true">
+                    <meta>
+                        <title lang="fr">Titre</title>
+                        <title lang="en">Title</title>
+                    </meta>
+                    <params>
+                        <param name="headline" value="true"/>
+                    </params>
+
+                    <tag name="sulu.search.field" role="title"/>
+
+                    <tag name="sulu.rlp.part"/>
+                </property>
+                <property name="url" type="resource_locator" mandatory="true">
+                    <meta>
+                        <title lang="fr">Adresse</title>
+                        <title lang="en">Resourcelocator</title>
+                    </meta>
+
+                    <tag name="sulu.rlp"/>
+                </property>
+            </properties>
+        </section>
+        <section name="feature">
+            <properties>
+                <property name="slogan" type="text_line">
+                    <meta>
+                        <title lang="fr">Slogan</title>
+                        <title lang="en">Slogan</title>
+                    </meta>
+                </property>
+                <property name="slides" type="media_selection">
+                    <meta>
+                        <title lang="fr">Fotos</title>
+                        <title lang="en">Images</title>
+                    </meta>
+                </property>
+                <property name="article" type="text_area" mandatory="true">
+                    <meta>
+                        <title lang="fr">Artikel</title>
+                        <title lang="en">Article</title>
+                    </meta>
+                    <tag name="sulu.search.field" role="description"/>
+                </property>
+            </properties>
+        </section>
+        <section name="testimonials">
+            <properties>
+                <property name="pages" type="smart_content">
+                    <meta>
+                        <title lang="fr">Testimonials</title>
+                        <title lang="en">Testimonials</title>
+                    </meta>
+
+                    <params>
+                        <param name="properties" type="collection">
+                            <param name="title" value="title"/>
+                            <param name="description" value="excerpt.description"/>
+                        </param>
+                        <param name="categories_parameter" value="testimonials" />
+                    </params>
+                </property>
+            </properties>
+        </section>
+        <section name="halls">
+            <meta>
+                <title lang="fr">Halls</title>
+                <title lang="en">Halls</title>
+
+                <info_text lang="fr">our halls</info_text>
+                <info_text lang="en">our halls</info_text>
+            </meta>
+
+            <properties>
+                <property name="pages" type="smart_content">
+                    <meta>
+                        <title lang="fr">Halls</title>
+                        <title lang="en">Halls</title>
+                    </meta>
+
+                    <params>
+                        <param name="properties" type="collection">
+                            <param name="title" value="title"/>
+                            <param name="description" value="excerpt.description"/>
+                        </param>
+                        <param name="categories_parameter" value="halls" />
+                    </params>
+                </property>
+            </properties>
+        </section>
+    </properties>
+</template>
