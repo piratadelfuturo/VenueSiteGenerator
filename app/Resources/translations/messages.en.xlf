@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2016-06-02T05:13:06Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="a6f323b95de5ac1c5ee39426ad0d949b27c257ac" resname="Anniversaries">
+        <source>Anniversaries</source>
+        <target state="new">Anniversaries</target>
+        <jms:reference-file line="38">./app/Resources/themes/pmg_social/default/templates/homepage.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="58853b1c161a91adeb937a6df14425c10f2f78a5" resname="Baptisms">
+        <source>Baptisms</source>
+        <target state="new">Baptisms</target>
+        <jms:reference-file line="37">./app/Resources/themes/pmg_social/default/templates/homepage.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ff5300d1dd86b406f5d58cdbe0d5b787d6d9a7d9" resname="Bridal Showers">
+        <source>Bridal Showers</source>
+        <target state="new">Bridal Showers</target>
+        <jms:reference-file line="35">./app/Resources/themes/pmg_social/default/templates/homepage.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5e19f7744e95f74a26aa5bb9129872021272bd01" resname="Check out our menus">
+        <source>Check out our menus</source>
+        <target state="new">Check out our menus</target>
+        <jms:reference-file line="44">./app/Resources/themes/pmg_social/default/templates/homepage.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4832e45812a2724f16a15f9ae87adfc8ae4168cf" resname="Contact us">
+        <source>Contact us</source>
+        <target state="new">Contact us</target>
+        <jms:reference-file line="99">./app/Resources/themes/pmg_social/default/templates/homepage.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6eee146b5500b27d83f9d0011896757d46763a34" resname="Fax:">
+        <source>Fax:</source>
+        <target state="new">Fax:</target>
+        <jms:reference-file line="103">./app/Resources/themes/pmg_social/default/templates/homepage.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="19a2e9d7922f4d9566f15d53e99b99153074f5e9" resname="Musical Evenings">
+        <source>Musical Evenings</source>
+        <target state="new">Musical Evenings</target>
+        <jms:reference-file line="39">./app/Resources/themes/pmg_social/default/templates/homepage.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="455f4df4287e948e22d237cbb41925365860d49f" resname="Our Halls">
+        <source>Our Halls</source>
+        <target state="new">Our Halls</target>
+        <jms:reference-file line="63">./app/Resources/themes/pmg_social/default/templates/homepage.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ad086cf55b834c375e209972840f1342401d8c41" resname="Read more">
+        <source>Read more</source>
+        <target state="new">Read more</target>
+        <jms:reference-file line="51">./app/Resources/themes/pmg_social/default/templates/homepage.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2c2cd2ae8ff170115855201664f8bc10a106aa1d" resname="Testimonials">
+        <source>Testimonials</source>
+        <target state="new">Testimonials</target>
+        <jms:reference-file line="50">./app/Resources/themes/pmg_social/default/templates/homepage.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e8f6e50e0af877e7284e8972cb2480fd91aa7e77" resname="Weddings">
+        <source>Weddings</source>
+        <target state="new">Weddings</target>
+        <jms:reference-file line="36">./app/Resources/themes/pmg_social/default/templates/homepage.html.twig</jms:reference-file>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
