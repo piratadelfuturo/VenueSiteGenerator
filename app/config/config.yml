@@ -84,7 +84,14 @@ liip_theme:
     active_theme: 'pmg_social'
     load_controllers: false
     assetic_integration: true
-    
+            
+jms_di_extra:
+    doctrine_integration: true
+    locations:
+        all_bundles: false
+        bundles: [JMSTranslationBundle]
+        directories: ["%kernel.root_dir%/../src"]
+        
 # JMS TranslationBundle
 jms_translation:
     locales: ["en","fr"]
@@ -96,4 +103,3 @@ jms_translation:
             excluded_names: ["*TestCase.php", "*Test.php"]
             excluded_dirs: [cache, data, logs]
             extractors: [alias_of_the_extractor]
-            

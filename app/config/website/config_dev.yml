@@ -44,12 +44,5 @@ monolog:
 assetic:
     use_controller: true
 
-jms_di_extra:
-    doctrine_integration: false
-    locations:
-        all_bundles: false
-        bundles: ["JMSTranslationBundle"]
-        directories: ["%kernel.root_dir%/../src"]
-
 #swiftmailer:
 #    delivery_address: me@example.com
