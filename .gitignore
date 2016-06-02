@@ -20,6 +20,7 @@
 /web/css
 /web/js
 /web/uploads/media/*
+!.htaccess
 
 # IDEs
 .idea/*
