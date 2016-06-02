@@ -1,0 +1,92 @@
+{% extends ":default:views/master.html.twig" %}
+
+{% block meta %}{% include ":default:blocks/meta.html.twig" %}{% endblock %}
+
+{% block content %}
+  <div class="banner-section" vocab="http://schema.org/" typeof="Content">
+    <div class="banner-img"><img src="images/banner-img.jpg" alt="" /></div>
+    <div class="main-info">
+      <div class="row">
+        <div class="col-md-8 left-info">
+          <h2>SLOGAN Plaza volare</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+        </div>
+        <div class="col-md-4 right-info">
+          <div class="right-info-content">
+            <div class="highlight-text-box"> <span class="highlighted-text">12</span> meeting halls </div>
+            <div class="highlight-text-box"> <span class="highlighted-text">10,000</span> square feet </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="service-section">
+    <div class="service-text"> <span class="bridal-text">Bridal Showers</span> <span class="wedding-text">Weddings</span> <span class="baptisms-text">Baptisms</span> <span class="anniversaries-text">Anniversaries</span> <span class="musical-text">Musical Evenings</span> </div>
+  </div>
+  <div class="over-menu-section">
+    <div class="menu-img"><img src="images/menu-img.jpg" alt="" /></div>
+    <div class="check-menu-btn"> <a href="">Check out our menus</a> </div>
+  </div>
+  <div class="testimonial-section">
+    <div class="container">
+      <div class="testimonial-title">
+        <h2>Testimonials</h2>
+        <div class="read-more-btn"><a href="testimonials.html">Read more</a></div>
+      </div>
+      <div class="testimonial-content">
+        <p> “Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.” </p>
+        <div class="author-name"> - Black Theatre </div>
+      </div>
+    </div>
+  </div>
+  <div class="halls-section">
+    <div class="row">
+      <div class="col-sm-9 halls-title-right">
+        <div class="halls-title-img"> <img src="images/halls-title-img.jpg" alt="" />
+          <h2>Our Halls</h2>
+        </div>
+      </div>
+      <div class="col-sm-3 halls-menu-left">
+        <div class="halls-menu-section">
+          <div class="halss-menu-box box-1"> <a href="javascript:void(0)">International Room</a> </div>
+          <div class="halss-menu-box box-2"> <a href="javascript:void(0)">Madrid - Rio</a> </div>
+          <div class="halss-menu-box box-3"> <a href="javascript:void(0)">Berlin</a> </div>
+          <div class="halss-menu-box box-4"> <a href="javascript:void(0)">Oslo</a> </div>
+          <div class="halss-menu-box box-5"> <a href="javascript:void(0)">Paris - Rome</a> </div>
+          <div class="halss-menu-box box-6"> <a href="javascript:void(0)">Venise</a> </div>
+          <div class="halss-menu-box box-7"> <a href="javascript:void(0)">Connexion Lounge</a> </div>
+          <div class="halss-menu-box box-8"> <a href="javascript:void(0)">Restaurant Volare</a> </div>
+          <div class="halss-menu-box box-9"> <a href="javascript:void(0)">The Outdoor Garden</a> </div>
+          <div class="halss-menu-box box-10 "> <a href="javascript:void(0)">The Outdoor Garden</a> </div>
+          <div class="halss-menu-box box-11"> <a href="javascript:void(0)">The Outdoor Garden #2</a> </div>
+          <div class="halss-menu-box box-12"> <a href="javascript:void(0)">New York Suite</a> </div>
+        </div>
+      </div>
+    </div>
+    <div class="show-hide-box" id="showbox-1">
+      <div class="close-btn">&times;</div>
+      <div class="show-img"> <img src="images/show-box-1.jpg" alt="" /> </div>
+      <div class="halls-show-content">
+        <div class="halls-info">
+          <p> One of the largest halls in the Greater Montreal area, it can easily accommodate 2,000 attendees for events, meetings, conventions and exhibits. With the ability to divide into 4 different sections, this flexible space can easily meet the needs of a variety of simultaneous functions. The uniqueness of the International room is complemented by a 4 seasons 3600 square feet tent, with a 20 foot ceiling, giving your event an exotic environment. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-map-section">
+    <div class="map-part">
+      <div id="googleMap" class="map-google"></div>
+    </div>
+    <div class="container">
+      <div class="contact-info">
+        <h2>Contact us</h2>
+        <div class="contact-content">
+          <p>6600 Cote-de-Liesse, Saint-Laurent, QC H4T 1E3. Canada</p>
+          <p> <strong>Tel:</strong> (514) 735-5150 </p>
+          <p> <strong>Fax:</strong> (514) 735-6132 </p>
+          <p> <a href="mailto:info@plazavolare.com">info@plazavolare.com</a> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

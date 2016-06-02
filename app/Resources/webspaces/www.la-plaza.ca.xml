@@ -12,7 +12,7 @@
     </localizations>
 
     <theme>
-        <key>default</key>
+        <key>pmg_social</key>
         <default-templates>
             <default-template type="page">default</default-template>
             <default-template type="homepage">homepage</default-template>
