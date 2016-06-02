@@ -24,6 +24,11 @@ class WebsiteKernel extends \AbstractKernel
         $bundles = parent::registerBundles();
         $bundles[] = new Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle();
 
+        if (in_array($this->getEnvironment(), ['dev', 'test'])) {
+            $bundles[] = new JMS\DiExtraBundle\JMSDiExtraBundle($this);
+            $bundles[] = new JMS\AopBundle\JMSAopBundle();
+        }
+        
         return $bundles;
     }
 }

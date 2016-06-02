@@ -90,8 +90,6 @@ abstract class AbstractKernel extends SuluKernel
             $bundles[] = new Sulu\Bundle\TestBundle\SuluTestBundle();
             $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
             $bundles[] = new JMS\TranslationBundle\JMSTranslationBundle();
-            $bundles[] = new JMS\DiExtraBundle\JMSDiExtraBundle($this);
-            $bundles[] = new JMS\AopBundle\JMSAopBundle();
         }
 
         return $bundles;
