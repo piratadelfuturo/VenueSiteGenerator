@@ -14,8 +14,8 @@
     <theme>
         <key>pmg_social</key>
         <default-templates>
-            <default-template type="page">default</default-template>
             <default-template type="homepage">homepage</default-template>
+            <default-template type="page">complex</default-template>
         </default-templates>
 
         <error-templates>
@@ -29,7 +29,7 @@
             <context key="main">
                 <meta>
                     <title lang="fr">Principalnavigation</title>
-                    <title lang="fr">Mainnavigation</title>
+                    <title lang="en">Mainnavigation</title>
                 </meta>
             </context>
         </contexts>
@@ -46,7 +46,8 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>{host}/{localization}</url>
+                        <url>www.challengerpiazza.com/{localization}</url>
+                        <url>new.plazaantique.ca/{localization}</url>
                         <url>cp-pmg.echo.mx/{localization}</url>
                     </urls>
                 </environment>

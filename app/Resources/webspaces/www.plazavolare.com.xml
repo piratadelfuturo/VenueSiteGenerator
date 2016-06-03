@@ -15,7 +15,7 @@
         <key>pmg_social</key>
         <default-templates>
             <default-template type="homepage">homepage</default-template>
-            <default-template type="page">default</default-template>
+            <default-template type="page">complex</default-template>
         </default-templates>
 
         <error-templates>
@@ -29,7 +29,7 @@
             <context key="main">
                 <meta>
                     <title lang="fr">Principalnavigation</title>
-                    <title lang="fr">Mainnavigation</title>
+                    <title lang="en">Mainnavigation</title>
                 </meta>
             </context>
         </contexts>
@@ -48,6 +48,7 @@
                     <urls>
                         <url>www.plazavolare.com/{localization}</url>
                         <url>pv-pmg.echo.mx/{localization}</url>
+                        <url>new.plazavolare.com/{localization}</url>
                     </urls>
                 </environment>
                 <environment type="stage">
