@@ -18,7 +18,7 @@
             {% endif %}    
             <a href="{{ sulu_content_path((urls[alter_locale]?:'/'),request.webspaceKey,alter_locale) }}">
                 <span class="flag">
-                    <img src="{{ asset("assets/pmg_social/default/images/#{alter_locale}-flag.png") }}" alt="{{ alter_locale }}" />
+                    <img src="{{ asset("assets/pmg_social/default/images/"~alter_locale~"-flag.png") }}" alt="{{ alter_locale }}" />
                 </span>
             </a>
         </div>

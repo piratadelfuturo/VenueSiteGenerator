@@ -1,3 +1,4 @@
+{% set webspace_key = app.request.attributes.get('_sulu').getAttribute('webspace').key %}
 <!DOCTYPE html>
 <html lang="{{ request.locale }}">
     <head>
@@ -9,7 +10,6 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-
         {% stylesheets filter="scssphp,cssrewrite" output="css/app.css"
             'assets/pmg_social/default/scss/main.scss'
             'assets/pmg_social/default/css/vegas.css'
@@ -39,7 +39,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 
     </head>
-<body>
+<body class="{{webspace_key~'_site'}}">
 <div class="page-wrapper">
 
     <div class="container">

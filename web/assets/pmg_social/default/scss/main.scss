@@ -1,4 +1,3 @@
-@import "compass";
 @import "bootstrap";
 
 body{background:url($body-bg) repeat left top; color:$white; font-size:14px;  font-family: 'open_sansregular'; overflow-x:hidden;}
@@ -1788,3 +1787,60 @@ footer{
 .zindex-up{z-index:12px;}
 img{max-width:100%;}
 
+$www-plazagardeninn-com-site-color: #a40000;
+
+$www-challengerpiazza-com-color:    #004ee9;
+
+$www-plazavolare-com-color:         #ce1b45;
+
+$www-la-plaza-com-color:            #de5bea;
+
+$www-plazaantique-com-color:        #ff5a00;
+
+$www-embassyplaza-com-color:        #00e4ff;
+
+$www-plazacentreville-com-color:    #329996;
+
+$www-plazagardeninn-com-color:      #a40000;
+
+
+.www_plazagardeninn_com_site{
+    .testimonial-section{
+        background: $www-plazagardeninn-com-site-color;        
+    }
+    
+}
+
+.www_challengerpiazza_com_site{
+    .testimonial-section{
+        background: $www-plazagardeninn-com-site-color;        
+    }    
+}
+
+
+.www_plazavolare_com_site{
+    .testimonial-section{
+        background: $www-plazavolare-com-color;        
+    }        
+}
+.www_la-plaza_com_site{
+    .testimonial-section{
+        background: $www-la-plaza-com-color;        
+    }    
+
+}
+.www_plazaantique_com_site{
+    .testimonial-section{
+        background: $www-plazaantique-com-color;        
+    }        
+}
+.www_embassyplaza_com_site{
+    .testimonial-section{
+        background: $www-embassyplaza-com-color;        
+    }    
+}
+.www_plazacentreville_com_site{
+    .testimonial-section{
+        background: $www-plazacentreville-com-color;        
+    }    
+}

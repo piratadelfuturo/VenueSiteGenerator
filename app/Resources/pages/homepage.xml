@@ -106,46 +106,27 @@
                 </property>     
             </properties>
         </section>
-        <section name="testimonials">
-            <properties>
-                <property name="testimonials" type="smart_content">
+        <section name="content">
+            <meta>
+                <title lang="fr">Content</title>
+                <title lang="en">Content</title>
+            </meta>
+            <properties>        
+                <property name="testimonials" type="snippet">
                     <meta>
                         <title lang="fr">Testimonials</title>
                         <title lang="en">Testimonials</title>
                     </meta>
 
                     <params>
-                        <param name="properties" type="collection">
-                            <param name="title" value="title"/>
-                            <param name="description" value="excerpt.description"/>
-                        </param>
-                        <param name="categories_parameter" value="testimonials" />
+                        <param name="snippetType" value="testimonials"/>
                     </params>
                 </property>
-            </properties>
-        </section>
-        <section name="halls">
-            <meta>
-                <title lang="fr">Halls</title>
-                <title lang="en">Halls</title>
-
-                <info_text lang="fr">our halls</info_text>
-                <info_text lang="en">our halls</info_text>
-            </meta>
-            <properties>
-                <property name="halls" type="smart_content">
+                <property name="pages" type="internal_links">
                     <meta>
                         <title lang="fr">Halls</title>
                         <title lang="en">Halls</title>
                     </meta>
-
-                    <params>
-                        <param name="properties" type="collection">
-                            <param name="title" value="title"/>
-                            <param name="description" value="excerpt.description"/>
-                        </param>
-                        <param name="categories_parameter" value="halls" />
-                    </params>
                 </property>
             </properties>
         </section>
