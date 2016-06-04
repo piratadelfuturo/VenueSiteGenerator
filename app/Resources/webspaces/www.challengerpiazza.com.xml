@@ -3,7 +3,7 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://schemas.sulu.io/webspace/webspace http://schemas.sulu.io/webspace/webspace-1.0.xsd">
 
-    <name>www.challengerpiazza.com</name>
+    <name>challengerpiazza.com</name>
     <key>www_challengerpiazza_com</key>
 
     <localizations>
@@ -29,7 +29,7 @@
             <context key="main">
                 <meta>
                     <title lang="fr">Principalnavigation</title>
-                    <title lang="en">Mainnavigation</title>
+                    <title lang="en">Main navigation</title>
                 </meta>
             </context>
         </contexts>
