@@ -122,6 +122,7 @@ class PmgFixture implements DocumentFixtureInterface, ContainerAwareInterface{
             $page->getStructure()->bind(array(
                 'title' => $page->getTitle()
             ));
+            $page->setNavigationContexts(['main']);
             $documentManager->persist($page, $locale, array(
                 'parent_path' => $parentDocument->getPath()
             ));
@@ -152,6 +153,7 @@ class PmgFixture implements DocumentFixtureInterface, ContainerAwareInterface{
             $page->getStructure()->bind(array(
                 'title' => $page->getTitle()
             ));
+            $page->setNavigationContexts(['main']);
             $documentManager->persist($page, $locale, array(
                 'parent_path' => $parentDocument->getPath()
             ));
