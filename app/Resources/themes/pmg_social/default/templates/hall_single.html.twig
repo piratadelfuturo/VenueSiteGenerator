@@ -4,77 +4,50 @@
 
 {% block content %} 
 <div class="banner-section">
-    <div class="banner-img menu-bannerimg"><img src="{{ asset('assets/pmg_social/default/images/halls-detail-img.jpg')}}" alt="" /></div>
+    <div class="banner-img menu-bannerimg">
+        {% if content.header_images %}
+        <img src="{{ asset(content.header_images[0].url)}}" alt="" />
+        {% else %}
+        <img src="{{ asset('assets/pmg_social/default/images/halls-detail-img.jpg')}}" alt="" />
+        {% endif %}
+    </div>
   </div>
   <div class="halls-information-section">
     <div class="container">
-      <h2>international room</h2>
-      <p> One of the largest halls in the Greater Montreal area, it can easily accommodate 2,000 attendees for events, meetings, conventions and exhibits. With the ability to divide into 4 different sections, this flexible space can easily meet the needs of a variety of simultaneous functions. The uniqueness of the International room is complemented by a 4 seasons 3600 square feet tent, with a 20 foot ceiling, giving your event an exotic environment. </p>
+      <h2>{{ content.title }}</h2>
+      <p> {{ content.description }}</p>
     </div>
   </div>
   <div class="dimension-section">
     <div class="page-heading">
-      <h2>Dimensions & Capacity</h2>
+      <h2> {% trans %}Dimensions & Capacity {% endtrans %}</h2>
     </div>
     <div class="dimension-content-box">
       <div class="table-responsive">
         <table>
-          
-          <tbody>
+            <thead>
           	<tr>
-          	<th>Hall</th>
-            <th>Dimensions (ft)</th>
-            <th>Sq. Feet</th>
-            <th>Height (ft)</th>
-            <th>Reception/Cocktail</th>
-            <th>Banquet</th>
-            <th>Theater/Classroom</th>
-          </tr>
+                    <th>{% trans %}Hall{% endtrans %}</th>
+                    <th>{% trans %}Dimensions (ft){% endtrans %}</th>
+                    <th>{% trans %}Sq. Feet{% endtrans %}</th>
+                    <th>{% trans %}Height (ft){% endtrans %}</th>
+                    <th>{% trans %}Reception/Cocktail{% endtrans %}</th>
+                    <th>{% trans %}Banquet{% endtrans %}</th>
+                    <th>{% trans %}Theater/Classroom{% endtrans %}</th>
+                  </tr>
+            </thead>
+          <tbody>
+              {%for row in content.rows %}
             <tr>
-              <td>McGill ABC</td>
-              <td>90 x 17</td>
-              <td>1530</td>
-              <td>9.6</td>
-              <td>200</td>
-              <td>110</td>
-              <td>180 / 80</td>
+              <td>{{row.hall}}</td>
+              <td>{{row.dimensions}}</td>
+              <td>{{row.sq_feet}}</td>
+              <td>{{row.height}}</td>
+              <td>{{row.reception}}</td>
+              <td>{{row.banquet}}</td>
+              <td>{{row.theater}}</td>
             </tr>
-            <tr>
-              <td>McGill ABC</td>
-              <td>90 x 17</td>
-              <td>1530</td>
-              <td>9.6</td>
-              <td>200</td>
-              <td>110</td>
-              <td>180 / 80</td>
-            </tr>
-            <tr>
-              <td>McGill ABC</td>
-              <td>90 x 17</td>
-              <td>1530</td>
-              <td>9.6</td>
-              <td>200</td>
-              <td>110</td>
-              <td>180 / 80</td>
-            </tr>
-            <tr>
-              <td>McGill ABC</td>
-              <td>90 x 17</td>
-              <td>1530</td>
-              <td>9.6</td>
-              <td>200</td>
-              <td>110</td>
-              <td>180 / 80</td>
-            </tr>
-            <tr>
-              <td>McGill ABC</td>
-              <td>90 x 17</td>
-              <td>1530</td>
-              <td>9.6</td>
-              <td>200</td>
-              <td>110</td>
-              <td>180 / 80</td>
-            </tr>
+            {% endfor %}
           </tbody>
         </table>
       </div>
@@ -83,10 +56,22 @@
   <div class="halls-stup-section">
     <div class="setup-content">
       <div class="page-heading">
-        <h2>Hall Setup</h2>
+        <h2>{% trans %}Hall Setup{% endtrans %}</h2>
       </div>
-      <div class="setup-info-box"> <img src="{{ asset('assets/pmg_social/default/images/setup-img.jpg')}}" alt="" /> </div>
-      <div class="download-btn"> <a href="{{ asset('assets/pmg_social/default/') }}">Download the complete hall info</a> </div>
+      <div class="setup-info-box">
+          {% if content.hall_setup %}
+           <img src="{{ asset(content.hall_setup[0].url)}}" alt="" />
+          {% else%}
+          <img src="{{ asset('assets/pmg_social/default/images/setup-img.jpg')}}" alt="" />
+          {% endif %}
+      </div>
+      {% set download_link = '' %}
+      {% if content.download_info[0] %}
+      {% set download_link = asset(content.download_info[0].url) %}
+      {% endif %}
+      <div class="download-btn"> <a href="{{ download_link }}" target="_blank">
+              {% trans %}Download the complete hall info{% endtrans %}
+          </a> </div>
     </div>
   </div>
 {% endblock %}
@@ -108,7 +93,6 @@
         <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('assets/pmg_social/default/images/gallery-9.jpg') }}"> <img class="img-responsive" src="{{ asset('assets/pmg_social/default/images/gallery-9.jpg')}}" alt="" /> </a> </div>
         <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('assets/pmg_social/default/images/gallery-10.jpg') }}"> <img class="img-responsive" src="{{ asset('assets/pmg_social/default/images/gallery-10.jpg')}}" alt="" /> </a> </div>
       </div>
-      <!-- <div class="see-more-btn"><a href="{{ asset('assets/pmg_social/default/') }}">See more photos</a></div> --> 
     </div>
   </div>
   <div class="push"></div>

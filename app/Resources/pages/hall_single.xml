@@ -28,7 +28,21 @@
 
                     <tag name="sulu.rlp.part"/>
                 </property>
-
+                <property name="header_images" type="media_selection">
+                    <meta>
+                        <title lang="fr">header image</title>
+                        <title lang="en">header image</title>
+                    </meta>
+                    <params>
+                        <param name="types" value="image"/>
+                    </params>               
+                </property>
+                <property name="description" type="text_area">
+                <meta>
+                    <title lang="en">Description</title>
+                    <title lang="en">Description</title>
+                </meta>
+                </property>
                 <property name="url" type="resource_locator" mandatory="true">
                     <meta>
                         <title lang="fr">Adresse</title>
@@ -40,23 +54,13 @@
             </properties>
         </section>
 
-        <property name="header_images" type="media_selection">
-            <meta>
-                <title lang="fr">header image</title>
-                <title lang="en">header image</title>
-            </meta>
-            <params>
-                <param name="types" value="image"/>
-            </params>               
-        </property>
-
         <section name="content">
             <meta>
                 <title lang="fr">Inhalt</title>
                 <title lang="en">Content</title>
             </meta>
             <properties>
-                <block name="blocks" default-type="row" minOccurs="0">
+                <block name="rows" default-type="row" minOccurs="0">
                     <meta>
                         <title lang="fr">Inhalte</title>
                         <title lang="en">Dimensions</title>
@@ -96,6 +100,18 @@
                                     <meta>
                                         <title lang="fr">Reception</title>
                                         <title lang="en">Reception</title>
+                                    </meta>
+                                </property>
+                                <property name="banquet" type="text_line">
+                                    <meta>
+                                        <title lang="fr">Banquet</title>
+                                        <title lang="en">Banquet</title>
+                                    </meta>
+                                </property>
+                                <property name="theater" type="text_line">
+                                    <meta>
+                                        <title lang="fr">Theater</title>
+                                        <title lang="en">Theater</title>
                                     </meta>
                                 </property>
                             </properties>

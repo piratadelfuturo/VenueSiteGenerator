@@ -4,14 +4,39 @@
 
 {% block content %}
 <div class="banner-section">
-    <div class="banner-img menu-bannerimg"><img src="{{ asset('assets/pmg_social/default/images/banner-img.jpg')}}" alt="" /></div>
+    <div class="banner-img menu-bannerimg">
+        <img src="{{ asset('assets/pmg_social/default/images/banner-img.jpg')}}" alt="" /></div>
   </div>
   <div class="our-halls-section">
     <div class="page-heading">
-      <h2>Our Halls</h2>
+      <h2>{{ content.title }}</h2>
     </div>
     <div class="halls-listing-section">
       <div class="row">
+        {% if content.links %}
+            {% for link in content.links %}
+            {% set linkDoc = sulu_content_load(link.uuid) %}
+            {% set linkContent = linkDoc.content %}
+
+        <div class="col-sm-3 halls-list-box">
+          <div class="halls-list-img">
+              {% if linkContent.header_images %}
+              <img src="{{ asset(linkContent.header_images[0].thumbnails['150x100'])}}" alt="" />
+              {% else %}
+              <img src="{{ asset('assets/pmg_social/default/images/halls-list-1.jpg')}}" alt="" />
+              {% endif %}    
+              
+          </div>
+          <div class="halls-list-info">
+            <div class="halls-content">
+              <h4>{{ link.title }}</h4>
+              <p> {{ linkContent.description |slice(1, 45) }} </p>
+            </div>
+            <div class="more-info-btn"> <a href="{{ sulu_content_path(link.url) }}">&plus;</a> </div>
+          </div>
+        </div>
+          {% endfor%}
+        {% else %}
         <div class="col-sm-3 halls-list-box">
           <div class="halls-list-img"> <img src="{{ asset('assets/pmg_social/default/images/halls-list-1.jpg')}}" alt="" /> </div>
           <div class="halls-list-info">
@@ -132,6 +157,7 @@
             <div class="more-info-btn"> <a href="halls-detail.html">&plus;</a> </div>
           </div>
         </div>
+          {% endif %}
       </div>
     </div>
   </div>
