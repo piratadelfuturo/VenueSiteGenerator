@@ -20,7 +20,6 @@
 
             <tag name="sulu.node.name"/>
         </property>
-
                 <block name="block"
                        default-type="only_text"
                        minOccurs="2"

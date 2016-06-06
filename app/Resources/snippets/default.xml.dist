@@ -7,14 +7,14 @@
     <key>default</key>
 
     <meta>
-        <title lang="de">Standard</title>
+        <title lang="fr">Standard</title>
         <title lang="en">Default</title>
     </meta>
 
     <properties>
         <property name="title" type="text_line" mandatory="true">
             <meta>
-                <title lang="de">Titel</title>
+                <title lang="fr">Titel</title>
                 <title lang="en">Title</title>
             </meta>
 
@@ -23,21 +23,21 @@
 
         <property name="description" type="text_editor">
             <meta>
-                <title lang="de">Beschreibung</title>
+                <title lang="fr">Beschreibung</title>
                 <title lang="en">Description</title>
             </meta>
         </property>
 
         <property name="internalLinks" type="internal_links">
             <meta>
-                <title lang="de">Verlinkungen</title>
+                <title lang="fr">Verlinkungen</title>
                 <title lang="en">Links</title>
             </meta>
         </property>
 
         <property name="images" type="media_selection">
             <meta>
-                <title lang="de">Bilder</title>
+                <title lang="fr">Bilder</title>
                 <title lang="en">images</title>
             </meta>
         </property>

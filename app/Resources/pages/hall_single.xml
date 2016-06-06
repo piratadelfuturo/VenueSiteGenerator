@@ -40,44 +40,85 @@
             </properties>
         </section>
 
-        <property name="links" type="internal_links">
+        <property name="header_images" type="media_selection">
             <meta>
-                <title lang="fr">Interne Links</title>
-                <title lang="en">Internal links</title>
+                <title lang="fr">header image</title>
+                <title lang="en">header image</title>
             </meta>
-        </property>
-
-        <property name="images" type="media_selection">
-            <tag name="sulu.search.field" role="image" index="false"/>
-            <meta>
-                <title lang="fr">Bilder</title>
-                <title lang="en">Images</title>
-            </meta>
+            <params>
+                <param name="types" value="image"/>
+            </params>               
         </property>
 
         <section name="content">
             <meta>
                 <title lang="fr">Inhalt</title>
                 <title lang="en">Content</title>
-
-                <info_text lang="fr">Bereich für den Inhalt</info_text>
-                <info_text lang="en">Content Section</info_text>
             </meta>
             <properties>
-                <property name="article" type="text_editor">
+                <block name="blocks" default-type="row" minOccurs="0">
                     <meta>
-                        <title lang="fr">Artikel</title>
-                        <title lang="en">Article</title>
+                        <title lang="fr">Inhalte</title>
+                        <title lang="en">Dimensions</title>
+                    </meta>
+                    <types>
+                        <type name="row">
+                            <meta>
+                                <title lang="fr">Row</title>
+                                <title lang="en">Row</title>
+                            </meta>
+                            <properties>
+                                <property name="hall" type="text_line">
+                                    <meta>
+                                        <title lang="fr">Hall</title>
+                                        <title lang="en">Hall</title>
+                                    </meta>
+                                </property>
+                                <property name="dimensions" type="text_line">
+                                    <meta>
+                                        <title lang="fr">Dimensions</title>
+                                        <title lang="en">Dimensions</title>
+                                    </meta>
+                                </property>
+                                <property name="sq_feet" type="text_line">
+                                    <meta>
+                                        <title lang="fr">Sq. Feet</title>
+                                        <title lang="en">Sq. Feet</title>
+                                    </meta>
+                                </property>
+                                <property name="height" type="text_line">
+                                    <meta>
+                                        <title lang="fr">Height</title>
+                                        <title lang="en">height</title>
+                                    </meta>
+                                </property>
+                                <property name="reception" type="text_line">
+                                    <meta>
+                                        <title lang="fr">Reception</title>
+                                        <title lang="en">Reception</title>
+                                    </meta>
+                                </property>
+                            </properties>
+                        </type>
+                    </types>
+                </block>
+                <property name="hall_setup" type="media_selection">
+                    <meta>
+                        <title lang="fr">hall setup</title>
+                        <title lang="en">hall setup</title>
+                    </meta>
+                    <params>
+                        <param name="types" value="image"/>
+                    </params>               
+                </property>
+                <property name="download_info" type="smart_content">
+                    <meta>
+                        <title lang="fr">Download Hall Info</title>
+                        <title lang="en">Download Hall Info</title>
                     </meta>
 
                     <params>
-                        <param name="link" value="true"/>
-                        <param name="table" value="true"/>
-                        <param name="height" value="100"/>
-                        <param name="max_height" value="500"/>
-                        <param name="paste_from_word" value="true"/>
-                        <param name="extra_allowed_content"
-                               value="img(*)[*]; span(*)[*]; div(*)[*]; iframe(*)[*]; script(*)[*]"/>
+                        <param name="provider" value="media" />
                     </params>
                 </property>
             </properties>

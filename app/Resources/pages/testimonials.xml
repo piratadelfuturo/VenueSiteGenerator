@@ -5,7 +5,7 @@
 
     <key>testimonials</key>
 
-    <view>:default/templates:complex</view>
+    <view>:default/templates:testimonials</view>
     <controller>SuluWebsiteBundle:Default:index</controller>
     <cacheLifetime>2400</cacheLifetime>
 
@@ -40,15 +40,7 @@
             </properties>
         </section>
 
-        <property name="links" type="internal_links">
-            <meta>
-                <title lang="fr">Interne Links</title>
-                <title lang="en">Internal links</title>
-            </meta>
-        </property>
-
         <property name="images" type="media_selection">
-            <tag name="sulu.search.field" role="image" index="false"/>
             <meta>
                 <title lang="fr">Bilder</title>
                 <title lang="en">Images</title>
@@ -59,27 +51,69 @@
             <meta>
                 <title lang="fr">Inhalt</title>
                 <title lang="en">Content</title>
-
-                <info_text lang="fr">Bereich für den Inhalt</info_text>
-                <info_text lang="en">Content Section</info_text>
             </meta>
             <properties>
-                <property name="article" type="text_editor">
+                <block name="block"
+                       default-type="only_text"
+                       minOccurs="2"
+                       maxOccurs="10"
+                       mandatory="true">
                     <meta>
-                        <title lang="fr">Artikel</title>
-                        <title lang="en">Article</title>
+                        <title lang="fr">Block</title>
+                        <title lang="en">Block</title>
                     </meta>
-
-                    <params>
-                        <param name="link" value="true"/>
-                        <param name="table" value="true"/>
-                        <param name="height" value="100"/>
-                        <param name="max_height" value="500"/>
-                        <param name="paste_from_word" value="true"/>
-                        <param name="extra_allowed_content"
-                               value="img(*)[*]; span(*)[*]; div(*)[*]; iframe(*)[*]; script(*)[*]"/>
-                    </params>
-                </property>
+                    <types>
+                        <type name="only_text">
+                            <meta>
+                                <title lang="fr">Text</title>
+                                <title lang="en">Text</title>
+                            </meta>
+                            <properties>
+                                <property name="title" type="text_line" mandatory="true">
+                                    <meta>
+                                        <title lang="fr">Titel</title>
+                                        <title lang="en">Title</title>
+                                    </meta>
+                                </property>
+                                <property name="article" type="text_editor" mandatory="true">
+                                    <meta>
+                                        <title lang="fr">Artikel</title>
+                                        <title lang="en">Article</title>
+                                    </meta>
+                                </property>
+                            </properties>
+                        </type>
+                        <type name="with_image">
+                            <meta>
+                                <title lang="fr">With Image</title>
+                                <title lang="en">With Image</title>
+                            </meta>
+                            <properties>
+                                <property name="title" type="text_line" mandatory="true">
+                                    <meta>
+                                        <title lang="fr">Titel</title>
+                                        <title lang="en">Title</title>
+                                    </meta>
+                                </property>
+                                <property name="article" type="text_editor" mandatory="true">
+                                    <meta>
+                                        <title lang="fr">Artikel</title>
+                                        <title lang="en">Article</title>
+                                    </meta>
+                                </property>
+                               <property name="image" type="media_selection">
+                                    <meta>
+                                        <title lang="fr">Bilder</title>
+                                        <title lang="en">Images</title>
+                                    </meta>
+                                    <params>
+                                        <param name="types" value="image"/>
+                                    </params>
+                                </property>
+                            </properties>
+                        </type>
+                    </types>
+                </block>
             </properties>
         </section>
     </properties>

@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>menus</key>
+
+    <view>:default/templates:menus</view>
+    <controller>SuluWebsiteBundle:Default:index</controller>
+    <cacheLifetime>2400</cacheLifetime>
+
+    <meta>
+        <title lang="fr">Manus</title>
+        <title lang="en">Menus</title>
+    </meta>
+
+    <properties>
+        <section name="highlight">
+            <properties>
+                <property name="title" type="text_line" mandatory="true">
+                    <meta>
+                        <title lang="fr">Titel</title>
+                        <title lang="en">Title</title>
+                    </meta>
+                    <params>
+                        <param name="headline" value="true"/>
+                    </params>
+
+                    <tag name="sulu.rlp.part"/>
+                </property>
+
+                <property name="url" type="resource_locator" mandatory="true">
+                    <meta>
+                        <title lang="fr">Adresse</title>
+                        <title lang="en">Resourcelocator</title>
+                    </meta>
+
+                    <tag name="sulu.rlp"/>
+                </property>
+            </properties>
+        </section>
+
+        <property name="selection_phrase" type="text_line">
+            <meta>
+                <title lang="fr">Choose phrase</title>
+                <title lang="en">Choose phrase</title>
+            </meta>
+            <params>
+                <param name="headline" value="true"/>
+            </params>
+        </property>
+
+
+        <section name="content">
+            <meta>
+                <title lang="fr">Menus</title>
+                <title lang="en">Menus</title>
+
+            </meta>
+            <properties>
+                <block name="packages" default-type="package" minOccurs="0">
+                    <meta>
+                        <title lang="fr">Packages</title>
+                        <title lang="en">Packages</title>
+                    </meta>
+                    <types>
+                        <type name="package">
+                            <meta>
+                                <title lang="fr">Package</title>
+                                <title lang="en">Package</title>
+                            </meta>
+                            <properties>
+                                <property name="name" type="text_line" mandatory="true">
+                                    <meta>
+                                        <title lang="fr">Nom</title>
+                                        <title lang="en">Name</title>
+                                    </meta>
+                                    <params>
+                                        <param name="headline" value="true"/>
+                                    </params>
+                                </property>
+                                <property name="menu_course" type="snippet">
+                                    <meta>
+                                        <title lang="fr">Courses</title>
+                                        <title lang="en">Courses</title>
+                                    </meta>
+
+                                    <params>
+                                        <param name="snippetType" value="menu_course"/>
+                                    </params>
+                                </property>
+                            </properties>
+                        </type>
+                    </types>
+                </block>
+            </properties>
+        </section>
+    </properties>
+</template>

@@ -31,9 +31,10 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 {% if sulu_navigation_root_tree('main') is not empty %}
+                {% dump(sulu_navigation_root_tree('main',2)) %}
                 <ul class="nav navbar-nav">
                     <li><a href="{{ sulu_content_root_path() }}">{% trans %} HOME {% endtrans %}</a></li>
-                    {% for item in sulu_navigation_root_tree('main') %}
+                    {% for item in sulu_navigation_root_tree('main',2) %}
                     <li {% if item.children|length > 0%} class="dropdown mega-dropdown" {% endif %} >
                         <a href="{{ sulu_content_path(item.url) }}"
                             title="{{ item.title }}"
@@ -46,6 +47,8 @@
                                     <div class="megamenu-content">
                                         <a href="{{ sulu_content_path(child.url) }}" 
                                            title="{{ child.title }}">
+                                            {% set child_content = sulu_content_load(child.uuid) %}
+                                            {% dump(child_content) %}
                                             <img src="{{ asset('assets/pmg_social/default/images/halls-img-1.jpg')}}" alt="" />
                                         <h6>{{ child.title }}</h6>
                                         </a>

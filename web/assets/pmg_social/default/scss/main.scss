@@ -235,6 +235,7 @@ header{
 	text-align:right;
 	float:right;
 	clear:both;
+        text-transform: uppercase;
 	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
 	  float:left; text-align:left;
 	}
@@ -1085,7 +1086,7 @@ footer{
 	}
 	.footer-nav{
 		 position:absolute; bottom:20px; right:20px;
-		 
+		 text-transform: uppercase;
 		 @media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
 			   bottom:20px;
 			}

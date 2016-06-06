@@ -1,5 +1,10 @@
-  <div class="banner-section">
-    <div class="banner-img menu-bannerimg"><img {{ asset('assets/pmg_social/default/images/halls-detail-img.jpg')}} alt="" /></div>
+{% extends ":default:views/master.html.twig" %}
+
+{% block meta %}{% include ":default:blocks/meta.html.twig" %}{% endblock %}
+
+{% block content %} 
+<div class="banner-section">
+    <div class="banner-img menu-bannerimg"><img src="{{ asset('assets/pmg_social/default/images/halls-detail-img.jpg')}}" alt="" /></div>
   </div>
   <div class="halls-information-section">
     <div class="container">
@@ -80,28 +85,32 @@
       <div class="page-heading">
         <h2>Hall Setup</h2>
       </div>
-      <div class="setup-info-box"> <img {{ asset('assets/pmg_social/default/images/setup-img.jpg')}} alt="" /> </div>
-      <div class="download-btn"> <a href="">Download the complete hall info</a> </div>
+      <div class="setup-info-box"> <img src="{{ asset('assets/pmg_social/default/images/setup-img.jpg')}}" alt="" /> </div>
+      <div class="download-btn"> <a href="{{ asset('assets/pmg_social/default/') }}">Download the complete hall info</a> </div>
     </div>
   </div>
+{% endblock %}
+{% block footer %}
   <div class="gallery-section last-section">
     <div class="page-heading">
       <h2>Gallery</h2>
     </div>
     <div class="gallery-list-section">
       <div class="row">
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="images/gallery-1.jpg"> <img class="img-responsive" {{ asset('assets/pmg_social/default/images/gallery-1.jpg')}} alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="images/gallery-2.jpg"> <img class="img-responsive" {{ asset('assets/pmg_social/default/images/gallery-2.jpg')}} alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="images/gallery-3.jpg"> <img class="img-responsive" {{ asset('assets/pmg_social/default/images/gallery-3.jpg')}} alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="images/gallery-4.jpg"> <img class="img-responsive" {{ asset('assets/pmg_social/default/images/gallery-4.jpg')}} alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="images/gallery-5.jpg"> <img class="img-responsive" {{ asset('assets/pmg_social/default/images/gallery-5.jpg')}} alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="images/gallery-6.jpg"> <img class="img-responsive" {{ asset('assets/pmg_social/default/images/gallery-6.jpg')}} alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="images/gallery-7.jpg"> <img class="img-responsive" {{ asset('assets/pmg_social/default/images/gallery-7.jpg')}} alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="images/gallery-8.jpg"> <img class="img-responsive" {{ asset('assets/pmg_social/default/images/gallery-8.jpg')}} alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="images/gallery-9.jpg"> <img class="img-responsive" {{ asset('assets/pmg_social/default/images/gallery-9.jpg')}} alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="images/gallery-10.jpg"> <img class="img-responsive" {{ asset('assets/pmg_social/default/images/gallery-10.jpg')}} alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('assets/pmg_social/default/images/gallery-1.jpg') }}"> <img class="img-responsive" src="{{ asset('assets/pmg_social/default/images/gallery-1.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('assets/pmg_social/default/images/gallery-2.jpg') }}"> <img class="img-responsive" src="{{ asset('assets/pmg_social/default/images/gallery-2.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('assets/pmg_social/default/images/gallery-3.jpg') }}"> <img class="img-responsive" src="{{ asset('assets/pmg_social/default/images/gallery-3.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('assets/pmg_social/default/images/gallery-4.jpg') }}"> <img class="img-responsive" src="{{ asset('assets/pmg_social/default/images/gallery-4.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('assets/pmg_social/default/images/gallery-5.jpg') }}"> <img class="img-responsive" src="{{ asset('assets/pmg_social/default/images/gallery-5.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('assets/pmg_social/default/images/gallery-6.jpg') }}"> <img class="img-responsive" src="{{ asset('assets/pmg_social/default/images/gallery-6.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('assets/pmg_social/default/images/gallery-7.jpg') }}"> <img class="img-responsive" src="{{ asset('assets/pmg_social/default/images/gallery-7.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('assets/pmg_social/default/images/gallery-8.jpg') }}"> <img class="img-responsive" src="{{ asset('assets/pmg_social/default/images/gallery-8.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('assets/pmg_social/default/images/gallery-9.jpg') }}"> <img class="img-responsive" src="{{ asset('assets/pmg_social/default/images/gallery-9.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('assets/pmg_social/default/images/gallery-10.jpg') }}"> <img class="img-responsive" src="{{ asset('assets/pmg_social/default/images/gallery-10.jpg')}}" alt="" /> </a> </div>
       </div>
-      <!-- <div class="see-more-btn"><a href="">See more photos</a></div> --> 
+      <!-- <div class="see-more-btn"><a href="{{ asset('assets/pmg_social/default/') }}">See more photos</a></div> --> 
     </div>
   </div>
   <div class="push"></div>
+{% endblock %}
+

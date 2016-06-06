@@ -1,5 +1,10 @@
-  <div class="banner-section">
-    <div class="banner-img menu-bannerimg"><img {{ asset('assets/pmg_social/default/images/menu-banner-bg.jpg')}} alt="" /></div>
+{% extends ":default:views/master.html.twig" %}
+
+{% block meta %}{% include ":default:blocks/meta.html.twig" %}{% endblock %}
+
+{% block content %}
+<div class="banner-section">
+    <div class="banner-img menu-bannerimg"><img src="{{ asset('assets/pmg_social/default/images/menu-banner-bg.jpg')}}" alt="" /></div>
   </div>
   <div class="package-section">
     <div class="container">
@@ -123,3 +128,4 @@
     </div>
   </div>
   <div class="push"></div>
+{% endblock %}

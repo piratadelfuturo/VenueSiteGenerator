@@ -10,7 +10,7 @@
     <cacheLifetime>2400</cacheLifetime>
 
     <meta>
-        <title lang="de">Komplex</title>
+        <title lang="fr">Komplex</title>
         <title lang="en">Complex</title>
     </meta>
 
@@ -19,7 +19,7 @@
             <properties>
                 <property name="title" type="text_line" mandatory="true">
                     <meta>
-                        <title lang="de">Titel</title>
+                        <title lang="fr">Titel</title>
                         <title lang="en">Title</title>
                     </meta>
                     <params>
@@ -30,9 +30,15 @@
 
                     <tag name="sulu.rlp.part"/>
                 </property>
+                <property name="images" type="media_selection">
+                    <meta>
+                        <title lang="fr">Bilder</title>
+                        <title lang="en">Images</title>
+                    </meta>
+                </property>
                 <property name="url" type="resource_locator" mandatory="true">
                     <meta>
-                        <title lang="de">Adresse</title>
+                        <title lang="fr">Adresse</title>
                         <title lang="en">Resourcelocator</title>
                     </meta>
 
@@ -43,16 +49,16 @@
 
         <section name="content">
             <meta>
-                <title lang="de">Inhalt</title>
+                <title lang="fr">Inhalt</title>
                 <title lang="en">Content</title>
 
-                <info_text lang="de">Bereich für den Inhalt</info_text>
+                <info_text lang="fr">Bereich für den Inhalt</info_text>
                 <info_text lang="en">Content Section</info_text>
             </meta>
             <properties>
                 <property name="article" type="text_editor" mandatory="true">
                     <meta>
-                        <title lang="de">Artikel</title>
+                        <title lang="fr">Artikel</title>
                         <title lang="en">Article</title>
                     </meta>
                 </property>
@@ -63,25 +69,25 @@
                        maxOccurs="10"
                        mandatory="true">
                     <meta>
-                        <title lang="de">Block</title>
+                        <title lang="fr">Block</title>
                         <title lang="en">Block</title>
                     </meta>
                     <types>
                         <type name="editor">
                             <meta>
-                                <title lang="de">Texteditor</title>
+                                <title lang="fr">Texteditor</title>
                                 <title lang="en">Text editor</title>
                             </meta>
                             <properties>
                                 <property name="title" type="text_line" mandatory="true">
                                     <meta>
-                                        <title lang="de">Titel</title>
+                                        <title lang="fr">Titel</title>
                                         <title lang="en">Title</title>
                                     </meta>
                                 </property>
                                 <property name="article" type="text_editor" mandatory="true">
                                     <meta>
-                                        <title lang="de">Artikel</title>
+                                        <title lang="fr">Artikel</title>
                                         <title lang="en">Article</title>
                                     </meta>
                                 </property>
@@ -89,25 +95,25 @@
                         </type>
                         <type name="images">
                             <meta>
-                                <title lang="de">Bilder</title>
+                                <title lang="fr">Bilder</title>
                                 <title lang="en">Images</title>
                             </meta>
                             <properties>
                                 <property name="title" type="text_line" mandatory="true">
                                     <meta>
-                                        <title lang="de">Titel</title>
+                                        <title lang="fr">Titel</title>
                                         <title lang="en">Title</title>
                                     </meta>
                                 </property>
                                 <property name="logos" type="media_selection">
                                     <meta>
-                                        <title lang="de">Bilder</title>
+                                        <title lang="fr">Bilder</title>
                                         <title lang="en">Images</title>
                                     </meta>
                                 </property>
                                 <property name="article" type="text_editor" mandatory="true">
                                     <meta>
-                                        <title lang="de">Artikel</title>
+                                        <title lang="fr">Artikel</title>
                                         <title lang="en">Article</title>
                                     </meta>
                                 </property>
@@ -115,19 +121,19 @@
                         </type>
                         <type name="textarea">
                             <meta>
-                                <title lang="de">Texteingabe</title>
+                                <title lang="fr">Texteingabe</title>
                                 <title lang="en">Text area</title>
                             </meta>
                             <properties>
                                 <property name="title" type="text_line" mandatory="true">
                                     <meta>
-                                        <title lang="de">Titel</title>
+                                        <title lang="fr">Titel</title>
                                         <title lang="en">Title</title>
                                     </meta>
                                 </property>
                                 <property name="article" type="text_area" mandatory="true">
                                     <meta>
-                                        <title lang="de">Artikel</title>
+                                        <title lang="fr">Artikel</title>
                                         <title lang="en">Article</title>
                                     </meta>
                                 </property>
@@ -135,13 +141,13 @@
                         </type>
                         <type name="title_only">
                             <meta>
-                                <title lang="de">Nur Titel</title>
+                                <title lang="fr">Nur Titel</title>
                                 <title lang="en">Title Only</title>
                             </meta>
                             <properties>
                                 <property name="title" type="text_line" mandatory="true">
                                     <meta>
-                                        <title lang="de">Titel</title>
+                                        <title lang="fr">Titel</title>
                                         <title lang="en">Title</title>
                                     </meta>
                                 </property>

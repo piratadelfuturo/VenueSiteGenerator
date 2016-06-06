@@ -10,7 +10,7 @@
     <cacheLifetime>2400</cacheLifetime>
 
     <meta>
-        <title lang="de">Beispiel</title>
+        <title lang="fr">Beispiel</title>
         <title lang="en">Example</title>
     </meta>
 
@@ -19,7 +19,7 @@
             <properties>
                 <property name="title" type="text_line">
                     <meta>
-                        <title lang="de">Titel</title>
+                        <title lang="fr">Titel</title>
                         <title lang="en">Title</title>
                     </meta>
                     <params>
@@ -31,14 +31,14 @@
 
                 <property name="subtitle" type="text_line">
                     <meta>
-                        <title lang="de">Untertitel</title>
+                        <title lang="fr">Untertitel</title>
                         <title lang="en">Subtitle</title>
                     </meta>
                 </property>
 
                 <property name="url" type="resource_locator">
                     <meta>
-                        <title lang="de">Resource Locator</title>
+                        <title lang="fr">Resource Locator</title>
                         <title lang="en">Resource locator</title>
                     </meta>
                     <tag name="sulu.rlp"/>
@@ -48,20 +48,20 @@
 
         <property name="multiple" type="multiple_select" colspan="4">
             <meta>
-                <title lang="de">Multiple Auswahl</title>
+                <title lang="fr">Multiple Auswahl</title>
                 <title lang="en">Multiple Select</title>
             </meta>
             <params>
                 <param name="values" type="collection">
                     <param name="option1">
                         <meta>
-                            <title lang="de">Option 1</title>
+                            <title lang="fr">Option 1</title>
                             <title lang="en">Option 1</title>
                         </meta>
                     </param>
                     <param name="option2">
                         <meta>
-                            <title lang="de">Option 2</title>
+                            <title lang="fr">Option 2</title>
                             <title lang="en">Option 2</title>
                         </meta>
                     </param>
@@ -71,20 +71,20 @@
 
         <property name="single" type="single_select" colspan="4">
             <meta>
-                <title lang="de">Einfache Auswahl</title>
+                <title lang="fr">Einfache Auswahl</title>
                 <title lang="en">Single Select</title>
             </meta>
             <params>
                 <param name="values" type="collection">
                     <param name="single_option1">
                         <meta>
-                            <title lang="de">Option 1</title>
+                            <title lang="fr">Option 1</title>
                             <title lang="en">Option 1</title>
                         </meta>
                     </param>
                     <param name="single_option2">
                         <meta>
-                            <title lang="de">Option 2</title>
+                            <title lang="fr">Option 2</title>
                             <title lang="en">Option 2</title>
                         </meta>
                     </param>
@@ -94,14 +94,14 @@
 
         <section name="content">
             <meta>
-                <title lang="de">Inhalt</title>
+                <title lang="fr">Inhalt</title>
                 <title lang="en">Content</title>
             </meta>
 
             <properties>
                 <property name="teaser" type="text_editor">
                     <meta>
-                        <title lang="de">Teaser</title>
+                        <title lang="fr">Teaser</title>
                         <title lang="en">Teaser</title>
                     </meta>
 
@@ -118,32 +118,32 @@
 
                 <block name="blocks" default-type="editor" minOccurs="0">
                     <meta>
-                        <title lang="de">Inhalte</title>
+                        <title lang="fr">Inhalte</title>
                         <title lang="en">Content</title>
                     </meta>
                     <types>
                         <type name="selection">
                             <meta>
-                                <title lang="de">Auswahl</title>
+                                <title lang="fr">Auswahl</title>
                                 <title lang="en">Selection</title>
                             </meta>
                             <properties>
                                 <property name="multiple" type="multiple_select" colspan="4">
                                     <meta>
-                                        <title lang="de">Multiple Auswahl</title>
+                                        <title lang="fr">Multiple Auswahl</title>
                                         <title lang="en">Multiple Select</title>
                                     </meta>
                                     <params>
                                         <param name="values" type="collection">
                                             <param name="option1">
                                                 <meta>
-                                                    <title lang="de">Option 1</title>
+                                                    <title lang="fr">Option 1</title>
                                                     <title lang="en">Option 1</title>
                                                 </meta>
                                             </param>
                                             <param name="option2">
                                                 <meta>
-                                                    <title lang="de">Option 2</title>
+                                                    <title lang="fr">Option 2</title>
                                                     <title lang="en">Option 2</title>
                                                 </meta>
                                             </param>
@@ -153,20 +153,20 @@
 
                                 <property name="single" type="single_select" colspan="4">
                                     <meta>
-                                        <title lang="de">Einfache Auswahl</title>
+                                        <title lang="fr">Einfache Auswahl</title>
                                         <title lang="en">Single Select</title>
                                     </meta>
                                     <params>
                                         <param name="values" type="collection">
                                             <param name="single_option1">
                                                 <meta>
-                                                    <title lang="de">Option 1</title>
+                                                    <title lang="fr">Option 1</title>
                                                     <title lang="en">Option 1</title>
                                                 </meta>
                                             </param>
                                             <param name="single_option2">
                                                 <meta>
-                                                    <title lang="de">Option 2</title>
+                                                    <title lang="fr">Option 2</title>
                                                     <title lang="en">Option 2</title>
                                                 </meta>
                                             </param>
@@ -177,13 +177,13 @@
                         </type>
                         <type name="editor">
                             <meta>
-                                <title lang="de">Editor</title>
+                                <title lang="fr">Editor</title>
                                 <title lang="en">Editor</title>
                             </meta>
                             <properties>
                                 <property name="article" type="text_editor">
                                     <meta>
-                                        <title lang="de">Artikel</title>
+                                        <title lang="fr">Artikel</title>
                                         <title lang="en">Article</title>
                                     </meta>
                                 </property>
@@ -191,13 +191,13 @@
                         </type>
                         <type name="editor_image">
                             <meta>
-                                <title lang="de">Editor mit Bild</title>
+                                <title lang="fr">Editor mit Bild</title>
                                 <title lang="en">Editor with image</title>
                             </meta>
                             <properties>
                                 <property name="images" type="media_selection" colspan="3">
                                     <meta>
-                                        <title lang="de">Bilder</title>
+                                        <title lang="fr">Bilder</title>
                                         <title lang="en">Images</title>
                                     </meta>
                                     <params>
@@ -218,7 +218,7 @@
 
                                 <property name="article" type="text_editor" colspan="9">
                                     <meta>
-                                        <title lang="de">Artikel</title>
+                                        <title lang="fr">Artikel</title>
                                         <title lang="en">Article</title>
                                     </meta>
                                 </property>
@@ -231,13 +231,13 @@
 
         <section name="references">
             <meta>
-                <title lang="de">Referenzen</title>
+                <title lang="fr">Referenzen</title>
                 <title lang="en">References</title>
             </meta>
             <properties>
                 <property name="similar_pages" type="smart_content">
                     <meta>
-                        <title lang="de">Ähnliche Seiten</title>
+                        <title lang="fr">Ähnliche Seiten</title>
                         <title lang="en">Similar pages</title>
                     </meta>
 
@@ -246,14 +246,14 @@
                         <param name="present_as" type="collection">
                             <param name="6">
                                 <meta>
-                                    <title lang="de">2 Spalten</title>
+                                    <title lang="fr">2 Spalten</title>
                                     <title lang="en">Two columns</title>
                                 </meta>
                             </param>
                             <param name="12">
                                 <meta>
-                                    <title lang="de">1 Spalte</title>
-                                    <title lang="de">One column</title>
+                                    <title lang="fr">1 Spalte</title>
+                                    <title lang="fr">One column</title>
                                 </meta>
                             </param>
                         </param>
@@ -262,14 +262,14 @@
 
                 <property name="additional_information" type="internal_links">
                     <meta>
-                        <title lang="de">Zusätzliche Informationen</title>
+                        <title lang="fr">Zusätzliche Informationen</title>
                         <title lang="en">Additional Information</title>
                     </meta>
                 </property>
 
                 <property name="embedded_information" type="snippet">
                     <meta>
-                        <title lang="de">Eingebettete Information</title>
+                        <title lang="fr">Eingebettete Information</title>
                         <title lang="en">Embedded information</title>
                     </meta>
 
@@ -280,42 +280,42 @@
 
                 <property name="internal_source" type="single_internal_link">
                     <meta>
-                        <title lang="de">Interne Quelle</title>
+                        <title lang="fr">Interne Quelle</title>
                         <title lang="en">Internal source</title>
                     </meta>
                 </property>
 
                 <property name="tags" type="tag_list">
                     <meta>
-                        <title lang="de">Tags</title>
+                        <title lang="fr">Tags</title>
                         <title lang="en">Tags</title>
                     </meta>
                 </property>
 
                 <property name="categories" type="category_list">
                     <meta>
-                        <title lang="de">Kategorien</title>
+                        <title lang="fr">Kategorien</title>
                         <title lang="en">Categories</title>
                     </meta>
                 </property>
 
                 <property name="authors" type="contact">
                     <meta>
-                        <title lang="de">Autoren</title>
+                        <title lang="fr">Autoren</title>
                         <title lang="en">Authors</title>
                     </meta>
                 </property>
 
                 <property name="location" type="location">
                     <meta>
-                        <title lang="de">Ort</title>
+                        <title lang="fr">Ort</title>
                         <title lang="en">Location</title>
                     </meta>
                 </property>
 
                 <property name="documents" type="media_selection">
                     <meta>
-                        <title lang="de">Dokumente</title>
+                        <title lang="fr">Dokumente</title>
                         <title lang="en">Documents</title>
                     </meta>
                     <params>
@@ -325,7 +325,7 @@
 
                 <property name="downloads" type="smart_content">
                     <meta>
-                        <title lang="de">Download Filter</title>
+                        <title lang="fr">Download Filter</title>
                         <title lang="en">Download filter</title>
                     </meta>
 
@@ -336,7 +336,7 @@
 
                 <property name="contacts" type="smart_content">
                     <meta>
-                        <title lang="de">Kontaktauswahl</title>
+                        <title lang="fr">Kontaktauswahl</title>
                         <title lang="en">Contact selection</title>
                     </meta>
 
@@ -346,14 +346,14 @@
                         <param name="present_as" type="collection">
                             <param name="6">
                                 <meta>
-                                    <title lang="de">2 Spalten</title>
+                                    <title lang="fr">2 Spalten</title>
                                     <title lang="en">Two columns</title>
                                 </meta>
                             </param>
                             <param name="12">
                                 <meta>
-                                    <title lang="de">1 Spalte</title>
-                                    <title lang="de">One column</title>
+                                    <title lang="fr">1 Spalte</title>
+                                    <title lang="fr">One column</title>
                                 </meta>
                             </param>
                         </param>
@@ -362,7 +362,7 @@
 
                 <property name="accounts" type="smart_content">
                     <meta>
-                        <title lang="de">Organizationsauswahl</title>
+                        <title lang="fr">Organizationsauswahl</title>
                         <title lang="en">Organization selection</title>
                     </meta>
 
@@ -372,14 +372,14 @@
                         <param name="present_as" type="collection">
                             <param name="6">
                                 <meta>
-                                    <title lang="de">2 Spalten</title>
+                                    <title lang="fr">2 Spalten</title>
                                     <title lang="en">Two columns</title>
                                 </meta>
                             </param>
                             <param name="12">
                                 <meta>
-                                    <title lang="de">1 Spalte</title>
-                                    <title lang="de">One column</title>
+                                    <title lang="fr">1 Spalte</title>
+                                    <title lang="fr">One column</title>
                                 </meta>
                             </param>
                         </param>
@@ -390,69 +390,69 @@
 
         <section name="configuration">
             <meta>
-                <title lang="de">Konfiguration</title>
+                <title lang="fr">Konfiguration</title>
                 <title lang="en">Configuration</title>
             </meta>
             <properties>
                 <property name="note" type="text_area">
                     <meta>
-                        <title lang="de">Notiz</title>
+                        <title lang="fr">Notiz</title>
                         <title lang="en">Note</title>
                     </meta>
                 </property>
 
                 <property name="phone" type="phone">
                     <meta>
-                        <title lang="de">Telefon</title>
+                        <title lang="fr">Telefon</title>
                         <title lang="en">Phone</title>
                     </meta>
                 </property>
 
                 <property name="password" type="password">
                     <meta>
-                        <title lang="de">Passwort</title>
+                        <title lang="fr">Passwort</title>
                         <title lang="en">Password</title>
                     </meta>
                 </property>
 
                 <property name="source" type="url">
                     <meta>
-                        <title lang="de">Quelle</title>
+                        <title lang="fr">Quelle</title>
                         <title lang="en">Source</title>
                     </meta>
                 </property>
 
                 <property name="email" type="email">
                     <meta>
-                        <title lang="de">Email</title>
+                        <title lang="fr">Email</title>
                         <title lang="en">Email</title>
                     </meta>
                 </property>
 
                 <property name="color" type="color">
                     <meta>
-                        <title lang="de">Farbe</title>
+                        <title lang="fr">Farbe</title>
                         <title lang="en">Color</title>
                     </meta>
                 </property>
 
                 <property name="date" type="date">
                     <meta>
-                        <title lang="de">Datum</title>
+                        <title lang="fr">Datum</title>
                         <title lang="en">Date</title>
                     </meta>
                 </property>
 
                 <property name="time" type="time">
                     <meta>
-                        <title lang="de">Zeit</title>
+                        <title lang="fr">Zeit</title>
                         <title lang="en">Time</title>
                     </meta>
                 </property>
 
                 <property name="checkbox" type="checkbox">
                     <meta>
-                        <title lang="de">Checkbox</title>
+                        <title lang="fr">Checkbox</title>
                         <title lang="en">Checkbox</title>
                     </meta>
                 </property>

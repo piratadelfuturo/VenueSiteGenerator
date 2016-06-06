@@ -10,7 +10,7 @@
     <cacheLifetime>2400</cacheLifetime>
 
     <meta>
-        <title lang="de">Sitemap</title>
+        <title lang="fr">Sitemap</title>
         <title lang="en">Sitemap</title>
     </meta>
 
@@ -19,7 +19,7 @@
             <properties>
                 <property name="title" type="text_line" mandatory="true">
                     <meta>
-                        <title lang="de">Titel</title>
+                        <title lang="fr">Titel</title>
                         <title lang="en">Title</title>
                     </meta>
                     <params>
@@ -31,7 +31,7 @@
 
                 <property name="url" type="resource_locator" mandatory="true">
                     <meta>
-                        <title lang="de">Adresse</title>
+                        <title lang="fr">Adresse</title>
                         <title lang="en">Resourcelocator</title>
                     </meta>
 

@@ -10,7 +10,7 @@
     <cacheLifetime>2400</cacheLifetime>
 
     <meta>
-        <title lang="de">Standard</title>
+        <title lang="fr">Standard</title>
         <title lang="en">Default</title>
     </meta>
 
@@ -19,7 +19,7 @@
             <properties>
                 <property name="title" type="text_line" mandatory="true">
                     <meta>
-                        <title lang="de">Titel</title>
+                        <title lang="fr">Titel</title>
                         <title lang="en">Title</title>
                     </meta>
                     <params>
@@ -31,7 +31,7 @@
 
                 <property name="url" type="resource_locator" mandatory="true">
                     <meta>
-                        <title lang="de">Adresse</title>
+                        <title lang="fr">Adresse</title>
                         <title lang="en">Resourcelocator</title>
                     </meta>
 
@@ -42,7 +42,7 @@
 
         <property name="links" type="internal_links">
             <meta>
-                <title lang="de">Interne Links</title>
+                <title lang="fr">Interne Links</title>
                 <title lang="en">Internal links</title>
             </meta>
         </property>
@@ -50,23 +50,23 @@
         <property name="images" type="media_selection">
             <tag name="sulu.search.field" role="image" index="false"/>
             <meta>
-                <title lang="de">Bilder</title>
+                <title lang="fr">Bilder</title>
                 <title lang="en">Images</title>
             </meta>
         </property>
 
         <section name="content">
             <meta>
-                <title lang="de">Inhalt</title>
+                <title lang="fr">Inhalt</title>
                 <title lang="en">Content</title>
 
-                <info_text lang="de">Bereich für den Inhalt</info_text>
+                <info_text lang="fr">Bereich für den Inhalt</info_text>
                 <info_text lang="en">Content Section</info_text>
             </meta>
             <properties>
                 <property name="article" type="text_editor">
                     <meta>
-                        <title lang="de">Artikel</title>
+                        <title lang="fr">Artikel</title>
                         <title lang="en">Article</title>
                     </meta>
 
