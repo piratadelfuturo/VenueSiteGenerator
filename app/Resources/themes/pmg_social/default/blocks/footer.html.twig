@@ -11,12 +11,12 @@
         </div>
         <div class="footer-nav">
           <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="our-halls.html">OUR HALLS</a></li>
-            <li><a href="our-menus.html">OUR MENUS</a></li>
-            <li><a href="gallery.html">GALLERY</a></li>
-            <li><a href="testimonials.html">TESTIMONIALS</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="{{ sulu_content_root_path() }}">{% trans %} HOME {% endtrans %}</a></li>
+            {% for item in sulu_navigation_root_tree('main') %}
+            <li>
+                <a href="{{ sulu_content_path(item.url) }}" title="{{ item.title }}">{{ item.title }}</a>
+            </li>
+            {% endfor %}
           </ul>
         </div>
       </div>
