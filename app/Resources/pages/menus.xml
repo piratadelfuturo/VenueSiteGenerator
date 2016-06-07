@@ -5,7 +5,7 @@
 
     <key>menus</key>
 
-    <view>:default/templates:menus</view>
+    <view>ClientWebsiteBundle:templates:menus</view>
     <controller>SuluWebsiteBundle:Default:index</controller>
     <cacheLifetime>2400</cacheLifetime>
 

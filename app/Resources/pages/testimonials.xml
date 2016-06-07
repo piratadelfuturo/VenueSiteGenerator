@@ -5,7 +5,7 @@
 
     <key>testimonials</key>
 
-    <view>:default/templates:testimonials</view>
+    <view>ClientWebsiteBundle:templates:testimonials</view>
     <controller>SuluWebsiteBundle:Default:index</controller>
     <cacheLifetime>2400</cacheLifetime>
 

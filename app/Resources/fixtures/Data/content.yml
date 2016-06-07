@@ -1,0 +1,198 @@
+sites:
+    www_embassyplaza_com:
+            -
+                locale: en
+                fields:
+                    title:  Embassy Plaza
+                    slogan: Wedding Halls and Conference Halls
+                    slogan_text: >
+                        The Embassy Plaza is a unique wedding hall and conference
+                        halls offering delicious cuisine, stunning halls as well
+                        as outstanding customer service.
+                        At the Embassy Plaza our goal is to create the perfect
+                        ambiance for your special occasion in one of our elegant
+                        wedding halls or conference halls. Here you will find
+                        one of Lavals largest and most elegant ballrooms in
+                        addition to reception halls and wedding halls complete
+                        with crystal chandeliers.
+                    first_number:   8
+                    first_number_text:  meeting halls
+                    second_number:  25,766
+                    second_number_text: square feet
+                image_fields:
+                    - slides
+                excerp:
+                    title:
+                    more:
+                    description:
+    www_la_plaza_ca:
+        homepage:
+            -
+                locale: en
+                fields:
+                    title:  La Plaza
+                    slogan: Meeting Space and Banquet Halls
+                    slogan_text: >
+                        At La Plaza, our goal is to create glamorous receptions
+                        in exquisite style. If you are planning a wedding, a
+                        fun-filled bar/bat mitzvah, a graduation ball or a
+                        corporate event, we are here to make it an unforgettable
+                        memory. As a private banquet facility in the heart of
+                        fashionable downtown Montreal's Holiday Inn, you enjoy
+                        both: luxurious settings and refined personal attention.
+                        Our vast menus provide for unique business luncheons as
+                        well as for elegant cocktail receptions.
+                    first_number:   11
+                    first_number_text:  meeting halls
+                    second_number:  20000
+                    second_number_text: square feet       
+                image_fields:
+                    - slides                    
+                excerp:
+                    title:
+                    more:
+                    description:
+
+    www_plazaantique_ca:
+        homepage:
+            -
+                locale: en
+                fields:
+                    title:  Plaza Antique
+                    slogan: Reception Halls and Catering Service
+                    slogan_text: >
+                        Innovative, modern, and traditional values are what
+                        Plaza Antique strives to achieve on a daily basis,
+                        no matter the event.
+                        A team of young chefs, Maître d’hôtel's, and event
+                        planners, with 25 years of experience in reception and
+                        event organization, ensure that your event is an
+                        unforgettable and delicious experience.
+                    first_number:   6
+                    first_number_text:  meeting halls
+                    second_number:  18,000
+                    second_number_text: square feet
+                image_fields:
+                    - slides
+                excerp:
+                    title:
+                    more:
+                    description:
+    
+    www_plazacentreville_com:
+        homepage:
+            -
+                locale: en
+                fields:
+                    title:  Plaza Centreville
+                    slogan: Exhibition Halls and Convention Center
+                    slogan_text: >
+                        Set in the true traditional Hotel setting and ambiance,
+                        our Banquet facilities can accommodate from 15 to 2000
+                        people in our fully renovated Lobby and banquet rooms.
+                        Our facilities offer a full range of services from the
+                        smallest of details to the most elaborate ones. We can
+                        cater to corporate as well as social events, Weddings,
+                        being our pride. Our professional staff is up to date
+                        on all the latest trends and can offer planning as to
+                        the smallest details. Come visit us and see why our home
+                        should be your home.
+                    first_number:   12
+                    first_number_text:  meeting halls
+                    second_number:  24 300
+                    second_number_text: square feet       
+                image_fields:
+                    - slides                    
+                excerp:
+                    title:
+                    more:
+                    description:
+
+    www_plazagardeninn_com:
+        homepage:
+            -
+                locale: en
+                fields:
+                    title:  Plaza Garden Inn
+                    slogan: Montreal Reception Halls and Banquet Venues
+                    slogan_text: >
+                        A short stroll to the gates of McGill University,
+                        minutes away from the world famous underground city,
+                        Place des Arts Theater, shops and boutiques on vibrant
+                        Ste. Catherine Street, the downtown business district
+                        and Palais de Congrès.
+                        The Hilton Garden Inn Montreal Centre-ville will easily
+                        become the place to choose for corporate travelers,
+                        business meetings or social events.
+                    first_number:   6
+                    first_number_text:  meeting halls
+                    second_number:  4 000
+                    second_number_text: square feet       
+                image_fields:
+                    - slides                    
+                excerp:
+                    title:
+                    more:
+                    description:
+
+
+    www_plazauniversel_com:
+        homepage:
+            -
+                locale: en
+                fields:
+                    title: Plaza Universel
+                    slogan: Welcome to Plaza Universel
+                    slogan_text: >
+                        Refined personal attention is the crowning touch that
+                        differentiates a special occasion from a memorable one.
+                        Meticulous planning is a must for that one special day
+                        of your life. Our hotel team strives to create new
+                        approaches to assure the highest level of satisfaction.
+                        Offering you superior service, exceptional accomodations,
+                        delightful cuisine and a memorable visit. 
+                    first_number:   12
+                    first_number_text:  meeting halls
+                    second_number:  30 000
+                    second_number_text: square feet
+                image_fields:
+                    - slides
+                excerp:
+                    title:
+                    more:
+                    description:
+    www_plazavolare_com:
+        homepage:
+            -
+                locale: en
+                fields:
+                    title:  Plaza Volare
+                    slogan: Conventional and Kosher Wedding Venues
+                    slogan_text: >
+                        Plaza Volare has been serving clients
+                        and hosting events for nearly three decades.
+                        Our extraodinary international cuisine caters
+                        both to Kosher and non-Kosher needs.
+                        Our professional staff will be with you
+                        every step of the way, accommodating your wedding
+                        or corporate event in one of our many banquet rooms.
+                        Our banquet facility can host 20 to 1200 guests.
+                        With over 30,000 square feet of functional space,
+                        including our ballroom with 15,000 square feet for
+                        just about any occasion! For further information
+                        please refer to our contact page;
+                        it will be a pleasure to hear from you!
+                    first_number:   12
+                    first_number_text:  meeting halls
+                    second_number:  30 000
+                    second_number_text: square feet
+                image_fields:
+                    - slides
+                excerp:
+                    title:
+                    more:
+                    description:
+snippets:
+    menus_dish: []
+    menus_course: []
+    menus_menu: []

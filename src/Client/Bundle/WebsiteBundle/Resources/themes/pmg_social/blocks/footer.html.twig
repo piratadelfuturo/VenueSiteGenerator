@@ -1,0 +1,35 @@
+<footer class="home-footer">
+  <div class="footer-top-part">
+    <div class="row">
+      <div class="col-sm-3 footer-logo"> <a href="index.html">
+              <img src="{{ asset('bundles/clientwebsite/pmg_social/default/images/logo.png') }}" alt="" /></a>
+      </div>
+      <div class="col-sm-9 footer-right">
+        <div class="social-media"> <a href=""><img alt="" src="{{ asset('bundles/clientwebsite/pmg_social/default/images/fb-icon.png') }}"></a>
+            <a href=""><img alt="" src="{{ asset('bundles/clientwebsite/pmg_social/default/images/twitter-icon.png') }}"></a>
+            <a href=""><img alt="" src="{{ asset('bundles/clientwebsite/pmg_social/default/images/linked-icon.png') }}"></a>
+        </div>
+        <div class="footer-nav">
+          <ul>
+            <li><a href="{{ sulu_content_root_path() }}">{% trans %} HOME {% endtrans %}</a></li>
+            {% for item in sulu_navigation_root_tree('main') %}
+            <li>
+                <a href="{{ sulu_content_path(item.url) }}" title="{{ item.title }}">{{ item.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <div class="footer-content">
+      <div class="row">
+        <div class="col-sm-4 copyright-text"> 2015 All rights reserved PMG group </div>
+        <div class="col-sm-8 sponsor-logos"> <a href="">
+                <img src="{{ asset('bundles/clientwebsite/pmg_social/default/images/sponser-img.png') }}" alt="" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>{# empty Twig template #}

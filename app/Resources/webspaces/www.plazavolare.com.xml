@@ -47,6 +47,7 @@
                 <environment type="prod">
                     <urls>
                         <url>www.plazavolare.com/{localization}</url>
+                        <url>www.plazavolare.con/{localization}</url>
                         <url>new.plazavolare.com/{localization}</url>
                         <url>pv-pmg.echo.mx/{localization}</url>
                     </urls>

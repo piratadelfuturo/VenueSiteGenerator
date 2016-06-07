@@ -97,7 +97,6 @@ jms_translation:
     locales: ["en","fr"]
     configs:
         default:
-            dirs: ["%kernel.root_dir%/Resources/themes/pmg_social/"]
             output_dir: "%kernel.root_dir%/Resources/translations"
             ignored_domains: [routes]
             excluded_names: ["*TestCase.php", "*Test.php"]

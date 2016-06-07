@@ -46,6 +46,7 @@
                 <environment type="prod">
                     <urls>
                         <url>www.plazaantique.ca/{localization}</url>
+                        <url>www.plazaantique.con/{localization}</url>
                         <url>new.plazaantique.ca/{localization}</url>
                         <url>pa-pmg.echo.mx/{localization}</url>
                     </urls>

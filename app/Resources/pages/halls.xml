@@ -5,7 +5,7 @@
 
     <key>halls</key>
 
-    <view>:default/templates:halls</view>
+    <view>ClientWebsiteBundle:templates:halls</view>
     <controller>SuluWebsiteBundle:Default:index</controller>
     <cacheLifetime>2400</cacheLifetime>
 

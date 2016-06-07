@@ -47,7 +47,8 @@
                 <environment type="prod">
                     <urls>
                         <url>www.embassyplaza.com/{localization}</url>
-                        <url>new.plazaantique.ca/{localization}</url>
+                        <url>www.embassyplaza.con/{localization}</url>
+                        <url>new.embassyplaza.com/{localization}</url>
                         <url>ep-pmg.echo.mx/{localization}</url>
                     </urls>
                 </environment>

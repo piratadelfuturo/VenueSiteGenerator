@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webspace xmlns="http://schemas.sulu.io/webspace/webspace"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/webspace/webspace http://schemas.sulu.io/webspace/webspace-1.0.xsd">
+
+    <name>www.challengerpiazza.com</name>
+    <key>www_challengerpiazza_com</key>
+
+    <localizations>
+        <localization language="en" default="true"/>
+        <localization language="fr"/>
+    </localizations>
+
+    <theme>
+        <key>pmg_social</key>
+        <default-templates>
+            <default-template type="homepage">homepage</default-template>
+            <default-template type="page">complex</default-template>
+        </default-templates>
+
+        <error-templates>
+            <error-template default="true">ClientWebsiteBundle:views:error.html.twig</error-template>
+            <error-template code="404">ClientWebsiteBundle:views:error404.html.twig</error-template>
+        </error-templates>
+    </theme>
+
+    <navigation>
+        <contexts>
+            <context key="main">
+                <meta>
+                    <title lang="fr">Principalnavigation</title>
+                    <title lang="en">Main navigation</title>
+                </meta>
+            </context>
+        </contexts>
+    </navigation>
+
+    <portals>
+        <portal>
+            <name>www.challengerpiazza.com</name>
+            <key>www_challengerpiazza_com</key>
+            <resource-locator>
+                <strategy>tree</strategy>
+            </resource-locator>
+
+            <environments>
+                <environment type="prod">
+                    <urls>
+                        <url>www.challengerpiazza.com/{localization}</url>
+                        <url>new.plazaantique.ca/{localization}</url>
+                        <url>cp-pmg.echo.mx/{localization}</url>
+                    </urls>
+                </environment>
+                <environment type="stage">
+                    <urls>
+                        <url>www.challengerpiaza.dev/{localization}</url>
+                        <url>www-cp-pmg.echo.mx/{localization}</url>
+                    </urls>
+                </environment>
+                <environment type="dev">
+                    <urls>
+                        <url>challengerpiaza.dev/{localization}</url>
+                        <url>dev-cp-pmg.echo.mx/{localization}</url>
+                    </urls>
+                </environment>
+            </environments>
+        </portal>
+    </portals>
+</webspace>

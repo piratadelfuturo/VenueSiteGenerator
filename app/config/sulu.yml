@@ -101,6 +101,8 @@ sulu_core:
                 snippet: "\\Sulu\\Component\\Content\\Compat\\Structure\\SnippetBridge"
 
 sulu_media:
+    format_cache:
+        path: %kernel.root_dir%/../web/uploads/media
     search:
         enabled: true
 

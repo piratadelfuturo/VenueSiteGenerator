@@ -47,7 +47,8 @@
                 <environment type="prod">
                     <urls>
                         <url>www.la-plaza.ca/{localization}</url>
-                        <url>new.plazaantique.ca/{localization}</url>
+                        <url>www.la-plaza.con/{localization}</url>
+                        <url>new.la-plaza.ca/{localization}</url>
                         <url>lp-pmg.echo.mx/{localization}</url>
                     </urls>
                 </environment>

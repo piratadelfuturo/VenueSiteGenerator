@@ -47,6 +47,7 @@
                 <environment type="prod">
                     <urls>
                         <url>www.plazagardeninn.com/{localization}</url>
+                        <url>www.plazagardeninn.con/{localization}</url>
                         <url>new.plazagardeninn.com/{localization}</url>
                         <url>pg-pmg.echo.mx/{localization}</url>
                     </urls>

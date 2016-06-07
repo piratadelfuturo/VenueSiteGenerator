@@ -47,6 +47,7 @@
                 <environment type="prod">
                     <urls>
                         <url>www.plazauniversel.com/{localization}</url>
+                        <url>www.plazauniversel.con/{localization}</url>
                         <url>new.plazauniversel.com/{localization}</url>
                         <url>pv-pmg.echo.mx/{localization}</url>
                     </urls>

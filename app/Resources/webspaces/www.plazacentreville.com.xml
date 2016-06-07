@@ -47,6 +47,7 @@
                 <environment type="prod">
                     <urls>
                         <url>www.plazacentreville.com/{localization}</url>
+                        <url>www.plazacentreville.con/{localization}</url>
                         <url>new.plazacentreville.com/{localization}</url>
                         <url>pc-pmg.echo.mx/{localization}</url>
                     </urls>

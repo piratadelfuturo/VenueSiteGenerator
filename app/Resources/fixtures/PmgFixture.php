@@ -4,7 +4,7 @@ use Sulu\Bundle\DocumentManagerBundle\DataFixtures\DocumentFixtureInterface;
 use Sulu\Component\Content\Document\WorkflowStage;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Sulu\Bundle\ContentBundle\Document\HomeDocument;
+use Symfony\Component\Yaml\Yaml;
 
 /**
  * Description of PmgFixture
@@ -16,7 +16,7 @@ class PmgFixture implements DocumentFixtureInterface, ContainerAwareInterface{
     private $container;
     
     private $documentManager;
-    
+        
     public function getLocales(){
         
         return ['en','fr'];
@@ -38,12 +38,16 @@ class PmgFixture implements DocumentFixtureInterface, ContainerAwareInterface{
     
     public function load(DocumentManager $documentManager)
     {
+        $directoryPath = $this->container->getParameter('kernel.root_dir');        
+        $value = Yaml::parse(file_get_contents($directoryPath.'/Resources/fixtures/Data/content.yml'));
+        
         $locales = $this->getLocales();
         $homeDocuments = array();
         $webspaceManager = $this->container->get('sulu_core.webspace.webspace_manager');
         $this->documentManager = $documentManager;
         $webspaces = $webspaceManager->getWebspaceCollection();
         foreach($webspaces as $webspace){
+            echo $webspace->getKey()."\n";
             $webspaceKey = $webspace->getKey();
             $homeDocuments[$webspaceKey] = $this->populateHomeDocument(
                     $webspaceKey,
