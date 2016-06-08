@@ -128,6 +128,17 @@
                         <title lang="en">Halls</title>
                     </meta>
                 </property>
+                <property name="location" type="snippet">
+                    <meta>
+                        <title lang="fr">Location</title>
+                        <title lang="en">Location</title>
+                    </meta>
+
+                    <params>
+                        <param name="snippetType" value="location"/>
+                    </params>
+                </property>
+
             </properties>
         </section>
     </properties>

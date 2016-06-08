@@ -55,9 +55,8 @@
             <properties>
                 <block name="block"
                        default-type="only_text"
-                       minOccurs="2"
-                       maxOccurs="10"
-                       mandatory="true">
+                       minOccurs="0"
+                       mandatory="false">
                     <meta>
                         <title lang="fr">Block</title>
                         <title lang="en">Block</title>
