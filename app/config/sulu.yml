@@ -101,7 +101,7 @@ sulu_core:
 
 sulu_media:
     format_cache:
-        path: %external.web_dir%
+        path: "%external.web_dir%/uploads/media"
     search:
         enabled: true
 
