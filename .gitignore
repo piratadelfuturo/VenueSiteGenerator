@@ -20,6 +20,10 @@
 /web/css
 /web/js
 /web/uploads/media/*
+/public_html/bundles/
+/public_html/css
+/public_html/js
+/public_html/uploads/media/*
 !.htaccess
 
 # IDEs

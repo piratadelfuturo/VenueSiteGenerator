@@ -5,7 +5,6 @@ framework:
     translator: { fallback: "%locale%" }
 
 assetic:
-    write_to: "%kernel.root_dir%/../web"
     filters:
         cssrewrite:
             apply_to: "\\.(css)$"
@@ -102,7 +101,7 @@ sulu_core:
 
 sulu_media:
     format_cache:
-        path: %kernel.root_dir%/../web/uploads/media
+        path: %external.web_dir%
     search:
         enabled: true
 

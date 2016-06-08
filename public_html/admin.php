@@ -15,7 +15,8 @@ use Symfony\Component\HttpFoundation\Request;
 
 //define project external folder
 defined('EXTERNAL_PATH') || define('EXTERNAL_PATH', getenv('EXTERNAL_PATH') ?: false);
-defined('EXTERNAL_PATH_DIR') || define('EXTERNAL_PATH_DIR', EXTERNAL_PATH !== false ? '/../'.EXTERNAL_PATH.'/web/' : '');
+defined('EXTERNAL_APP_DIR') || define('EXTERNAL_APP_DIR', EXTERNAL_PATH !== false ? '/../'.EXTERNAL_PATH : '');
+defined('EXTERNAL_WEB_DIR') || define('EXTERNAL_WEB_DIR', getenv('DOCUMENT_ROOT') ?: __DIR__ );
 
 // Define application environment
 defined('SYMFONY_ENV') || define('SYMFONY_ENV', getenv('SYMFONY_ENV') ?: 'prod');
@@ -24,7 +25,7 @@ defined('SYMFONY_DEBUG') ||
     define('SYMFONY_DEBUG', filter_var(getenv('SYMFONY_DEBUG') ?: SYMFONY_ENV === 'dev', FILTER_VALIDATE_BOOLEAN));
 
 // maintenance mode
-$maintenanceFilePath = __DIR__ . EXTERNAL_PATH_DIR . '/../app/maintenance.php';
+$maintenanceFilePath = __DIR__ . EXTERNAL_APP_DIR . '/../app/maintenance.php';
 if (SULU_MAINTENANCE && file_exists($maintenanceFilePath)) {
     // show maintenance mode and exit if no allowed IP is met
     if (require $maintenanceFilePath) {
@@ -32,8 +33,8 @@ if (SULU_MAINTENANCE && file_exists($maintenanceFilePath)) {
     }
 }
 
-$loader = require __DIR__ . EXTERNAL_PATH_DIR . '/../app/autoload.php';
-include_once __DIR__ . EXTERNAL_PATH_DIR . '/../app/bootstrap.php.cache';
+$loader = require __DIR__ . EXTERNAL_APP_DIR . '/../app/autoload.php';
+include_once __DIR__ . EXTERNAL_APP_DIR . '/../app/bootstrap.php.cache';
 
 if (SYMFONY_DEBUG) {
     Debug::enable();
@@ -49,7 +50,7 @@ $loader->unregister();
 $apcLoader->register(true);
 */
 
-require_once __DIR__ . EXTERNAL_PATH_DIR . '/../app/AdminKernel.php';
+require_once __DIR__ . EXTERNAL_APP_DIR . '/../app/AdminKernel.php';
 
 $kernel = new AdminKernel(SYMFONY_ENV, SYMFONY_DEBUG);
 $kernel->loadClassCache();

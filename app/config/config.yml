@@ -1,4 +1,5 @@
 imports:
+    - { resource: parameters.php }
     - { resource: parameters.yml }
     - { resource: services.yml }
     - { resource: sulu.yml }
@@ -40,6 +41,8 @@ twig:
 
 # Assetic Configuration
 assetic:
+    read_from: "%external.web_dir%"
+    write_to:  "%external.web_dir%"
     debug:          "%kernel.debug%"
     use_controller: false
     bundles:        [ ]
