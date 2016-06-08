@@ -7,8 +7,8 @@
     <key>www_plazacentreville_com</key>
 
     <localizations>
-        <localization language="en" default="true"/>
-        <localization language="fr"/>
+        <localization language="en" />
+        <localization language="fr" default="true"/>
     </localizations>
 
     <theme>

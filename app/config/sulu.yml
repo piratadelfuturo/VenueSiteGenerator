@@ -69,7 +69,7 @@ sulu_core:
         en: English
         fr: Français
     fallback_locale: 'en'
-    translations: ['de', 'en', 'fr']
+    translations: [ 'en', 'fr', 'de']
     phpcr:
         backend:    "%phpcr_backend%"
         workspace:  "%phpcr_workspace%"
