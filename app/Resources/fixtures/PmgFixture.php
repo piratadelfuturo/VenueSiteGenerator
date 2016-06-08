@@ -146,7 +146,6 @@ class PmgFixture implements DocumentFixtureInterface, ContainerAwareInterface{
                     $parentDocument->getWebspaceName(),
                     $locale
                 );
-                $pathName = $resource['resourceLocator'];
                 $document->setParent($parentDocument);
                 $document->setResourceSegment($resource['resourceLocator']);
                 $options['parent_path'] = $parentDocument->getPath();
