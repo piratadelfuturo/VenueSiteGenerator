@@ -1,0 +1,8 @@
+pmg_social:
+    resource: "@PmgSocialBundle/Resources/config/routing.yml"
+    prefix:   /social/
+
+# nviba_deployment:
+#    resource: "@NvibaDeploymentBundle/Resources/config/routing.yml"
+#    prefix:   /
+

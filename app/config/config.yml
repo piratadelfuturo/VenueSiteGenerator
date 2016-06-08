@@ -3,6 +3,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: services.yml }
     - { resource: sulu.yml }
+    - { resource: "@PmgSocialBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -45,7 +46,7 @@ assetic:
     write_to:  "%external.web_dir%"
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ ]
+    bundles:        [ ClientWebsiteBundle, PmgSocialBundle ]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -84,7 +85,7 @@ swiftmailer:
 # LIIP Theme Configuration
 liip_theme:
     themes: ["pmg_social","default"]
-    active_theme: 'pmg_social'
+    active_theme: "pmg_social"
     load_controllers: false
     assetic_integration: true
             

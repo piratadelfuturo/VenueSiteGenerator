@@ -1,0 +1,3 @@
+pmg_social_homepage:
+    path:     /
+    defaults: { _controller: PmgSocialBundle:Default:index }

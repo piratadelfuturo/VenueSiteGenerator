@@ -1,0 +1,3 @@
+nviba_deployment_homepage:
+    path:     /
+    defaults: { _controller: NvibaDeploymentBundle:Default:index }

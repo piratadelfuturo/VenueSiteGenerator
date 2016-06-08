@@ -1,0 +1,100 @@
+{% extends "PmgSocialBundle:views:master.html.twig" %}
+
+{% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
+
+{% block content %} 
+<div class="banner-section">
+    <div class="banner-img menu-bannerimg">
+        {% if content.header_images %}
+        <img src="{{ asset(content.header_images[0].url)}}" alt="" />
+        {% else %}
+        <img src="{{ asset('bundles/clientwebsite/pmg_social/default/images/halls-detail-img.jpg')}}" alt="" />
+        {% endif %}
+    </div>
+  </div>
+  <div class="halls-information-section">
+    <div class="container">
+      <h2>{{ content.title }}</h2>
+      <p> {{ content.description }}</p>
+    </div>
+  </div>
+  <div class="dimension-section">
+    <div class="page-heading">
+      <h2> {% trans %}Dimensions & Capacity {% endtrans %}</h2>
+    </div>
+    <div class="dimension-content-box">
+      <div class="table-responsive">
+        <table>
+            <thead>
+          	<tr>
+                    <th>{% trans %}Hall{% endtrans %}</th>
+                    <th>{% trans %}Dimensions (ft){% endtrans %}</th>
+                    <th>{% trans %}Sq. Feet{% endtrans %}</th>
+                    <th>{% trans %}Height (ft){% endtrans %}</th>
+                    <th>{% trans %}Reception/Cocktail{% endtrans %}</th>
+                    <th>{% trans %}Banquet{% endtrans %}</th>
+                    <th>{% trans %}Theater/Classroom{% endtrans %}</th>
+                  </tr>
+            </thead>
+          <tbody>
+              {%for row in content.rows %}
+            <tr>
+              <td>{{row.hall}}</td>
+              <td>{{row.dimensions}}</td>
+              <td>{{row.sq_feet}}</td>
+              <td>{{row.height}}</td>
+              <td>{{row.reception}}</td>
+              <td>{{row.banquet}}</td>
+              <td>{{row.theater}}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="halls-stup-section">
+    <div class="setup-content">
+      <div class="page-heading">
+        <h2>{% trans %}Hall Setup{% endtrans %}</h2>
+      </div>
+      <div class="setup-info-box">
+          {% if content.hall_setup %}
+           <img src="{{ asset(content.hall_setup[0].url)}}" alt="" />
+          {% else%}
+          <img src="{{ asset('bundles/clientwebsite/pmg_social/default/images/setup-img.jpg')}}" alt="" />
+          {% endif %}
+      </div>
+      {% set download_link = '' %}
+      {% if content.download_info[0] %}
+      {% set download_link = asset(content.download_info[0].url) %}
+      {% endif %}
+      <div class="download-btn"> <a href="{{ download_link }}" target="_blank">
+              {% trans %}Download the complete hall info{% endtrans %}
+          </a> </div>
+    </div>
+  </div>
+{% endblock %}
+{% block footer %}
+  <div class="gallery-section last-section">
+    <div class="page-heading">
+      <h2>Gallery</h2>
+    </div>
+    <div class="gallery-list-section">
+      <div class="row">
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/clientwebsite/pmg_social/default/images/gallery-1.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/clientwebsite/pmg_social/default/images/gallery-1.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/clientwebsite/pmg_social/default/images/gallery-2.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/clientwebsite/pmg_social/default/images/gallery-2.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/clientwebsite/pmg_social/default/images/gallery-3.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/clientwebsite/pmg_social/default/images/gallery-3.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/clientwebsite/pmg_social/default/images/gallery-4.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/clientwebsite/pmg_social/default/images/gallery-4.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/clientwebsite/pmg_social/default/images/gallery-5.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/clientwebsite/pmg_social/default/images/gallery-5.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/clientwebsite/pmg_social/default/images/gallery-6.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/clientwebsite/pmg_social/default/images/gallery-6.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/clientwebsite/pmg_social/default/images/gallery-7.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/clientwebsite/pmg_social/default/images/gallery-7.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/clientwebsite/pmg_social/default/images/gallery-8.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/clientwebsite/pmg_social/default/images/gallery-8.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/clientwebsite/pmg_social/default/images/gallery-9.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/clientwebsite/pmg_social/default/images/gallery-9.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/clientwebsite/pmg_social/default/images/gallery-10.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/clientwebsite/pmg_social/default/images/gallery-10.jpg')}}" alt="" /> </a> </div>
+      </div>
+    </div>
+  </div>
+  <div class="push"></div>
+{% endblock %}
+

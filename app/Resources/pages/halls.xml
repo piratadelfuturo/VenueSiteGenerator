@@ -5,7 +5,7 @@
 
     <key>halls</key>
 
-    <view>ClientWebsiteBundle:templates:halls</view>
+    <view>PmgSocialBundle:templates:halls</view>
     <controller>SuluWebsiteBundle:Default:index</controller>
     <cacheLifetime>2400</cacheLifetime>
 
