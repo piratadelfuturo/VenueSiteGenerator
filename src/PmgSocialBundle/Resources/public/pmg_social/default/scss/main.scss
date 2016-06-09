@@ -257,6 +257,7 @@ header{
 	text-align:right;
 	float:right;
 	clear:both;
+        text-transform: uppercase;
 	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
 	  float:left;
 	}
@@ -1666,9 +1667,9 @@ footer{
 				img{width:100%;}
 			}
 			.halls-list-info{
-				background:$halls-info-content;  overflow:hidden; position:relative; min-height:130px;
+				background:$halls-info-content;  overflow:hidden; position:relative; height:130px;
 				@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
-					min-height:150px;
+					height:150px;
 				}
 				.halls-content{
 					float:left; width:80%; padding:10px 15px;
@@ -2306,39 +2307,40 @@ img{max-width:100%;}
 	
 }
 
-.navbar{
-    .navbar-default{
-        text-transform: uppercase;
-    }
-}
 
-$www-plazagardeninn-com-site-color: #a40000;
+$www_plazagardeninn_com_site-color: #a40000;
 
-$www-challengerpiazza-com-color:    #004ee9;
+$www_challengerpiazza_com-color:    #004ee9;
 
-$www-plazavolare-com-color:         #ce1b45;
+$www_plazavolare_com-color:         #ce1b45;
 
-$www-la-plaza-com-color:            #de5bea;
+$www_la_plaza_com-color:            #de5bea;
 
-$www-plazaantique-com-color:        #ff5a00;
+$www_plazaantique_com-color:        #ff5a00;
 
-$www-embassyplaza-com-color:        #00e4ff;
+$www_embassyplaza_com-color:        #00e4ff;
 
-$www-plazacentreville-com-color:    #329996;
+$www_plazacentreville_com-color:    #329996;
 
-$www-plazagardeninn-com-color:      #a40000;
+$www_plazagardeninn_com-color:      #a40000;
 
+$venues-list: www_plazagardeninn_com www_challengerpiazza_com www_plazavolare_com www_la-plaza_com www_la-plaza_com www_plazaantique_com www_embassyplaza_com www_plazacentreville_com
 
 .www_plazagardeninn_com_site{
     .testimonial-section{
         background: $www-plazagardeninn-com-site-color;        
     }
     
+
+    .over-menu-section .check-menu-btn a:hover {
+        background: $www-plazagardeninn-com-site-color;
+    }
+    
 }
 
 .www_challengerpiazza_com_site{
     .testimonial-section{
-        background: $www-plazagardeninn-com-site-color;        
+        background: $www-challengerpiazza-site-color;        
     }    
 }
 
