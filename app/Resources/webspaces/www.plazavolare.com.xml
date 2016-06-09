@@ -61,8 +61,8 @@
                 </environment>
                 <environment type="dev">
                     <urls>
-                        <url>plazavolare.dev/{localization}</url>
                         <url>dev-pv-pmg.echo.mx/{localization}</url>
+                        <url>plazavolare.dev/{localization}</url>
                     </urls>
                 </environment>
             </environments>

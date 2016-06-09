@@ -6,13 +6,9 @@
   <div class="banner-section" vocab="http://schema.org/" typeof="Content">
     <div class="banner-img">
         {% if content.slides %}
-            {% block scripts %}
-            
-            
-            {% endblock %}
             <img src="{{ asset(content.slides[0].url) }}" alt="" />
         {% else %}
-        <img src="{{ asset('bundles/clientwebsite/pmg_social/default/images/banner-img.jpg') }}" alt="" />
+        <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/banner-img.jpg') }}" alt="" />
         {% endif %}
     </div>
     <div class="main-info">
@@ -39,7 +35,7 @@
         <span class="musical-text">{% trans %}Musical Evenings{% endtrans %}</span> </div>
   </div>
   <div class="over-menu-section">
-    <div class="menu-img"><img src="{{ asset('bundles/clientwebsite/pmg_social/default/images/menu-img.jpg') }}" alt="" /></div>
+    <div class="menu-img"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/menu-img.jpg') }}" alt="" /></div>
     <div class="check-menu-btn">
         <a href="">{% trans %}Check out our menus{% endtrans %}</a>
     </div>
@@ -56,71 +52,119 @@
       </div>
     </div>
   </div>
-  <div class="halls-section">
+  <div class="halls-section homebanner">
     <div class="row">
       <div class="col-sm-9 halls-title-right">
-        <div class="halls-title-img"> <img src="{{ asset('bundles/clientwebsite/pmg_social/default/images/halls-title-img.jpg') }}" alt="" />
-          <h2>{% trans %}Our Halls{% endtrans %}</h2>
+        <div class="halls-title-img"> <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/halls-title-img.jpg') }}" alt="" />
+          <h2>Our Halls</h2>
         </div>
       </div>
-      
-    <div class="col-sm-3 halls-menu-left">
-        <div class="halls-menu-section">
-          {% if content.pages %}
-              {% for page in content.pages %}
-                <div class="halss-menu-box box-{{ loop.index }}">
-                    <a href="javascript:void(0)">{{ page.title }}</a>
-                </div>
-              {% endfor %}
-          {% else %}
-          <div class="halss-menu-box box-1"> <a href="javascript:void(0)">International Room</a> </div>
-          <div class="halss-menu-box box-2"> <a href="javascript:void(0)">Madrid - Rio</a> </div>
-          <div class="halss-menu-box box-3"> <a href="javascript:void(0)">Berlin</a> </div>
-          <div class="halss-menu-box box-4"> <a href="javascript:void(0)">Oslo</a> </div>
-          <div class="halss-menu-box box-5"> <a href="javascript:void(0)">Paris - Rome</a> </div>
-          <div class="halss-menu-box box-6"> <a href="javascript:void(0)">Venise</a> </div>
-          <div class="halss-menu-box box-7"> <a href="javascript:void(0)">Connexion Lounge</a> </div>
-          <div class="halss-menu-box box-8"> <a href="javascript:void(0)">Restaurant Volare</a> </div>
-          <div class="halss-menu-box box-9"> <a href="javascript:void(0)">The Outdoor Garden</a> </div>
-          <div class="halss-menu-box box-10 "> <a href="javascript:void(0)">The Outdoor Garden</a> </div>
-          <div class="halss-menu-box box-11"> <a href="javascript:void(0)">The Outdoor Garden #2</a> </div>
-          <div class="halss-menu-box box-12"> <a href="javascript:void(0)">New York Suite</a> </div>
-          {% endif %}
+      <div class="col-sm-3 halls-menu-left">
+        <div class="halls-menu-section venue_set_ctn">
+          <div class="halss-menu-box venue_ctn box-1" data-venue="international-room"> <a href="javascript:void(0)">International Room</a> </div>
+          <div class="halss-menu-box venue_ctn box-2" data-venue="madriad-rio"> <a href="javascript:void(0)">Madrid - Rio</a> </div>
+          <div class="halss-menu-box venue_ctn box-3" data-venue="berlin"> <a href="javascript:void(0)">Berlin</a> </div>
+          <div class="halss-menu-box venue_ctn box-4" data-venue="oslo"> <a href="javascript:void(0)">Oslo</a> </div>
+          <div class="halss-menu-box venue_ctn box-5" data-venue="paris-rome"> <a href="javascript:void(0)">Paris - Rome</a> </div>
+          <div class="halss-menu-box venue_ctn box-6" data-venue="venise"> <a href="javascript:void(0)">Venise</a> </div>
+          <div class="halss-menu-box venue_ctn box-7" data-venue="connexion-lounge"> <a href="javascript:void(0)">Connexion Lounge</a> </div>
+          <div class="halss-menu-box venue_ctn box-8" data-venue="restaurant-volare"> <a href="javascript:void(0)">Restaurant Volare</a> </div>
+          <div class="halss-menu-box venue_ctn box-9" data-venue="outdoor-garden"> <a href="javascript:void(0)">The Outdoor Garden</a> </div>
+          <div class="halss-menu-box venue_ctn box-11" data-venue="outdoor-garden-2"> <a href="javascript:void(0)">The Outdoor Garden #2</a> </div>
+          <div class="halss-menu-box venue_ctn box-10" data-venue="the-tent"> <a href="javascript:void(0)">The Tent</a> </div>
+          <div class="halss-menu-box venue_ctn box-12" data-venue="new-york-suite"> <a href="javascript:void(0)">New York Suite</a> </div>
         </div>
       </div>
     </div>
-    {% if content.pages %}
-        {% for page in content.pages%}
-            {% set pageContent = sulu_content_load(page.uuid) %}
-            <div class="show-hide-box" id="showbox-{{loop.index}}">
-                <div class="close-btn">&times;</div>
-                <div class="show-img">
-                    {% if pageContent.header_images %}
-                        <img src="{{ asset(pageContent.header_images[0].thumbnails['200x200'])}}" alt="" />
-                    {% else %}
-                        <img src="{{ asset('bundles/clientwebsite/pmg_social/default/images/show-box-1.jpg') }}" alt="" />
-                    {% endif %}
-                </div>
-                <div class="halls-show-content">
-                  <div class="halls-info">
-                    <p> {{ pageContent.description }}</p>
-                  </div>
-                </div>
-              </div>
-        {% endfor %}
-    {% else %}
-    <div class="show-hide-box" id="showbox-1">
+    <!-- <div class="show-hide-box" id="showbox-1">
       <div class="close-btn">&times;</div>
-      <div class="show-img"> <img src="{{ asset('bundles/clientwebsite/pmg_social/default/images/show-box-1.jpg') }}" alt="" /> </div>
+      <div class="show-img"> <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/show-box-1.jpg') }}" alt="" /> </div>
       <div class="halls-show-content">
         <div class="halls-info">
           <p> One of the largest halls in the Greater Montreal area, it can easily accommodate 2,000 attendees for events, meetings, conventions and exhibits. With the ability to divide into 4 different sections, this flexible space can easily meet the needs of a variety of simultaneous functions. The uniqueness of the International room is complemented by a 4 seasons 3600 square feet tent, with a 20 foot ceiling, giving your event an exotic environment. </p>
         </div>
       </div>
-    </div>
-    {% endif %}
+    </div> -->
+    
+    <div class="overlay_ctn">
+        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/international-room-img.jpg') }} );" class="venue_banner international-room" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/international-room-img.jpg') }}">
+          <div class="line_ctn">
+            <p>One of the largest halls in the Greater Montreal area, it can easily accommodate 2,000 attendees for events, meetings, conventions and exhibits. With the ability to divide into 4 different sections, this flexible space can easily meet the needs of a variety of simultaneous functions. The uniqueness of the International room is complemented by a 4 seasons 3600 square feet tent, with a 20 foot ceiling, giving your event an exotic environment.</p>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/madriad-rio-img.jpg') }} );" class="venue_banner madriad-rio" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/madriad-rio-img.jpg') }}">
+          <div class="line_ctn">
+            <p>The combined rooms cans host smaller groups of 50 to 60 people and be separated for more intimate events. The total space is 2080 square feet.</p>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/berlin-img.jpg') }} );" class="venue_banner berlin" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/berlin-img.jpg') }}">
+          <div class="line_ctn">
+            <p>Each of these rooms cans host between 50 to 70 people. They offer an elegant setting for cocktails and receptions. These rooms are also ideally suited for additional planner office space or a speaker-ready room. </p>
+            <div class="line"></div>
+          </div>
+        </div>
+        
+        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/oslo-img.jpg') }} );" class="venue_banner oslo" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/oslo-img.jpg') }}">
+          <div class="line_ctn">
+            <p>Each of these rooms cans host between 50 to 70 people. They offer an elegant setting for cocktails and receptions. These rooms are also ideally suited for additional planner office space or a speaker-ready room. </p>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/paris-rome-img.jpg') }} );" class="venue_banner paris-rome" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/paris-rome-img.jpg') }}">
+          <div class="line_ctn">
+            <p>The Paris - Rome Ballroom features 3100 square feet of flexible meeting space that can break down into two sections or be used for exhibitions. This ballroom is accompanied by a 2000 square foot foyer for pre-function events, and is conveniently located adjacent to the new exhibit hall. </p>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/venise-img.jpg') }} );" class="venue_banner venise" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/venise-img.jpg') }}">
+          <div class="line_ctn">
+            <p>For groups between 120 and 150 the Venise room features 2380 square feet with 12" ceiling and offers maximum flexibility.</p>
+            <div class="line"></div>
+          </div>
+        </div>
+        
+        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/connexion-lounge-img.jpg') }} );" class="venue_banner connexion-lounge" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/connexion-lounge-img.jpg') }}">
+          <div class="line_ctn">
+            <p>A relaxing area with full bar service. Television and Pool room</p>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/restaurant-volare-img.jpg') }} );" class="venue_banner restaurant-volare" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/restaurant-volare-img.jpg') }}">
+          <div class="line_ctn">
+            <p>Open for breakfast lunch and diner. Can also be used for pre function cocktails and banquet hall. </p>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/outdoor-garden-img.jpg') }} );" class="venue_banner outdoor-garden" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/outdoor-garden-img.jpg') }}">
+          <div class="line_ctn">
+            <p>During the summer extend your event to our garden area. </p>
+            <div class="line"></div>
+          </div>
+        </div>
+        
+        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/outdoor-garden-2-img.jpg') }} );" class="venue_banner outdoor-garden-2" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/outdoor-garden-2-img.jpg') }}">
+          <div class="line_ctn">
+            <p>During the summer extend your event to our garden area. </p>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/the-tent-img.jpg') }} );" class="venue_banner the-tent" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/the-tent-img.jpg') }}">
+          <div class="line_ctn">
+            <p>It’s just a tent where you can have parties!</p>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/new-york-suite-img.jpg') }} );" class="venue_banner new-york-suite" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/new-york-suite-img.jpg') }}">
+          <div class="line_ctn">
+            <p>or executives and board meetings. This room provides 15 high-black leather chairs around a 12 foot table. </p>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
   </div>
-  <div class="contact-map-section">
+ <div class="contact-map-section">
     <div class="map-part">
       <div id="googleMap" class="map-google"></div>
     </div>
@@ -136,4 +180,48 @@
       </div>
     </div>
   </div>
+  <div class="push"></div>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    <script>
+    function initialize()
+{
+  var mapProp = {
+    center: new google.maps.LatLng(45.4843521,-73.6943357),
+	
+    zoom:17,
+    panControl:false,
+    zoomControl:false,
+    mapTypeControl:false,
+    scaleControl:false,
+    streetViewControl:false,
+    overviewMapControl:false,
+    rotateControl:false,    
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<script>
+	$(function(){
+		var venue, bannerimg;
+		$('[data-imgsrc]').each(function(i, obj) {
+		    bannerimg = $(this).data('imgsrc');
+		    $(this).css('background-image', 'url("'+bannerimg+'")');
+		});
+		$('[data-venue]').hover(function(){
+			venue = $(this).data('venue');
+			$('.venue_ctn').addClass('inactive');
+			$(this).removeClass('inactive');
+			$('.'+venue).addClass('active');
+		}, function(){
+			$('.venue_ctn').removeClass('inactive');
+			$('.'+venue).removeClass('active');
+		});
+	});
+</script> 
 {% endblock %}

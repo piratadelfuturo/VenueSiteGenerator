@@ -154,10 +154,36 @@ $custom-font-path: "../fonts/";
 
 }
 
+@font-face {
+    font-family: 'robotoitalic';
+    src: url('#{$custom-font-path}roboto-italic-webfont.eot');
+    src: url('#{$custom-font-path}roboto-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}roboto-italic-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}roboto-italic-webfont.woff') format('woff'),
+         url('#{$custom-font-path}roboto-italic-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}roboto-italic-webfont.svg#robotoitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('#{$custom-font-path}roboto-regular-webfont.eot');
+    src: url('#{$custom-font-path}roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}roboto-regular-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}roboto-regular-webfont.woff') format('woff'),
+         url('#{$custom-font-path}roboto-regular-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 h1,h2,h3,h4,h5,h6{margin:0 0 20px 0; padding:0; font-family: 'playfair_displayregular'; color:$white;}
-h1{font-size:50px;}
-h2{font-size:42px;}
-h3{font-size:36px;}
+h1{font-size:60px;}
+h2{font-size:44px;}
+h3{font-size:30px;}
 h4{font-size:24px;}
 h5{font-size:18px;}
 h6{font-size:16px;}
@@ -165,13 +191,15 @@ h6{font-size:16px;}
 a{color:$pink-color;
 	&:hover{color:$black;}
 }
-.page-wrapper{max-width:1200px; margin:0 auto; overflow:hidden;}
+.page-wrapper{ overflow:hidden;}
 
 header{
-	padding:30px 30px;
+	padding:30px 50px;
 	position:relative;background:$black;
 	
-	
+	@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+		padding:10px 10px;
+	}
 	@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 	 padding:10px 10px;
 	}
@@ -204,9 +232,6 @@ header{
 			@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
 			  max-width:250px;
 			}
-			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-			   max-width:250px;
-			}
 			@media (max-width: $iphone-to-ipad) {
 			  max-width:250px; 
 			}
@@ -224,9 +249,6 @@ header{
 	
 }
 .header-right-part{
-	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-		margin-top:5px;	  
-	}
 	@media (max-width: $iphone-to-ipad) {
 	  clear:both;
 	}
@@ -235,21 +257,16 @@ header{
 	text-align:right;
 	float:right;
 	clear:both;
-        text-transform: uppercase;
 	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-	  float:left; text-align:left;
+	  float:left;
 	}
 	@media (max-width: $iphone-to-ipad) {
-	  width:auto; text-align:left; clear:none; float:none; 
+	  width:auto; text-align:left; clear:none; float:none;
 	}
-	
-	
 	
 }
 .top-right{float:right;  margin-bottom:5px;
-	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-	 
-	}
+	
 	@media (max-width: $iphone-to-ipad) {
 		float:left; margin-top:10px;
 	}
@@ -263,9 +280,6 @@ header{
 	span{border-left:1px solid $white; padding-left:15px; display:inline-block; }
 }
 .social-media{margin-top:40px;
-	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-	  margin-top:10px; 
-	}
 	@media (max-width: $iphone-to-ipad) {
 	 	margin-top:10px; 
 	}
@@ -279,7 +293,12 @@ header{
 	&:hover{opacity:0.7;}
 	}
 	
-	
+	@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+		
+	}
+	@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+	 
+	}
 	@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
 	 margin-top:20px;
 	}
@@ -300,7 +319,17 @@ header{
 	
 	.banner-img{
 		position:relative;  top:-150px; margin-bottom:-150px;
-
+		img{width:100%;}
+		
+		@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+		  top:-80px; margin-bottom:-80px;
+		}
+		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+		  top:-50px; margin-bottom:-50px;
+		}
+		@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+		 top:-50px; margin-bottom:-50px;
+		}
 		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
 		  top:0px; margin-bottom:0px;
 		}
@@ -309,27 +338,56 @@ header{
 		  top:0px; margin-bottom:0px;
 		}
 		
-		&:after{background:url($header-bg) no-repeat left top; content:""; position:absolute;  z-index:1; left:0px; width:100%; height:171px;
-		
-		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-		   content:none;
-		}
-		@media (max-width: $iphone-to-ipad) {
-		  content:none;
-		}
-		@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
-		  
-		}
-		@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-		  
-		}
+		&:after{background:url($header-bg) no-repeat left top;  content:""; position:absolute;  z-index:1; left:0px; top:0; width:100%; height:100%; background-size:100% auto;
+			@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+	  
+			}
+	
+			@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+			 
+			}
+			@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+			 
+			}
+			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+			   content:none;
+			}
+			@media (max-width: $iphone-to-ipad) {
+			  content:none;
+			}
+			@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+			  
+			}
+			@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+			  
+			}
 			
+		}
+		
+		
+		iframe{width:100%; height:685px; pointer-events:none; border:none;
+			@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+			 	height:600px;
+			}
+			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+			   height:520px;
+			}
+			@media (max-width: $iphone-to-ipad) {
+				height:420px;
+			  
+			}
+			@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+				height:350px;
+			}
+			@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+				height:300px;
+			}
 		}
 	}
 }
 
 
-.main-info{padding:15px 0px 15px 30px; background:$light-dark-black;
+.main-info{padding:15px 0px 15px 50px; background:$light-dark-black;
 	
 	
 	@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
@@ -342,15 +400,17 @@ header{
 		  padding:15px 15px 0;
 		}
 	 
-	h2{color:$pink-color; font-family: 'playfair_displaybold'; font-size:48px; text-transform:uppercase; margin-top:20px;
+	h2{color:$pink-color; font-family: 'playfair_displaybold'; font-size:60px; text-transform:uppercase; margin-top:20px;
 		
-		
+		@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+  
+		}
 
 		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
-		 
+		  font-size:50px; 
 		}
 		@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
-		  
+		  font-size:50px; 
 		}
 		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
 		  font-size:40px; 
@@ -365,9 +425,11 @@ header{
 		  font-size:20px; 
 		}
 	}
-	p{font-size:18px; color:$light-text-color; max-width:82%;
+	p{font-size:24px; color:$light-text-color;
 	
-		
+		@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+  			font-size:20px; max-width:80%;
+		}
 
 		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 		   font-size:16px; max-width:80%;
@@ -376,10 +438,10 @@ header{
 		  font-size:16px;  max-width:80%;
 		}
 		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-		  font-size:16px;  max-width:100%;
+		  font-size:18px; 
 		}
 		@media (max-width: $iphone-to-ipad) {
-		 font-size:16px; max-width:100%;
+		 font-size:18px;
 		}
 		@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
 		  font-size:18px; 
@@ -399,7 +461,7 @@ header{
 	@media (max-width: $iphone-to-ipad) {
 		  background:$transparent-white; margin-top:30px;
 		}
-	&:after{background:url($right-cruve-bg) no-repeat right top; background-size:100% 100%; position:absolute; right:10px; top:-200px; content:""; width:150%; height:160%;
+	&:after{background:url($right-cruve-bg) no-repeat right top; background-size:100% 100%; position:absolute; right:10px; top:-200px; content:""; width:150%; height:150%;
 		
 		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 		   height:160%;
@@ -430,8 +492,13 @@ header{
 	 
 }
 .highlight-text-box{  
-	font-size:24px; color:$light-text-color; margin-top:20px; display:block; text-align:center;
-	
+	font-size:40px; color:$light-text-color; margin-top:20px; display:block; text-align:center;
+	@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+  		font-size:36px;
+	}
+	@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+	  font-size:30px;
+	}
 	
 	@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
 	  font-size:24px;
@@ -443,25 +510,24 @@ header{
 		  display:inline-block; width:48%; margin-top:0px; margin-bottom:20px; font-size:24px;
 		}
 		@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
-		  width:48%; font-size:20px;
+		  width:100%;
 		}
 		@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-		 width:100%; font-size:18px;
+		 width:100%;
 		}
 		
 	
 	 
 		span{
-			color:$pink-color; font-size:80px; display:block; line-height:80px;
-			
+			color:$pink-color; font-size:100px; display:block; line-height:100px;
+			@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+				font-size:80px; line-height:80px;
+			}
 			@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 			  font-size:70px; line-height:70px; 
 			}
 			@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
 			  font-size:50px; line-height:50px; 
-			}
-			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-			   font-size:50px; line-height:50px; 
 			}
 				@media (max-width: $iphone-to-ipad) {
 				  font-size:40px; line-height:40px;
@@ -469,77 +535,71 @@ header{
 		}
 }
 .service-section{ padding:50px 30px;
-	
-	@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
-	  	padding:30px 15px;
-	}
-	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-	 	padding:30px 15px;
-	}
-	
-	@media (max-width: $iphone-to-ipad) {
-		padding:30px 15px;
-	}
+
 	.service-text{max-width:1600px; margin:0 auto; text-align:center;
 		span{
-			color:$service-text-color; display:inline-block; line-height:60px;
-			&.bridal-text{font-size:36px; text-transform:uppercase; vertical-align:top; }
-			&.wedding-text{font-size:90px; text-transform:uppercase; font-family: 'open_sansextrabold';}
-			&.baptisms-text{font-size:72px; font-family: 'open_sanslight_italic'; vertical-align:top;}
-			&.anniversaries-text{font-size:100px; font-family: 'open_sanscondensed_light';}
-			&.musical-text{font-size:68px; text-transform:uppercase; font-family: 'open_sanssemibold';}
+			color:$service-text-color; display:inline-block; line-height:90px;
+			&.bridal-text{font-size:54px; text-transform:uppercase; vertical-align:top; }
+			&.wedding-text{font-size:126px; text-transform:uppercase; font-family: 'open_sansextrabold';}
+			&.baptisms-text{font-size:92px; font-family: 'open_sanslight_italic'; vertical-align:top;}
+			&.anniversaries-text{font-size:135px; font-family: 'open_sanscondensed_light';}
+			&.musical-text{font-size:99px; text-transform:uppercase; font-family: 'open_sanssemibold';}
 			
 				
-				
+				@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+					&.bridal-text{font-size:34px;}
+					&.wedding-text{font-size:86px;}
+					&.baptisms-text{font-size:82px;}
+					&.anniversaries-text{font-size:105px;}
+					&.musical-text{font-size:68px;}
+				}
 				@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 				
-					line-height:70px;
-				  &.bridal-text{font-size:24px;}
-					&.wedding-text{font-size:80px;}
-					&.baptisms-text{font-size:68px;}
-					&.anniversaries-text{font-size:90px;}
-					&.musical-text{font-size:55px;}
+					&.bridal-text{font-size:34px;}
+					&.wedding-text{font-size:86px;}
+					&.baptisms-text{font-size:82px;}
+					&.anniversaries-text{font-size:105px;}
+					&.musical-text{font-size:68px;}
 				  
 				}
 				@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
-				   line-height:70px;
-				  &.bridal-text{font-size:24px;}
-					&.wedding-text{font-size:80px;}
-					&.baptisms-text{font-size:68px;}
-					&.anniversaries-text{font-size:90px;}
-					&.musical-text{font-size:55px;}
+				  
+				  &.bridal-text{font-size:34px;}
+					&.wedding-text{font-size:86px;}
+					&.baptisms-text{font-size:82px;}
+					&.anniversaries-text{font-size:105px;}
+					&.musical-text{font-size:68px;}
 				}
 				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-				  line-height:50px;
-				  &.bridal-text{font-size:24px;}
-					&.wedding-text{font-size:60px;}
-					&.baptisms-text{font-size:40px;}
-					&.anniversaries-text{font-size:68px;}
-					&.musical-text{font-size:38px;}
+				  
+				  &.bridal-text{font-size:30px;}
+					&.wedding-text{font-size:80px;}
+					&.baptisms-text{font-size:60px;}
+					&.anniversaries-text{font-size:80px;}
+					&.musical-text{font-size:68px;}
 				}
 				@media (max-width: $iphone-to-ipad) {
-					line-height:60px;
-					&.bridal-text{font-size:20px;}
-				  	&.wedding-text{font-size:60px;}
-					&.baptisms-text{font-size:60px;}
-					&.anniversaries-text{font-size:70px;}
-					&.musical-text{font-size:40px;}
+					line-height:90px;
+				  	&.wedding-text{font-size:100px;}
+					&.baptisms-text{font-size:120px;}
+					&.anniversaries-text{font-size:100px;}
+					&.musical-text{font-size:54px;}
 				}
 				@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
-				  line-height:50px;
-					&.bridal-text{font-size:18px;}
-					&.wedding-text{font-size:42px;}
-					&.baptisms-text{font-size:48px;}
-					&.anniversaries-text{font-size:50px;}
-					&.musical-text{font-size:28px;}
+				  line-height:70px;
+					&.bridal-text{font-size:24px;}
+					&.wedding-text{font-size:48px;}
+					&.baptisms-text{font-size:65px;}
+					&.anniversaries-text{font-size:60px;}
+					&.musical-text{font-size:24px;}
 				}
 				@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-					line-height:44px;
-					&.bridal-text{font-size:18px;}
-					&.wedding-text{font-size:40px;}
-					&.baptisms-text{font-size:42px;}
-					&.anniversaries-text{font-size:50px;}
-					&.musical-text{font-size:20px;}
+					line-height:70px;
+					&.bridal-text{font-size:24px;}
+					&.wedding-text{font-size:48px;}
+					&.baptisms-text{font-size:65px;}
+					&.anniversaries-text{font-size:60px;}
+					&.musical-text{font-size:24px;}
 				
 				}
 		
@@ -552,18 +612,23 @@ header{
 	position:relative; 
 	.menu-img{
 		background:$white;
-			img{opacity:0.5;}
+			img{opacity:0.5; width:100%;}
 	}
 	.check-menu-btn{
 		position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); -moz-transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%);
 		width:100%; text-align:center;
-		a{text-decoration:none; color:$black; font-size:40px; font-family: 'playfair_displayitalic'; padding:15px 50px; display:inline-block; background:$check-menu-bg;
+		a{text-decoration:none; color:$black; font-size:62px; line-height:62px; font-family: 'playfair_displayitalic'; padding:40px 70px; display:inline-block; background:$check-menu-bg;
 			&:hover{background:$pink-color; color:$white;}
 			
 			
-			
+			@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+				  
+				}
+				@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+				  font-size:42px; line-height:42px; padding:24px 50px;
+				}
 				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-				 padding:15px 40px;
+				  font-size:42px; line-height:42px; padding:24px 50px;
 				}
 				@media (max-width: $iphone-to-ipad) {
 				  font-size:30px; line-height:30px; padding:14px 20px;
@@ -583,13 +648,13 @@ header{
 	background:$pink-color; color:$white; padding:50px 0;
 		.testimonial-title{
 			overflow:hidden; margin-bottom:30px; 
-			h2{font-size:40px; font-family: 'playfair_displaybold_italic'; float:left; width:80%; margin-bottom:0px;
+			h2{font-size:44px; font-family: 'playfair_displaybold_italic'; float:left; width:80%;
 			
 				@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
 				    width:70%; font-size:36px;
 				}
 				@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-					width:70%; font-size:30px;		 
+					width:70%; font-size:30px;		
 				}
 				@media (max-width: $iphone-to-ipad) {
 				  width:70%;
@@ -598,7 +663,7 @@ header{
 			}
 			.read-more-btn{
 				float:right; width:20%; text-align:right; margin-top:5px;
-				a{color:$black; text-decoration:none; font-family: 'open_sansitalic'; font-size:24px;
+				a{color:$black; text-decoration:none; font-family: 'open_sansitalic'; font-size:30px;
 					&:hover{color:$white;}
 					
 					@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
@@ -649,8 +714,19 @@ header{
 	 position:relative;
 	
 	
+	
+	@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+  
+	}
+	
+	@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+	  
+	}
+	@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+	 
+	}
 	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-	 padding-bottom:30px;
+	 padding-bottom:60px;
 	}
 	@media (max-width: $iphone-to-ipad) {
 	  padding-bottom:30px;
@@ -665,6 +741,14 @@ header{
 	.halls-menu-section{
 		float:right; position:relative; padding:50px 0px; left:50px; top:40px; z-index:1;
 		
+		@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
+  			top:5px;
+		}
+
+		
+		@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+  			top:20px; left:inherit; right:-100%;
+		}
 		
 		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 			top:10px; left:inherit; right:-100%;
@@ -674,10 +758,10 @@ header{
 		 top:10px; left:inherit; right:-120%;
 		}
 		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-		 float:none; position:initial;  padding:30px 0;  text-align:center;
+		 top:5px; right:inherit; left:10%; 
 		}
 		@media (max-width: $iphone-to-ipad) {
-		  float:none; position:initial;  padding:30px 0;  text-align:center;
+		  float:none;  padding:30px 0; left:0; top:0;  text-align:center;
 		}
 		@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
 		
@@ -689,7 +773,13 @@ header{
 		
 	}
 	.halls-menu-left{
-		width:15%;
+		
+		
+		
+		@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+  			width:15%;
+		}
+		
 		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 		  width:10%;
 		}
@@ -697,7 +787,7 @@ header{
 		 width:10%;
 		}
 		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-		 width:100%;
+		 width:20%;
 		}
 		@media (max-width: $iphone-to-ipad) {
 		  width:100%; clear:both;
@@ -711,7 +801,7 @@ header{
 		
 	}
 	.halss-menu-box{
-		text-align:center;  background:url($halls-menu-bg) no-repeat left top; background-size:100%; display:inline-block; width:155px; height:155px; padding:14px;  vertical-align:middle; position:absolute; cursor:pointer;
+		text-align:center;  background:url($halls-menu-bg) no-repeat left top; background-size:100%; display:inline-block; width:205px; height:205px; padding:14px;  vertical-align:middle; position:absolute; cursor:pointer;
 		
 		
 		
@@ -719,8 +809,12 @@ header{
 		&:hover,
 		&.active
 		{
-			 background:url($halls-menu-active-bg) no-repeat left top; background-size:100%;
+			 background:url($halls-menu-active-bg) no-repeat left top;
 			 
+			@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+	  			width:155px; height:155px; background-size:100%;
+			}
+			
 			@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 			  width:155px; height:155px; background-size:100%;
 			}
@@ -728,7 +822,7 @@ header{
 			  width:155px; height:155px; background-size:100%;
 			}
 			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-			 background:$pink-color;
+			 width:120px; height:120px; background-size:100%;
 			}
 			@media (max-width: $iphone-to-ipad) {
 			 background:$pink-color;
@@ -740,13 +834,23 @@ header{
 			}
 		}
 		a{
-			 font-size:14px; color:$white; font-family: 'open_sanssemibold'; text-decoration:none; display:block;  padding:10px 32px; position:absolute; left:50%; top:50%; 
+			 font-size:18px; color:$white; font-family: 'open_sanssemibold'; text-decoration:none; display:block;  padding:10px 40px; position:absolute; left:50%; top:50%; 
 			 transform:translate(-50%,-50%); -moz-transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%); width:100%;
 			
 			
+			@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+  				font-size:14px;
+			}
 			
+			@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+				font-size:14px;
+			  
+			}
+			@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+			font-size:14px; 
+			}
 			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-			 position:initial; transform:none; -moz-transform:none; -webkit-transform:none; -ms-transform:none; font-size:15px; padding:6px 12px;
+			 font-size:13px; padding:10px 20px;
 			}
 			@media (max-width: $iphone-to-ipad) {
 			 position:initial; transform:none; -moz-transform:none; -webkit-transform:none; -ms-transform:none; font-size:13px; padding:6px 6px;
@@ -759,20 +863,35 @@ header{
 			}
 			
 		}
-		&.box-1{left:0px;top:0px;}
-		&.box-2{left:-80px;top:80px;}
-		&.box-3{left:-160px;top:160px;}
-		&.box-4{left:160px;top:0px;}
-		&.box-5{left:80px;top:80px;}
-		&.box-6{left:0;top:160px;}
-		&.box-7{left:-80px;top:240px;}
-		&.box-8{left:320px;top:0px;}
-		&.box-9{left:240px;top:80px;}
-		&.box-10{left:160px;top:160px;}
-		&.box-11{left:80px;top:240px;}
-		&.box-12{left:0px;top:320px;}
 		
+		&.box-1{left:0;top:0;}
+		&.box-2{left:-110px;top:110px;}
+		&.box-3{left:-220px;top:220px;}
+		&.box-4{left:220px;top:0px;}
+		&.box-5{left:110px;top:110px;}
+		&.box-6{left:0;top:220px;}
+		&.box-7{left:-110px;top:330px;}
+		&.box-8{left:442px;top:0px;}
+		&.box-9{left:330px;top:110px;}
+		&.box-10{left:220px;top:220px;}
+		&.box-11{left:110px;top:330px;}
+		&.box-12{left:0px;top:440px;}
 		
+		@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+  			width:155px; height:155px;
+			
+			&.box-2{left:-80px;top:80px;}
+			&.box-3{left:-160px;top:160px;}
+			&.box-4{left:160px;top:0px;}
+			&.box-5{left:80px;top:80px;}
+			&.box-6{left:0;top:160px;}
+			&.box-7{left:-80px;top:240px;}
+			&.box-8{left:320px;top:0px;}
+			&.box-9{left:240px;top:80px;}
+			&.box-10{left:160px;top:160px;}
+			&.box-11{left:80px;top:240px;}
+			&.box-12{left:0px;top:320px;}
+		}
 		
 		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 			width:155px; height:155px;
@@ -806,7 +925,19 @@ header{
 			&.box-12{left:0px;top:320px;}
 		}
 		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-		 position:initial; background:$black; width:30%; height:auto; margin:5px 1%; display:inline-block;
+		 width:120px; height:120px;
+			
+			&.box-2{left:-65px;top:65px;}
+			&.box-3{left:-130px;top:130px;}
+			&.box-4{left:130px;top:0px;}
+			&.box-5{left:65px;top:65px;}
+			&.box-6{left:0;top:130px;}
+			&.box-7{left:-65px;top:195px;}
+			&.box-8{left:260px;top:0px;}
+			&.box-9{left:195px;top:65px;}
+			&.box-10{left:130px;top:130px;}
+			&.box-11{left:65px;top:195px;}
+			&.box-12{left:0px;top:260px;}
 		}
 		@media (max-width: $iphone-to-ipad) {
 		  position:initial; background:$black; width:30%; height:auto; margin:5px 1%; display:inline-block;
@@ -823,7 +954,13 @@ header{
 		
 	}
 	.halls-title-right{
-		float:right; width:85%;
+		float:right;
+		
+		
+		@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+  				width:80%;
+			}
+			
 			@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 			  width:90%;
 			}
@@ -831,7 +968,7 @@ header{
 			width:90%;
 			}
 			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-			 width:100%; float:left;
+			 width:80%;
 			}
 			@media (max-width: $iphone-to-ipad) {
 			 width:100%; float:left;
@@ -843,9 +980,13 @@ header{
 			}
 	}
 	.halls-title-img{
-		transform:skewX(-45deg) translate(355px);  -moz-transform:skewX(-45deg) translate(355px); -webkit-transform:skewX(-45deg) translate(355px); -ms-transform:skewX(-45deg) translate(355px);
+		transform:skewX(-45deg) translate(469px);  -moz-transform:skewX(-45deg) translate(469px); -webkit-transform:skewX(-45deg) translate(469px); -ms-transform:skewX(-45deg) translate(469px);
 		background:$black; overflow:hidden;
 		
+			
+			@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+  				transform:skewX(-45deg) translate(390px); -moz-transform:skewX(-45deg) translate(390px); -webkit-transform:skewX(-45deg) translate(390px); -ms-transform:skewX(-45deg) translate(390px);
+			}
 			
 			@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 			  transform:skewX(-45deg) translate(370px); -moz-transform:skewX(-45deg) translate(370px); -webkit-transform:skewX(-45deg) translate(370px); -ms-transform:skewX(-45deg) translate(370px);
@@ -854,17 +995,16 @@ header{
 				transform:skewX(-45deg) translate(400px); -moz-transform:skewX(-45deg) translate(400px); -webkit-transform:skewX(-45deg) translate(400px); -ms-transform:skewX(-45deg) translate(400px);
 			}
 			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-			 transform:none; -moz-transform:none; -webkit-transform:none; -ms-transform:none; height:220px;
+			transform:skewX(-45deg) translate(425px) scale(1.5); -moz-transform:skewX(-45deg) translate(425px) scale(1.5); -webkit-transform:skewX(-45deg) translate(425px) scale(1.5);
+			 -ms-transform:skewX(-45deg) translate(425px) scale(1.5);
 			}
 			@media (max-width: $iphone-to-ipad) {
 			 transform:none; -moz-transform:none; -webkit-transform:none; -ms-transform:none;
-			 height:200px;
 			}
 			@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
-				height:150px;
+			
 			}
 			@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-				height:150px;
 			}
 			
 			img{transform:rotate(0deg) skewX(45deg) translate(0) scale(1.6);
@@ -873,9 +1013,18 @@ header{
 				-ms-transform:rotate(0deg) skewX(45deg) translate(0) scale(1.6);
 			 	opacity:0.1;
 				
+				@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+  
+				}
 				
+				@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+				  
+				}
+				@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+					 
+				}
 				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-				 	 transform:none; -moz-transform:none; -webkit-transform:none; -ms-transform:none;
+				 	 
 				}
 				@media (max-width: $iphone-to-ipad) {
 				 	 transform:none; -moz-transform:none; -webkit-transform:none; -ms-transform:none;
@@ -887,16 +1036,25 @@ header{
 				}
 				
 			 }
-			h2{font-size:48px; color:$white; font-family: 'playfair_displayregular';  text-transform:uppercase;
+			h2{font-size:63px; color:$white; font-family: 'playfair_displayregular';  text-transform:uppercase;
 				transform:rotate(0deg) skewX(45deg) translate(-100%,-50%); position:absolute; left:50%; top:50%;
 				-moz-transform:rotate(0deg) skewX(45deg) translate(-100%,-50%); position:absolute; left:50%; top:50%;
 				-webkit-transform:rotate(0deg) skewX(45deg) translate(-100%,-50%); position:absolute; left:50%; top:50%;
 				-ms-transform:rotate(0deg) skewX(45deg) translate(-100%,-50%); position:absolute; left:50%; top:50%;
 				
 				
+				@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+  
+				}
 				
+				@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+				  
+				}
+				@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+					
+				}
 				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-				 	 transform:none; -moz-transform:none; -webkit-transform:none; -ms-transform:none;  text-align:center; width:100%; left:0; top:40%;
+				 	font-size:24px; left:35%;
 				}
 				@media (max-width: $iphone-to-ipad) {
 				 	 transform:none; -moz-transform:none; -webkit-transform:none; -ms-transform:none;  text-align:center; width:100%; left:0; top:40%;
@@ -932,18 +1090,14 @@ header{
 	position:relative;
 	
 	.map-part{
-		height:480px;
+		height:560px;
 		@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
 		  height:400px; 
 		}
 		.map-google{height:100%; width:100%; pointer-events:none;}
 	}
 	.contact-info{
-		position:absolute; top:0px; margin-top:20px; left:10%;
-		
-		@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-			left:5%;
-		}	
+		position:absolute; top:0px; margin-top:20px;
 		
 		h2{color:$black; font-family: 'playfair_displaybold_italic'; }
 		.contact-content{
@@ -954,38 +1108,72 @@ header{
 			p{font-size:16px; color:$black; font-family: 'open_sansbold'; text-transform:uppercase;
 				strong{font-weight:normal;}
 				a{text-decoration:none; color:inherit;}
-				@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-					font-size:14px;
-				}
 			}
 		}
 	}
 }
 
 footer{
-	position:relative;  margin:-150px auto 0; max-width:1200px;
-	
-	
-	.footer-top-part{background:url($footer-bg) no-repeat left top; background-size:100% auto; height:250px; width:100%; position:relative;  padding:10px 50px;
+	position:relative;  margin-top:-250px;
+	@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
+  		
+	}
+	@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+  		
+	}
+	@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+	  
+	}	
+	@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
 		
-				@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
-				  padding:10px 30px; background-size:cover;
-				}
+	}
+	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+		background:$black; margin-top:0px;
+	}
+	@media (max-width: $iphone-to-ipad) {
+		background:$black; margin-top:0px;
+		
+	}
+	&.home-footer{margin-top:-330px;
+		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+			 margin-top:0; 
+		}
+		@media (max-width: $iphone-to-ipad) {
+			margin-top:0; 
+		}
+	}
+	.footer-top-part{width:100%; position:relative;
 			
-				@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
-					padding:10px 30px; background-size:cover;
-				}
+			.footer-img{
+				img{width:100%;}
 				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-				 	 padding:10px 30px; background-size:cover;
+					 display:none;
 				}
 				@media (max-width: $iphone-to-ipad) {
-				 	padding:10px 30px; background-size:cover;
+				 display:none;
+				}
+			}
+			
+			@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+  
+				}
+				
+				@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+				  
+				}
+				@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+					
+				}
+				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+				 	 padding:30px 30px; position:initial; background:url($footer-mobile) no-repeat left top; background-size:cover;
+				}
+				@media (max-width: $iphone-to-ipad) {
+				 	padding:30px 30px; position:initial; background:url($footer-mobile) no-repeat left top; background-size:cover;
 				}
 				@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
 				
 				}
 				@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-					
 				}
 
 		
@@ -995,45 +1183,47 @@ footer{
 		max-width:1750px; margin:0 auto;
 	}
 	.footer-right{text-align:right; height:100%;
-		float:none; position:absolute; bottom:0px; right:0px;
+		float:none; position:absolute; bottom:20px; right:0px;
 			
+				@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
+					height:90%;
+				}
+				@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+  					height:80%;
+				}
 				
 				@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
-				  height:90%;
+				  height:70%;
 				}
 				@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
-					height:80%; width:100%;
+					height:60%; width:100%;
 				}
 				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-				 	 height:70%; width:100%;
+				 	 height:60%; width:100%;  position:initial; margin-top:20px;
 				}
 				@media (max-width: $iphone-to-ipad) {
-				 	height:70%; width:100%;
+				 	height:60%; width:100%;  position:initial; margin-top:20px;
 				}
 				@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
-					height:60%;
+				
 				}
 				@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
 					height:60%;
 				}
-		.social-media{margin-top:0px; position:absolute; top:50px; right:20px;
+		.social-media{margin-top:0px; position:absolute; top:80px; right:20px;
+		
+			@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+			  top:40px;
+			}
 			@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
-			  top:30px;
+			  top:0px;
 			}
-			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-				 top:30px;
-			}
+			
 			@media (max-width: $iphone-to-ipad) {
-				 	right:10px; top:30px; 
+				 	right:5px; top:90px;  position:initial; text-align:center; margin-bottom:10px; width:100%;
 				}
 			a{
 				margin-left:30px; margin-right:0px;
-				@media (max-width: $iphone-to-ipad) {
-					margin-left:10px; margin-right:0px;
-				}
-				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-					 margin-left:20px; margin-right:0px;
-				}
 				@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
 					margin-left:10px; margin-right:0px;
 				}
@@ -1042,62 +1232,72 @@ footer{
 	}
 	.ftr-top{padding:50px 0;}
 	.footer-logo{
-		float:none; position:absolute; bottom:20px; z-index:1;
+		float:none; position:absolute; bottom:10px; z-index:1; left:20px;
 			
+			@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+  					bottom:10px;
+				}
 				
-				
-				@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
-					
-				}
-				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-				 	 bottom:20px; left:0px;
-				}
-				@media (max-width: $iphone-to-ipad) {
-				 	bottom:45px;
-				}
-				@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
-					bottom:45px;
-				}
-				@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-					bottom:52px;
-				}
-			
-		img{max-width:220px; position:absolute; bottom:0px;
-			
 				@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
-				  
+				  bottom:0px;
 				}
 				@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
-					
+					bottom:28px;
 				}
 				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-				 	max-width:180px;
+				 	 bottom:60px; position:initial; text-align:center; margin-bottom:10px;
 				}
 				@media (max-width: $iphone-to-ipad) {
-				 	max-width:160px;
+				 	bottom:60px; position:initial; text-align:center; margin-bottom:10px;
 				}
 				@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
-					max-width:150px;
+				
 				}
 				@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-					max-width:140px;
+				}
+			
+		img{max-width:350px; position:absolute; bottom:10px;
+			
+				@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+  					max-width:250px;
+				}
+				@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+				  max-width:250px;
+				}
+				@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+					max-width:250px; bottom:-20px;
+				}
+				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+				 	max-width:250px;  position:initial;
+				}
+				@media (max-width: $iphone-to-ipad) {
+				 	max-width:250px;  position:initial;
+				}
+				@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+				
+				}
+				@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+					max-width:180px;
 				}
 		}
 	}
 	.footer-nav{
-		 position:absolute; bottom:20px; right:20px;
-		 text-transform: uppercase;
+		 position:absolute; bottom:0px; right:30px;
+		 
 		 @media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
-			   bottom:20px;
+			 
+			}
+			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+			  left:0; right:0; bottom:0;  position:initial; text-align:center; width:100%;
 			}
 		 @media (max-width: $iphone-to-ipad) {
-				 	left:0; right:0; bottom:5px;
+				 	left:0; right:0; bottom:0;  position:initial; text-align:center; width:100%;
 				}
 		@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
-				bottom:10px;
+				bottom:-10px;
 			}
 			@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-				bottom:0px;
+				bottom:-10px;
 			}
 		ul{
 			margin:0; padding:0; list-style:none;
@@ -1114,13 +1314,13 @@ footer{
 					margin-left:15px;
 				}
 				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-				 	margin-left:15px;
+				 	margin-left:20px;
 				}
 				@media (max-width: $iphone-to-ipad) {
-				 	margin-left:15px; margin-bottom:3px;
+				 	margin-left:15px; margin-top:5px;
 				}
 				@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
-					margin-left:8px;
+				
 				}
 				@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
 					margin-left:15px;
@@ -1132,17 +1332,14 @@ footer{
 					@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
 						font-size:16px;
 					}
-					@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-						font-size:14px;
-					}
 					@media (max-width: $iphone-to-ipad) {
 						font-size:16px;
 					}
 					@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
-						font-size:13px;
+						font-size:16px;
 					}
 					@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-						font-size:13px;
+						font-size:14px;
 					}
 				}
 				&.active{
@@ -1153,26 +1350,35 @@ footer{
 	}
 	
 	.copyright{background:$black; border-top:1px solid #1f1f1f; padding:20px 50px;
+				@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+					 padding:20px 40px;
+				}
 				@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
-				  padding:15px;
+				  padding:20px;
+				}
+				@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+					 padding:20px;
+				}
+				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+				 	 padding:20px;
 				}
 				@media (max-width: $iphone-to-ipad) {
 						padding:20px 15px;
 					}
-		.copyright-text{font-family: 'playfair_displayregular'; font-size:18px; margin-top:15px;
+		.copyright-text{font-family: 'playfair_displayregular'; font-size:18px; margin-top:4px;
 		
 			
 				@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
-				 font-size:16px;
+				 font-size:16px; margin-top:4px;
 				}
 				@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
-					width:100%; float:none; text-align:center;  margin-top:0px;
+					width:100%; float:none; text-align:center; 
 				}
 				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-				 	width:100%; float:none; text-align:center;  margin-top:0px;
+				 	width:100%; float:none; text-align:center; 
 				}
 				@media (max-width: $iphone-to-ipad) {
-				 	width:100%; float:none; text-align:center;  margin-top:0px;
+				 	width:100%; float:none; text-align:center;
 				}
 				@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
 				
@@ -1200,6 +1406,36 @@ footer{
 				
 				}
 				@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+				}
+				
+				a{
+					display:inline-block; margin:0 10px;
+					
+					&:hover{opacity:0.5;}
+					&:last-child{margin-right:0px;}
+					&:first-child{margin-left:0px;}
+					
+					@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+					  width:60px;
+					}
+					@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+						width:50px;
+					}
+					@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+ 						margin:0px 5px;
+					}
+					@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+					  margin:5px 5px;
+					}
+					@media (max-width: $iphone-to-ipad) {
+					  	margin:5px 10px;
+					}
+					@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+						margin:5px 8px;
+					}
+					@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+						margin:5px 3px;
+					}
 				}
 		}
 	 }
@@ -1251,12 +1487,10 @@ footer{
 }
 .megamenu-content{
 	position:relative;
-	a{text-decoration:none; color:$white; font-size:initial !important;}
+	a{text-decoration:none; color:$white;}
 	h6{
 		position:absolute; bottom:0px; width:100%; padding:10px; text-transform:$uppercase; margin-bottom:0px; background:$megamenu-title-bg; font-size:14px;
-		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-			font-size:13px;
-		}
+		
 		@media (max-width: $iphone-to-ipad) {
 		  position:initial; background:none;
 		}
@@ -1265,22 +1499,25 @@ footer{
 
 
 .menu-bannerimg{
+	
 	&:before{
-		background:url($pink-cruve-img) no-repeat left bottom; content:""; position:absolute;  z-index:1; left:0px; width:100%; height:150px; bottom:0px;
+		background:url($pink-cruve-img) no-repeat left bottom; content:""; position:absolute;  z-index:1; left:0px; width:100%; height:100%; bottom:0px;  background-size:100% auto;
 	}
 
 }
 
 .package-section{
 	background:$light-dark-black; padding:50px 0; text-align:center;
-	@media (max-width: $iphone-to-ipad) {
-		  padding:30px 0;
-		}
 	h2{
-		color:$pink-color; font-size:48px; text-transform:uppercase; font-family: 'playfair_displaybold';
+		color:$pink-color; font-size:60px; text-transform:uppercase; font-family: 'playfair_displaybold';
 		
 		
-		
+		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+		  font-size:50px; 
+		}
+		@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+		 	font-size:50px; 
+		}
 		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
 		  font-size:40px; 
 		}
@@ -1288,7 +1525,7 @@ footer{
 		  font-size:36px; 
 		}
 		@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
-			font-size:26px; 
+			font-size:30px; 
 		}
 		@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
 			font-size:30px; 
@@ -1296,69 +1533,57 @@ footer{
 	}
 	.package-btns{
 		margin-top:30px; display:inline-block;
-		@media (max-width: $iphone-to-ipad) {
-		  margin-top:15px;
-		}
-		a{border:2px solid $light-text-color; padding:15px 30px; color:$light-grey-color-text; font-size:30px; text-transform:uppercase; text-decoration:none; display:inline-block; margin:0 50px;
+		a{border:2px solid $light-text-color; padding:15px 30px; color:$light-grey-color-text; font-size:38px; text-transform:uppercase; text-decoration:none; display:inline-block; margin:0 50px;
 			&:hover,&:focus{
 				background:$pink-color; color:$white; border-color:$pink-color;
 			}
-			
+			@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+			  
+			}
+			@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+				font-size:30px;
+			}
 			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-			   margin:0px 15px 0px; font-size:24px;
+			   margin:0px 15px 0px; font-size:30px;
 			}
 			@media (max-width: $iphone-to-ipad) {
-			 font-size:22px; 
+			 font-size:26px; 
 			}
 			@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
-				font-size:20px;  margin:0px 10px 0px;
+				font-size:24px;  margin:0px 10px 0px;
 			}
 			@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-				font-size:18px;  margin:10px 0px 0px;
+				font-size:24px;  margin:10px 0px 0px;
 			}
 		}
 	}
 }
 
 .menu-list-section{
-	margin-bottom:150px;
-	@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
-	   margin-bottom:80px;
-	}
-	@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
-	   margin-bottom:80px;
-	}
-	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-	   margin-bottom:80px;
-	}
-	@media (max-width: $iphone-to-ipad) {
-		 margin-bottom:50px;
-	}
 	
 	.menu-listing-box{
-		padding:30px 0px 0;		text-align:center;
+		padding:30px 30px;		text-align:center;
 		@media (max-width: $iphone-to-ipad) {
 			 padding:15px; 
 			}
-		h2{font-size:32px; font-family: 'open_sanssemibold'; color:$pink-color; text-transform:uppercase; position:relative;
+		h2{font-size:40px; font-family: 'open_sanssemibold'; color:$pink-color; text-transform:uppercase; position:relative;
 			span{ padding:0 20px;
 				background:url($body-bg) repeat left top; position:relative; z-index:1;
+			}
+			&:after{background:$black; height:1px;  content:""; width:100%; position:absolute; top:50%; left:0%;
 				@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-					 padding:0 10px;
+				 	content:none;
 				}
 			}
-			&:after{background:$black; height:1px;  content:""; width:100%; position:absolute; top:50%; left:0%;}
-			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-			  font-size:28px;
-			}
+			
 			@media (max-width: $iphone-to-ipad) {
 			 font-size:24px; 
 			}
 			@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
-				 font-size:20px;
+				 font-size:22px;
 			}
 			@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-				 font-size:16px;
+				 font-size:18px;
 			}
 		}
 		ul{
@@ -1368,7 +1593,7 @@ footer{
 				margin-bottom:20px;
 				&:last-child{margin-bottom:0px;}
 				a{
-					font-size:18px; font-family: 'open_sanssemibold'; color:$new-black-color; text-decoration:none;
+					font-size:24px; font-family: 'open_sanssemibold'; color:$new-black-color; text-decoration:none;
 					
 					@media (max-width: $iphone-to-ipad) {
 					 font-size:16px;
@@ -1385,7 +1610,7 @@ footer{
 }
 
 .page-heading{
-		position:relative; text-align:center; 
+		max-width:1140px; margin:0 auto; position:relative; text-align:center; 
 		&:after{background:$black; height:2px;  content:""; width:100%; position:absolute; top:50%; left:0%;}
 		@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
 			margin:0 15px; 
@@ -1415,7 +1640,7 @@ footer{
 		padding-top:40px;
 	}
 	.halls-listing-section{
-		padding:30px 0px 0;
+		padding:30px 40px 0;
 		.halls-list-box{
 			margin-bottom:30px;
 			@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
@@ -1441,11 +1666,15 @@ footer{
 				img{width:100%;}
 			}
 			.halls-list-info{
-				background:$halls-info-content;  overflow:hidden; position:relative; min-height:150px;
-				
+				background:$halls-info-content;  overflow:hidden; position:relative; min-height:130px;
+				@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+					min-height:150px;
+				}
 				.halls-content{
 					float:left; width:80%; padding:10px 15px;
-					
+					@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+							padding:10px;					  
+						}
 					@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 					  padding:10px;	
 					}
@@ -1455,8 +1684,11 @@ footer{
 					@media (max-width: $iphone-to-ipad) {
 						padding:10px;
 					}
-					h4{color:$pink-color; text-transform:uppercase; font-family: 'open_sansregular'; margin-bottom:10px; font-size:16px;
+					h4{color:$pink-color; text-transform:uppercase; font-family: 'open_sansregular'; margin-bottom:10px;
 						
+						@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+							 font-size:16px;					  
+						}
 						@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 						  font-size:17px;	
 						}
@@ -1473,9 +1705,11 @@ footer{
 							font-size:16px;
 						}
 					}
-					p{font-size:14px; margin-bottom:0px; line-height:20px; 
+					p{font-size:16px; margin-bottom:0px; line-height:20px; 
 						
-						
+						@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+							 font-size:14px;					  
+						}
 						@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 						  font-size:15px;	
 						}
@@ -1494,9 +1728,11 @@ footer{
 				.more-info-btn{
 					position:absolute; right:-1px; bottom:-1px;
 					a{
-						color:$white; text-decoration:none;  font-family: 'open_sansbold'; background:url($pink-ribbion-img) no-repeat left top; display:inline-block;
-						text-align:center; padding:40px 0 0 45px; width:100px; height:100px; font-size:42px;
-						
+						color:$white; text-decoration:none; font-size:48px;  font-family: 'open_sansbold'; background:url($pink-ribbion-img) no-repeat left top; width:113px; height:113px; display:inline-block;
+						text-align:center; padding:40px 0 0 45px;
+						@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+							 width:90px; height:90px; font-size:42px;					  
+						}
 						@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 						  width:90px; height:90px; font-size:42px;
 						}
@@ -1511,7 +1747,9 @@ footer{
 			}
 		}
 		
-		
+		@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+			 padding:30px 30px 0;					  
+		}
 		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 		  padding:30px 25px 0;
 		}
@@ -1534,7 +1772,6 @@ footer{
 	}
 
 	.page-heading{
-		margin:0 15px;
 		&:after{background:$white;}
 		h2{
 			color:$white; background:$gallery-bg;
@@ -1542,9 +1779,11 @@ footer{
 	}
 	
 	.gallery-list-section{
-		padding:30px 15px 0;		
+		padding:30px 40px 0;		
 		
-		
+		@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+			 padding:30px 30px 0;					  
+		}
 		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 		  padding:30px 25px 0;
 		}
@@ -1565,7 +1804,23 @@ footer{
 			
 			img{border:5px solid $white;}
 			
+			@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
+			  
+			}
 			
+			@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+			  
+			}
+			
+			@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+			  
+			}
+			@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+			 
+			}
+			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+			  
+			}
 			@media (max-width: $iphone-to-ipad) {
 			  	width:25%;
 			}
@@ -1592,7 +1847,7 @@ footer{
 	}
 
 	.page-heading{
-		 margin:0 15px 50px;
+		margin-bottom:50px;
 		h2{
 			background:$testiminal-bg;
 		}
@@ -1622,9 +1877,15 @@ footer{
 		}
 	} 
 	h2{
-		color:$pink-color; font-size:48px; text-transform:uppercase; font-family: 'playfair_displaybold'; text-align:center; margin-bottom:40px;
+		color:$pink-color; font-size:60px; text-transform:uppercase; font-family: 'playfair_displaybold'; text-align:center; margin-bottom:40px;
 		
 		
+		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+		  font-size:50px; 
+		}
+		@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+		 	font-size:50px; 
+		}
 		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
 		  font-size:40px; 
 		}
@@ -1635,26 +1896,27 @@ footer{
 			font-size:30px; 
 		}
 		@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-			font-size:24px; 
+			font-size:30px; 
 		}
 	}	
 	
 	p{
-		color:$white; font-size:18px; font-family: 'open_sanssemibold'; line-height:32px;
+		color:$white; font-size:24px; font-family: 'open_sanssemibold'; line-height:40px;
+		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+		  font-size:18px; line-height:32px;
+		}
 		@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
-				font-size:16px; line-height:24px;
+				font-size:18px; line-height:24px;
 			}
 			@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-				font-size:14px; line-height:24px;
+				font-size:16px; line-height:24px;
 			}
 	}
 }
 
 .halls-stup-section{
 	text-align:center; padding:60px 15px 70px;
-	@media (max-width: $iphone-to-ipad) {
-		  padding:40px 15px 50px;
-		}
+	
 	.page-heading{
 		max-width:1630px;
 		h2{font-family: 'playfair_displayitalic';}
@@ -1662,7 +1924,7 @@ footer{
 	
 	.setup-info-box{margin-top:30px;}
 	.download-btn{margin-top:30px;
-		a{background:$pink-color; color:$black; text-decoration:none; font-size:30px; font-family: 'open_sansitalic'; padding:10px 20px; display:inline-block;
+		a{background:$pink-color; color:$black; text-decoration:none; font-size:36px; font-family: 'open_sansitalic'; padding:10px 20px; display:inline-block;
 			&:hover{color:$white; background:$black;}
 			
 			@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
@@ -1757,8 +2019,7 @@ footer{
 
 .ekko-lightbox{
 	background:$megamenu-title-bg;
-	.modal-dialog{margin:auto;}
-	.modal-body{padding:5px;}
+	.modal-body{padding:0px; border:2px solid $white;}
 	.ekko-lightbox-container{position:relative;}
 	.ekko-lightbox-nav-overlay{
 		.next-btn{background:url($next-arrow) no-repeat left top; width:26px; height:45px; text-indent:-9999px; display:inline-block; position:absolute; right:10px; top:50%; margin-top:-23px; }
@@ -1770,23 +2031,286 @@ footer{
 }
 
 .last-section{
-	padding-bottom:250px;
-	@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
-	  padding-bottom:120px;
-	}
-	@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
-	 padding-bottom:120px;
-	}
+	padding-bottom:250px; 
+	
 	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-	  padding-bottom:120px;
+		padding-bottom:30px;	  
 	}
 	@media (max-width: $iphone-to-ipad) {
-		padding-bottom:120px;	  
+		padding-bottom:30px;	  
 	}
 }
 
-.zindex-up{z-index:12px;}
+.contact-page-section{
+	padding-top:80px;
+	@media (max-width: $iphone-to-ipad) {
+		padding-top:30px;
+	}
+	.contact-form{
+		input{border:none; background:$input-background; width:100%; padding:10px 15px; font-family: 'playfair_displayitalic'; color:$light-dark-black; font-size:16px; margin-bottom:15px;
+			&:focus{outline:none;}
+		}
+		textarea{border:none; background:$input-background; width:100%; padding:10px 15px; font-family: 'playfair_displayitalic'; color:$light-dark-black; font-size:16px; height:100px;
+			&:focus{outline:none;}
+		}
+		.col-sm-6{
+			@media (max-width: $iphone-to-ipad) {
+				width:50%; float:left;
+			}
+			@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+				width:100%;
+			}
+			@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+				width:100%;
+			}
+		}
+	}
+	.col-sm-1{
+		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+			  display:none;
+			}
+	}
+	.contact-detail{
+			@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
+			  
+			}
+			
+			@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+			  
+			}
+			
+			@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+			  
+			}
+			@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+			 
+			}
+			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+			  width:41.6667%;
+			}
+			@media (max-width: $iphone-to-ipad) {
+				margin-top:30px;
+			  
+			}
+			@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+			
+			}
+			@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+			
+			}
+		p{
+			font-size:20px; font-family: 'open_sanssemibold'; color:$black;
+			strong, b{color:$pink-color; font-weight:normal; font-family: 'open_sansbold';}
+			a{color:inherit; text-decoration:none;}
+			
+			@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+				font-size:16px;
+			}
+			@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+			 	font-size:16px;
+			}
+			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+			  	font-size:16px;
+			}
+			@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+				font-size:16px;
+			}
+		}
+	}
+}
+.tetimonial-section{
+	padding-top:50px;
+	.page-heading{
+		margin-bottom:30px;
+		&:after{background:$pink-color;}
+		h2{
+			color:$pink-color; background:$light-dark-black;
+		}
+	}
+	
+	p{font-size:16px;font-family: 'robotoitalic'; color:$black;
+		strong, b{font-size:30px; color:$black;  font-weight:normal;}
+		
+		@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+			font-size:15px;
+		}
+	}
+	
+	.testimonial-author{
+		float:none; display:table-cell; vertical-align:middle; text-align:center;
+			@media (max-width: $iphone-to-ipad) {
+			  display:inherit;
+			}
+			@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+			
+			}
+			@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+			
+			}
+	}
+	.testimonial-info{
+		float:none; display:table-cell; vertical-align:middle; 
+			@media (max-width: $iphone-to-ipad) {
+			  display:inherit;
+			}
+			@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+			
+			}
+			@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+			
+			}
+	}
+	
+	.testimonial-img{
+		 border-radius:100%; overflow:hidden;  margin-bottom:15px;
+		img{border-radius:100%; border:5px solid $testimonial-default; background:$white; padding:3px;}
+	 }
+	 .author-info{
+	 	text-align:center;
+	 	h4{font-size:25px; font-family: 'playfair_displayitalic'; margin-bottom:10px; color:$new-black-color;
+			@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+				font-size:18px;
+			}
+		}
+		.event-info{font-size:16px; color:$pink-color; font-family: 'robotoregular';
+			@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+				font-size:14px;
+			}
+		}
+	 }
+	 
+	 
+}
+.black-testimonial{
+	background:$light-dark-black;  padding-bottom:50px;
+	
+	p{font-size:16px;font-family: 'robotoitalic'; color:$white;
+		strong, b{font-size:30px; color:$pink-color;}
+	}
+	
+	.testimonial-img{
+		img{border-color:$pink-color;}
+	 }
+	 .author-info{
+	 	h4{color:$pink-color;}
+		.event-info{color:$white;}
+	 }
+
+}
+
+.pink-testimonial{
+	background:$pink-color; padding-bottom:50px;
+	
+	p{color:$white;}
+	.testimonial-img{
+		img{border-color:$testimonial-black;}
+	 }
+	 .author-info{
+	 	.event-info{color:$white;}
+	 }
+
+}
+
+.plus-icon{float:right;}
 img{max-width:100%;}
+
+
+
+.homebanner {
+	background-size: cover;	position: relative;	overflow: hidden;
+	
+	.venue_ctn {
+		display: inline-block;	color: $white;	text-align: center;	-webkit-transition: all 0.4s ease 0s; -ms-transition: all 0.4s ease 0s;-o-transition: all 0.4s ease 0s;	-moz-transition: all 0.4s ease 0s; 
+		transition: all 0.4s ease 0s;
+		
+		&:hover .moreinfo {
+			top: 10px; opacity: 1;
+		}
+		
+		
+		.logo {
+			z-index: 10; position: relative; text-align: center; top: 10px;	-webkit-transition: all 0.4s ease 0s; -ms-transition: all 0.4s ease 0s; -o-transition: all 0.4s ease 0s; -moz-transition: all 0.4s ease 0s; 
+			transition: all 0.4s ease 0s;
+		}
+		
+		.squarectn {
+			z-index: 1; top: 0;	bottom: 0;	left: 0;	right: 0;	height: 100%;	width: 100%;	position: absolute;		background-color: $squarectn-background;
+			-webkit-transform: rotate(45deg);	-moz-transform: rotate(45deg);	-ms-transform: rotate(45deg);	-o-transform: rotate(45deg);	transform: rotate(45deg);	-webkit-transition: all 0.4s ease 0s;
+			-ms-transition: all 0.4s ease 0s;	-o-transition: all 0.4s ease 0s;	-moz-transition: all 0.4s ease 0s;	transition: all 0.4s ease 0s;
+		}
+		
+		.moreinfo {
+			position: relative; border-top: 1px solid $white; border-bottom: 1px solid $white; padding: 2px 0px;	display: inline;	z-index: 10; top: 20px;	opacity: 0;
+			-webkit-transition: all 0.4s ease 0s; -ms-transition: all 0.4s ease 0s;	-o-transition: all 0.4s ease 0s; -moz-transition: all 0.4s ease 0s;	transition: all 0.4s ease 0s;
+		}
+		
+	}
+	
+	.venue_ctn.inactive{opacity: 0;}
+	
+	
+	.overlay_ctn{
+	
+		.venue_banner {
+			top: 0; bottom: 0; left: 0; right: 0; height: 100%; width: 100%; position: absolute; -webkit-transition: all 0.4s ease 0s; -ms-transition: all 0.4s ease 0s; -o-transition: all 0.4s ease 0s;
+			-moz-transition: all 0.4s ease 0s; transition: all 0.4s ease 0s; background-position: center top; background-repeat: no-repeat; background-size: cover; opacity: 0;
+			
+			.line_ctn {
+				height: 100%; position: relative; overflow: hidden; width: 100%;
+				
+				@media (max-width: $iphone-to-ipad) {
+				  display:none;
+				}
+				@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+					display:none;
+				}
+				@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+					display:none;
+				}
+				
+				p {
+					position: relative; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); color: $white; position: absolute; z-index: 10; left: 35%; width: 30%;
+					opacity: 0; -webkit-transition: all 0.4s ease 0s; -ms-transition: all 0.4s ease 0s; -o-transition: all 0.4s ease 0s; -moz-transition: all 0.4s ease 0s; transition: all 0.4s ease 0s;
+				}
+				
+				.line {
+					left: 30%; width: 40%; height: 200%; top: -50%; position: relative; opacity: 0;  background: $pink-line-background;
+					-webkit-transition: all 0.4s ease 0.3s; -ms-transition: all 0.4s ease 0.3s; -o-transition: all 0.4s ease 0.3s; -moz-transition: all 0.4s ease 0.3s; transition: all 0.4s ease 0.3s;
+					-webkit-transform: rotate(25deg); -moz-transform: rotate(25deg); -ms-transform: rotate(25deg); -o-transform: rotate(25deg); transform: rotate(25deg);
+				}
+				
+			}
+			
+		}
+		
+		.venue_banner.active{
+			opacity: 1;
+			.line {
+				opacity: 1; left: 50%;
+				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+					left:40%;  width: 50%;			  
+				}
+			}
+			p {
+				opacity: 1; font-size:18px; font-family: 'open_sanssemibold'; left: 55%;
+				
+				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+					font-size:15px;	  width: 40%;	 left: 45%;		  
+				}
+			}
+		}
+
+	
+	}
+	
+	
+}
+
+.navbar{
+    .navbar-default{
+        text-transform: uppercase;
+    }
+}
 
 $www-plazagardeninn-com-site-color: #a40000;
 
