@@ -50,7 +50,6 @@
                         <url>www.plazavolare.con/{localization}</url>
                         <url>new.plazavolare.com/{localization}</url>
                         <url>pv-pmg.echo.mx/{localization}</url>
-                        <url>dev.nviba.com/pmg_social_cms/public_html/{localization}</url>
                     </urls>
                 </environment>
                 <environment type="stage">

@@ -3,8 +3,8 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://schemas.sulu.io/webspace/webspace http://schemas.sulu.io/webspace/webspace-1.0.xsd">
 
-    <name>www.plazaantique.ca</name>
-    <key>www_plazaantique_ca</key>
+    <name>www.plazaantique.com</name>
+    <key>www_plazaantique_com</key>
 
     <localizations>
         <localization language="en" />
@@ -45,9 +45,9 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.plazaantique.ca/{localization}</url>
+                        <url>www.plazaantique.com/{localization}</url>
                         <url>www.plazaantique.con/{localization}</url>
-                        <url>new.plazaantique.ca/{localization}</url>
+                        <url>new.plazaantique.com/{localization}</url>
                         <url>pa-pmg.echo.mx/{localization}</url>
                     </urls>
                 </environment>
