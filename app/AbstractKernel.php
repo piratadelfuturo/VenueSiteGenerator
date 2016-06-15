@@ -75,7 +75,6 @@ abstract class AbstractKernel extends SuluKernel
             // website
             new Client\Bundle\WebsiteBundle\ClientWebsiteBundle(),
             new PmgSocialBundle\PmgSocialBundle(),
-            new Nviba\DeploymentBundle\NvibaDeploymentBundle(),
             new Liip\ThemeBundle\LiipThemeBundle(),
 
             // tools
@@ -83,6 +82,7 @@ abstract class AbstractKernel extends SuluKernel
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\TranslationBundle\JMSTranslationBundle(),
+            new Nviba\Bundle\SuluOverridesBundle\NvibaSuluOverridesBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'])) {

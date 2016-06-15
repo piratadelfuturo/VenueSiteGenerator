@@ -147,7 +147,7 @@ sites:
             load_default_template: hall_single
             parent: halls
 
-    www_plazaantique_ca:
+    www_plazaantique_com:
         homepage:
             structureType: homepage
             title:  Homepage

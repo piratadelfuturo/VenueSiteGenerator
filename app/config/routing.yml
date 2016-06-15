@@ -1,3 +1,7 @@
+nviba_sulu_overrides:
+    resource: "@NvibaSuluOverridesBundle/Resources/config/routing.yml"
+    prefix:   /
+
 pmg_social:
     resource: "@PmgSocialBundle/Resources/config/routing.yml"
     prefix:   /social/

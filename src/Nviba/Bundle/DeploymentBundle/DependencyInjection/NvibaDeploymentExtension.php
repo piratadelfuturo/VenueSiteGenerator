@@ -1,6 +1,6 @@
 <?php
 
-namespace Nviba\DeploymentBundle\DependencyInjection;
+namespace Nviba\Bundle\DeploymentBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

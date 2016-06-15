@@ -107,3 +107,7 @@ jms_translation:
             excluded_names: ["*TestCase.php", "*Test.php"]
             excluded_dirs: [cache, data, logs]
             extractors: [alias_of_the_extractor]
+
+nviba_sulu_overrides:
+    portal_themes:
+        www_plazavolare_com_social: "pmg_social"

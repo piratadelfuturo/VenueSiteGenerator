@@ -1,0 +1,3 @@
+nviba_sulu_overrides_homepage:
+    path:     /
+    defaults: { _controller: NvibaSuluOverridesBundle:Default:index }

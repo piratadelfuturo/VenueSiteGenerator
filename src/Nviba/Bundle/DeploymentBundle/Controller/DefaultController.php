@@ -1,6 +1,6 @@
 <?php
 
-namespace Nviba\DeploymentBundle\Controller;
+namespace Nviba\Bundle\DeploymentBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 

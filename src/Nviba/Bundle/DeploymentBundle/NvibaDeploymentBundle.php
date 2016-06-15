@@ -1,6 +1,6 @@
 <?php
 
-namespace Nviba\DeploymentBundle;
+namespace Nviba\Bundle\DeploymentBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
