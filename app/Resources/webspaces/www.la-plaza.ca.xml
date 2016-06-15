@@ -3,7 +3,7 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://schemas.sulu.io/webspace/webspace http://schemas.sulu.io/webspace/webspace-1.0.xsd">
 
-    <name>www.la-plaza.ca</name>
+    <name>la-plaza.ca</name>
     <key>www_la_plaza_ca</key>
 
     <localizations>
@@ -38,7 +38,7 @@
     <portals>
         <portal>
             <name>la-plaza social</name>
-            <key>www_la_plaza_ca_social/key>
+            <key>www_la_plaza_ca_social</key>
             <resource-locator>
                 <strategy>tree</strategy>
             </resource-locator>
@@ -70,7 +70,7 @@
         </portal>
         <portal>
             <name>la-plaza corp</name>
-            <key>www_la_plaza_ca_corp/key>
+            <key>www_la_plaza_ca_corp</key>
             <resource-locator>
                 <strategy>tree</strategy>
             </resource-locator>
