@@ -389,8 +389,7 @@ header{
 
 
 .main-info{padding:15px 0px 15px 50px; background:$light-dark-black;
-	
-	
+           	
 	@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
 		 padding:15px 15px 0;
 		}
@@ -430,6 +429,7 @@ header{
 	
 		@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
   			font-size:20px; max-width:80%;
+                        padding-right:15%;
 		}
 
 		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
@@ -462,7 +462,7 @@ header{
 	@media (max-width: $iphone-to-ipad) {
 		  background:$transparent-white; margin-top:30px;
 		}
-	&:after{background:url($right-cruve-bg) no-repeat right top; background-size:100% 100%; position:absolute; right:10px; top:-200px; content:""; width:150%; height:150%;
+	&:after{background:url($right-cruve-bg) no-repeat right top; background-size:100% 100%; position:absolute; right:10px; bottom:-22%; content:""; width:160%; height:160%;
 		
 		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 		   height:160%;
