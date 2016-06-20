@@ -1,3 +1,10 @@
+# prod deploy code:
+
+rm -rf app/cache/*;php app/console assets:install public_html; php app/console assetic:dump -e dev;rsync -avz --exclude 'public_html/.htaccess'  public_html/ ../public_html/sitescms/
+
+
+
+
 # Sulu - Content Management
 
 [![](https://travis-ci.org/sulu/sulu-standard.svg?branch=master)](https://travis-ci.org/sulu/sulu-standard)
@@ -18,6 +25,7 @@ For the install guide and reference, see:
 
 * [installation guide](http://docs.sulu.io/en/latest/book/getting-started/index.html)
 
-## Contributing
 
-Pull requests are welcome. Please see our [CONTRIBUTING](https://github.com/sulu/sulu-standard/blob/develop/CONTRIBUTING.md) guide.
+
+
+
