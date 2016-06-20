@@ -1,11 +1,11 @@
-"MEETING PACKAGES":
-    "PLAN A":
+MEETING PACKAGES:
+    PLAN A:
         Mid-morning coffee break: 
             drinks:
                 - Coffee
                 - Tea 
 
-        "Cold lunch buffet":
+        Cold lunch buffet:
             note: "served in the room"
             food:
                 - Crispy vegetables and dip 
@@ -19,7 +19,7 @@
                 - Soft drinks
                 - Mineral water 
 
-        "Mid-afternoon coffee break": 
+        Mid-afternoon coffee break: 
             food:
                 - Platter of fresh sliced fruit 
                 - Assorted homemade cookies
@@ -28,8 +28,8 @@
                 - Tea
                 - Soft drinks
                 - Mineral water 
-    "PLAN B":
-        "Continental Breakfast":
+    PLAN B:
+        Continental Breakfast:
             food:
                 - Croissants
                 - Danishes
@@ -126,16 +126,16 @@
 
 "LUNCH MEETING PACKAGE":
     "PLAN B, C & D":
-        note: "served private salon"
+        note: |
+          served private salon
+          one choice per course
         "ENTRÉE":
-            limited_choice: 1
             food:
                 - Cream of vegetables
                 - Minestrone soup
                 - Tossed green salad with balsamic vinaigrette
                 - Ceasar salad
         "MAIN DISH":
-            limited_choice: 1
             food:
                 - Penne Primavera
                 - Chicken scallopini with white wine lemon sauce
@@ -145,7 +145,6 @@
                 - Potatoes or rice
                 - Rolls and butter
         "DESSERT":
-            limited_choice: 1
             food:
                 - Fresh fruit salad
                 - Chocolate mousse cake
@@ -422,192 +421,181 @@ DINNER RECEPTION:
             - Coffee
             - Tea 
 DINNER RECEPTION PACKAGE:
+    note: PLEASE MAKE ONE (1) CHOICE FOR EACH
     Cocktail: 
-        note: "One (1) hour service: Hot canapés - platter service"
-        Punch or Sangria
-
-
-        PLEASE MAKE ONE (1) CHOICE FOR EACH 
-
-
-    Cold entrées: 
-        Trilogie parisienne (smoked salmon, prosciutto, terrine of grilled vegetables)
-        Platter of charcuteries (galantine of chicken, salami, capicolli, mixed vegetables, tomatoes, olives) 
-        Smoked salmon trio (cognac, pepper, fine herbs) 
-        Grilled vegetables with shavings of parmesan, balsamic reduction
-
-    OR
-
-    Hot entrées:
-        Cannellonis stuffed with game meat
-        Duo of pasta (crêpe fiorentina and orecchiette rosée sauce)
-        Spiedini of scallops and shrimps served on rice with pesto 
-        Lobster bisque 
-        Timbale of crêpes, meat sauce and balsamic reduction
-
+        note: |
+          "One (1) hour service: Hot canapés - platter service"
+          Two (2) bottle of house wine per table of 10 people
+          Unlimited soft drinks and mineral water during the meal
+        drinks:
+            - Punch or Sangria
+    Entrées:
+      note: Cold or hot entree
+      Cold entrées:
+        food:
+            -  Trilogie parisienne (smoked salmon, prosciutto, terrine of grilled vegetables)
+            - Platter of charcuteries (galantine of chicken, salami, capicolli, mixed vegetables, tomatoes, olives) 
+            - Smoked salmon trio (cognac, pepper, fine herbs) 
+            - Grilled vegetables with shavings of parmesan, balsamic reduction
+      Hot entrées:
+        food:
+            - Cannellonis stuffed with game meat
+            - Duo of pasta (crêpe fiorentina and orecchiette rosée sauce)
+            - Spiedini of scallops and shrimps served on rice with pesto 
+            - Lobster bisque 
+            - Timbale of crêpes, meat sauce and balsamic reduction
     Salads:
-        Chef’s salad, olive oil and balsamic vinegar
-        Garden salad with lemon tuile Caesar salad
-
-    Main dishes: 
-        Chicken portefeuille with mushrooms velouté 
-        Fillet of beef en croûte sauce châteaubriand 
-        Pork and beef brochette served on a bed of rice 
-        Half rack of lamb with mint sauce and half chicken ballottine 
-        Grain fed veal tenderloin roast au jus 
-        Veal scallopini bolognese served with penne sauce napolitana 
-        Filet of sole and shrimps “à la nage” sauce pizzaiolla
-
+      food:
+          - Chef’s salad, olive oil and balsamic vinegar
+          - Garden salad with lemon tuile Caesar salad
+    Main dishes:
+        food:
+          - Chicken portefeuille with mushrooms velouté 
+          - Fillet of beef en croûte sauce châteaubriand 
+          - Pork and beef brochette served on a bed of rice 
+          - Half rack of lamb with mint sauce and half chicken ballottine 
+          - Grain fed veal tenderloin roast au jus 
+          - Veal scallopini bolognese served with penne sauce napolitana 
+          - Filet of sole and shrimps “à la nage” sauce pizzaiolla
     Vegetarian dishes: 
-        Parmaricotta eggplant 
-        Stuffed cabbage with tofu and rice
-         Crêpe stuffed with vegetables 
-        Our dishes are garnished with vegetables and potatoes 
-        Bread and butter
-
-    Desserts: 
-        Black forest mousse served in a flute
-         Vanilla mousse lava cake with chocolate fondant 
-        Casino pouch (raspberry mousse coated with chocolate) 
-        Cheese cake served in a martini glass Lemon and chocolate mousse tiramisu 
-        Coffee, tea
-
-    Two (2) bottle of house wine per table of 10 people
-    Unlimited soft drinks and mineral water during the meal
-
-
+        food:
+          - Parmaricotta eggplant 
+          - Stuffed cabbage with tofu and rice
+          - Crêpe stuffed with vegetables 
+          - Our dishes are garnished with vegetables and potatoes 
+          - Bread and butter
+    Desserts:
+        food:
+          - Black forest mousse served in a flute
+          - Vanilla mousse lava cake with chocolate fondant 
+          - Casino pouch (raspberry mousse coated with chocolate) 
+          - Cheese cake served in a martini glass Lemon and chocolate mousse tiramisu
+        drinks:
+          - Coffee
+          - tea
 DINNER COCKTAIL PACKAGE:
-    Dinner Cocktail Package
-        Cocktail (2hr Service)
-        Hot Canapés- Platter Service
-        White & Red house wine
-        Domestic Beer
-        Soft Drinks & Mineral Water 
-
-
-        Choice of three (3) stations:
-
-
-        Deli Station
-        Smoked Meat
-        Smoked Turkey
-        Rye Bread
-        Fries
-        Coleslaw, pickles & Mustard 
-
-
-        Chinese Station
-        Sushi & Makis
-        Dumplings
-        Egg Rolls
-        Tempura Vegetables 
-
-
-        Italian Station
-        Assortment of pizzas & focaccia
-        Mirror of Prosciutto & Charcuteries
-        Platter of Cheeses
-        Grilled Vegetables
-        Pasta with choice of sauce
-        Assortments of Marinades & olives 
-
-
-        Mexican Station
-        Nachos & Salsa
-        Guacamole
-        Chicken & Beef Fajitas with peppers & onions 
-
-    Bar Service 
-
-
-    Number 1
-        White & Red house wine
-        Domestic Beer
-        Soft Drinks & Mineral water
-
-
-    Number 2
-        Hard Liqour
-        Red & White wine
-        Domestic Beer
-        Soft Drinks & Mineral water
-
-    Additional Stations 
-
-        Coffee Table
-            Mini Pastries
-            Assorted Cookies
-            Sliced Fresh Fruit
-            Coffee & Tea 
-
-        Sweet Table
-            Assorted Cakes
-            Pastries
-            Chocolate Fountain & Fruit Brochettes
-            Assorted Paninis
-            Pizzas
-            Coffee & Tea 
-
-        Grill Station
-            Lamb
-            Italian Sausages
-            Grilled Chicken
-
-        Seafood Station
-            Mirror of Smoked Salmon
-            Shrimp
-            Seafood Salad 
-
-
+    Dinner Cocktail Package:
+        note: Choice of three (3) stations
+        Cocktail:
+          note: (2hr Service)
+          food:
+            - Hot Canapés- Platter Service
+            - White & Red house wine
+            - Domestic Beer
+            - Soft Drinks & Mineral Water 
+        Deli Station:
+          food:
+            - Smoked Meat
+            - Smoked Turkey
+            - Rye Bread
+            - Fries
+            - Coleslaw, pickles & Mustard 
+        Chinese Station:
+          food:
+            - Sushi & Makis
+            - Dumplings
+            - Egg Rolls
+            - Tempura Vegetables 
+        Italian Station:
+          food:
+            - Assortment of pizzas & focaccia
+            - Mirror of Prosciutto & Charcuteries
+            - Platter of Cheeses
+            - Grilled Vegetables
+            - Pasta with choice of sauce
+            - Assortments of Marinades & olives 
+        Mexican Station:
+          food:
+            - Nachos & Salsa
+            - Guacamole
+            - Chicken & Beef Fajitas with peppers & onions 
+        Bar Service:
+          Number 1:
+              drinks:
+                - White & Red house wine
+                - Domestic Beer
+                - Soft Drinks & Mineral water
+          Number 2:
+            drinks:
+              - Hard Liqour
+              - Red & White wine
+              - Domestic Beer
+              - Soft Drinks & Mineral water
+        Additional Stations:
+            Coffee Table:
+                food:
+                  - Mini Pastries
+                  - Assorted Cookies
+                  - Sliced Fresh Fruit
+                drinks:
+                  - Coffee
+                  - Tea 
+            Sweet Table:
+              food:                
+                - Assorted Cakes
+                - Pastries
+                - Chocolate Fountain & Fruit Brochettes
+                - Assorted Paninis
+                - Pizzas
+              drinks:
+                - Coffee
+                - Tea 
+            Grill Station:
+              food:
+                - Lamb
+                - Italian Sausages
+                - Grilled Chicken
+            Seafood Station:
+              food
+                - Mirror of Smoked Salmon
+                - Shrimp
+                - Seafood Salad 
 CANAPÉS:
-    "SELECTION « A »"
-        COLD 
-            Vegetarian bruschetta 
-            Matane shrimps 
-            Mousse of pâté
-            Celery sticks with cream cheese
-            Salmon mousse
-            Egg stuffed cucumber 
-
-
-        HOT
-            Vegetable mini quiches 
-            Meatballs with spicy sauce 
-            Cocktail sausages 
-            Tiropita 
-            Chicken nuggets 
-            Mini egg rolls 
-            Fish croquettes
-            Zucchini sticks 
-
-
-    SELECTION « B » 
-        COLD 
-            Smoked oysters 
-            Brie and grapes 
-            Bruschetta with dried tomatoes and bocconcini 
-            Prosciutto and melon 
-            Cucumbers stuffed with shrimps 
-            Smoked salmon 
-            Mini puffs stuffed with tuna 
-
-        CHAUDS 
-            Seafood on crackers au gratin 
-            Spicy chicken wings 
-            Spanakopita 
-            Cheese fondue 
-            Mini chicken brochettes 
-            Mini beef brochettes rolled in bacon 
-            Shrimps with garlic butter 
-            Mini pizza 
-
-
+    SELECTION « A »:
+        COLD:
+            food:
+              - Vegetarian bruschetta 
+              - Matane shrimps 
+              - Mousse of pâté
+              - Celery sticks with cream cheese
+              - Salmon mousse
+              - Egg stuffed cucumber 
+        HOT:
+          food:
+            - Vegetable mini quiches 
+            - Meatballs with spicy sauce 
+            - Cocktail sausages 
+            - Tiropita 
+            - Chicken nuggets 
+            - Mini egg rolls 
+            - Fish croquettes
+            - Zucchini sticks 
+    SELECTION « B »:
+        COLD :
+            food:
+              - Smoked oysters 
+              - Brie and grapes 
+              - Bruschetta with dried tomatoes and bocconcini 
+              - Prosciutto and melon 
+              - Cucumbers stuffed with shrimps 
+              - Smoked salmon 
+              - Mini puffs stuffed with tuna 
+        CHAUDS:
+            food:
+              - Seafood on crackers au gratin 
+              - Spicy chicken wings 
+              - Spanakopita 
+              - Cheese fondue 
+              - Mini chicken brochettes 
+              - Mini beef brochettes rolled in bacon 
+              - Shrimps with garlic butter 
+              - Mini pizza
 COCKTAIL PACKAGES:
-    "COCKTAIL PACKAGE #1":
+    COCKTAIL PACKAGE #1:
         note: Two (2) hour service
         food: |
-            Platter service : Hot and cold canapés
-            (Chef’s selection)
+            "Platter service : Hot and cold canapés
+            (Chef’s selection)"
         drinks:
             - Bar service : House wine (red and white)
             - Domestic beers
