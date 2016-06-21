@@ -10,6 +10,7 @@
  */
 
 use Symfony\Component\ClassLoader\ApcClassLoader;
+use Symfony\Component\ClassLoader\XcacheClassLoader;
 use Symfony\Component\Debug\Debug;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -44,11 +45,11 @@ if (SYMFONY_DEBUG) {
 // You should change the ApcClassLoader first argument to a unique prefix
 // in order to prevent cache key conflicts with other applications
 // also using APC.
-/*
-$apcLoader = new ApcClassLoader(sha1(__FILE__), $loader);
+
+$apcLoader = new XcacheClassLoader(sha1(__FILE__), $loader);
 $loader->unregister();
 $apcLoader->register(true);
-*/
+
 
 require_once __DIR__ . (EXTERNAL_APP_DIR ?: '/..') . '/app/AdminKernel.php';
 

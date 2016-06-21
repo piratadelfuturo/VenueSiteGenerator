@@ -10,6 +10,7 @@
  */
 
 use Symfony\Component\ClassLoader\ApcClassLoader;
+use Symfony\Component\ClassLoader\XcacheClassLoader;
 use Symfony\Component\Debug\Debug;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -44,9 +45,9 @@ if (SYMFONY_DEBUG) {
 // Change 'sf2' to a unique prefix in order to prevent cache key conflicts
 // with other applications also using APC.
 //
-// $apcLoader = new ApcClassLoader('sf2', $loader);
-// $loader->unregister();
-// $apcLoader->register(true);
+ $apcLoader = new XcacheClassLoader('sf2', $loader);
+ $loader->unregister();
+ $apcLoader->register(true);
 
 require_once __DIR__ . (EXTERNAL_APP_DIR ?: '/..') . '/app/WebsiteKernel.php';
 
