@@ -3,8 +3,8 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://schemas.sulu.io/webspace/webspace http://schemas.sulu.io/webspace/webspace-1.0.xsd">
 
-    <name>plaza antique</name>
-    <key>www_plazaantique_com</key>
+    <name>plaza antique CORP</name>
+    <key>plazaantique_corp</key>
 
     <localizations>
         <localization language="en" />
@@ -19,8 +19,8 @@
         </default-templates>
 
         <error-templates>
-            <error-template default="true">ClientWebsiteBundle:views:error.html.twig</error-template>
-            <error-template code="404">ClientWebsiteBundle:views:error404.html.twig</error-template>
+            <error-template default="true">PmgSocialBundle:templates:error.html.twig</error-template>
+            <error-template code="404">PmgSocialBundle:templates:error404.html.twig</error-template>
         </error-templates>
     </theme>
 
@@ -37,39 +37,8 @@
 
     <portals>
         <portal>
-            <name>plaza antique social</name>
-            <key>www_plazaantique_com_social</key>
-            <resource-locator>
-                <strategy>tree</strategy>
-            </resource-locator>
-            <environments>
-                <environment type="prod">
-                    <urls>
-                        <url>www.plazaantique.com/{localization}</url>
-                        <url>www.plazaantique.con/{localization}</url>
-                        <url>new.plazaantique.com/{localization}</url>
-                        <url>pa-pmg.echo.mx/{localization}</url>
-                        <url>pa-pmg.agenciabase.com.mx/{localization}</url>
-                    </urls>
-                </environment>
-                <environment type="stage">
-                    <urls>
-                        <url>www.plazaantique.dev/{localization}</url>
-                        <url>www-pa-pmg.echo.mx/{localization}</url>
-                    </urls>
-                </environment>
-                <environment type="dev">
-                    <urls>
-                        <url>plazaantique.dev/{localization}</url>
-                        <url>dev-pa-pmg.echo.mx/{localization}</url>
-                        <url>dev-pa-pmg.agenciabase.com.mx/{localization}</url>
-                    </urls>
-                </environment>
-            </environments>
-        </portal>
-        <portal>
             <name>plaza antique corp</name>
-            <key>www_plazaantique_com_corp</key>
+            <key>plazaantique_corp_default</key>
             <resource-locator>
                 <strategy>tree</strategy>
             </resource-locator>

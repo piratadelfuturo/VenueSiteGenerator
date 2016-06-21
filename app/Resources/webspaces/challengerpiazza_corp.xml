@@ -3,19 +3,19 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://schemas.sulu.io/webspace/webspace http://schemas.sulu.io/webspace/webspace-1.0.xsd">
 
-    <name>sulu.io</name>
-    <key>sulu_io</key>
+    <name>challenger piazza CORP</name>
+    <key>challengerpiazza_corp</key>
 
     <localizations>
         <localization language="en" default="true"/>
-        <localization language="de"/>
+        <localization language="fr"/>
     </localizations>
 
     <theme>
-        <key>default</key>
+        <key>pmg_social</key>
         <default-templates>
-            <default-template type="page">default</default-template>
-            <default-template type="homepage">overview</default-template>
+            <default-template type="homepage">homepage</default-template>
+            <default-template type="page">complex</default-template>
         </default-templates>
 
         <error-templates>
@@ -28,8 +28,8 @@
         <contexts>
             <context key="main">
                 <meta>
-                    <title lang="de">Hauptnavigation</title>
-                    <title lang="en">Mainnavigation</title>
+                    <title lang="fr">Principalnavigation</title>
+                    <title lang="en">Main navigation</title>
                 </meta>
             </context>
         </contexts>
@@ -37,8 +37,8 @@
 
     <portals>
         <portal>
-            <name>sulu.io</name>
-            <key>sulu_io</key>
+            <name>challenger piazza corp</name>
+            <key>challengerpiazza_corp</key>
             <resource-locator>
                 <strategy>tree</strategy>
             </resource-locator>
@@ -46,17 +46,24 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>{host}/{localization}</url>
+                        <url>www.challengerpiazza.com/{localization}/corp</url>
+                        <url>www.challengerpiazza.con/{localization}/corp</url>
+                        <url>new.challengerpiazza.com/{localization}/corp</url>
+                        <url>cp-pmg.echo.mx/{localization}/corp</url>
+                        <url>cp-pmg.agenciabase.com.mx/{localization}/corp</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>{host}/{localization}</url>
+                        <url>www.challengerpiazza.dev/{localization}/corp</url>
+                        <url>www-cp-pmg.echo.mx/{localization}/corp</url>
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
-                        <url>{host}/{localization}</url>
+                        <url>challengerpiazza.dev/{localization}/corp</url>
+                        <url>dev-cp-pmg.echo.mx/{localization}/corp</url>
+                        <url>dev-cp-pmg.agenciabase.com.mx/{localization}/corp</url>
                     </urls>
                 </environment>
             </environments>

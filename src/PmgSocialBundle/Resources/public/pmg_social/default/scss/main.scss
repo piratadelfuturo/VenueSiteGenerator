@@ -462,7 +462,7 @@ header{
 	@media (max-width: $iphone-to-ipad) {
 		  background:$transparent-white; margin-top:30px;
 		}
-	&:after{background:url($right-cruve-bg) no-repeat right top; background-size:100% 100%; position:absolute; right:10px; bottom:-22%; content:""; width:160%; height:160%;
+	&:after{background:url($right-cruve-bg) no-repeat right top; background-size:100% 100%; position:absolute; right:10px; bottom:-50%; content:""; width:160%; height:200%;
 		
 		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 		   height:160%;

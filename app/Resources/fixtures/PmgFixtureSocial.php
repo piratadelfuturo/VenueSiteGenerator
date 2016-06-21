@@ -12,11 +12,13 @@ use Symfony\Component\Yaml\Yaml;
  *
  * @author daniel
  */
-class PmgFixture implements DocumentFixtureInterface, ContainerAwareInterface{
+class PmgFixtureSocial implements DocumentFixtureInterface, ContainerAwareInterface{
     
     private $container;
     
     private $documentManager;
+    
+    CONST CONTENT_FILE_LOCATION = '/Resources/fixtures/Data/social/content.yml';
         
     public function getLocales(){
         
@@ -45,7 +47,7 @@ class PmgFixture implements DocumentFixtureInterface, ContainerAwareInterface{
     public function load(DocumentManager $documentManager)
     {
         $directoryPath = $this->container->getParameter('kernel.root_dir');        
-        $value = Yaml::parse(file_get_contents($directoryPath.'/Resources/fixtures/Data/content.yml'));
+        $value = Yaml::parse(file_get_contents($directoryPath.self::CONTENT_FILE_LOCATION));
         $sitesData = $value['sites'];
         
         $homeDocuments = array();
@@ -53,29 +55,34 @@ class PmgFixture implements DocumentFixtureInterface, ContainerAwareInterface{
         $this->documentManager = $documentManager;
         $webspaces = $webspaceManager->getWebspaceCollection();
         foreach($webspaces as $webspace){
-            echo $webspace->getKey()."\n";
-            $webspaceContent = $sitesData[$webspace->getKey()];
-            
-            $webspaceKey = $webspace->getKey();
-            $homeDocuments[$webspaceKey] = $this->generateHomepageDocuments(
-                    $webspaceKey,
-                    $webspaceContent['homepage']
-                    );
-            $this->generateHallsDocuments(
-                    $homeDocuments[$webspaceKey]
-                    );
-            $this->generateMenusDocuments(
-                    $homeDocuments[$webspaceKey]
-                    );
-            $this->generateTestimonialDocuments(
-                    $homeDocuments[$webspaceKey]
-                    );
-            $this->generateContactDocuments(
-                    $homeDocuments[$webspaceKey]
-                    );
+            if(array_key_exists($webspace->getKey(), $sitesData)){
+                echo $webspace->getKey()."\n";
 
+                $this->generateDocuments($webspace,$sitesData);
+            }
         }
-        
+    }
+    
+    protected function generateDocuments($webspace,$sitesData){
+        $webspaceKey = $webspace->getKey();
+        $webspaceContent = $sitesData[$webspaceKey];
+
+        $homeDocuments[$webspaceKey] = $this->generateHomepageDocuments(
+                $webspaceKey,
+                $webspaceContent['homepage']
+                );
+        $this->generateHallsDocuments(
+                $homeDocuments[$webspaceKey]
+                );
+        $this->generateMenusDocuments(
+                $homeDocuments[$webspaceKey]
+                );
+        $this->generateTestimonialDocuments(
+                $homeDocuments[$webspaceKey]
+                );
+        $this->generateContactDocuments(
+                $homeDocuments[$webspaceKey]
+                );        
     }
     
     protected function loadPageFromData(BasePageDocument $document, $data, BasePageDocument $parentDocument = null){

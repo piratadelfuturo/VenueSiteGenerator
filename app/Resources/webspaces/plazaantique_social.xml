@@ -3,8 +3,8 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://schemas.sulu.io/webspace/webspace http://schemas.sulu.io/webspace/webspace-1.0.xsd">
 
-    <name>plaza universel</name>
-    <key>www_plazauniversel_com</key>
+    <name>plaza antique SOCIAL</name>
+    <key>plazaantique_social</key>
 
     <localizations>
         <localization language="en" />
@@ -19,8 +19,8 @@
         </default-templates>
 
         <error-templates>
-            <error-template default="true">ClientWebsiteBundle:views:error.html.twig</error-template>
-            <error-template code="404">ClientWebsiteBundle:views:error404.html.twig</error-template>
+            <error-template default="true">PmgSocialBundle:templates:error.html.twig</error-template>
+            <error-template code="404">PmgSocialBundle:templates:error404.html.twig</error-template>
         </error-templates>
     </theme>
 
@@ -28,7 +28,7 @@
         <contexts>
             <context key="main">
                 <meta>
-                    <title lang="fr">Principal navigation</title>
+                    <title lang="fr">Principalnavigation</title>
                     <title lang="en">Main navigation</title>
                 </meta>
             </context>
@@ -37,69 +37,66 @@
 
     <portals>
         <portal>
-            <name>plaza universel social</name>
-            <key>www_plazauniversel_com_social</key>
+            <name>plaza antique social</name>
+            <key>plazaantique_social_default</key>
             <resource-locator>
                 <strategy>tree</strategy>
             </resource-locator>
-
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.plazauniversel.com/{localization}</url>
-                        <url>www.plazauniversel.con/{localization}</url>
-                        <url>new.plazauniversel.com/{localization}</url>
-                        <url>pv-pmg.echo.mx/{localization}</url>
-                        <url>pv-pmg.agenciabase.com.mx/{localization}</url>
+                        <url>www.plazaantique.com/{localization}</url>
+                        <url>www.plazaantique.con/{localization}</url>
+                        <url>new.plazaantique.com/{localization}</url>
+                        <url>pa-pmg.echo.mx/{localization}</url>
+                        <url>pa-pmg.agenciabase.com.mx/{localization}</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>www.plazauniversel.dev/{localization}</url>
-                        <url>www-pv-pmg.echo.mx/{localization}</url>
+                        <url>www.plazaantique.dev/{localization}</url>
+                        <url>www-pa-pmg.echo.mx/{localization}</url>
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
-                        <url>plazauniversel.dev/{localization}</url>
-                        <url>dev-pv-pmg.echo.mx/{localization}</url>
-                        <url>dev-pv-pmg.agenciabase.com.mx/{localization}</url>
+                        <url>plazaantique.dev/{localization}</url>
+                        <url>dev-pa-pmg.echo.mx/{localization}</url>
+                        <url>dev-pa-pmg.agenciabase.com.mx/{localization}</url>
                     </urls>
                 </environment>
             </environments>
         </portal>
         <portal>
-            <name>plaza universel corp</name>
-            <key>www_plazauniversel_com_corp</key>
+            <name>plaza antique corp</name>
+            <key>plazaantique_corp</key>
             <resource-locator>
                 <strategy>tree</strategy>
             </resource-locator>
-
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.plazauniversel.com/{localization}/corp</url>
-                        <url>www.plazauniversel.con/{localization}/corp</url>
-                        <url>new.plazauniversel.com/{localization}/corp</url>
-                        <url>pv-pmg.echo.mx/{localization}/corp</url>
-                        <url>pv-pmg.agenciabase.com.mx/{localization}/corp</url>
+                        <url>www.plazaantique.com/{localization}/corp</url>
+                        <url>www.plazaantique.con/{localization}/corp</url>
+                        <url>new.plazaantique.com/{localization}/corp</url>
+                        <url>pa-pmg.echo.mx/{localization}/corp</url>
+                        <url>pa-pmg.agenciabase.com.mx/{localization}/corp</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>www.plazauniversel.dev/{localization}/corp</url>
-                        <url>www-pv-pmg.echo.mx/{localization}/corp</url>
+                        <url>www.plazaantique.dev/{localization}/corp</url>
+                        <url>www-pa-pmg.echo.mx/{localization}/corp</url>
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
-                        <url>plazauniversel.dev/{localization}/corp</url>
-                        <url>dev-pv-pmg.echo.mx/{localization}</url>
-                        <url>dev-pv-pmg.agenciabase.com.mx/{localization}/corp</url>
+                        <url>plazaantique.dev/{localization}/corp</url>
+                        <url>dev-pa-pmg.echo.mx/{localization}/corp</url>
+                        <url>dev-pa-pmg.agenciabase.com.mx/{localization}/corp</url>
                     </urls>
                 </environment>
             </environments>
         </portal>
-
     </portals>
 </webspace>

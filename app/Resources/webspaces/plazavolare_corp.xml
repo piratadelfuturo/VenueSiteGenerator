@@ -3,8 +3,8 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://schemas.sulu.io/webspace/webspace http://schemas.sulu.io/webspace/webspace-1.0.xsd">
 
-    <name>plaza volare</name>
-    <key>www_plazavolare_com</key>
+    <name>plaza volare CORP</name>
+    <key>plazavolare_corp</key>
 
     <localizations>
         <localization language="en" />
@@ -19,8 +19,8 @@
         </default-templates>
 
         <error-templates>
-            <error-template default="true">ClientWebsiteBundle:views:error.html.twig</error-template>
-            <error-template code="404">ClientWebsiteBundle:views:error404.html.twig</error-template>
+            <error-template default="true">PmgSocialBundle:templates:error.html.twig</error-template>
+            <error-template code="404">PmgSocialBundle:templates:error404.html.twig</error-template>
         </error-templates>
     </theme>
 
@@ -34,44 +34,10 @@
             </context>
         </contexts>
     </navigation>
-
     <portals>
         <portal>
-            <name>plaza volare social</name>
-            <key>www_plazavolare_com_social</key>
-            <resource-locator>
-                <strategy>tree</strategy>
-            </resource-locator>
-
-            <environments>
-                <environment type="prod">
-                    <urls>
-                        <url>www.plazavolare.com/{localization}</url>
-                        <url>sitescms.plazapmg.com/{localization}</url>
-                        <url>www.plazavolare.con/{localization}</url>
-                        <url>new.plazavolare.com/{localization}</url>
-                        <url>pv-pmg.echo.mx/{localization}</url>
-                        <url>pv-pmg.agenciabase.com.mx/{localization}</url>
-                    </urls>
-                </environment>
-                <environment type="stage">
-                    <urls>
-                        <url>www.plazavolare.dev/{localization}</url>
-                        <url>www-pv-pmg.echo.mx/{localization}</url>
-                    </urls>
-                </environment>
-                <environment type="dev">
-                    <urls>
-                        <url>plazavolare.dev/{localization}</url>
-                        <url>dev-pv-pmg.echo.mx/{localization}</url>
-                        <url>dev-pv-pmg.agenciabase.com.mx/{localization}</url>
-                    </urls>
-                </environment>
-            </environments>
-        </portal>
-        <portal>
             <name>plaza volare corp</name>
-            <key>www_plazavolare_com_corp</key>
+            <key>plazavolare_corp_default</key>
             <resource-locator>
                 <strategy>tree</strategy>
             </resource-locator>

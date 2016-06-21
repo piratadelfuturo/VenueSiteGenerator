@@ -3,8 +3,8 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://schemas.sulu.io/webspace/webspace http://schemas.sulu.io/webspace/webspace-1.0.xsd">
 
-    <name>plaza garden inn</name>
-    <key>www_plazagardeninn_com</key>
+    <name>plaza garden inn SOCIAL</name>
+    <key>plazagardeninn_social</key>
 
     <localizations>
         <localization language="en" />
@@ -19,8 +19,8 @@
         </default-templates>
 
         <error-templates>
-            <error-template default="true">ClientWebsiteBundle:views:error.html.twig</error-template>
-            <error-template code="404">ClientWebsiteBundle:views:error404.html.twig</error-template>
+            <error-template default="true">PmgSocialBundle:templates:error.html.twig</error-template>
+            <error-template code="404">PmgSocialBundle:templates:error404.html.twig</error-template>
         </error-templates>
     </theme>
 
@@ -38,7 +38,7 @@
     <portals>
         <portal>
             <name>plaza garden inn social</name>
-            <key>www_plazagardeninn_com_social</key>
+            <key>plazagardeninn_social_default</key>
             <resource-locator>
                 <strategy>tree</strategy>
             </resource-locator>
@@ -67,38 +67,6 @@
                     </urls>
                 </environment>
             </environments>
-        </portal>        
-        <portal>
-            <name>plaza garden inn corp</name>
-            <key>www_plazagardeninn_com_corp</key>
-            <resource-locator>
-                <strategy>tree</strategy>
-            </resource-locator>
-
-            <environments>
-                <environment type="prod">
-                    <urls>
-                        <url>www.plazagardeninn.com/{localization}/corp</url>
-                        <url>www.plazagardeninn.con/{localization}/corp</url>
-                        <url>new.plazagardeninn.com/{localization}/corp</url>
-                        <url>pg-pmg.echo.mx/{localization}/corp</url>
-                        <url>pg-pmg.agenciabase.com.mx/{localization}/corp</url>
-                    </urls>
-                </environment>
-                <environment type="stage">
-                    <urls>
-                        <url>www.plazagardeninn.dev/{localization}/corp</url>
-                        <url>www-pg-pmg.echo.mx/{localization}/corp</url>
-                    </urls>
-                </environment>
-                <environment type="dev">
-                    <urls>
-                        <url>plazagardeninn.dev/{localization}/corp</url>
-                        <url>dev-pg-pmg.echo.mx/{localization}/corp</url>
-                        <url>dev-pg-pmg.agenciabase.com.mx/{localization}/corp</url>
-                    </urls>
-                </environment>
-            </environments>
-        </portal>        
+        </portal>       
     </portals>
 </webspace>
