@@ -6,7 +6,7 @@
     <key>contact</key>
 
     <view>PmgSocialBundle:templates:contact</view>
-    <controller>SuluWebsiteBundle:Default:index</controller>
+    <controller>PmgSocialBundle:Default:contact</controller>
     <cacheLifetime>2400</cacheLifetime>
 
     <meta>

@@ -1,0 +1,57 @@
+homepage:
+    structureType: homepage
+    title:  Homepage
+    navigationContexts: ['main']
+    content:
+        en:
+            title: Homepage
+            locale: en
+            fields:
+                title:  Embassy Plaza
+                slogan: Wedding Halls and Conference Halls
+                slogan_text: >
+                    The Embassy Plaza is a unique wedding hall and conference
+                    halls offering delicious cuisine, stunning halls as well
+                    as outstanding customer service.
+                    At the Embassy Plaza our goal is to create the perfect
+                    ambiance for your special occasion in one of our elegant
+                    wedding halls or conference halls. Here you will find
+                    one of Lavals largest and most elegant ballrooms in
+                    addition to reception halls and wedding halls complete
+                    with crystal chandeliers.
+                first_number:   8
+                first_number_text:  meeting halls
+                second_number:  25,766
+                second_number_text: square feet
+            image_fields:
+                - slides
+            excerp:
+                title:
+                more:
+                description:
+halls:
+    structureType: halls
+    title:  Our Halls
+    navigationContexts: ['main']
+    content: []
+menus:
+    structureType: menus
+    title:  Our Menus
+    navigationContexts: ['main']
+    content: []
+testimonials:
+    structureType: testimonials
+    title:  Testimonials
+    navigationContexts: ['main']
+    content: []
+contact:
+    structureType: contact
+    title:  Contact
+    navigationContexts: ['main']
+    content: []
+hall_single:
+    structureType: hall_single
+    title:  Single Hall
+    navigationContexts: ['main']
+    parent: halls
+    content: []

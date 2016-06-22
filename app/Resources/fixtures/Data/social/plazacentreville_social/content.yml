@@ -1,0 +1,43 @@
+homepage:
+    structureType: homepage
+    title:  Homepage
+    navigationContexts: ['main']
+    content:
+        en:
+            locale: en
+            fields:
+                title:  Plaza Centreville
+                slogan: Exhibition Halls and Convention Center
+                slogan_text: >
+                    Set in the true traditional Hotel setting and ambiance,
+                    our Banquet facilities can accommodate from 15 to 2000
+                    people in our fully renovated Lobby and banquet rooms.
+                    Our facilities offer a full range of services from the
+                    smallest of details to the most elaborate ones. We can
+                    cater to corporate as well as social events, Weddings,
+                    being our pride. Our professional staff is up to date
+                    on all the latest trends and can offer planning as to
+                    the smallest details. Come visit us and see why our home
+                    should be your home.
+                first_number:   12
+                first_number_text:  meeting halls
+                second_number:  24 300
+                second_number_text: square feet       
+            image_fields:
+                - slides                    
+            excerp:
+                title:
+                more:
+                description:
+halls:
+    load_default_template: halls
+    children: ["Hall Single 1"]
+menus:
+    load_default_template: menus
+testimonials:
+    load_default_template: testimonials
+contact:
+    load_default_template: contact
+"Hall Single 1":
+    load_default_template: hall_single
+    parent: halls

@@ -1,8 +1,14 @@
 # prod deploy code:
 
-rm -rf app/cache/*;php app/console assets:install public_html; php app/console assetic:dump -e dev;rsync -avz --exclude 'public_html/.htaccess'  public_html/ ../public_html/sitescms/
+rm -rf app/cache/*;
+php -d xcache.var_size=100M app/console cache:clear -e prod;
+php -d xcache.var_size=100M app/console sulu:build prod;
+php -d xcache.var_size=100M app/console assets:install public_html -e prod;
+php -d xcache.var_size=100M app/console assetic:dump -e prod;rsync -avz --exclude 'public_html/.htaccess'  public_html/ ../public_html/sitescms/
 
-
+#file permissions
+chomd 755
+755 public_html public_html/*
 
 
 # Sulu - Content Management

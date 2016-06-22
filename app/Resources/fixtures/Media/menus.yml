@@ -541,15 +541,15 @@ DINNER COCKTAIL PACKAGE:
                 - Coffee
                 - Tea 
             Grill Station:
-                food:
-                    - Lamb
-                    - Italian Sausages
-                    - Grilled Chicken
+              food:
+                - Lamb
+                - Italian Sausages
+                - Grilled Chicken
             Seafood Station:
-                food:
-                    - Mirror of Smoked Salmon
-                    - Shrimp
-                    - Seafood Salad 
+              food
+                - Mirror of Smoked Salmon
+                - Shrimp
+                - Seafood Salad 
 CANAPÉS:
     SELECTION « A »:
         COLD:

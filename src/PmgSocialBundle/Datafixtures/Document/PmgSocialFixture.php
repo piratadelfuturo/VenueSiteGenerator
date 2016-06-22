@@ -6,19 +6,24 @@ use Sulu\Component\Content\Document\WorkflowStage;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Yaml\Yaml;
+use Symfony\Component\Console\Output\ConsoleOutput;
 
 /**
  * Description of PmgFixture
  *
  * @author daniel
  */
-class PmgFixtureSocial implements DocumentFixtureInterface, ContainerAwareInterface{
+class PmgSocialFixture implements DocumentFixtureInterface, ContainerAwareInterface{
     
     private $container;
     
     private $documentManager;
     
-    CONST CONTENT_FILE_LOCATION = '/Resources/fixtures/Data/social/content.yml';
+    protected $defaultTemplateContent;
+    
+    protected $output;
+    
+    CONST CONTENT_FILE_LOCATION = '/Resources/fixtures/Data/social/%s/content.yml';
         
     public function getLocales(){
         
@@ -44,61 +49,89 @@ class PmgFixtureSocial implements DocumentFixtureInterface, ContainerAwareInterf
         return $this->container;
     }
     
+    public function getDefaultContent($templateKey,$exception){
+        $this->output->writeln("*Getting default content for $templateKey");
+        if(!array_key_exists($templateKey,$this->defaultTemplateContent)){
+            throw Exception('default content not found',00,$exception);
+        }
+        return $this->defaultTemplateContent[$templateKey];
+    }
+    
+    public function setDefaultTemplateContent($data){
+        $this->defaultTemplateContent = $data;        
+    }
+    
     public function load(DocumentManager $documentManager)
     {
+        $this->output = new ConsoleOutput();
         $directoryPath = $this->container->getParameter('kernel.root_dir');        
-        $value = Yaml::parse(file_get_contents($directoryPath.self::CONTENT_FILE_LOCATION));
-        $sitesData = $value['sites'];
+        $contentFilePattern = $directoryPath.self::CONTENT_FILE_LOCATION;
+        $this->setDefaultTemplateContent(Yaml::parse(sprintf($contentFilePattern,'default')));
         
         $homeDocuments = array();
         $webspaceManager = $this->container->get('sulu_core.webspace.webspace_manager');
         $this->documentManager = $documentManager;
         $webspaces = $webspaceManager->getWebspaceCollection();
         foreach($webspaces as $webspace){
-            if(array_key_exists($webspace->getKey(), $sitesData)){
-                echo $webspace->getKey()."\n";
-
+            $fileName = sprintf($contentFilePattern,$webspace->getKey());
+            if(file_exists($fileName)){
+                $sitesData = Yaml::parse(file_get_contents($fileName));
                 $this->generateDocuments($webspace,$sitesData);
             }
         }
     }
     
-    protected function generateDocuments($webspace,$sitesData){
+    protected function generateDocuments($webspace,$webspaceContent){
         $webspaceKey = $webspace->getKey();
-        $webspaceContent = $sitesData[$webspaceKey];
+        $this->output->writeln("**$webspaceKey**");
 
         $homeDocuments[$webspaceKey] = $this->generateHomepageDocuments(
                 $webspaceKey,
                 $webspaceContent['homepage']
                 );
         $this->generateHallsDocuments(
-                $homeDocuments[$webspaceKey]
+                $homeDocuments[$webspaceKey],
+                $webspaceContent['halls']
                 );
         $this->generateMenusDocuments(
-                $homeDocuments[$webspaceKey]
+                $homeDocuments[$webspaceKey],
+                $webspaceContent['menus']
                 );
         $this->generateTestimonialDocuments(
-                $homeDocuments[$webspaceKey]
+                $homeDocuments[$webspaceKey],
+                $webspaceContent['testimonials']
                 );
         $this->generateContactDocuments(
-                $homeDocuments[$webspaceKey]
+                $homeDocuments[$webspaceKey],
+                $webspaceContent['contact']
                 );        
     }
     
-    protected function loadPageFromData(BasePageDocument $document, $data, BasePageDocument $parentDocument = null){
+    protected function loadPageFromData($templateKey, BasePageDocument $document, $data, BasePageDocument $parentDocument = null){
+        $this->output->writeln("\n === LOADING PAGE ====\n");
+        
+        if(is_null($data) || empty($data) || (is_array($data) && key_exists('load_default_template', $data) && $data['load_default_template'] == true )){
+            $data = $this->getDefaultContent(
+                    $templateKey,
+                    new Exception('content not found')
+                    );
+        }
         
         $documentManager    = $this->documentManager;
         $locales            = $this->getLocales();
-        
+                
         $structureType      = $data['structureType'];
         $documentContents   = $data['content'];
         $defaultTitle       = isset($data['title']) ? $data['title'] : 'page';
         $documentNavigation = isset($data['navigationContexts']) ? $data['navigationContexts']: [];
-        
+                
         $defaultLocale      = $this->getDefaultLocale();
         $defaultData        = isset($documentContents[$defaultLocale]['fields']) ? $documentContents[$defaultLocale]['fields'] : null;
         
         $pathName           = $document->getPath();
+        
+        $this->output->writeln("$structureType: $defaultTitle");
+
         
         $document->setStructureType($structureType);
         $document->setWorkflowStage(WorkflowStage::PUBLISHED);        
@@ -116,6 +149,7 @@ class PmgFixtureSocial implements DocumentFixtureInterface, ContainerAwareInterf
         }        
         
         foreach($locales as $locale){
+            
             if(isset($documentContents[$locale]['fields']))
             {
                 $documentData = $documentContents[$locale]['fields'];                
@@ -126,6 +160,7 @@ class PmgFixtureSocial implements DocumentFixtureInterface, ContainerAwareInterf
             }else{
                 $documentData = array();
             }
+                        
             $documentTitle = isset($documentContents[$locale]['title']) ? $documentContents[$locale]['title']: $defaultTitle;
             
             $document->setTitle($documentTitle);
@@ -142,6 +177,7 @@ class PmgFixtureSocial implements DocumentFixtureInterface, ContainerAwareInterf
                 $document->setShadowLocale($defaultLocale);
                 $document->setShadowLocaleEnabled(true);                
                 $options['load_ghost_content'] = true;
+                $this->output->writeln("LOADING GHOST CONTENT FROM $defaultLocale");
             }
             
             if(!is_null($parentDocument)){
@@ -156,8 +192,10 @@ class PmgFixtureSocial implements DocumentFixtureInterface, ContainerAwareInterf
                 $document->setParent($parentDocument);
                 $document->setResourceSegment($resource['resourceLocator']);
                 $options['parent_path'] = $parentDocument->getPath();
+                $this->output->writeln("parent path: $options[parent_path], $resource[resourceLocator], $pathName");
             }else{
                 $options['path'] = $pathName;
+                $this->output->writeln("parent path: $options[path]");
             }
             
             $document->setExtension(
@@ -169,6 +207,8 @@ class PmgFixtureSocial implements DocumentFixtureInterface, ContainerAwareInterf
                     'tags' => []
                 ]
             );
+            
+            $this->output->writeln("$structureType:$locale: $documentTitle");
             
             $documentManager->persist(
                 $document,
@@ -189,28 +229,22 @@ class PmgFixtureSocial implements DocumentFixtureInterface, ContainerAwareInterf
      */
     protected function generateHomepageDocuments($name, $data)
     {
+        $templateKey = 'homepage';
         $documentManager = $this->documentManager;
         $pathName = '/cmf/'.$name.'/contents';
         $homeDocument = $documentManager->find($pathName);
                 
-        $homeDocument = $this->loadPageFromData($homeDocument,$data);
+        $homeDocument = $this->loadPageFromData($templateKey,$homeDocument,$data);
         
         return $homeDocument;
     }
     
     protected function generateHallsDocuments(BasePageDocument $parentDocument, $data = null) {
+        $templateKey = 'halls';
         $documentManager = $this->documentManager;        
         $page = $documentManager->create('page');
         
-        if(is_null($data) || empty($data)){
-            $data = array();
-            $data['structureType'] = 'halls';
-            $data['content'] = array();
-            $data['title'] = 'Our Halls';
-            $data['navigationContexts'] = ['main'];
-        }
-        
-        $page = $this->loadPageFromData($page, $data, $parentDocument);
+        $page = $this->loadPageFromData($templateKey,$page, $data, $parentDocument);
         
         return $page;
         
@@ -220,16 +254,8 @@ class PmgFixtureSocial implements DocumentFixtureInterface, ContainerAwareInterf
         $templateKey = 'menus';
         $documentManager = $this->documentManager;        
         $page = $documentManager->create('page');
-        
-        if(is_null($data) || empty($data)){
-            $data = array();
-            $data['structureType'] = $templateKey;
-            $data['content'] = array();
-            $data['title'] = 'Our Menus';
-            $data['navigationContexts'] = ['main'];
-        }
-        
-        $page = $this->loadPageFromData($page, $data, $parentDocument);
+                
+        $page = $this->loadPageFromData($templateKey, $page, $data, $parentDocument);
         
         return $page;
 
@@ -240,15 +266,7 @@ class PmgFixtureSocial implements DocumentFixtureInterface, ContainerAwareInterf
         $documentManager = $this->documentManager;        
         $page = $documentManager->create('page');
         
-        if(is_null($data) || empty($data)){
-            $data = array();
-            $data['structureType'] = $templateKey;
-            $data['content'] = array();
-            $data['title'] = 'Testimonials';
-            $data['navigationContexts'] = ['main'];
-        }
-        
-        $page = $this->loadPageFromData($page, $data, $parentDocument);
+        $page = $this->loadPageFromData($templateKey,$page, $data, $parentDocument);
         
         return $page;
         
@@ -259,16 +277,8 @@ class PmgFixtureSocial implements DocumentFixtureInterface, ContainerAwareInterf
         $templateKey = 'contact';
         $documentManager = $this->documentManager;        
         $page = $documentManager->create('page');
-        
-        if(is_null($data) || empty($data)){
-            $data = array();
-            $data['structureType'] = $templateKey;
-            $data['content'] = array();
-            $data['title'] = 'Contact';
-            $data['navigationContexts'] = ['main'];
-        }
-        
-        $page = $this->loadPageFromData($page, $data, $parentDocument);
+               
+        $page = $this->loadPageFromData($templateKey,$page, $data, $parentDocument);
         
         return $page;
         

@@ -1,0 +1,46 @@
+homepage:
+    structureType: homepage
+    title:  Homepage
+    navigationContexts: ['main']
+    content:
+        en:
+            locale: en
+            fields:
+                title:  Plaza Volare
+                slogan: Conventional and Kosher Wedding Venues
+                slogan_text: >
+                    Plaza Volare has been serving clients
+                    and hosting events for nearly three decades.
+                    Our extraodinary international cuisine caters
+                    both to Kosher and non-Kosher needs.
+                    Our professional staff will be with you
+                    every step of the way, accommodating your wedding
+                    or corporate event in one of our many banquet rooms.
+                    Our banquet facility can host 20 to 1200 guests.
+                    With over 30,000 square feet of functional space,
+                    including our ballroom with 15,000 square feet for
+                    just about any occasion! For further information
+                    please refer to our contact page;
+                    it will be a pleasure to hear from you!
+                first_number:   12
+                first_number_text:  meeting halls
+                second_number:  30 000
+                second_number_text: square feet
+            image_fields:
+                - slides
+            excerp:
+                title:
+                more:
+                description:
+halls:
+    load_default_template: halls
+    children: ["Hall Single 1"]
+menus:
+    load_default_template: menus
+testimonials:
+    load_default_template: testimonials
+contact:
+    load_default_template: contact
+"Hall Single 1":
+    load_default_template: hall_single
+    parent: halls

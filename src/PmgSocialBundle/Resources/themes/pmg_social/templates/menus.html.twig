@@ -1,18 +1,110 @@
+{% macro package(title,content,menu_index) %}
+    <div class="menu-content-part menu-option-{{ menu_index[title]|raw }}">
+            {% if content.sub is defined %}
+                {% set display_content = content.sub%}
+            {% else %}
+                {% set display_content = content%}
+            {% endif %}            
+        {% for meal_title,meal_content  in display_content %}
+            {{ _self.plan(meal_title,meal_content) }}
+        {% endfor %}
+    </div>
+{% endmacro %}
+
+{% macro plan(title,content) %}
+
+      <article class="menu-listing-box">
+        <h2><span>{{ title }}</span></h2>
+        <ul class="up-arrow">
+            {% if content.sub is defined %}
+                {% set display_content = content.sub%}
+            {% else %}
+                {% set display_content = content%}
+            {% endif %}
+
+        {% if content.food is defined or content.drinks is defined%}
+            {{ _self.dishes(content) }}
+        {% elseif display_content is iterable %}
+            {% for meal_title,meal_content in display_content %}
+                <li>
+                {{ _self.meal(meal_title,meal_content)}}
+                </li>
+            {% endfor %}
+        {% else %}
+            <li>
+        {{ _self.dishes(display_content) }}    
+            </li>
+        {% endif %}
+        </ul>
+      </article>
+
+{% endmacro %}
+
+{% macro meal(title,content)%}
+    {% if content.sub is defined %}
+        {% for sub_title,sub_content in content.sub %}
+        {{ _self.meal(sub_title,sub_content) }}
+        {% endfor %}
+    {% else %}
+        <ul>
+            <li><a><strong>{{title}}</strong></a></li>
+            <li>{{ _self.dishes(content) }}</li>
+        </ul>
+    {% endif %}
+{% endmacro %}
+
+{% macro dishes(content) %}
+    {% if content.food is defined or content.drinks is defined %}
+        <ul>
+          {% if content.food is defined%}
+              {% for title in content.food %}
+                  <li><a href="">{{ title }}</a></li>
+              {% endfor %}
+          {% endif %}
+          {% if content.drinks is defined%}
+              <li>
+                <a href="">
+                    {% if content.drinks| length > 1 %}
+                        {% for title in content.drinks %}{% if not loop.first and not loop.last %}, {%elseif loop.last %}{{', and'|trans}}{% endif %} {{ title|trim }}{% endfor %}
+                    {% else %}
+                        {{ content.drinks[0]|trim }}
+                    {% endif %}
+                </a>
+              </li>
+          {% endif %}
+        </ul>
+    {% else %}
+        {% for sub_title,sub_content in content %}
+        {{ _self.meal(sub_title,sub_content) }}
+        {% endfor %}    
+    {% endif %}
+{% endmacro%}
+    
 {% extends "PmgSocialBundle:views:master.html.twig" %}
 
 {% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
 
 {% block content %}
+{% dump(menu) %}
+{% dump(menu_index) %}
 <div class="banner-section">
     <div class="banner-img menu-bannerimg"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/menu-banner-bg.jpg')}}" alt="" /></div>
   </div>
   <div class="package-section">
     <div class="container">
       <h2>choose from our 2 packages</h2>
-      <div class="package-btns"> <a href="">PACKAGE 1</a> <a href="">PACKAGE 2</a> </div>
+      <div class="package-btns">
+          {% for package_name,package_key in menu_index %}
+          <a href="#menu-option-{{package_key|raw}}">{{package_name}}</a>
+          {% endfor %}
+      </div>
     </div>
   </div>
   <div class="menu-list-section">
+    {% for package_key,package_content in menu%}
+      {{ _self.package(package_key,package_content,menu_index) }}
+    {% endfor %}
+    <!--
     <div class="menu-content-part">
       <article class="menu-listing-box">
         <h2><span>Cocktail</span></h2>
@@ -126,6 +218,7 @@
         </ul>
       </article>
     </div>
+    -->
   </div>
   <div class="push"></div>
 {% endblock %}

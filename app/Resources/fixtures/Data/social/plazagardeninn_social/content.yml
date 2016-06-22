@@ -1,0 +1,41 @@
+homepage:
+    structureType: homepage
+    title:  Homepage
+    navigationContexts: ['main']
+    content:
+        en:
+            locale: en
+            fields:
+                title:  Plaza Garden Inn
+                slogan: Montreal Reception Halls and Banquet Venues
+                slogan_text: >
+                    A short stroll to the gates of McGill University,
+                    minutes away from the world famous underground city,
+                    Place des Arts Theater, shops and boutiques on vibrant
+                    Ste. Catherine Street, the downtown business district
+                    and Palais de Congrès.
+                    The Hilton Garden Inn Montreal Centre-ville will easily
+                    become the place to choose for corporate travelers,
+                    business meetings or social events.
+                first_number:   6
+                first_number_text:  meeting halls
+                second_number:  4 000
+                second_number_text: square feet       
+            image_fields:
+                - slides                    
+            excerp:
+                title:
+                more:
+                description:
+halls:
+    load_default_template: halls
+    children: ["Hall Single 1"]
+menus:
+    load_default_template: menus
+testimonials:
+    load_default_template: testimonials
+contact:
+    load_default_template: contact
+"Hall Single 1":
+    load_default_template: hall_single
+    parent: halls

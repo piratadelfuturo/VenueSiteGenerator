@@ -6,7 +6,7 @@
     <key>menus</key>
 
     <view>PmgSocialBundle:templates:menus</view>
-    <controller>SuluWebsiteBundle:Default:index</controller>
+    <controller>PmgSocialBundle:Default:menus</controller>
     <cacheLifetime>2400</cacheLifetime>
 
     <meta>
