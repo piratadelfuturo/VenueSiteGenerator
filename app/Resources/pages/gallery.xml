@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>gallery</key>
+
+    <view>PmgSocialBundle:templates:gallery</view>
+    <controller>SuluWebsiteBundle:Default:index</controller>
+    <cacheLifetime>2400</cacheLifetime>
+
+    <meta>
+        <title lang="fr">Gallery</title>
+        <title lang="en">Gallery</title>
+    </meta>
+
+    <properties>
+        <section name="highlight">
+            <properties>
+                <property name="title" type="text_line" mandatory="true">
+                    <meta>
+                        <title lang="fr">Titel</title>
+                        <title lang="en">Title</title>
+                    </meta>
+                    <params>
+                        <param name="headline" value="true"/>
+                    </params>
+
+                    <tag name="sulu.rlp.part"/>
+                </property>
+                <property name="header_images" type="media_selection">
+                    <meta>
+                        <title lang="fr">header image</title>
+                        <title lang="en">header image</title>
+                    </meta>
+                    <params>
+                        <param name="types" value="image"/>
+                    </params>               
+                </property>
+                <property name="description" type="text_area">
+                <meta>
+                    <title lang="en">Description</title>
+                    <title lang="en">Description</title>
+                </meta>
+                </property>
+                <property name="url" type="resource_locator" mandatory="true">
+                    <meta>
+                        <title lang="fr">Adresse</title>
+                        <title lang="en">Resourcelocator</title>
+                    </meta>
+
+                    <tag name="sulu.rlp"/>
+                </property>
+            </properties>
+        </section>
+
+        <section name="content">
+            <meta>
+                <title lang="fr">Inhalt</title>
+                <title lang="en">Content</title>
+            </meta>
+            <properties>
+                <property name="hall_setup" type="media_selection">
+                    <meta>
+                        <title lang="fr">hall setup</title>
+                        <title lang="en">hall setup</title>
+                    </meta>
+                    <params>
+                        <param name="types" value="image"/>
+                    </params>               
+                </property>
+            </properties>
+        </section>
+    </properties>
+</template>
