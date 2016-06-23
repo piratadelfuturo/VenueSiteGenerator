@@ -6,11 +6,10 @@
     <name>plaza universel SOCIAL</name>
     <key>plazauniversel_social</key>
 
-    <localizations>
+<localizations>
         <localization language="en" />
         <localization language="fr" default="true" />
     </localizations>
-
     <theme>
         <key>pmg_social</key>
         <default-templates>

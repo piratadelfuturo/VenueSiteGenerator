@@ -8,7 +8,7 @@ imports:
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: en
+    locale: fr
 
 framework:
     #esi:             ~
@@ -101,7 +101,7 @@ jms_di_extra:
         
 # JMS TranslationBundle
 jms_translation:
-    locales: ["en","fr"]
+    locales: ["fr","en"]
     configs:
         default:
             dirs: ["%kernel.root_dir%/../src"]

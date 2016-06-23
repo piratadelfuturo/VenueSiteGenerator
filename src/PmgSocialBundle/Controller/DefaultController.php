@@ -10,6 +10,7 @@ use Symfony\Component\Yaml\Yaml;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
 use Gedmo\Sluggable\Util as Sluggable;
+use PmgSocialBundle\Form\Type\ContactType;
 
 class DefaultController extends BaseController
 {
@@ -23,16 +24,42 @@ class DefaultController extends BaseController
      *
      * @return Response
      */
-    public function contactAction(StructureInterface $structure, $preview = false, $partial = false)
+    public function contactAction(StructureInterface $structure, $preview = false, $partial = false, Request $request)
     {
+        
+        $form = $this->createForm(new ContactType());
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+                $message = \Swift_Message::newInstance()
+                    ->setSubject('Website contact')
+                    ->setFrom($form->get('email')->getData())
+                    ->setTo('daniel@nviba.com')
+                    ->setBody($form->get('message')->getData());
+
+                $this->get('mailer')->send($message);
+
+                $this->addFlash('success_form', 'Your email has been sent! Thanks!');
+                unset($form);
+                $form = $this->createForm(new ContactType());
+        }
+        
+        
         $response = $this->renderStructure(
             $structure,
-            [],
+            [ 'contact_form' => $form->createView()],
             $preview,
             $partial
         );
 
         return $response;
+    }
+    
+    
+    public function sendContactAction(Request $request){
+        
+        
+        
     }
 
     /**
@@ -48,7 +75,7 @@ class DefaultController extends BaseController
     public function menusAction(StructureInterface $structure, $preview = false, $partial = false)
     {
         
-        
+        $request = 
         
         $directoryPath = $this->container->getParameter('kernel.root_dir');        
         $contentFilePattern = $directoryPath.'/Resources/fixtures/Document/social/default/menus.yml';

@@ -6,9 +6,9 @@
     <name>plaza volare SOCIAL</name>
     <key>plazavolare_social</key>
 
-    <localizations>
+<localizations>
         <localization language="en" />
-        <localization language="fr" default="true"/>
+        <localization language="fr" default="true" />
     </localizations>
 
     <theme>

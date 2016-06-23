@@ -1,10 +1,17 @@
 # prod deploy code:
 
+prod:
 rm -rf app/cache/*;
 php -d xcache.var_size=100M app/console cache:clear -e prod;
 php -d xcache.var_size=100M app/console sulu:build prod;
 php -d xcache.var_size=100M app/console assets:install public_html -e prod;
 php -d xcache.var_size=100M app/console assetic:dump -e prod;rsync -avz --exclude 'public_html/.htaccess'  public_html/ ../public_html/sitescms/
+
+dev:
+rm -rf app/cache/*;
+php -d xcache.var_size=100M app/console cache:clear -e dev;
+php -d xcache.var_size=100M app/console sulu:build dev;
+php -d xcache.var_size=100M app/console assets:install public_html -e dev
 
 #file permissions
 chomd 755

@@ -1,13 +1,22 @@
 {% macro package(title,content,menu_index) %}
     <div class="menu-content-part menu-option-{{ menu_index[title]|raw }}">
+        {% if content.food is defined or content.drinks is defined %}
+            <article class="menu-listing-box">
+                <ul class="up-arrow"><li>
+                        
+            {{ _self.dishes('',content) }}
+                    </li></ul>
+            </article>
+        {% else %}
             {% if content.sub is defined %}
                 {% set display_content = content.sub%}
             {% else %}
                 {% set display_content = content%}
-            {% endif %}            
-        {% for meal_title,meal_content  in display_content %}
-            {{ _self.plan(meal_title,meal_content) }}
-        {% endfor %}
+            {% endif %}
+            {% for meal_title,meal_content  in display_content %}
+                {{ _self.plan(meal_title,meal_content) }}
+            {% endfor %}
+        {% endif %}
     </div>
 {% endmacro %}
 
@@ -62,15 +71,22 @@
               {% endfor %}
           {% endif %}
           {% if content.drinks is defined%}
+                {% if content.food is defined %}
+                {{ dump(content.drinks) }}
               <li>
                 <a href="">
                     {% if content.drinks| length > 1 %}
                         {% for title in content.drinks %}{% if not loop.first and not loop.last %}, {%elseif loop.last %}{{', and'|trans}}{% endif %} {{ title|trim }}{% endfor %}
-                    {% else %}
+                    {% elseif content.drinks| length == 1 %}
                         {{ content.drinks[0]|trim }}
                     {% endif %}
                 </a>
               </li>
+              {% else %}
+                  {% for title in content.drinks %}
+                      <li><a href="">{{title}}</a></li>
+                  {% endfor %}
+              {% endif %}
           {% endif %}
         </ul>
     {% else %}

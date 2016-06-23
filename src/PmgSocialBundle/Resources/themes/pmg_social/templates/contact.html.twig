@@ -3,9 +3,10 @@
 {% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
 
 {% block content %}
+    {% set location = content.location %}
       <div class="banner-section">
-    <div class="banner-img menu-bannerimg">
-    	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.277896562941!2d-73.6943356844419!3d45.48434837910121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc9179261d81bfb%3A0x7fa861cd7e642b9c!2s6600+Chemin+de+la+C%C3%B4te+de+Liesse%2C+Montr%C3%A9al%2C+QC+H4T+1E3%2C+Canada!5e0!3m2!1sen!2sin!4v1465298689540" allowfullscreen></iframe>
+    <div id="map_marker" class="banner-img menu-bannerimg">
+    	<iframe src="https://www.google.com/maps/embed/v1/place?key={{'AIzaSyB8XGnzd8Qv06uWV8rRdeIIBoGkEYZ46Ks'}}&center={{content.location.lat~','~content.location.long}}&zoom={{content.location.zoom}}&q={{location.number~' '~location.street~', '~location.town~' '~location.code}}" allowfullscreen></iframe>
     </div>
   </div>
   
@@ -13,31 +14,70 @@
   	<div class="container">
     	<div class="row">
         	<div class="col-sm-7 contact-form">
-            	<form action="">
-                	<div class="row">
+                {{ form_errors(contact_form) }}
+                {% for flash_message in app.session.flashBag.get('success_form') %}
+                    <div class="flash-notice">
+                        {{ flash_message }}
+                    </div>
+                {% endfor %}
+                {% dump(request) %}
+                {% dump(app.request) %}
+                
+                {# form_start(contact_form,{'action': path('pmg_social_send_contact',{'prefix': request.routeParameters.prefix, 'host' : request.routeParameters.host}) }) #}
+                {{ form_start(contact_form) }}
+                
+                    <div class="row">
                     	<div class="col-sm-6">
-                        	<input type="text" placeholder="Name" />
+                                {{ form_widget(contact_form.name) }}
                         </div>
                         <div class="col-sm-6">
-                        	<input type="text" placeholder="Last name" />
+                                {{ form_widget(contact_form.last_name) }}
                         </div>
                         <div class="col-sm-12">
-                        	<input type="email" placeholder="E-mail" />
+                                {{ form_widget(contact_form.email) }}
                         </div>
                         <div class="col-sm-12">
-                        	<textarea placeholder="Message"></textarea>
+                                {{ form_widget(contact_form.message) }}
                         </div>
                     </div>
-                </form>
+                {{ form_end(contact_form) }}
             </div>
             <div class="col-sm-1"></div>
             <div class="col-sm-4 contact-detail">
-            	<p>
+            	{% if content.location is defined %}
+                {% set location = content.location %}
+                    <p>
+                	<strong>{{ location.number~' '~location.street~', '~location.town~' '~location.code }}</strong>
+                </p>
+                {% else %} 
+                <p>
                 	<strong>6600 Cote-de-Liesse, Saint-Laurent, QC H4T 1E3. Canada</strong>
                 </p>
-                <p><strong>Tel:</strong> (514) 735-5150</p>
-                <p><strong>Fax:</strong> (514) 735-6132</p>
-                <p><strong>Courriel:</strong> <a href="mailto:info@plazavolare.com">info@plazavolare.com</a></p>
+                {% endif %}
+                {% if content.phones is defined %}
+                <p>
+                    <strong>{{ 'Tel:'|trans }}</strong>
+                    {% for phone in content.phones %}
+                    {{ phone.phone }}
+                    {% endfor %}
+                </p>
+                {% endif %}
+                {% if content.faxes is defined %}
+                <p>
+                    <strong>{{ 'Fax:'|trans }}</strong>
+                    {% for fax in content.faxes %}
+                    {{ fax.phone }}
+                    {% endfor %}
+                </p>
+                {% endif %}
+                {% if content.emails is defined %}
+                <p>
+                    <strong>{{ 'Courriel:'| trans }}</strong>
+                    {% for email in content.emails %}
+                    <a href="mailto:{{ email.email|raw }}">{{email.email}}</a>
+                    {% endfor %}
+                </p>
+                {% endif %}
             </div>
         </div>
     </div>

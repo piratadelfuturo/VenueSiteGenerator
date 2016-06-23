@@ -1,3 +1,5 @@
-pmg_social_homepage:
-    path:     /
-    defaults: { _controller: PmgSocialBundle:Default:index }
+pmg_social_send_contact:
+    path:     /send_contact
+    defaults:
+        _controller: PmgSocialBundle:Default:sendContact
+        methods: [POST]

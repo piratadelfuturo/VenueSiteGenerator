@@ -48,7 +48,42 @@ contact:
     structureType: contact
     title:  Contact
     navigationContexts: ['main']
-    content: []
+    content:
+        en:
+            title: Contact
+            locale: en
+            fields:
+                title:  Contact
+                location:
+                    title: "Plaza volare"
+                    street:  "Chemin de la Côte de Liesse"
+                    number: "6600"
+                    code: "QC H4T 1E3"
+                    town: "Saint-Laurent"
+                    country: "ca"
+                    mapProvider: "google"
+                    long: "-73.6766827"
+                    lat: "45.494892"
+                    zoom: "15"
+                phones:
+                    - type: phone
+                      phone: "121212"
+                    - type: phone
+                      phone: "121212"
+                faxes:
+                    - type: fax
+                      phone: "121212"
+                    - type: fax
+                      phone: "121212"
+                emails:
+                    - type: email
+                      email: "something@something.com"
+                    - type: email
+                      email: "something@something.com"
+            excerp:
+                title: Contact
+                more: Find us
+                description: Find us here
 hall_single:
     structureType: hall_single
     title:  Single Hall

@@ -40,16 +40,41 @@
             </properties>
         </section>
 
-        <property name="location" type="snippet">
+        <property name="location" type="location">
             <meta>
                 <title lang="fr">Location</title>
                 <title lang="en">Location</title>
             </meta>
 
-            <params>
-                <param name="snippetType" value="location"/>
-            </params>
         </property>
+        
+        <block name="phones" default-type="phone" minOccurs="0">
+            <types>
+                <type name="phone">
+                    <properties>
+                        <property name="phone" type="phone"></property>
+                    </properties>
+                </type>
+            </types>
+        </block>
+        <block name="faxes" default-type="fax" minOccurs="0">
+            <types>
+                <type name="fax">
+                    <properties>
+                        <property name="phone" type="phone"></property>
+                    </properties>
+                </type>
 
+            </types>            
+        </block>
+        <block name="emails" default-type="email" minOccurs="0">
+            <types>
+                <type name="email">
+                    <properties>
+                        <property name="email" type="email"></property>
+                    </properties>
+                </type>
+            </types>
+        </block>
     </properties>
 </template>

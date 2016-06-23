@@ -6,9 +6,9 @@
     <name>embassy plaza SOCIAL</name>
     <key>embassyplaza_social</key>
 
-    <localizations>
+<localizations>
         <localization language="en" />
-        <localization language="fr" default="true"/>
+        <localization language="fr" default="true" />
     </localizations>
 
     <theme>

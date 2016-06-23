@@ -6,7 +6,7 @@
     <name>plaza antique SOCIAL</name>
     <key>plazaantique_social</key>
 
-    <localizations>
+<localizations>
         <localization language="en" />
         <localization language="fr" default="true" />
     </localizations>

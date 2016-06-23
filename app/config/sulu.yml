@@ -65,9 +65,9 @@ massive_search:
 # Sulu Bundles
 sulu_core:
     locales:
-        de: Deutsch
         en: English
         fr: Français
+        de: Deutsch
     fallback_locale: 'en'
     translations: [ 'en', 'fr', 'de']
     phpcr:

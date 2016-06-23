@@ -6,9 +6,9 @@
     <name>plaza centreville CORP</name>
     <key>plazacentreville_corp</key>
 
-    <localizations>
+<localizations>
         <localization language="en" />
-        <localization language="fr" default="true"/>
+        <localization language="fr" default="true" />
     </localizations>
 
     <theme>

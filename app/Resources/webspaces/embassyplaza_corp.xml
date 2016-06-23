@@ -6,9 +6,9 @@
     <name>embassy plaza CORP</name>
     <key>embassyplaza_corp</key>
 
-    <localizations>
+<localizations>
         <localization language="en" />
-        <localization language="fr" default="true"/>
+        <localization language="fr" default="true" />
     </localizations>
 
     <theme>

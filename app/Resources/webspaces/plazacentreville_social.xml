@@ -8,9 +8,9 @@
 
     <localizations>
         <localization language="en" />
-        <localization language="fr" default="true"/>
+        <localization language="fr" default="true" />
     </localizations>
-
+    
     <theme>
         <key>pmg_social</key>
         <default-templates>
