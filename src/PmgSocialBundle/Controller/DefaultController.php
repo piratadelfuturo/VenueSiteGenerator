@@ -24,8 +24,10 @@ class DefaultController extends BaseController
      *
      * @return Response
      */
-    public function contactAction(StructureInterface $structure, $preview = false, $partial = false, Request $request)
+    public function contactAction(StructureInterface $structure, $preview = false, $partial = false)
     {
+        
+        $request = $this->container->get('request_stack')->getCurrentRequest();
         
         $form = $this->createForm(new ContactType());
 
