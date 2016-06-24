@@ -20,8 +20,6 @@
                         {{ flash_message }}
                     </div>
                 {% endfor %}
-                {% dump(request) %}
-                {% dump(app.request) %}
                 
                 {# form_start(contact_form,{'action': path('pmg_social_send_contact',{'prefix': request.routeParameters.prefix, 'host' : request.routeParameters.host}) }) #}
                 {{ form_start(contact_form) }}

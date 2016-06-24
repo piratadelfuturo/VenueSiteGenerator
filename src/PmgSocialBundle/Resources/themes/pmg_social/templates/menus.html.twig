@@ -72,7 +72,6 @@
           {% endif %}
           {% if content.drinks is defined%}
                 {% if content.food is defined %}
-                {{ dump(content.drinks) }}
               <li>
                 <a href="">
                     {% if content.drinks| length > 1 %}
@@ -101,8 +100,6 @@
 {% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
 
 {% block content %}
-{% dump(menu) %}
-{% dump(menu_index) %}
 <div class="banner-section">
     <div class="banner-img menu-bannerimg"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/menu-banner-bg.jpg')}}" alt="" /></div>
   </div>
