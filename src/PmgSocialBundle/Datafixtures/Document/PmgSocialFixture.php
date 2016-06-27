@@ -81,6 +81,22 @@ class PmgSocialFixture implements DocumentFixtureInterface, ContainerAwareInterf
         }
     }
     
+    protected function generateSnippets($content){
+        
+        foreach ($monkeys as $name => $description) {
+            $monkey = $documentManager->create('snippet');
+            $monkey->setStructureType('monkey');
+            $monkey->setTitle($name);
+            $monkey->setWorkflowStage(WorkflowStage::PUBLISHED);
+            $monkey->getStructure()->bind(array(
+                'description' => $description
+            ));
+            $documentManager->persist($monkey, 'de');
+        }
+        $documentManager->flush();        
+        
+    }
+    
     protected function generateDocuments($webspace,$webspaceContent){
         $webspaceKey = $webspace->getKey();
         $this->output->writeln("**$webspaceKey**");

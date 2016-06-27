@@ -1,0 +1,113 @@
+{% set webspace_key = request.webspaceKey %}
+<!DOCTYPE html>
+<html lang="{{ request.locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block meta %} {% endblock %}
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        {% stylesheets filter="scssphp,cssrewrite" output="css/main.css"
+            'bundles/pmgsocial/pmg_corp/default/scss/main.scss'
+        %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+    </head>
+<body class="{{webspace_key~'_site'}}">
+<div class="page-wrapper">
+
+        {% block header %}
+        {% include "PmgSocialBundle:blocks:header.html.twig" %}
+        {% endblock %}
+
+            <!-- content -->
+            {% block content %}{% endblock %}
+            <!-- /content -->
+        <!-- /container -->
+</div>
+            <!-- footer -->
+        {% block footer %}
+        {% include "PmgSocialBundle:blocks:footer.html.twig" %}
+        {% endblock %}
+            <!-- /footer -->
+{% block scripts %}
+        {% javascripts
+            '@PmgSocialBundle/Resources/public/pmg_corp/default/js/jquery.js'
+            '@PmgSocialBundle/Resources/public/pmg_corp/default/js/bootstrap.min.js'
+        %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+<script>
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ 
+}
+else{
+	jQuery(document).ready(function(){
+    $(".dropdown").hover(
+        function() { $('.dropdown-menu', this).fadeIn("fast");
+        },
+        function() { $('.dropdown-menu', this).fadeOut("fast");
+    });
+});
+
+	
+}
+</script> 
+<script>
+$( ".box-1" ).click(function() {
+ 	$( "#showbox-1" ).fadeIn( "" );
+	$( ".box-1" ).addClass( "active" );
+	$( ".box-1" ).css( "z-index","12" );
+	
+	
+});
+
+$( ".close-btn" ).click(function() {
+ 	$( ".show-hide-box" ).fadeOut( "" );
+	$( ".halss-menu-box" ).removeClass( "active" );
+	$( ".halss-menu-box" ).css( "z-index","10" );
+});
+</script>
+<script>
+	$(function(){
+		var venue, bannerimg;
+		$('[data-imgsrc]').each(function(i, obj) {
+		    bannerimg = $(this).data('imgsrc');
+		    $(this).css('background-image', 'url("'+bannerimg+'")');
+		});
+		$('[data-venue]').hover(function(){
+			venue = $(this).data('venue');
+			$('.venue_ctn').addClass('inactive');
+			$(this).removeClass('inactive');
+			$('.'+venue).addClass('active');
+		}, function(){
+			$('.venue_ctn').removeClass('inactive');
+			$('.'+venue).removeClass('active');
+		});
+	});
+</script> 
+<!-- tab script -->
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	$(".tab_content").hide();
+	$(".tab_content:first").show(); 
+
+	$("ul.tabs li").click(function() {
+		$("ul.tabs li").removeClass("active");
+		$(this).addClass("active");
+		$(".tab_content").hide();
+		var activeTab = $(this).attr("rel"); 
+		$("#"+activeTab).fadeIn(); 
+	});
+});
+
+</script> 
+{% endblock %}
+    </body>
+</html>

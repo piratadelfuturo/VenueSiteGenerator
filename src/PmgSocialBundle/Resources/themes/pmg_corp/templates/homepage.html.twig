@@ -1,0 +1,287 @@
+{% extends "PmgSocialBundle:views:master.html.twig" %}
+
+{% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
+
+{% block content %}
+    <div class="banner-section">
+    <div class="banner-img">
+        {% if content.slides %}
+            <img src="{{ asset(content.slides[0].url) }}" alt="" />
+        {% else %}
+        <img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/home-banner-img.jpg') }}" alt="" />
+        {% endif %}
+    </div>
+  </div>
+  <div class="comman-section about-section">
+  	<div class="container">
+          <h2>{{ content.slogan }}</h2>
+          <p>{{ content.slogan_text }}</p>
+    </div>
+  </div>
+  <div class="halls-section tabcontainermain">
+  	<div class="row">
+    	<div class="equal-table-height">
+    		<div class="col-sm-4 halls-tab-left">
+        	<div class="halls-tab-list">
+            	<div class="halls-tab-logo"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/halls-tab-logo.png') }}" alt="" /></div>
+            	<h3>{% trans %}our HALLS{% endtrans%}</h3>
+            	<ul class="tabs">
+                	<li class="active" rel="international-room">International Room</li>
+                    <li rel="paris-rome">Paris - Rome</li>
+                    <li rel="venise">Venise</li>
+                    <li rel="madrid-rio">Madrid - Rio</li>
+                    <li rel="berlin">Berlin</li>
+                    <li rel="oslo">Oslo</li>
+                    <li rel="connexion-lounge">Connexion Lounge</li>
+                    <li rel="restaurant-volare">Restaurant Volare</li>
+                    <li rel="outdoor-garden">The Outdoor Garden</li>
+                    <li rel="the-tent">The Tent</li>
+                    <li rel="outdoor-garden-2">The Outdoor Garden #2</li>
+                    <li rel="new-york-suite">New York Suite</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-8 halls-info-right tab_container">
+        	<div id="international-room" class="halls-detail-part tab_content">
+            	<div class="halls-tab-detail-content">
+                	<h2>International Room</h2>
+                    <p>
+                    	One of the largest halls in the Greater Montreal area, it can easily accommodate 2,000 attendees for events, meetings, conventions and exhibits. With the ability to divide into 4 different sections, this flexible space can easily meet the needs of 
+a variety of simultaneous functions. The uniqueness of the International 
+room is complemented by a 4 seasons 3600 square feet tent, with a 
+20 foot ceiling, giving your event an exotic environment. 
+                    </p>
+                    <div class="more-info-btn"><a href="">{% trans %}MORE INFO{% endtrans %}</a></div>
+                </div>
+            	<div class="halls-big-img">
+                	<div class="overlay-color"></div>
+                    <img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/halls-detail-img.jpg' ) }}" alt="" />
+                </div>
+            </div>
+            
+            <div id="paris-rome" class="halls-detail-part tab_content">
+            	<div class="halls-tab-detail-content">
+                	<h2>Pris Rome</h2>
+                    <p>
+                    	The Paris - Rome Ballroom features 3100 square feet of flexible meeting space that can break down into two sections or be used for exhibitions. This ballroom is accompanied by a 2000 square foot foyer for pre-function events, and is conveniently located adjacent to the new exhibit hall. 
+                    </p>
+                    <div class="more-info-btn"><a href="">MORE INFO</a></div>
+                </div>
+            	<div class="halls-big-img">
+                	<div class="overlay-color"></div>
+                    <img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/paris-rome-img.jpg') }}" alt="" />
+                </div>
+            </div>
+            
+            <div id="venise" class="halls-detail-part tab_content">
+            	<div class="halls-tab-detail-content">
+                	<h2>Venise</h2>
+                    <p>
+                    	For groups between 120 and 150 the Venise room features 2380 square feet with 12" ceiling and offers maximum flexibility.
+                    </p>
+                    <div class="more-info-btn"><a href="">MORE INFO</a></div>
+                </div>
+            	<div class="halls-big-img">
+                	<div class="overlay-color"></div>
+                    <img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/venise-img.jpg') }}" alt="" />
+                </div>
+            </div>
+            
+            <div id="madrid-rio" class="halls-detail-part tab_content">
+            	<div class="halls-tab-detail-content">
+                	<h2>Madrid - Rio</h2>
+                    <p>
+                    	The combined rooms cans host smaller groups of 50 to 60 people and be separated for more intimate events. The total space is 2080 square feet.
+                    </p>
+                    <div class="more-info-btn"><a href="">MORE INFO</a></div>
+                </div>
+            	<div class="halls-big-img">
+                	<div class="overlay-color"></div>
+                    <img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/madrid-rio-img.jpg') }}" alt="" />
+                </div>
+            </div>
+            
+            <div id="berlin" class="halls-detail-part tab_content">
+            	<div class="halls-tab-detail-content">
+                	<h2>Berlin</h2>
+                    <p>
+                    	Each of these rooms cans host between 50 to 70 people. They offer an elegant setting for cocktails and receptions. These rooms are also ideally suited for additional planner office space or a speaker-ready room. 
+                    </p>
+                    <div class="more-info-btn"><a href="">MORE INFO</a></div>
+                </div>
+            	<div class="halls-big-img">
+                	<div class="overlay-color"></div>
+                    <img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/berlin-img.jpg') }}" alt="" />
+                </div>
+            </div>
+            
+            <div id="oslo" class="halls-detail-part tab_content">
+            	<div class="halls-tab-detail-content">
+                	<h2>Oslo</h2>
+                    <p>
+                    	Each of these rooms cans host between 50 to 70 people. They offer an elegant setting for cocktails and receptions. These rooms are also ideally suited for additional planner office space or a speaker-ready room. 
+                    </p>
+                    <div class="more-info-btn"><a href="">MORE INFO</a></div>
+                </div>
+            	<div class="halls-big-img">
+                	<div class="overlay-color"></div>
+                    <img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/oslo-img.jpg') }}" alt="" />
+                </div>
+            </div>
+            
+            <div id="connexion-lounge" class="halls-detail-part tab_content">
+            	<div class="halls-tab-detail-content">
+                	<h2>Connexion Lounge</h2>
+                    <p>
+                    	A relaxing area with full bar service. Television and Pool room
+                    </p>
+                    <div class="more-info-btn"><a href="">MORE INFO</a></div>
+                </div>
+            	<div class="halls-big-img">
+                	<div class="overlay-color"></div>
+                    <img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/connexion-lounge-img.jpg') }}" alt="" />
+                </div>
+            </div>
+            
+            <div id="restaurant-volare" class="halls-detail-part tab_content">
+            	<div class="halls-tab-detail-content">
+                	<h2>Restaurant Volare</h2>
+                    <p>
+                    	Open for breakfast lunch and diner. Can also be used for pre function cocktails and banquet hall. 
+                    </p>
+                    <div class="more-info-btn"><a href="">MORE INFO</a></div>
+                </div>
+            	<div class="halls-big-img">
+                	<div class="overlay-color"></div>
+                    <img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/restro-volare-img.jpg') }}" alt="" />
+                </div>
+            </div>
+            
+            <div id="outdoor-garden" class="halls-detail-part tab_content">
+            	<div class="halls-tab-detail-content">
+                	<h2>The Outdoor Garden</h2>
+                    <p>
+                    	During the summer extend your event to our garden area.  
+                    </p>
+                    <div class="more-info-btn"><a href="">MORE INFO</a></div>
+                </div>
+            	<div class="halls-big-img">
+                	<div class="overlay-color"></div>
+                    <img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/outdoor-garden-img.jpg') }}" alt="" />
+                </div>
+            </div>
+            
+            <div id="the-tent" class="halls-detail-part tab_content">
+            	<div class="halls-tab-detail-content">
+                	<h2>The Tent</h2>
+                    <p>
+                    	It’s just a tent where you can have parties!
+                    </p>
+                    <div class="more-info-btn"><a href="">MORE INFO</a></div>
+                </div>
+            	<div class="halls-big-img">
+                	<div class="overlay-color"></div>
+                    <img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/tent-img.jpg') }}" alt="" />
+                </div>
+            </div>
+            
+            <div id="outdoor-garden-2" class="halls-detail-part tab_content">
+            	<div class="halls-tab-detail-content">
+                	<h2>The Outdoor Garden #2</h2>
+                    <p>
+                    	During the summer extend your event to our garden area. 
+                    </p>
+                    <div class="more-info-btn"><a href="">MORE INFO</a></div>
+                </div>
+            	<div class="halls-big-img">
+                	<div class="overlay-color"></div>
+                    <img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/outdoor-garden-2-img.jpg') }}" alt="" />
+                </div>
+            </div>
+            
+            <div id="new-york-suite" class="halls-detail-part tab_content">
+            	<div class="halls-tab-detail-content">
+                	<h2>New York Suite</h2>
+                    <p>
+                    	or executives and board meetings. This room provides 15 high-black leather chairs around a 12 foot table. 
+                    </p>
+                    <div class="more-info-btn"><a href="">MORE INFO</a></div>
+                </div>
+            	<div class="halls-big-img">
+                	<div class="overlay-color"></div>
+                    <img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/new-york-suite-img.jpg') }}" alt="" />
+                </div>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+  </div>
+  
+  <div class="testimonial-contact-section">
+  		<div class="equal-table-height">
+    		<div class="col-sm-8 testimonial-section">
+        	<div class="testimonial-content">
+            	<h3>{% trans %}TESTIMONIALS{% endtrans %}</h3>
+                <div class="testimonial-info">
+                	<p>
+                    	Natali,
+					</p>
+                    <p>
+It was an absolute pleasure working with you both as a customer, and on a personal note. Everyone was floored by the great hospitality and service by yourself and your staff.
+                    </p>
+               </div>
+               <div class="more-info-btn">
+                    <a href="">{%trans%}READ MORE{%endtrans%}</a>
+                </div>
+            </div>
+            <div class="col-sm-6 check-menu">
+            	<img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/check-menu-img.jpg' ) }}" alt="" />
+                <div class="overlay-nav-text">
+                	<a href="">{% trans %}CHECK OUT OUR<br>MENUS{% endtrans %}</a>
+                </div>
+            </div>
+            <div class="col-sm-6 gallery-nav">
+            	<img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/gallery-bg-img.jpg') }}" alt="" />
+                <div class="overlay-nav-text">
+                	<a href="">{% trans %}GALLERY{% endtrans %}</a>
+                </div>
+            </div>
+        </div>
+        	<div class="col-sm-4 contact-section">
+        	<div class="contact-form-section">
+            	<div class="overlay-content"></div>
+                <div class="contact-form">
+                	<h2>{% trans %}CONTACT US{% endtrans %}</h2>
+                    <div class="form-row">
+                    	<label>Hello my name is</label>
+                        <input type="text" />
+                    </div>
+                    <div class="form-row">
+                    	<label>I’m interested in</label>
+                        <input type="text" />
+                    </div>
+                    <div class="form-row">
+                    	<label>Here’s my e-mail</label>
+                        <input type="email" />
+                    </div>
+                    <div class="form-row">
+                    	<label>I can give you more details</label>
+                       <input type="text" class="width55" />
+                       <input type="text" class="width100" />
+                       <input type="text" class="width100" />
+                       <input type="text" class="width100" />
+                    </div>
+                    <div class="form-row">
+                    	<input type="submit" value="Send" />
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        </div>
+    
+  </div>
+
+<div class="push"></div>
+{% endblock%}

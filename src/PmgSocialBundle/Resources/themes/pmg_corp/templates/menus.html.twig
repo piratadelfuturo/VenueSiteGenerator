@@ -1,0 +1,237 @@
+{% macro package(title,content,menu_index) %}
+    <div class="menu-content-part menu-option-{{ menu_index[title]|raw }}">
+        {% if content.food is defined or content.drinks is defined %}
+            <article class="menu-listing-box">
+                <ul class="up-arrow"><li>
+                        
+            {{ _self.dishes('',content) }}
+                    </li></ul>
+            </article>
+        {% else %}
+            {% if content.sub is defined %}
+                {% set display_content = content.sub%}
+            {% else %}
+                {% set display_content = content%}
+            {% endif %}
+            {% for meal_title,meal_content  in display_content %}
+                {{ _self.plan(meal_title,meal_content) }}
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endmacro %}
+
+{% macro plan(title,content) %}
+
+      <article class="menu-listing-box">
+        <h2><span>{{ title }}</span></h2>
+        <ul class="up-arrow">
+            {% if content.sub is defined %}
+                {% set display_content = content.sub%}
+            {% else %}
+                {% set display_content = content%}
+            {% endif %}
+
+        {% if content.food is defined or content.drinks is defined%}
+            {{ _self.dishes(content) }}
+        {% elseif display_content is iterable %}
+            {% for meal_title,meal_content in display_content %}
+                <li>
+                {{ _self.meal(meal_title,meal_content)}}
+                </li>
+            {% endfor %}
+        {% else %}
+            <li>
+        {{ _self.dishes(display_content) }}    
+            </li>
+        {% endif %}
+        </ul>
+      </article>
+
+{% endmacro %}
+
+{% macro meal(title,content)%}
+    {% if content.sub is defined %}
+        {% for sub_title,sub_content in content.sub %}
+        {{ _self.meal(sub_title,sub_content) }}
+        {% endfor %}
+    {% else %}
+        <ul>
+            <li><a><strong>{{title}}</strong></a></li>
+            <li>{{ _self.dishes(content) }}</li>
+        </ul>
+    {% endif %}
+{% endmacro %}
+
+{% macro dishes(content) %}
+    {% if content.food is defined or content.drinks is defined %}
+        <ul>
+          {% if content.food is defined%}
+              {% for title in content.food %}
+                  <li><a href="">{{ title }}</a></li>
+              {% endfor %}
+          {% endif %}
+          {% if content.drinks is defined%}
+                {% if content.food is defined %}
+              <li>
+                <a href="">
+                    {% if content.drinks| length > 1 %}
+                        {% for title in content.drinks %}{% if not loop.first and not loop.last %}, {%elseif loop.last %}{{', and'|trans}}{% endif %} {{ title|trim }}{% endfor %}
+                    {% elseif content.drinks| length == 1 %}
+                        {{ content.drinks[0]|trim }}
+                    {% endif %}
+                </a>
+              </li>
+              {% else %}
+                  {% for title in content.drinks %}
+                      <li><a href="">{{title}}</a></li>
+                  {% endfor %}
+              {% endif %}
+          {% endif %}
+        </ul>
+    {% else %}
+        {% for sub_title,sub_content in content %}
+        {{ _self.meal(sub_title,sub_content) }}
+        {% endfor %}    
+    {% endif %}
+{% endmacro%}
+    
+{% extends "PmgSocialBundle:views:master.html.twig" %}
+
+{% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
+
+{% block content %}
+<div class="banner-section">
+    <div class="banner-img menu-bannerimg"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/menu-banner-bg.jpg')}}" alt="" /></div>
+  </div>
+  <div class="package-section">
+    <div class="container">
+      <h2>choose from our 2 packages</h2>
+      <div class="package-btns">
+          {% for package_name,package_key in menu_index %}
+          <a href="#menu-option-{{package_key|raw}}">{{package_name}}</a>
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="menu-list-section">
+    {% for package_key,package_content in menu%}
+      {{ _self.package(package_key,package_content,menu_index) }}
+    {% endfor %}
+    <!--
+    <div class="menu-content-part">
+      <article class="menu-listing-box">
+        <h2><span>Cocktail</span></h2>
+        <ul class="up-arrow">
+          <li><a href="">Hot and Cold Canapés (chef?s choice)</a></li>
+          <li><a href="">Fresh fruit punch</a></li>
+          <li><a href="">Sangria "La Plaza"</a></li>
+          <li><a href="">Refreshment station</a></li>
+          <li><a href="">**Option of adding food stations</a></li>
+        </ul>
+      </article>
+      <article class="menu-listing-box">
+        <h2><span>During the Meal</span></h2>
+        <ul class="up-arrow">
+          <li><a href="">Sparkling wine toast</a></li>
+          <li><a href="">Soft drinks and Beer</a></li>
+          <li><a href="">Mineral Water</a></li>
+          <li><a href="">Unlimited Red and White wine</a></li>
+        </ul>
+      </article>
+      <article class="menu-listing-box">
+        <h2><span>Entrée: (any one of)</span></h2>
+        <ul class="up-arrow">
+          <li><a href="">Antipasto Caprese / Misto</a></li>
+          <li><a href="">Smoked salmon</a></li>
+          <li><a href="">Prosciutto / melon</a></li>
+          <li><a href="">Greek antipasto</a></li>
+          <li><a href="">Portobello mushroom risotto</a></li>
+        </ul>
+      </article>
+      <article class="menu-listing-box">
+        <h2><span>Pastas: (any one of or Duo)</span></h2>
+        <ul class="up-arrow">
+          <li><a href="">Trenne Rigate al Romanoff</a></li>
+          <li><a href="">Orecchiette</a></li>
+          <li><a href="">Farfalle al salmone</a></li>
+          <li><a href="">Tortellini Cardinale</a></li>
+          <li><a href="">Conchiglioni</a></li>
+          <li><a href="">Stuffed Gnocchi (mushrooms, ricotta...)</a></li>
+          <li><a href="">Medaglione / Fusilli</a></li>
+          <li><a href="">Cannelloni / Nuvole</a></li>
+          <li><a href="">Manicotti / Fazzoletti</a></li>
+          <li><a href="">Crêpes Fiorentina or Pouch</a></li>
+        </ul>
+      </article>
+      <article class="menu-listing-box">
+        <h2><span>Sorbet</span></h2>
+        <ul class="up-arrow">
+          <li><a href="">Granita</a></li>
+          <li><a href="">Sorbet trio</a></li>
+        </ul>
+      </article>
+      <article class="menu-listing-box">
+        <h2><span>SALAD</span></h2>
+        <ul class="up-arrow">
+          <li><a href="">Garden salad</a></li>
+          <li><a href="">Caesar salad</a></li>
+          <li><a href="">Exotic salad</a></li>
+        </ul>
+      </article>
+      <article class="menu-listing-box">
+        <h2><span>Main Course (choice of one)</span></h2>
+        <ul class="up-arrow">
+          <li><a href="">Rib steak (10-12oz)</a></li>
+          <li><a href="">Roast veal</a></li>
+          <li><a href="">Veal Scaloppini / Millefeuille</a></li>
+          <li><a href="">Beef & Chicken Tournedos</a></li>
+          <li><a href="">Ballottine of chicken</a></li>
+          <li><a href="">*Vegetarian meals available</a></li>
+        </ul>
+      </article>
+      <article class="menu-listing-box">
+        <h2><span>Main course side dishes</span></h2>
+        <ul class="up-arrow">
+          <li><a href="">Choice of potatoes or rice</a></li>
+          <li><a href="">Choice of two types of vegetables</a></li>
+        </ul>
+      </article>
+      <article class="menu-listing-box">
+        <h2><span>Desserts: (any one of)</span></h2>
+        <ul class="up-arrow">
+          <li><a href="">Home-made ice cream</a></li>
+          <li><a href="">Chocolate pouch with a raspberry mouse</a></li>
+          <li><a href="">Home-made Tiramisu</a></li>
+          <li><a href="">Four season, chocolate tulip</a></li>
+          <li><a href="">Coffee and tea</a></li>
+          <li><a href="">Espresso bar</a></li>
+          <li><a href="">Open bar after meal (International selection)</a></li>
+        </ul>
+      </article>
+      <article class="menu-listing-box">
+        <h2><span>Coffee table</span></h2>
+        <ul class="up-arrow">
+          <li><a href="">(All on a decorated table)</a></li>
+          <li><a href="">Mirror of sliced fruits</a></li>
+          <li><a href="">Assorted Italian biscuit</a></li>
+          <li><a href="">Assorted mini pastries</a></li>
+          <li><a href="">Home-made Italian pizza</a></li>
+        </ul>
+      </article>
+      <article class="menu-listing-box">
+        <h2><span>Also included at no charge</span></h2>
+        <ul class="up-arrow">
+          <li><a href="">Hotel room for bride and groom</a></li>
+          <li><a href="">Candelabras on head table</a></li>
+          <li><a href="">Imitation wedding cake</a></li>
+          <li><a href="">Votive candles on tables</a></li>
+          <li><a href="">Personalized table menus</a></li>
+          <li><a href="">Guest placement cards</a></li>
+          <li><a href="">Free interior valet parking</a></li>
+        </ul>
+      </article>
+    </div>
+    -->
+  </div>
+  <div class="push"></div>
+{% endblock %}

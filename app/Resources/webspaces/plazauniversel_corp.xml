@@ -11,7 +11,7 @@
         <localization language="fr" default="true" />
     </localizations>
     <theme>
-        <key>pmg_social</key>
+        <key>pmg_corp</key>
         <default-templates>
             <default-template type="homepage">homepage</default-template>
             <default-template type="page">complex</default-template>

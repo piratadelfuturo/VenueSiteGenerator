@@ -1,0 +1,1373 @@
+@import "compass";
+@import "bootstrap";
+
+$custom-font-path: "../fonts/";
+
+@font-face {
+    font-family: 'open_sansCnLtIt';
+    src: url('#{$custom-font-path}opensans-condlightitalic-webfont.eot');
+    src: url('#{$custom-font-path}opensans-condlightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}opensans-condlightitalic-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}opensans-condlightitalic-webfont.woff') format('woff'),
+         url('#{$custom-font-path}opensans-condlightitalic-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}opensans-condlightitalic-webfont.svg#open_sansCnLtIt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('#{$custom-font-path}opensans-bold-webfont.eot');
+    src: url('#{$custom-font-path}opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}opensans-bold-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}opensans-bold-webfont.woff') format('woff'),
+         url('#{$custom-font-path}opensans-bold-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sansbold_italic';
+    src: url('#{$custom-font-path}opensans-bolditalic-webfont.eot');
+    src: url('#{$custom-font-path}opensans-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}opensans-bolditalic-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}opensans-bolditalic-webfont.woff') format('woff'),
+         url('#{$custom-font-path}opensans-bolditalic-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}opensans-bolditalic-webfont.svg#open_sansbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sans_condensedbold';
+    src: url('#{$custom-font-path}opensans-condbold-webfont.eot');
+    src: url('#{$custom-font-path}opensans-condbold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}opensans-condbold-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}opensans-condbold-webfont.woff') format('woff'),
+         url('#{$custom-font-path}opensans-condbold-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}opensans-condbold-webfont.svg#open_sans_condensedbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sanscondensed_light';
+    src: url('#{$custom-font-path}opensans-condlight_1-webfont.eot');
+    src: url('#{$custom-font-path}opensans-condlight_1-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}opensans-condlight_1-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}opensans-condlight_1-webfont.woff') format('woff'),
+         url('#{$custom-font-path}opensans-condlight_1-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}opensans-condlight_1-webfont.svg#open_sanscondensed_light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sanssemibold_italic';
+    src: url('#{$custom-font-path}opensans-semibolditalic-webfont.eot');
+    src: url('#{$custom-font-path}opensans-semibolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}opensans-semibolditalic-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}opensans-semibolditalic-webfont.woff') format('woff'),
+         url('#{$custom-font-path}opensans-semibolditalic-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}opensans-semibolditalic-webfont.svg#open_sanssemibold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sansextrabold';
+    src: url('#{$custom-font-path}opensans-extrabold-webfont.eot');
+    src: url('#{$custom-font-path}opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}opensans-extrabold-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}opensans-extrabold-webfont.woff') format('woff'),
+         url('#{$custom-font-path}opensans-extrabold-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}opensans-extrabold-webfont.svg#open_sansextrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sansextrabold_italic';
+    src: url('#{$custom-font-path}opensans-extrabolditalic-webfont.eot');
+    src: url('#{$custom-font-path}opensans-extrabolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}opensans-extrabolditalic-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}opensans-extrabolditalic-webfont.woff') format('woff'),
+         url('#{$custom-font-path}opensans-extrabolditalic-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}opensans-extrabolditalic-webfont.svg#open_sansextrabold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sansitalic';
+    src: url('#{$custom-font-path}opensans-italic-webfont.eot');
+    src: url('#{$custom-font-path}opensans-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}opensans-italic-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}opensans-italic-webfont.woff') format('woff'),
+         url('#{$custom-font-path}opensans-italic-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}opensans-italic-webfont.svg#open_sansitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('#{$custom-font-path}opensans-light-webfont.eot');
+    src: url('#{$custom-font-path}opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}opensans-light-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}opensans-light-webfont.woff') format('woff'),
+         url('#{$custom-font-path}opensans-light-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}opensans-light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sanslight_italic';
+    src: url('#{$custom-font-path}opensans-lightitalic-webfont.eot');
+    src: url('#{$custom-font-path}opensans-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}opensans-lightitalic-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}opensans-lightitalic-webfont.woff') format('woff'),
+         url('#{$custom-font-path}opensans-lightitalic-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}opensans-lightitalic-webfont.svg#open_sanslight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('#{$custom-font-path}opensans-regular-webfont.eot');
+    src: url('#{$custom-font-path}opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}opensans-regular-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}opensans-regular-webfont.woff') format('woff'),
+         url('#{$custom-font-path}opensans-regular-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url('#{$custom-font-path}opensans-semibold-webfont.eot');
+    src: url('#{$custom-font-path}opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}opensans-semibold-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}opensans-semibold-webfont.woff') format('woff'),
+         url('#{$custom-font-path}opensans-semibold-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'playfair_displayblack';
+    src: url('#{$custom-font-path}playfairdisplay-black-webfont.eot');
+    src: url('#{$custom-font-path}playfairdisplay-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}playfairdisplay-black-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}playfairdisplay-black-webfont.woff') format('woff'),
+         url('#{$custom-font-path}playfairdisplay-black-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}playfairdisplay-black-webfont.svg#playfair_displayblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'playfair_displayblack_italic';
+    src: url('#{$custom-font-path}playfairdisplay-blackitalic-webfont.eot');
+    src: url('#{$custom-font-path}playfairdisplay-blackitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}playfairdisplay-blackitalic-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}playfairdisplay-blackitalic-webfont.woff') format('woff'),
+         url('#{$custom-font-path}playfairdisplay-blackitalic-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}playfairdisplay-blackitalic-webfont.svg#playfair_displayblack_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'playfair_displaybold';
+    src: url('#{$custom-font-path}playfairdisplay-bold-webfont.eot');
+    src: url('#{$custom-font-path}playfairdisplay-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}playfairdisplay-bold-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}playfairdisplay-bold-webfont.woff') format('woff'),
+         url('#{$custom-font-path}playfairdisplay-bold-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}playfairdisplay-bold-webfont.svg#playfair_displaybold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'playfair_displaybold_italic';
+    src: url('#{$custom-font-path}playfairdisplay-bolditalic-webfont.eot');
+    src: url('#{$custom-font-path}playfairdisplay-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}playfairdisplay-bolditalic-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}playfairdisplay-bolditalic-webfont.woff') format('woff'),
+         url('#{$custom-font-path}playfairdisplay-bolditalic-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}playfairdisplay-bolditalic-webfont.svg#playfair_displaybold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'playfair_displayitalic';
+    src: url('#{$custom-font-path}playfairdisplay-italic-webfont.eot');
+    src: url('#{$custom-font-path}playfairdisplay-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}playfairdisplay-italic-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}playfairdisplay-italic-webfont.woff') format('woff'),
+         url('#{$custom-font-path}playfairdisplay-italic-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}playfairdisplay-italic-webfont.svg#playfair_displayitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'playfair_displayregular';
+    src: url('#{$custom-font-path}playfairdisplay-regular-webfont.eot');
+    src: url('#{$custom-font-path}playfairdisplay-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}playfairdisplay-regular-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}playfairdisplay-regular-webfont.woff') format('woff'),
+         url('#{$custom-font-path}playfairdisplay-regular-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}playfairdisplay-regular-webfont.svg#playfair_displayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoregular';
+    src: url('#{$custom-font-path}roboto-regular-webfont.eot');
+    src: url('#{$custom-font-path}roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$custom-font-path}roboto-regular-webfont.woff2') format('woff2'),
+         url('#{$custom-font-path}roboto-regular-webfont.woff') format('woff'),
+         url('#{$custom-font-path}roboto-regular-webfont.ttf') format('truetype'),
+         url('#{$custom-font-path}roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{background:$body-color; color:$white; font-size:24px;  font-family: 'open_sansregular'; overflow-x:hidden;
+
+	@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+	  font-size:20px;
+	}
+	@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+		font-size:20px;
+	}
+	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+	  font-size:18px;
+	}
+	@media (max-width: $iphone-to-ipad) {
+	  font-size:16px;
+	}
+	@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+		font-size:16px;
+	}
+	@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+		font-size:14px;
+	}
+
+}
+
+h1,h2,h3,h4,h5,h6{margin:0 0 20px 0; padding:0; font-family: 'playfair_displaybold'; color:$white;}
+h1{font-size:60px;}
+h2{font-size:44px;}
+h3{font-size:36px;}
+h4{font-size:30px;}
+h5{font-size:24px;}
+h6{font-size:18px;}
+
+a{color:$pink-color;
+	&:hover{color:$black;}
+}
+.page-wrapper{ overflow:hidden;}
+
+header{
+	padding:15px 50px 50px;
+	position:relative;
+	
+	@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+		padding:10px 10px;
+	}
+	@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+	 padding:10px 10px;
+	}
+	@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+	  padding:10px 10px;
+	}
+	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+	  padding:10px 10px;
+	}
+	@media (max-width: $iphone-to-ipad) {
+	  padding:10px 10px;
+	}
+	@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+	   padding:10px 10px;
+	}
+	@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+	 padding:10px 10px;
+	}
+	
+	
+	.brand-logo{
+		position:absolute; top:0; left:0; z-index:3; height:353px;
+		
+		 background:url($brand-shape-img) no-repeat left top; background-size:100% 100%;
+		
+		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+		  	background:none; position:initial; text-align:center; height:auto;
+		}
+		@media (max-width: $iphone-to-ipad) {
+			background:none; position:initial; text-align:center; height:auto;
+		}
+	}
+	.brand-img{
+		display:inline-block; padding:30px 20px;
+
+			@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+				padding:4% 3%;
+			}
+			@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+				padding:15px 10px;
+			}
+			@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+			  	padding:10px;
+			}
+			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+				padding:10px; 
+			}
+			@media (max-width: $iphone-to-ipad) {
+			  	padding:10px;
+			}
+		
+		img {
+			@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
+				max-width:320px;
+			}
+			@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+				max-width:280px;
+			}
+			@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+				max-width:280px;
+			}
+			@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+			  max-width:280px; 
+			}
+			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+				 max-width:280px;  padding:10px; 
+			}
+			@media (max-width: $iphone-to-ipad) {
+			  max-width:250px;   padding:10px;
+			}
+		}
+	}
+	
+	.header-right-part{
+		position:relative; z-index:3;
+		
+		@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+		  	width:60%;
+		}
+
+		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+			width:60%;
+		}
+		@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+		  float:right; width:75%;
+		  
+		}
+	}
+	
+	
+}
+.header-right-part{
+	float:right;
+	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+	  float:none;
+	}
+	@media (max-width: $iphone-to-ipad) {
+	  clear:both;  float:none;
+	}
+}
+.navbar-default{
+	text-align:right;
+	float:right;
+	clear:both;
+	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+	  float:left; clear:none;
+	}
+	@media (max-width: $iphone-to-ipad) {
+	  width:auto; text-align:left; clear:none; float:none;
+	}
+	
+	
+	
+}
+.top-right{float:right;  margin-bottom:5px; position:relative; z-index:1;
+	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+	  margin-top:9px;
+	}
+	@media (max-width: $iphone-to-ipad) {
+		float:left; margin-top:10px;
+	}
+
+	a{color:$black; text-decoration:none; display:inline-block; margin-right:15px; font-family: 'playfair_displayitalic'; font-size:20px; vertical-align:middle;
+		&:hover{color:$pink-color;}
+		@media (max-width: $iphone-to-ipad) {
+			font-size:16px;
+		}
+	 }
+	span{border-left:1px solid $black; padding-left:15px; display:inline-block; vertical-align:middle; line-height:18px; }
+}
+
+.banner-section{
+	
+	.banner-img{
+		img{width:100%;}
+	}
+}
+
+
+.mega-dropdown {
+  position: static !important;
+}
+
+.mega-dropdown-menu {
+  padding: 20px 10px;
+  width: 100%;
+  	@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+	   padding:10px 5px;
+	}
+	@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+		 padding:10px 5px;
+	}
+  	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+	  padding:10px 5px;
+	}
+  	@media (max-width: $iphone-to-ipad) {
+		 padding:0; background:$transparent-white !important;
+	}
+ }
+
+.mega-dropdown-menu > li > ul {
+  padding: 0;
+  margin: 0;
+}
+
+.mega-dropdown-menu > li > ul > li {
+  list-style: none;
+}
+
+.mega-dropdown-menu > li > ul > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  white-space: normal;
+}
+
+.mega-dropdown-menu > li ul > li > a:hover,
+.mega-dropdown-menu > li ul > li > a:focus {
+  text-decoration: none;
+}
+
+.mega-dropdown-menu{
+	
+	.col-sm-4{
+		margin:5px 0;
+		padding:0 10px;
+			@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+			   padding:0px 5px;
+			}
+			@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+				 padding:0px 5px;
+			}
+			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+			  padding:0px 5px;
+			}
+		img{
+			@media (max-width: $iphone-to-ipad) {
+			  display:none;
+			}
+		}
+	}
+}
+.megamenu-content{
+	position:relative;
+	a{text-decoration:none; color:$black;}
+	h6{
+		position:absolute; bottom:0px; width:100%; padding:10px 5px; text-transform:$uppercase; margin-bottom:0px; background:$megamenu-title-bg; font-size:14px; color:$black; font-family: 'playfair_displayregular';
+		
+		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+		  font-size:13px; padding:10px 5px;
+		}
+		@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+			font-size:12px; padding:10px 5px;
+		}
+		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+		  font-size:12px; padding:10px 5px;
+		}
+		@media (max-width: $iphone-to-ipad) {
+		  position:initial; background:none;
+		}
+	}
+}
+
+
+
+
+.container{
+	width:96%;
+}
+.comman-section{
+	padding:60px 0;
+	@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+	  padding:40px 0;
+	}
+	@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+		padding:40px 0;
+	}
+	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+	  padding:30px 0;
+	}
+	@media (max-width: $iphone-to-ipad) {
+	  padding:20px 0;
+	}
+}
+.about-section{
+	h2{
+		font-size:60px; color:$pink-color; font-family: 'playfair_displaybold'; text-transform:uppercase;
+		
+		@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
+  
+		}
+		
+		@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+		  
+		}
+		
+		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+		  font-size:50px;
+		}
+		@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+		 	font-size:50px;
+		}
+		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+		  font-size:42px;
+		}
+		@media (max-width: $iphone-to-ipad) {
+		  font-size:36px;
+		}
+		@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+			font-size:30px;
+		}
+		@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+			font-size:24px;
+		}
+	}
+	p{
+		color:$common-text-color; margin-bottom:0px;
+		
+		
+	}
+}
+
+
+.halls-section{
+
+	h3{text-transform:uppercase;}
+	.halls-tab-left{
+		 float:none; display:table-cell; height:100%; vertical-align:top;
+		 
+		 @media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+		   width:25%;
+		}
+		 @media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+		  width:22%;
+		}
+		 
+		  @media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+		 	width:22%;
+			}
+			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+			  width:30%;
+			}
+			@media (max-width: $iphone-to-ipad) {
+			  width:40%;
+			}
+			@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+				display:inherit; width:100%;
+			}
+			@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+				display:inherit; width:100%;
+			}
+		
+		.halls-tab-list{
+			background:$pink-color; padding:15px 50px; position:absolute; height:100%;  width:100%;
+				
+				@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+				    padding:20px ;
+				}
+				@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+				  padding:20px 15px;
+				}
+				@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+					 padding:15px 15px;
+				}	
+				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+				   padding:15px 15px;
+				}
+				@media (max-width: $iphone-to-ipad) {
+				  padding:15px 15px;
+				}
+				@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+					position:initial; padding:15px 15px;
+				}
+				@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+					position:initial; padding:30px 15px;
+				}
+			h3{margin-bottom:30px;
+				@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
+				  margin-bottom:20px;
+				}
+				@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+				    font-size:30px; margin-bottom:15px;
+				}
+				@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+				 font-size:24px; margin-bottom:15px;
+				}
+				@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+					font-size:24px; margin-bottom:15px;
+				}
+				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+				   font-size:30px;
+				}
+				@media (max-width: $iphone-to-ipad) {
+					margin-bottom:15px; font-size:24px;
+				}
+			}
+			.halls-tab-logo{
+				position:absolute; bottom:90px; left:4%; right:4%;
+				
+
+				
+				img{opacity:0.2;}
+			}	
+			
+			ul{
+				list-style:none; margin:0px; padding:0px;
+				li{
+					font-size:30px; font-family: 'open_sanssemibold'; padding-left:45px; position:relative; margin-bottom:4px; cursor:pointer;
+					
+					@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
+					  font-size:24px;
+					}
+					@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+					  font-size:18px; padding-left:30px; 
+					}
+					@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+					 font-size:16px; padding-left:30px; 
+					}
+					@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+						font-size:16px; padding-left:30px; 
+					}	
+					@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+					  	font-size:16px; padding-left:30px; 
+					}
+					@media (max-width: $iphone-to-ipad) {
+					  	font-size:16px; padding-left:30px; 
+					}
+					@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+						font-size:18px; padding-left:30px; 
+					}
+					@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+						font-size:18px; padding-left:30px; 
+					}
+					a{
+						color:$white; text-decoration:none;
+					}
+					&:hover{
+						&:before{content:""; background:url($halls-active-icon) no-repeat left center; width:24px; height:24px; position:absolute; left:0; top:10px; background-size:100%;
+							@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
+							  top:8px;
+							}
+							@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+							  top:5px; width:18px; height:18px; 
+							}
+							@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+							 top:5px; width:18px; height:18px; 
+							}
+							@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+								top:5px; width:18px; height:18px; 
+							}
+							 @media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+							 	 top:5px; width:18px; height:18px; 
+							 }
+							@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+							   top:5px; width:18px; height:18px; 
+							}
+							@media (max-width: $iphone-to-ipad) {
+							 top:5px; width:18px; height:18px; 
+							}
+						}
+					}
+					&.active{
+						&:before{content:""; background:url($halls-active-icon) no-repeat left center; width:24px; height:24px; position:absolute; left:0; top:10px; background-size:100%;
+							@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
+							  top:8px;
+							}
+							@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+							  top:5px; width:18px; height:18px; 
+							}
+							@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+							 top:5px; width:18px; height:18px; 
+							}
+							@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+								top:5px; width:18px; height:18px; 
+							}
+							@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+							 	 top:5px; width:18px; height:18px; 
+							 }
+							@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+							   top:5px; width:18px; height:18px; 
+							}
+							@media (max-width: $iphone-to-ipad) {
+							 top:5px; width:18px; height:18px; 
+							}						
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	.halls-info-right{
+		 float:none; display:table-cell; height:100%; vertical-align:top;
+		 
+		 @media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+		 
+		}
+		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+		  
+		}
+		@media (max-width: $iphone-to-ipad) {
+		  
+		}
+		@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+			display:inherit;
+		}
+		@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+			display:inherit;
+		}
+		 
+		.halls-detail-part{
+			position:relative;
+			&:before{content:""; background:url($halls-shape-bg) no-repeat left top; position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; background-size:100%;
+				@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+				  background:$halls-mobile-background; height:60%;
+				}
+				@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+					background:$halls-mobile-background; height:60%;
+				}	
+				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+				  content:none;
+				}
+				@media (max-width: $iphone-to-ipad) {
+					content:none;
+				}
+			}
+			
+			.halls-tab-detail-content{
+				padding:30px;
+				position:absolute; top:0; left:0; z-index:1; max-width:60%;
+					@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+					 padding:20px;
+					}
+					@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+					  padding:20px; max-width:100%;
+					}
+					@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+						max-width:100%; padding:15px;
+					}	
+					@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+					  max-width:100%; padding:15px; position:initial; background:$halls-mobile-background;
+					}
+					@media (max-width: $iphone-to-ipad) {
+					  	max-width:100%; padding:15px; position:initial; background:$halls-mobile-background;
+					}
+					@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+						max-width:100%; padding:15px; position:initial;
+					}
+					@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+						max-width:100%; padding:15px; position:initial;
+					}
+				
+				p{
+					font-size:18px; font-family: 'open_sansbold'; margin-bottom:20px;
+					@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
+					  font-size:16px;
+					}
+					@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+						font-size:14px;
+					}
+					@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+					  font-size:14px; margin-bottom:0px;
+					}
+					@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+						font-size:14px; margin-bottom:0px;
+					}	
+					@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+					  font-size:16px;
+					}
+					@media (max-width: $iphone-to-ipad) {
+					  	font-size:16px;
+					}
+					@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+						
+					}
+					@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+						
+					}
+				}
+				h2{
+					@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+					  font-size:30px; margin-bottom:15px;
+					}
+					@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+					  font-size:24px; margin-bottom:15px;
+					}
+					@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+						font-size:24px; margin-bottom:10px;
+					}	
+					@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+					  	font-size:30px;
+					}
+					@media (max-width: $iphone-to-ipad) {
+					  	font-size:24px;
+					}
+					@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+						font-size:24px;
+					}
+					@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+						font-size:24px;
+					}	
+				}
+				
+			}
+			.halls-big-img{
+				position:relative;
+				.overlay-color{position:absolute; top:0; left:0; height:100%; width:100%; background:$overlay-color-bg;}
+				img{width:100%;}
+			}
+		}
+	}
+	
+	.tab_content {
+		display: none;
+	}
+
+
+}
+
+.more-info-btn{
+	margin-top:15px; margin-bottom:15px; display:inline-block;
+	
+	@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+		margin-top:10px;
+	 }
+	a{
+		display:inline-block; padding:10px 15px; font-size:25px; font-family: 'playfair_displaybold'; text-transform:uppercase; color:$white; text-decoration:none; background:$pink-color;
+		@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+			  font-size:18px;
+			}
+		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+		  font-size:16px;
+		}
+		@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+			  font-size:16px; 
+		 }
+		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+		    font-size:18px;
+		}
+		@media (max-width: $iphone-to-ipad) {
+			 font-size:15px;
+		}
+		&:hover, &:focus{background:$black;}
+	}
+}
+
+.testimonial-contact-section{
+	.testimonial-section{
+		padding:0px; float:none; display:table-cell; height:100%; vertical-align:top;
+		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+			display:inherit; overflow:hidden; width:100%;
+		}
+		@media (max-width: $iphone-to-ipad) {
+			display:inherit; overflow:hidden;
+		}
+		.testimonial-content{
+			background:$testimonial-background; padding:30px 50px;
+			
+			@media (max-width: $iphone-to-ipad) {
+			  	padding:15px;
+			}
+			
+			.testimonial-info{
+				background:url($quote-sign) no-repeat left top;  padding:30px 60px 0px; min-height:130px;
+				@media (max-width: $iphone-to-ipad) {
+					background-size:60px; padding:10px 30px 0;
+				}
+				p{font-size:18px; font-family: 'robotoregular';
+					@media (max-width: $iphone-to-ipad) {
+						font-size:16px;
+					}
+					@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+						font-size:16px;
+					}
+					@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+						font-size:16px;
+					}
+				 }
+				
+			}
+			.more-info-btn{text-align:right; width:100%; margin-bottom:0px; margin-top:30px;}
+		}
+		
+		.col-sm-6{
+			padding:0px; position:relative;
+			
+			@media (max-width: $iphone-to-ipad) {
+				width:50%; float:left;
+			}
+			@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+				width:50%; float:left;
+			}
+			@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+				width:100%; float:none;
+			}
+			
+			&.check-menu{background:$check-menu-bg;
+				img{opacity:0.49; width:100%;}
+			}
+			&.gallery-nav{background:$black;
+				img{opacity:0.68; width:100%;}
+			}
+			.overlay-nav-text{
+				position:absolute; top:50px; left:50px; right:50px; max-width:250px;
+				@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+					top:20px; left:20px; right:20px; max-width:180px;
+				}
+				@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+					top:20px; left:20px; right:20px; max-width:180px;
+				}
+				@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+					top:20px; left:20px; right:20px; max-width:180px;
+				}
+				
+				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+					top:20px; left:20px; right:20px; max-width:180px;
+				}
+				@media (max-width: $iphone-to-ipad) {
+					top:20px; left:20px; right:20px; max-width:180px;
+				}
+				@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+						top:10px; left:10px; right:10px;
+					}
+				
+				a{
+					font-size:40px; color:$white; text-decoration:none; text-transform:uppercase; font-family: 'playfair_displaybold';
+					&:hover{color:$black;}
+					@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+						font-size:30px;
+					}
+					@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+  						font-size:30px;
+					}
+					@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+					 	font-size:30px;
+					}
+					@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+						font-size:36px;
+					}
+					@media (max-width: $iphone-to-ipad) {
+						font-size:24px;
+					}
+					@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+						font-size:22px;
+					}
+				}
+			}
+		
+		}
+	}
+	.contact-section{
+		padding:0px; float:none; display:table-cell; height:100%; vertical-align:top;
+		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+				display:inherit; width:100%;
+			}
+		@media (max-width: $iphone-to-ipad) {
+			display:inherit; width:100%;
+		}
+		
+		.overlay-content{background:$overlay-content; position:absolute; top:0; left:0; width:100%; height:100%;}
+		.contact-form-section{
+			background:url($contact-form-bg) no-repeat left top; padding:30px 50px; position:absolute; top:0; left:0; width:100%; height:100%; background-size:100%;
+			@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
+				background-size:cover;
+			}
+			@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+				padding:20px 20px; background-size:cover;
+			}
+			@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+				padding:20px 20px; background-size:cover;
+			}
+			@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+				padding:20px 20px; background-size:cover;
+			}
+			
+			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+				position:initial; padding:20px 40px; background-size:100% 100%; margin-bottom:0px;
+			}
+			@media (max-width: $iphone-to-ipad) {
+				position:initial; padding:20px 15px; background-size:cover;
+			}
+			
+			h2{font-size:49px; text-align:center; margin-bottom:40px;
+				@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+				  	font-size:36px;
+				}
+				@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+					font-size:30px; 
+				}
+				@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+ 					font-size:30px; 
+				}
+				@media (max-width: $iphone-to-ipad) {
+					font-size:30px; margin-bottom:20px;
+				}
+			}
+			
+			.contact-form{
+				position:relative; z-index:1; overflow:hidden;
+				@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+				  	max-width:480px; margin:0 auto;
+				}
+				@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+					max-width:480px; margin:0 auto;
+				}
+				@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+					max-width:480px; margin:0 auto;
+				}
+				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+					max-width:480px; margin:0 auto;
+				}
+				@media (max-width: $iphone-to-ipad) {
+					max-width:480px; margin:0 auto;	
+					}
+				
+				.form-row{margin-bottom:30px;
+					@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
+					  	margin-bottom:20px;
+					}
+
+					@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+						margin-bottom:20px;
+					}
+					@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+						margin-bottom:20px;
+					}
+					@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+						margin-bottom:20px;
+					}
+				
+				}
+				label{font-size:18px; font-weight:normal; font-family: 'playfair_displaybold_italic'; margin-right:5px; vertical-align:top;
+					@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+						font-size:16px;
+					}
+					@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+						font-size:16px;
+					}
+					@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+					  	font-size:16px;
+					}
+					@media (max-width: $iphone-to-ipad) {
+						font-size:16px;
+					}
+					@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+						font-size:16px;
+					}
+					@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+						font-size:15px;
+					}
+					
+				 }	
+				input{background:none; border:none; border-bottom:1px solid $white; font-size:18px; float:right; width:70%; margin-bottom:30px; border-radius:0px;
+					@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
+					  	width:65%; margin-bottom:20px;
+					}
+					@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+						width:55%; margin-bottom:20px;
+					}
+					@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+						font-size:16px; width:50%; margin-bottom:20px;
+					}
+					@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+						font-size:16px; width:50%; margin-bottom:20px;
+					}
+					@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+					  	font-size:16px;
+					}
+					@media (max-width: $iphone-to-ipad) {
+						font-size:16px;
+					}
+					@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+						font-size:15px; width:65%; margin-bottom:20px;
+					}
+					@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+						font-size:15px; width:54%; margin-bottom:20px;
+					}
+				
+					&.width55{width:55%;
+						@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
+							width:48%;
+						}
+						@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+							width:35%;
+						}
+						@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+							width:30%;
+						}
+						@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+							width:30%;
+						}
+						@media (max-width: $iphone-to-ipad) {
+							
+						}
+						@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+							width:52%;
+						}
+						@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+							width:32%;
+						}
+					}
+					&.width100{width:100%;}
+					&:focus{outline:none;}
+				}
+				input[type="submit"]{
+					width:auto; border:none; padding:10px 30px; font-size:25px; font-family: 'playfair_displaybold'; text-transform:uppercase; color:$white; text-decoration:none; background:$pink-color;
+					@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+						font-size:18px;
+					}
+					@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+						font-size:18px;
+					}
+					@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+						font-size:18px;
+					}
+					@media (max-width: $iphone-to-ipad) {
+						font-size:16px;
+					}
+					&:hover{background:$black;}
+				}
+			}
+		}
+	}
+
+}
+
+footer{
+	background:$black; overflow:hidden;
+	.footer-logo{
+		background:url($footer-logo-shape) no-repeat left top; background-size:100%; min-height:260px;
+		@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
+		   background-size:100% 100%;
+		}
+		@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+			 width:35%; background-size:100% 100%; min-height:232px;
+		}
+		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+  			width:35%; background-size:100% 100%; min-height:210px;
+		}
+		@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+		 	width:35%; background-size:100% 100%; min-height:210px;
+		}
+		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+			background:$footer-mobile-logo-bg; min-height:inherit;	text-align:center;	width:100%;  
+		}
+		@media (max-width: $iphone-to-ipad) {
+			background:$footer-mobile-logo-bg; min-height:inherit;	text-align:center;	  
+		}
+		img{padding:30px 20px;
+			@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+				max-width:260px; 
+			}
+			@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+				max-width:240px; padding:30px 30px;
+			}
+			@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+				max-width:240px; padding:30px 30px;
+			}
+			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+				max-width:260px;
+			}
+			@media (max-width: $iphone-to-ipad) {
+				max-width:260px;	  
+			}
+		}
+	}
+	
+	.footer-right-side{
+		text-align:right; padding:15px 50px 15px 0;
+		@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+		  width:65%;
+		}
+		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+  			width:65%;
+		}
+		@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+		 	width:65%;
+		}
+		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+			width:100%;	text-align:center; padding:15px;
+		}
+		@media (max-width: $iphone-to-ipad) {
+			padding:15px; text-align:center;
+		}
+		ul{
+			margin:0; padding:0; list-style:none;
+			li{
+				display:inline-block; margin-left:30px; font-size:18px; font-family: 'playfair_displayregular'; text-transform:uppercase;
+				a{
+					text-decoration:none; color:$white;
+					&:hover{color:$pink-color;}
+				}
+				&.active{
+					a{color:$pink-color;}
+				}
+				
+			}
+		}
+		
+		.footer-nav{margin:20px 0;
+			ul{
+				li{
+					&:first-child{margin-left:0px;}
+					@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+						margin-left:15px;
+					}
+					@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+						margin-left:15px;
+					}
+					@media (max-width: $iphone-to-ipad) {
+						margin-left:15px; margin-bottom:5px; 
+					}
+					a{
+						@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+							font-size:16px;
+						}
+						@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+							font-size:16px;
+						}
+						@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+							font-size:16px;
+						}
+						@media (max-width: $iphone-to-ipad) {
+							font-size:14px;
+						}
+					}
+				}
+			}
+		}
+		
+		.social-media{margin:0 0 40px 0;
+			ul{
+				li{
+					margin-left:15px;
+					
+					&:hover{
+						img{opacity:0.5;}
+					}
+				}
+			}
+		}
+		
+		.sponsor-logos{
+			a{
+				margin-left:15px; display:inline-block;
+				&:first-child{margin-left:0px;}
+				@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
+				   margin-left:8px;
+				}
+				@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+					 margin-left:6px;
+				}
+				@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+					width:10%; margin-left:10px;
+				}
+				@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+					width:10%; margin-left:10px;
+				}
+				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+					margin-left:6px;
+				}
+				@media (max-width: $iphone-to-ipad) {
+					margin-left:10px; width:10%; 
+				}
+				@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+					margin-left:10px; width:20%; margin-top:10px;
+				}
+				@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+					margin-left:10px; width:20%; margin-top:10px;
+				}
+				&:hover{
+					img{opacity:0.5;}
+				}
+			}
+		}
+		
+	}
+
+
+}
+
+.equal-table-height{
+	display:table; width:100%;
+	
+	@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+	 
+	}
+	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+	  
+	}
+	@media (max-width: $iphone-to-ipad) {
+	  
+	}
+	@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+		display:inherit;
+	}
+	@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+		display:inherit;
+	}
+	
+}
+
+
+.plus-icon{float:right;}
+img{max-width:100%;}
+
+.ekko-lightbox{
+	background:$megamenu-title-bg;
+	.modal-body{padding:0px; border:2px solid $white;}
+	.ekko-lightbox-container{position:relative;}
+	.ekko-lightbox-nav-overlay{
+		//.next-btn{background:url($next-arrow) no-repeat left top; width:26px; height:45px; text-indent:-9999px; display:inline-block; position:absolute; right:10px; top:50%; margin-top:-23px; }
+		//prev-btn{background:url($prev-arrow) no-repeat left top; width:26px; height:45px; text-indent:-9999px; display:inline-block; position:absolute; left:10px; top:50%;  margin-top:-23px;}
+		a{
+			&:focus{outline:none;}
+		}
+	}
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+    width: 12px; opacity:1;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 12px; opacity:1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $scroll-color;
+    border-radius: 10px;
+    border: 2px solid $white; 
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;  
+    background-color: $white; 
+}

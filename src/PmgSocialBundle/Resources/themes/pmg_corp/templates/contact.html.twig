@@ -1,0 +1,86 @@
+{% extends "PmgSocialBundle:views:master.html.twig" %}
+
+{% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
+
+{% block content %}
+    {% set location = content.location %}
+      <div class="banner-section">
+    <div id="map_marker" class="banner-img menu-bannerimg">
+    	<iframe src="https://www.google.com/maps/embed/v1/place?key={{'AIzaSyB8XGnzd8Qv06uWV8rRdeIIBoGkEYZ46Ks'}}&center={{content.location.lat~','~content.location.long}}&zoom={{content.location.zoom}}&q={{location.number~' '~location.street~', '~location.town~' '~location.code}}" allowfullscreen></iframe>
+    </div>
+  </div>
+  
+  <div class="contact-page-section last-section">
+  	<div class="container">
+    	<div class="row">
+        	<div class="col-sm-7 contact-form">
+                {{ form_errors(contact_form) }}
+                {% for flash_message in app.session.flashBag.get('success_form') %}
+                    <div class="flash-notice">
+                        {{ flash_message }}
+                    </div>
+                {% endfor %}
+                
+                {# form_start(contact_form,{'action': path('pmg_social_send_contact',{'prefix': request.routeParameters.prefix, 'host' : request.routeParameters.host}) }) #}
+                {{ form_start(contact_form) }}
+                
+                    <div class="row">
+                    	<div class="col-sm-6">
+                                {{ form_widget(contact_form.name) }}
+                        </div>
+                        <div class="col-sm-6">
+                                {{ form_widget(contact_form.last_name) }}
+                        </div>
+                        <div class="col-sm-12">
+                                {{ form_widget(contact_form.email) }}
+                        </div>
+                        <div class="col-sm-12">
+                                {{ form_widget(contact_form.message) }}
+                        </div>
+                    </div>
+                {{ form_end(contact_form) }}
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4 contact-detail">
+            	{% if content.location is defined %}
+                {% set location = content.location %}
+                    <p>
+                	<strong>{{ location.number~' '~location.street~', '~location.town~' '~location.code }}</strong>
+                </p>
+                {% else %} 
+                <p>
+                	<strong>6600 Cote-de-Liesse, Saint-Laurent, QC H4T 1E3. Canada</strong>
+                </p>
+                {% endif %}
+                {% if content.phones is defined %}
+                <p>
+                    <strong>{{ 'Tel:'|trans }}</strong>
+                    {% for phone in content.phones %}
+                    {{ phone.phone }}
+                    {% endfor %}
+                </p>
+                {% endif %}
+                {% if content.faxes is defined %}
+                <p>
+                    <strong>{{ 'Fax:'|trans }}</strong>
+                    {% for fax in content.faxes %}
+                    {{ fax.phone }}
+                    {% endfor %}
+                </p>
+                {% endif %}
+                {% if content.emails is defined %}
+                <p>
+                    <strong>{{ 'Courriel:'| trans }}</strong>
+                    {% for email in content.emails %}
+                    <a href="mailto:{{ email.email|raw }}">{{email.email}}</a>
+                    {% endfor %}
+                </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  <div class="push"></div>
+
+{% endblock %}

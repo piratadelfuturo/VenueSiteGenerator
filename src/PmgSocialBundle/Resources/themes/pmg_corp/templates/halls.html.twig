@@ -1,0 +1,200 @@
+{% extends "PmgSocialBundle:views:master.html.twig" %}
+
+{% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
+
+{% block content %}
+<div class="banner-section">
+    <div class="banner-img menu-bannerimg">
+        <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/banner-img.jpg')}}" alt="" /></div>
+  </div>
+  <div class="our-halls-section">
+    <div class="page-heading">
+      <h2>{{ content.title }}</h2>
+    </div>
+    <div class="halls-listing-section">
+      <div class="row">
+        {% if content.links %}
+            {% for link in content.links %}
+            {% set linkDoc = sulu_content_load(link.uuid) %}
+            {% set linkContent = linkDoc.content %}
+
+        <div class="col-sm-3 halls-list-box">
+          <div class="halls-list-img">
+              {% if linkContent.header_images %}
+              <img src="{{ asset(linkContent.header_images[0].thumbnails['150x100'])}}" alt="" />
+              {% else %}
+              <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/halls-list-1.jpg')}}" alt="" />
+              {% endif %}    
+              
+          </div>
+          <div class="halls-list-info">
+            <div class="halls-content">
+              <h4>{{ link.title }}</h4>
+              <p> {{ linkContent.description |slice(1, 45) }} </p>
+            </div>
+            <div class="more-info-btn"> <a href="{{ sulu_content_path(link.url) }}">&plus;</a> </div>
+          </div>
+        </div>
+          {% endfor%}
+        {% else %}
+        <div class="col-sm-3 halls-list-box">
+          <div class="halls-list-img"> <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/halls-list-1.jpg')}}" alt="" /> </div>
+          <div class="halls-list-info">
+            <div class="halls-content">
+              <h4>International Room</h4>
+              <p> Can easily accommodate 2,000 attendees for events, meetings, conventions and exhibits. </p>
+            </div>
+            <div class="more-info-btn"> <a href="halls-detail.html">&plus;</a> </div>
+          </div>
+        </div>
+        <div class="col-sm-3 halls-list-box">
+          <div class="halls-list-img"> <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/halls-list-2.jpg')}}" alt="" /> </div>
+          <div class="halls-list-info">
+            <div class="halls-content">
+              <h4>Paris - Rome</h4>
+              <p> Features 3100 square feet of flexible meeting space that can break down into two sections or be used for exhibitions. </p>
+            </div>
+            <div class="more-info-btn"> <a href="halls-detail.html">&plus;</a> </div>
+          </div>
+        </div>
+        <div class="col-sm-3 halls-list-box">
+          <div class="halls-list-img"> <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/halls-list-3.jpg')}}" alt="" /> </div>
+          <div class="halls-list-info">
+            <div class="halls-content">
+              <h4>Venise</h4>
+              <p> For groups between 120 and 150, features 2380 square feet with 12" ceiling and offers maximum flexibility. </p>
+            </div>
+            <div class="more-info-btn"> <a href="halls-detail.html">&plus;</a> </div>
+          </div>
+        </div>
+        <div class="col-sm-3 halls-list-box">
+          <div class="halls-list-img"> <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/halls-list-4.jpg')}}" alt="" /> </div>
+          <div class="halls-list-info">
+            <div class="halls-content">
+              <h4>Madrid - Rio</h4>
+              <p> The combined rooms cans host smaller groups of 50 to 60 people and be separated for more intimate events. </p>
+            </div>
+            <div class="more-info-btn"> <a href="halls-detail.html">&plus;</a> </div>
+          </div>
+        </div>
+        <div class="col-sm-3 halls-list-box">
+          <div class="halls-list-img"> <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/halls-list-5.jpg')}}" alt="" /> </div>
+          <div class="halls-list-info">
+            <div class="halls-content">
+              <h4>Berlin</h4>
+              <p> Each of these rooms cans host between 50 to 70 people. They offer an elegant setting for cocktails and receptions. </p>
+            </div>
+            <div class="more-info-btn"> <a href="halls-detail.html">&plus;</a> </div>
+          </div>
+        </div>
+        <div class="col-sm-3 halls-list-box">
+          <div class="halls-list-img"> <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/halls-list-6.jpg')}}" alt="" /> </div>
+          <div class="halls-list-info">
+            <div class="halls-content">
+              <h4>Oslo</h4>
+              <p> This elegant room can host between 50 to 70 people. It offers a warm setting for cocktails and receptions. </p>
+            </div>
+            <div class="more-info-btn"> <a href="halls-detail.html">&plus;</a> </div>
+          </div>
+        </div>
+        <div class="col-sm-3 halls-list-box">
+          <div class="halls-list-img"> <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/halls-list-7.jpg')}}" alt="" /> </div>
+          <div class="halls-list-info">
+            <div class="halls-content">
+              <h4>Connexion Lounge</h4>
+              <p> A relaxing area with full bar service. Television and Pool room. </p>
+            </div>
+            <div class="more-info-btn"> <a href="halls-detail.html">&plus;</a> </div>
+          </div>
+        </div>
+        <div class="col-sm-3 halls-list-box">
+          <div class="halls-list-img"> <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/halls-list-8.jpg')}}" alt="" /> </div>
+          <div class="halls-list-info">
+            <div class="halls-content">
+              <h4>Restaurant Volare</h4>
+              <p> Open for breakfast lunch and diner. Can also be used for pre function cocktails and banquet hall. </p>
+            </div>
+            <div class="more-info-btn"> <a href="halls-detail.html">&plus;</a> </div>
+          </div>
+        </div>
+        <div class="col-sm-3 halls-list-box">
+          <div class="halls-list-img"> <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/halls-list-9.jpg')}}" alt="" /> </div>
+          <div class="halls-list-info">
+            <div class="halls-content">
+              <h4>The Outdoor Garden</h4>
+              <p> During the summer extend your event to our garden area. . </p>
+            </div>
+            <div class="more-info-btn"> <a href="halls-detail.html">&plus;</a> </div>
+          </div>
+        </div>
+        <div class="col-sm-3 halls-list-box">
+          <div class="halls-list-img"> <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/halls-list-10.jpg')}}" alt="" /> </div>
+          <div class="halls-list-info">
+            <div class="halls-content">
+              <h4>The Tent</h4>
+              <p> </p>
+            </div>
+            <div class="more-info-btn"> <a href="halls-detail.html">&plus;</a> </div>
+          </div>
+        </div>
+        <div class="col-sm-3 halls-list-box">
+          <div class="halls-list-img"> <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/halls-list-11.jpg')}}" alt="" /> </div>
+          <div class="halls-list-info">
+            <div class="halls-content">
+              <h4>The Outdoor Garden #2</h4>
+              <p> During the summer extend your event to our garden area. </p>
+            </div>
+            <div class="more-info-btn"> <a href="halls-detail.html">&plus;</a> </div>
+          </div>
+        </div>
+        <div class="col-sm-3 halls-list-box">
+          <div class="halls-list-img"> <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/halls-list-12.jpg')}}" alt="" /> </div>
+          <div class="halls-list-info">
+            <div class="halls-content">
+              <h4>New York Suite</h4>
+              <p> For executives and board meetings. This room provides 15 high-black leather chairs around a 12 foot table. </p>
+            </div>
+            <div class="more-info-btn"> <a href="halls-detail.html">&plus;</a> </div>
+          </div>
+        </div>
+          {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="over-menu-section">
+    <div class="menu-img"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/menu-img.jpg')}}" alt="" /></div>
+    <div class="check-menu-btn"> <a href="">Check out our menus</a> </div>
+  </div>
+  <div class="gallery-section">
+    <div class="page-heading">
+      <h2>Gallery</h2>
+    </div>
+    <div class="gallery-list-section">
+      <div class="row">
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-1.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-1.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-2.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-2.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-3.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-3.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-4.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-4.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-5.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-5.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-6.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-6.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-7.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-7.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-8.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-8.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-9.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-9.jpg')}}" alt="" /> </a> </div>
+        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-10.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-10.jpg')}}" alt="" /> </a> </div>
+      </div>
+      <div class="see-more-btn"><a href="">See more photos</a></div>
+    </div>
+  </div>
+  <div class="inner-testimonal-section last-section">
+    <div class="page-heading">
+      <h2>Testimonials</h2>
+    </div>
+    <div class="container">
+      <div class="testimonial-content">
+        <p> “Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.” </p>
+        <div class="author-name"> - Black Theatre </div>
+      </div>
+    </div>
+  </div>
+  <div class="push"></div>
+{% endblock %}

@@ -1,0 +1,36 @@
+<footer>
+  <div class="col-sm-6 footer-logo">
+  	<a href="{{ sulu_content_root_path() }}"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/footer-logo.png') }}" alt="" /></a>
+  </div>
+  <div class="col-sm-6 footer-right-side">
+  	<div class="footer-nav">
+    	<ul>
+            <li><a href="{{ sulu_content_root_path() }}">{% trans %} HOME {% endtrans %}</a></li>
+            {% for item in sulu_navigation_root_tree('main') %}
+            <li>
+                <a href="{{ sulu_content_path(item.url) }}" title="{{ item.title }}">{{ item.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="social-media">
+    	<ul>
+            <li><a href=""><img alt="" src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/fb-icon.png') }}"></a></li>
+            <li><a href=""><img alt="" src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/twitter-icon.png') }}"></a></li>
+            <li><a href=""><img alt="" src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/linked-icon.png') }}"></a></li>
+        </ul>
+    </div>
+    <div class="sponsor-logos">
+            <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-1.png') }}" alt="" /></a>
+            <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-2.png') }}" alt="" /></a>
+            <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-3.png') }}" alt="" /></a>
+            <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-4.png') }}" alt="" /></a>
+            <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-5.png') }}" alt="" /></a>
+            <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-6.png') }}" alt="" /></a>
+            <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-7.png') }}" alt="" /></a>
+            <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-8.png') }}" alt="" /></a>
+            <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-9.png') }}" alt="" /></a>
+
+        </div>
+  </div>
+</footer>

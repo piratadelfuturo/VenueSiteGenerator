@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>homepage_corp</key>
+
+    <view>PmgSocialBundle:templates:homepage</view>
+    <controller>SuluWebsiteBundle:Default:index</controller>
+    <cacheLifetime>2400</cacheLifetime>
+
+    <meta>
+        <title lang="fr">Homepage CORP</title>
+        <title lang="en">Homepage CORP</title>
+    </meta>
+
+    <properties>
+        <section name="highlight">
+            <meta>
+                <title lang="fr">Header</title>
+                <title lang="en">Header</title>
+            </meta>
+            <properties>
+                <property name="title" type="text_line" mandatory="true">
+                    <meta>
+                        <title lang="fr">Titre</title>
+                        <title lang="en">Title</title>
+                    </meta>
+                    <params>
+                        <param name="headline" value="true"/>
+                    </params>
+
+                    <tag name="sulu.search.field" role="title"/>
+
+                    <tag name="sulu.rlp.part"/>
+                </property>
+                <property name="url" type="resource_locator" mandatory="true">
+                    <meta>
+                        <title lang="fr">Adresse</title>
+                        <title lang="en">Resourcelocator</title>
+                    </meta>
+
+                    <tag name="sulu.rlp"/>
+                </property>
+            </properties>
+        </section>
+        <section name="feature">
+            <properties>
+                <property name="slides" type="media_selection">
+                    <meta>
+                        <title lang="fr">Fotos</title>
+                        <title lang="en">Images</title>
+                    </meta>
+                    <params>
+                        <param name="types" value="image"/>
+                        <param name="displayOptions" type="collection">
+                            <param name="leftTop" value="false"/>
+                            <param name="top" value="false"/>
+                            <param name="rightTop" value="false"/>
+                            <param name="left" value="false"/>
+                            <param name="middle" value="false"/>
+                            <param name="right" value="false"/>
+                            <param name="leftBottom" value="false"/>
+                            <param name="bottom" value="false"/>
+                            <param name="rightBottom" value="false"/>
+                        </param>
+                        <param name="defaultDisplayOption" value="middle"/>
+                    </params>
+                </property>
+                <property name="slogan" type="text_line">
+                    <meta>
+                        <title lang="fr">Slogan</title>
+                        <title lang="en">Slogan</title>
+                    </meta>
+                </property>
+                <property name="slogan_text" type="text_area" mandatory="true">
+                    <meta>
+                        <title lang="fr">Slogan description</title>
+                        <title lang="en">Slogan description</title>
+                    </meta>
+                    <tag name="sulu.search.field" role="description"/>
+                </property>
+            </properties>
+        </section>
+        <section name="content">
+            <meta>
+                <title lang="fr">Content</title>
+                <title lang="en">Content</title>
+            </meta>
+            <properties>        
+                <property name="testimonials" type="internal_links">
+                    <meta>
+                        <title lang="fr">Testimonials</title>
+                        <title lang="en">Testimonials</title>
+                    </meta>
+
+                    <params>
+                        <param name="snippetType" value="testimonials"/>
+                    </params>
+                </property>
+                <property name="pages" type="internal_links">
+                    <meta>
+                        <title lang="fr">Halls</title>
+                        <title lang="en">Halls</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
+    </properties>
+</template>
