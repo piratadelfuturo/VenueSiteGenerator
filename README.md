@@ -6,12 +6,16 @@ php -d xcache.var_size=100M app/console cache:clear -e prod;
 php -d xcache.var_size=100M app/webconsole cache:clear -e prod;
 php -d xcache.var_size=100M app/console assets:install public_html -e prod;
 php -d xcache.var_size=100M app/console assetic:dump -e prod;
+php -d xcache.var_size=100M app/console sulu:build prod -e prod -n;
 rsync -avz --exclude 'php.ini' --exclude '.htaccess' public_html/ ../public_html/sitescms/;
-php -d xcache.var_size=100M app/console sulu:build prod -e prod;
-php -d xcache.var_size=100M app/console sulu:document:fixtures:load --fixtures  ./src/PmgSocialBundle/Datafixtures/Document/ -e prod
 
-load fixtures:
-php -d xcache.var_size=100M app/console sulu:document:fixtures:load --fixtures  ./src/PmgSocialBundle/Datafixtures/Document/ -e prod
+
+#file permissions
+chown plazapmg:plazapmg ../public_html/sitescms/ ../public_html/sitescms/*
+chmod 755 ../public_html/sitescms/ ../public_html/sitescms/*
+
+load fixtures: // -n erases all database
+php -d xcache.var_size=100M app/console sulu:document:fixtures:load --fixtures  ./src/PmgSocialBundle/Datafixtures/Document/ -e prod -n
 
 dev:
 rm -rf app/cache/*;
@@ -19,9 +23,7 @@ php -d xcache.var_size=100M app/console cache:clear -e dev;
 php -d xcache.var_size=100M app/console sulu:build dev;
 php -d xcache.var_size=100M app/console assets:install public_html -e dev
 
-#file permissions
-chown plazapmg:plazapmg ../public_html/sitescms/ ../public_html/sitescms/*
-chmod 755 ../public_html/sitescms/ ../public_html/sitescms/*
+
 
 
 # Sulu - Content Management

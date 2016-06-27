@@ -1,4 +1,6 @@
-{% set webspace_key = app.request.attributes.get('_sulu').getAttribute('webspace').key %}
+{% set webspace_key = request.webspaceKey %}
+{% set alter_webspace_key = request.webspaceKey|replace({'_social' : '_corp'} )%}
+
 <header>
     <div class="row">
       <div class="col-md-3 brand-logo">
@@ -14,7 +16,7 @@
         </div>
       </div>
       <div class="col-md-9 header-right-part">
-        <div class="top-right"> <a href="">{% trans %}Corporate{% endtrans %}</a>
+        <div class="top-right"> <a href="{{ sulu_content_path('/',alter_webspace_key)}}">{% trans %}Corporate{% endtrans %}</a>
             {% if request.locale == 'en' %}
                 {% set alter_locale = 'fr' %}
             {% else %}
