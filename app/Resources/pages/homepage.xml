@@ -106,21 +106,21 @@
                 </property>     
             </properties>
         </section>
+        <property name="menu_link" type="single_internal_link">
+            <meta>
+                <title lang="en">Menu link</title>
+            </meta>
+        </property>
         <section name="content">
             <meta>
                 <title lang="fr">Content</title>
                 <title lang="en">Content</title>
             </meta>
             <properties>        
-                <property name="testimonials" type="snippet">
+                <property name="testimonials" type="single_internal_link">
                     <meta>
-                        <title lang="fr">Testimonials</title>
                         <title lang="en">Testimonials</title>
                     </meta>
-
-                    <params>
-                        <param name="snippetType" value="testimonials"/>
-                    </params>
                 </property>
                 <property name="pages" type="internal_links">
                     <meta>

@@ -34,13 +34,16 @@
         <span class="anniversaries-text">{% trans %}Anniversaries{% endtrans %}</span> 
         <span class="musical-text">{% trans %}Musical Evenings{% endtrans %}</span> </div>
   </div>
+  {% if content.menu_link is defined and content.link is not empty %}
+    {% set menu_link = sulu_content_load(content.menu_link) %}
   <div class="over-menu-section">
     <div class="menu-img"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/menu-img.jpg') }}" alt="" /></div>
     <div class="check-menu-btn">
-        <a href="">{% trans %}Check out our menus{% endtrans %}</a>
+        <a href="{{ sulu_content_path(menu_link.content.url) }}">{% trans %}Check out our menus{% endtrans %}</a>
     </div>
   </div>
-  <div class="testimonial-section">
+  {% endif %}
+    <div class="testimonial-section">
     <div class="container">
       <div class="testimonial-title">
         <h2>{% trans %}Testimonials{% endtrans %}</h2>
@@ -52,7 +55,8 @@
       </div>
     </div>
   </div>
-  <div class="halls-section homebanner">
+  
+<div class="halls-section homebanner">
     <div class="row">
       <div class="col-sm-9 halls-title-right">
         <div class="halls-title-img"> <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/halls-title-img.jpg') }}" alt="" />
@@ -164,6 +168,7 @@
         </div>
       </div>
   </div>
+
  <div class="contact-map-section">
     <div class="map-part">
       <div id="googleMap" class="map-google"></div>
@@ -180,7 +185,8 @@
       </div>
     </div>
   </div>
-  <div class="push"></div>
+
+<div class="push"></div>
 
 {% endblock %}
 
