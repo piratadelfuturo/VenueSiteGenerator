@@ -34,7 +34,7 @@
         <span class="anniversaries-text">{% trans %}Anniversaries{% endtrans %}</span> 
         <span class="musical-text">{% trans %}Musical Evenings{% endtrans %}</span> </div>
   </div>
-  {% if content.menu_link is defined and content.link is not empty %}
+  {% if content.menu_link is defined and content.menu_link is not empty %}
     {% set menu_link = sulu_content_load(content.menu_link) %}
   <div class="over-menu-section">
     <div class="menu-img"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/menu-img.jpg') }}" alt="" /></div>
