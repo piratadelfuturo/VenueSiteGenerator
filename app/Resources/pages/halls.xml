@@ -40,11 +40,34 @@
             </properties>
         </section>
 
-        <property name="links" type="internal_links">
+        <property name="halls_list" type="internal_links">
             <meta>
-                <title lang="fr">Interne Links</title>
-                <title lang="en">Internal links</title>
+                <title lang="fr">Halls</title>
+                <title lang="en">Halls</title>
             </meta>
         </property>
+        <section name="menu_box">
+            <meta>
+                <title lang="fr">Menu</title>
+                <title lang="en">Menu</title>
+            </meta>
+            <properties>
+            <property name="menu_link" type="single_internal_link">
+                <meta>
+                    <title lang="en">Menu link</title>
+                </meta>
+            </property>
+            </properties>
+        </section>
+        <property name="gallery" type="snippet">
+                <meta>
+                    <title lang="fr">gallery</title>
+                    <title lang="en">gallery</title>
+                </meta>
+                <params>
+                    <param name="snippetType" value="gallery"/>
+                </params>               
+        </property>
+
     </properties>
 </template>

@@ -1,5 +1,10 @@
 {% set webspace_key = request.webspaceKey %}
 {% set alter_webspace_key = request.webspaceKey|replace({'_corp' : '_social'} )%}
+{% if request.locale == 'en' %}
+    {% set alter_locale = 'fr' %}
+{% else %}
+    {% set alter_locale = 'en' %}
+{% endif %}
 <header>
         <div class="row">
       <div class="col-md-6 brand-logo">
@@ -10,11 +15,6 @@
       <div class="col-md-6 header-right-part">
         <div class="top-right">
             <a href="{{ sulu_content_path('/',alter_webspace_key)}}">{% trans %}Social{% endtrans %}</a>
-            {% if request.locale == 'en' %}
-                {% set alter_locale = 'fr' %}
-            {% else %}
-                {% set alter_locale = 'en' %}
-            {% endif %}    
             <a href="{{ sulu_content_path((urls[alter_locale]?:'/'),request.webspaceKey,alter_locale) }}">
                 <span class="flag">
                     <img src="{{ asset("bundles/pmgsocial/pmg_corp/default/images/"~alter_locale~"-flag.png") }}" alt="{{ alter_locale }}" />

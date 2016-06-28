@@ -127,17 +127,26 @@
                         <param name="types" value="image"/>
                     </params>               
                 </property>
-                <property name="download_info" type="smart_content">
+                <property name="download_info" type="media_selection">
                     <meta>
-                        <title lang="fr">Download Hall Info</title>
-                        <title lang="en">Download Hall Info</title>
+                        <title lang="fr">hall details download</title>
+                        <title lang="en">hall details download</title>
                     </meta>
-
                     <params>
-                        <param name="provider" value="media" />
-                    </params>
+                        <param name="types" value="image"/>
+                    </params>               
                 </property>
             </properties>
         </section>
+        <property name="gallery" type="snippet">
+                <meta>
+                    <title lang="fr">gallery</title>
+                    <title lang="en">gallery</title>
+                </meta>
+                <params>
+                    <param name="snippetType" value="gallery"/>
+                </params>               
+        </property>
+
     </properties>
 </template>

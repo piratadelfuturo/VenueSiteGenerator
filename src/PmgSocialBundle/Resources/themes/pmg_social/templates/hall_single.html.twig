@@ -5,7 +5,7 @@
 {% block content %} 
 <div class="banner-section">
     <div class="banner-img menu-bannerimg">
-        {% if content.header_images %}
+        {% if content.header_images is defined %}
         <img src="{{ asset(content.header_images[0].url)}}" alt="" />
         {% else %}
         <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/halls-detail-img.jpg')}}" alt="" />
@@ -20,7 +20,7 @@
   </div>
   <div class="dimension-section">
     <div class="page-heading">
-      <h2> {% trans %}Dimensions & Capacity {% endtrans %}</h2>
+      <h2> {% trans %}Dimensions & Capacity{% endtrans %}</h2>
     </div>
     <div class="dimension-content-box">
       <div class="table-responsive">
@@ -37,6 +37,7 @@
                   </tr>
             </thead>
           <tbody>
+            {% if content.rows is iterable and  content.rows is not empty%}
               {%for row in content.rows %}
             <tr>
               <td>{{row.hall}}</td>
@@ -47,7 +48,8 @@
               <td>{{row.banquet}}</td>
               <td>{{row.theater}}</td>
             </tr>
-            {% endfor %}
+                {% endfor %}
+            {% endif %}
           </tbody>
         </table>
       </div>
@@ -59,42 +61,23 @@
         <h2>{% trans %}Hall Setup{% endtrans %}</h2>
       </div>
       <div class="setup-info-box">
-          {% if content.hall_setup %}
+          {% if content.hall_setup is iterable and content.hall_setup[0] is defined %}
            <img src="{{ asset(content.hall_setup[0].url)}}" alt="" />
           {% else%}
           <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/setup-img.jpg')}}" alt="" />
           {% endif %}
       </div>
       {% set download_link = '' %}
-      {% if content.download_info[0] %}
-      {% set download_link = asset(content.download_info[0].url) %}
-      {% endif %}
-      <div class="download-btn"> <a href="{{ download_link }}" target="_blank">
-              {% trans %}Download the complete hall info{% endtrans %}
+      {% if content.download_info is iterable and content.download_info[0] is defined %}
+        <div class="download-btn"> <a href="{{ download_link }}" target="_blank">
+                {% trans %}Download the complete hall info{% endtrans %}
           </a> </div>
+    {% endif %}
     </div>
-  </div>
-{% endblock %}
-{% block footer %}
-  <div class="gallery-section last-section">
-    <div class="page-heading">
-      <h2>Gallery</h2>
-    </div>
-    <div class="gallery-list-section">
-      <div class="row">
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-1.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-1.jpg')}}" alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-2.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-2.jpg')}}" alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-3.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-3.jpg')}}" alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-4.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-4.jpg')}}" alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-5.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-5.jpg')}}" alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-6.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-6.jpg')}}" alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-7.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-7.jpg')}}" alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-8.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-8.jpg')}}" alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-9.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-9.jpg')}}" alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-10.jpg') }}"> <img class="img-responsive" src="{{ asset('bundles/pmgsocial/pmg_social/default/images/gallery-10.jpg')}}" alt="" /> </a> </div>
-      </div>
-    </div>
-  </div>
+</div>
+{% if content.gallery.images is iterable and content.images is not empty%}
+    {% include 'PmgSocialBundle:snippets:gallery.snippet.html.twig' with { 'content' : content.gallery, 'title' : null} %}
+{% endif %}
   <div class="push"></div>
 {% endblock %}
 

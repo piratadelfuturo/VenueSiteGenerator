@@ -3,15 +3,15 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
 
-    <key>gallery</key>
+    <key>gallery_content</key>
 
-    <view>PmgSocialBundle:templates:gallery</view>
+    <view>PmgSocialBundle:templates:gallery_content</view>
     <controller>SuluWebsiteBundle:Default:index</controller>
     <cacheLifetime>2400</cacheLifetime>
 
     <meta>
-        <title lang="fr">Gallery</title>
-        <title lang="en">Gallery</title>
+        <title lang="fr">Gallery Page</title>
+        <title lang="en">Gallery Page</title>
     </meta>
 
     <properties>
@@ -60,13 +60,13 @@
                 <title lang="en">Content</title>
             </meta>
             <properties>
-                <property name="hall_setup" type="media_selection">
+                <property name="gallery" type="snippet">
                     <meta>
-                        <title lang="fr">hall setup</title>
-                        <title lang="en">hall setup</title>
+                        <title lang="fr">gallery</title>
+                        <title lang="en">gallery</title>
                     </meta>
                     <params>
-                        <param name="types" value="image"/>
+                        <param name="snippetType" value="gallery"/>
                     </params>               
                 </property>
             </properties>

@@ -1,0 +1,12 @@
+{% extends "PmgSocialBundle:views:master.html.twig" %}
+
+{% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
+
+{% block content %}
+        {% if content.gallery is iterable and content.gallery is not empty%}
+            {% for gallery in content.gallery %}
+            {% include 'PmgSocialBundle:snippets:gallery.snippet.html.twig' with { 'content' : gallery, 'title' : content.title , 'section_class' : ''} %}
+            {% endfor %}
+        {% endif %}
+      <div class="push"></div>
+{% endblock %}

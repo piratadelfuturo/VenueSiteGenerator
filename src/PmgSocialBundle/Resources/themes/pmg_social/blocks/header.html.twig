@@ -1,5 +1,10 @@
 {% set webspace_key = request.webspaceKey %}
 {% set alter_webspace_key = request.webspaceKey|replace({'_social' : '_corp'} )%}
+{% if request.locale == 'en' %}
+    {% set alter_locale = 'fr' %}
+{% else %}
+    {% set alter_locale = 'en' %}
+{% endif %}    
 
 <header>
     <div class="row">
@@ -17,11 +22,6 @@
       </div>
       <div class="col-md-9 header-right-part">
         <div class="top-right"> <a href="{{ sulu_content_path('/',alter_webspace_key)}}">{% trans %}Corporate{% endtrans %}</a>
-            {% if request.locale == 'en' %}
-                {% set alter_locale = 'fr' %}
-            {% else %}
-                {% set alter_locale = 'en' %}
-            {% endif %}    
             <a href="{{ sulu_content_path((urls[alter_locale]?:'/'),request.webspaceKey,alter_locale) }}">
                 <span class="flag">
                     <img src="{{ asset("bundles/pmgsocial/pmg_social/default/images/"~alter_locale~"-flag.png") }}" alt="{{ alter_locale }}" />
@@ -41,7 +41,7 @@
                     <li><a href="{{ sulu_content_root_path() }}">{% trans %} HOME {% endtrans %}</a></li>
                     {% for item in sulu_navigation_root_tree('main',2) %}
                     <li {% if item.children|length > 0%} class="dropdown mega-dropdown" {% endif %} >
-                        <a href="{{ sulu_content_path(item.url) }}"
+                        <a href="{{ sulu_content_path(item.url,item.webspaceKey) }}"
                             title="{{ item.title }}"
                             {% if item.children|length > 0%} class="dropdown-toggle" data-toggle="dropdown" {% endif %}
                             >{{ item.title }}</a>
@@ -50,7 +50,7 @@
                             {% for child in item.children %}
                                 <li class="col-sm-4">
                                     <div class="megamenu-content">
-                                        <a href="{{ sulu_content_path(child.url) }}" 
+                                        <a href="{{ sulu_content_path(child.url,child.webspaceKey) }}" 
                                            title="{{ child.title }}">
                                             {% set child_content = sulu_content_load(child.uuid) %}
                                             <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/halls-img-1.jpg')}}" alt="" />

@@ -4,83 +4,90 @@
 
 {% block content %}
     {% set location = content.location %}
-      <div class="banner-section">
-    <div id="map_marker" class="banner-img menu-bannerimg">
-    	<iframe src="https://www.google.com/maps/embed/v1/place?key={{'AIzaSyB8XGnzd8Qv06uWV8rRdeIIBoGkEYZ46Ks'}}&center={{content.location.lat~','~content.location.long}}&zoom={{content.location.zoom}}&q={{location.number~' '~location.street~', '~location.town~' '~location.code}}" allowfullscreen></iframe>
+      <div class="banner-section contact-banner">
+    <div class="banner-img">
+    	<div class="contact-form-section">
+            	<div class="overlay-content"></div>
+                <div class="contact-form">
+                	<h2>CONTACT US</h2>
+                    <div class="form-row">
+                    	<label>Hello my name is</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-row">
+                    	<label>I’m interested in</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-row">
+                    	<label>Here’s my e-mail</label>
+                        <input type="email">
+                    </div>
+                    <div class="form-row">
+                    	<label>I can give you more details</label>
+                       <input type="text" class="width55">
+                       <input type="text" class="width100">
+                       <input type="text" class="width100">
+                       <input type="text" class="width100">
+                    </div>
+                    <div class="form-row">
+                    	<input type="submit" value="Send">
+                    </div>
+                </div>
+            
+            </div>
     </div>
   </div>
-  
-  <div class="contact-page-section last-section">
+  <div class="contact-page-section">
   	<div class="container">
     	<div class="row">
-        	<div class="col-sm-7 contact-form">
-                {{ form_errors(contact_form) }}
-                {% for flash_message in app.session.flashBag.get('success_form') %}
-                    <div class="flash-notice">
-                        {{ flash_message }}
-                    </div>
-                {% endfor %}
-                
-                {# form_start(contact_form,{'action': path('pmg_social_send_contact',{'prefix': request.routeParameters.prefix, 'host' : request.routeParameters.host}) }) #}
-                {{ form_start(contact_form) }}
-                
-                    <div class="row">
-                    	<div class="col-sm-6">
-                                {{ form_widget(contact_form.name) }}
-                        </div>
-                        <div class="col-sm-6">
-                                {{ form_widget(contact_form.last_name) }}
-                        </div>
-                        <div class="col-sm-12">
-                                {{ form_widget(contact_form.email) }}
-                        </div>
-                        <div class="col-sm-12">
-                                {{ form_widget(contact_form.message) }}
-                        </div>
-                    </div>
-                {{ form_end(contact_form) }}
-            </div>
-            <div class="col-sm-1"></div>
-            <div class="col-sm-4 contact-detail">
-            	{% if content.location is defined %}
-                {% set location = content.location %}
+            <div class="equal-table-height">
+                <div class="col-sm-4 contact-address">
+                <div class="contact-address-content">
+                    <h6>Please do not hesitate to contact us should you require further information.</h6>
+                    <p><span class="contact-icon-img"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/location-icon.png') }}" alt="" /></span>
+                    {% if content.location is defined %}
+                    {% set location = content.location %}
+                        {{ location.number~' '~location.street }}<br>
+                        {{ location.town }}<br>
+                        {{ location.code }}. Canada
+                    {% else %} 
+                        6600 Cote-de-Liesse,<br>Saint-Laurent, QC<br>H4T 1E3. Canada
+                    {% endif %}
+
+                    </p>
+                    {% if content.phones is defined %}
+                    <p><span class="contact-icon-img"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/mobile-icon.png') }}" alt="" /></span>
+                        {% for phone in content.phones %}
+                        {{ phone.phone }}
+                        {% endfor %}
+                        
+                    </p>
+                    {% endif %}
+                    {% if content.faxes is defined %}
                     <p>
-                	<strong>{{ location.number~' '~location.street~', '~location.town~' '~location.code }}</strong>
-                </p>
-                {% else %} 
-                <p>
-                	<strong>6600 Cote-de-Liesse, Saint-Laurent, QC H4T 1E3. Canada</strong>
-                </p>
-                {% endif %}
-                {% if content.phones is defined %}
-                <p>
-                    <strong>{{ 'Tel:'|trans }}</strong>
-                    {% for phone in content.phones %}
-                    {{ phone.phone }}
-                    {% endfor %}
-                </p>
-                {% endif %}
-                {% if content.faxes is defined %}
-                <p>
-                    <strong>{{ 'Fax:'|trans }}</strong>
-                    {% for fax in content.faxes %}
-                    {{ fax.phone }}
-                    {% endfor %}
-                </p>
-                {% endif %}
-                {% if content.emails is defined %}
-                <p>
-                    <strong>{{ 'Courriel:'| trans }}</strong>
-                    {% for email in content.emails %}
-                    <a href="mailto:{{ email.email|raw }}">{{email.email}}</a>
-                    {% endfor %}
-                </p>
-                {% endif %}
+                        <span class="contact-icon-img">
+                            <img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/fax-icon.png') }}" alt="" /></span>
+                            {% for fax in content.faxes %}
+                            {{ fax.phone }}
+                            {% endfor %}
+                    </p>
+
+                    {% endif %}
+                    {% if content.emails is defined %}
+                    <p><span class="contact-icon-img"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/email-icon.png') }}" alt="" /></span>
+                        {% for email in content.emails %}
+                        <a href="mailto:{{ email.email|raw }}">{{email.email}}</a>
+                        {% endfor %}                    
+                    </p>
+                    {% endif %}
+                </div>
+            </div>	
+                <div class="col-sm-8 contact-map">
+                <div id="googleMap" class="map-google"></div>
+            </div>
             </div>
         </div>
     </div>
   </div>
-  
-  <div class="push"></div>
 
 {% endblock %}
