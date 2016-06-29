@@ -39,6 +39,9 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        pmg_social:
+            social_profiles: '%pmg_social.social_profiles%'
 
 # Assetic Configuration
 assetic:
@@ -114,3 +117,6 @@ jms_translation:
 nviba_sulu_overrides:
     portal_themes:
         www_plazavolare_com_social: "pmg_social"
+        
+pmg_social:
+    social_profiles: "%pmg_social.social_profiles%"

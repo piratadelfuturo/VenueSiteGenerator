@@ -28,6 +28,14 @@
 
                     <tag name="sulu.rlp.part"/>
                 </property>
+                
+                <property name="header_images" type="media_selection">
+                    <meta>
+                        <title lang="fr">Bilder</title>
+                        <title lang="en">Images</title>
+                    </meta>
+                </property>
+
 
                 <property name="url" type="resource_locator" mandatory="true">
                     <meta>
@@ -39,42 +47,19 @@
                 </property>
             </properties>
         </section>
+        <section name="location_data">
+            <properties>
+                <property name="location" type="snippet">
+                    <meta>
+                        <title lang="fr">Location</title>
+                        <title lang="en">Location</title>
+                    </meta>
 
-        <property name="location" type="location">
-            <meta>
-                <title lang="fr">Location</title>
-                <title lang="en">Location</title>
-            </meta>
-
-        </property>
-        
-        <block name="phones" default-type="phone" minOccurs="0">
-            <types>
-                <type name="phone">
-                    <properties>
-                        <property name="phone" type="phone"></property>
-                    </properties>
-                </type>
-            </types>
-        </block>
-        <block name="faxes" default-type="fax" minOccurs="0">
-            <types>
-                <type name="fax">
-                    <properties>
-                        <property name="phone" type="phone"></property>
-                    </properties>
-                </type>
-
-            </types>            
-        </block>
-        <block name="emails" default-type="email" minOccurs="0">
-            <types>
-                <type name="email">
-                    <properties>
-                        <property name="email" type="email"></property>
-                    </properties>
-                </type>
-            </types>
-        </block>
+                    <params>
+                        <param name="snippetType" value="location"/>
+                    </params>
+                </property>
+            </properties>
+        </section>
     </properties>
 </template>

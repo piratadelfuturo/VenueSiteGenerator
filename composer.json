@@ -3,7 +3,7 @@
     "license": "MIT",
     "type": "project",
     "description": "The sulu content management framework",
-    "version": "1.2.2",
+    "version": "1.2.4",
     "autoload": {
         "psr-0": {
             "": "src/",
@@ -18,7 +18,7 @@
         "sensio/distribution-bundle": "~5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "~2.0",
-        "sulu/sulu": "1.2.3",
+        "sulu/sulu": "1.2.4",
         "symfony-cmf/core-bundle": "1.2.*",
         "dantleech/phpcr-migrations-bundle": "0.1.*",
 
@@ -77,7 +77,6 @@
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "public_html",
-        "symfony-assets-install": "relative",
         "incenteev-parameters": [
             {"file": "app/config/parameters.yml"},
             {"file": "app/config/phpcr.yml"}

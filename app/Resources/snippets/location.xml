@@ -20,6 +20,8 @@
 
             <tag name="sulu.node.name"/>
         </property>
+        <section name="location_data">
+            <properties>
         <property name="location" type="location">
             <meta>
                 <title lang="fr">Location</title>
@@ -55,6 +57,8 @@
                     </properties>
                 </type>
             </types>
-        </block>        
+        </block>
+            </properties>
+        </section>
     </properties>
 </template>

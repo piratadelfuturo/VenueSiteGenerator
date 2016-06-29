@@ -36,14 +36,16 @@
               </button>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                
                 {% if sulu_navigation_root_tree('main') is not empty %}
                 <ul class="nav navbar-nav">
                     <li><a href="{{ sulu_content_root_path() }}">{% trans %} HOME {% endtrans %}</a></li>
                     {% for item in sulu_navigation_root_tree('main',2) %}
                     <li {% if item.children|length > 0%} class="dropdown mega-dropdown" {% endif %} >
                         <a href="{{ sulu_content_path(item.url,item.webspaceKey) }}"
+                           data-target="{{ sulu_content_path(item.url,item.webspaceKey) }}"
                             title="{{ item.title }}"
-                            {% if item.children|length > 0%} class="dropdown-toggle" data-toggle="dropdown" {% endif %}
+                            {% if item.children|length > 0%} class="dropdown-link" data-toggle="dropdown" {% endif %}
                             >{{ item.title }}</a>
                         {% if item.children|length > 0 %}
                             <ul class="dropdown-menu mega-dropdown-menu row">
@@ -53,7 +55,14 @@
                                         <a href="{{ sulu_content_path(child.url,child.webspaceKey) }}" 
                                            title="{{ child.title }}">
                                             {% set child_content = sulu_content_load(child.uuid) %}
-                                            <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/halls-img-1.jpg')}}" alt="" />
+                                            {% set child_content = child_content.content %}
+                                            {% if child_content.header_images is defined and child_content.header_images is not empty %}
+                                                {% set section_image = random(child_content.header_images)%}
+                                                {% set section_image = section_image.thumbnails['menu-thumb']%}
+                                            {% else %}
+                                                {% set section_image = 'bundles/pmgsocial/pmg_social/default/images/halls-img-1.jpg'%}        
+                                            {% endif %}
+                                            <img src="{{ asset(section_image)}}" alt="" />
                                         <h6>{{ child.title }}</h6>
                                         </a>
                                     </div>

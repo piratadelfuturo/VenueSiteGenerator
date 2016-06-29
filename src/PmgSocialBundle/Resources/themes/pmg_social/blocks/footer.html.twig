@@ -1,10 +1,11 @@
+{% set webspace_key = request.webspaceKey %}
 <footer class="home-footer">
   <div class="footer-top-part">
-  	<div class="footer-img"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/footer-img.png') }}" alt="" /></div>
+  	<div class="footer-img"><img src="{{ asset('bundles/pmgsocial/pmg_social/'~webspace_key~'/images/footer-img.png') }}" alt="" /></div>
     <div class="row">
       <div class="col-sm-3 footer-logo">
           <a href="{{ sulu_content_root_path() }}">
-              <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/logo.png') }}" alt="" />
+              <img src="{{ asset('bundles/pmgsocial/pmg_social/'~webspace_key~'/images/logo.png') }}" alt="" />
           </a>
       </div>
       <div class="col-sm-9 footer-right">
@@ -31,14 +32,14 @@
       <div class="row">
         <div class="col-sm-4 copyright-text">{% trans %}2015 All rights reserved PMG group{% endtrans %}</div>
         <div class="col-sm-8 sponsor-logos">
-        	<a href=""><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/sponsor-logo-1.png') }}" alt="" /></a>
-            <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/sponsor-logo-2.png') }}" alt="" /></a>
-            <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/sponsor-logo-3.png') }}" alt="" /></a>
-            <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/sponsor-logo-4.png') }}" alt="" /></a>
-            <!-- <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/sponsor-logo-5.png') }}" alt="" /></a> -->
-            <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/sponsor-logo-6.png') }}" alt="" /></a>
-            <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/sponsor-logo-7.png') }}" alt="" /></a>
-            <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/sponsor-logo-8.png') }}" alt="" /></a>
+            <a href="{{ sulu_content_path('/','plazavolare_social')}}"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/sponsor-logo-1.png') }}" alt="" /></a>
+            <a href="{{ sulu_content_path('/','la_plaza_social')}}"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/sponsor-logo-2.png') }}" alt="" /></a>
+            <a href="{{ sulu_content_path('/','plazaantique_social')}}"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/sponsor-logo-3.png') }}" alt="" /></a>
+            <a href="{{ sulu_content_path('/','embassyplaza_social')}}"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/sponsor-logo-4.png') }}" alt="" /></a>
+            {# <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/sponsor-logo-5.png') }}" alt="" /></a> #}
+            <a href="{{ sulu_content_path('/','plazacentreville_social')}}"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/sponsor-logo-6.png') }}" alt="" /></a>
+            <a href="{{ sulu_content_path('/','plazagardeninn_social')}}"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/sponsor-logo-7.png') }}" alt="" /></a>
+            {# <a href="{{ sulu_content_path('/','challengerpiazza_social')}}"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/sponsor-logo-8.png') }}" alt="" /></a> #}
             <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/sponsor-logo-9.png') }}" alt="" /></a>
         </div>
       </div>
