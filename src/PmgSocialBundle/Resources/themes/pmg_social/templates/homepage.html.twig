@@ -60,6 +60,7 @@
     </div>
   </div>
 {% endif %}
+
 {% if content.halls_list is defined and content.halls_list is not empty %}
     {% set hall_content = [] %}
     {% for hall in content.halls_list %}
@@ -99,8 +100,9 @@
       </div>
   </div>
 {% endif %}
+
 {% if content.location is defined and content.location is not empty %}
-{% set location = content.location %}
+{% set location = content.location[0] %}
  <div class="contact-map-section">
     <div class="map-part">
       <div id="googleMap" class="map-google"></div>

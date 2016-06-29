@@ -4,9 +4,10 @@
 
 {% block content %}
     {% if content.location is not empty %}
-    {% set location = content.location %}
+    {% set location = content.location[0] %}
     <div class="banner-section">
     <div id="map_marker" class="banner-img menu-bannerimg">
+        
     	<iframe src="https://www.google.com/maps/embed/v1/place?key={{
     'AIzaSyB8XGnzd8Qv06uWV8rRdeIIBoGkEYZ46Ks'|url_encode
         }}&center={{
@@ -16,8 +17,9 @@
         }}&zoom={{
     location.location.zoom|url_encode
         }}&q={{
-    location.number~' '~location.street~', '~location.town~' '~location.code|url_encode
+    location.location.number~' '~location.location.street~', '~location.location.town~' '~location.location.code|url_encode
         }}" allowfullscreen></iframe>
+        
     </div>
   </div>
     {% endif %}
@@ -26,11 +28,13 @@
     	<div class="row">
         	<div class="col-sm-7 contact-form">
                 {{ form_errors(contact_form) }}
+                {% if app.session.flashBag is defined %}
                 {% for flash_message in app.session.flashBag.get('success_form') %}
                     <div class="flash-notice">
                         {{ flash_message }}
                     </div>
                 {% endfor %}
+                {% endif %}
                 
                 {# form_start(contact_form,{'action': path('pmg_social_send_contact',{'prefix': request.routeParameters.prefix, 'host' : request.routeParameters.host}) }) #}
                 {{ form_start(contact_form) }}
@@ -54,35 +58,47 @@
             <div class="col-sm-1"></div>
             <div class="col-sm-4 contact-detail">
             	{% if content.location is defined and content.location is not empty %}
-                {% set location = content.location %}
+                    {% set location = content.location[0] %}
+                        <p>
+                            <strong>{{ location.location.number~' '~location.location.street~', '~location.location.town~' '~location.location.code }}</strong>
+                    </p>
+                    {% endif %}
+                    {% if location.phones is defined %}
                     <p>
-                	<strong>{{ location.number~' '~location.street~', '~location.town~' '~location.code }}</strong>
-                </p>
+                        <strong>{% trans %}Tel:{% endtrans %}</strong>
+                        {% for phone in location.phones %}
+                        {{ phone.phone }}
+                            {% if loop.last == false %}
+                            <br />
+                            {% endif %}
+                        {% endfor %}
+                    </p>
+                    {% endif %}
+                    {% if content.faxes is defined %}
+                    <p>
+                        <strong>{{ 'Fax:'|trans }}</strong>
+                        {% for fax in location.faxes %}
+                        {{ fax.phone }}
+                            {% if loop.last == false %}
+                            <br />
+                            {% endif %}
+
+                        {% endfor %}
+                    </p>
+                    {% endif %}
+                    {% if content.emails is defined %}
+                    <p>
+                        <strong>{% trans %}E-mail:{% endtrans %}</strong>
+                        {% for email in location.emails %}
+                        <a href="mailto:{{ email.email|raw }}">{{email.email}}</a>
+                            {% if loop.last == false %}
+                            <br />
+                            {% endif %}
+
+                        {% endfor %}
+                    </p>
                 {% endif %}
-                {% if content.phones is defined %}
-                <p>
-                    <strong>{% trans %}Tel:{% endtrans %}</strong>
-                    {% for phone in content.phones %}
-                    {{ phone.phone }}
-                    {% endfor %}
-                </p>
-                {% endif %}
-                {% if content.faxes is defined %}
-                <p>
-                    <strong>{{ 'Fax:'|trans }}</strong>
-                    {% for fax in content.faxes %}
-                    {{ fax.phone }}
-                    {% endfor %}
-                </p>
-                {% endif %}
-                {% if content.emails is defined %}
-                <p>
-                    <strong>{% trans %}E-mail:{% endtrans %}</strong>
-                    {% for email in content.emails %}
-                    <a href="mailto:{{ email.email|raw }}">{{email.email}}</a>
-                    {% endfor %}
-                </p>
-                {% endif %}
+                
             </div>
         </div>
     </div>
