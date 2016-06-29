@@ -3,13 +3,24 @@
 {% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
 
 {% block content %}
+    {% if content.location is not empty %}
     {% set location = content.location %}
-      <div class="banner-section">
+    <div class="banner-section">
     <div id="map_marker" class="banner-img menu-bannerimg">
-    	<iframe src="https://www.google.com/maps/embed/v1/place?key={{'AIzaSyB8XGnzd8Qv06uWV8rRdeIIBoGkEYZ46Ks'|url_encode}}&center={{location.location.lat|url_encode}},{{location.location.long|url_encode}}&zoom={{location.location.zoom|url_encode}}&q={{location.number~' '~location.street~', '~location.town~' '~location.code||url_encode}}" allowfullscreen></iframe>
+    	<iframe src="https://www.google.com/maps/embed/v1/place?key={{
+    'AIzaSyB8XGnzd8Qv06uWV8rRdeIIBoGkEYZ46Ks'|url_encode
+        }}&center={{
+    location.location.lat|url_encode
+        }},{{
+    location.location.long|url_encode
+        }}&zoom={{
+    location.location.zoom|url_encode
+        }}&q={{
+    location.number~' '~location.street~', '~location.town~' '~location.code|url_encode
+        }}" allowfullscreen></iframe>
     </div>
   </div>
-  
+    {% endif %}
   <div class="contact-page-section last-section">
   	<div class="container">
     	<div class="row">
@@ -42,14 +53,10 @@
             </div>
             <div class="col-sm-1"></div>
             <div class="col-sm-4 contact-detail">
-            	{% if content.location is defined %}
+            	{% if content.location is defined and content.location is not empty %}
                 {% set location = content.location %}
                     <p>
                 	<strong>{{ location.number~' '~location.street~', '~location.town~' '~location.code }}</strong>
-                </p>
-                {% else %} 
-                <p>
-                	<strong>6600 Cote-de-Liesse, Saint-Laurent, QC H4T 1E3. Canada</strong>
                 </p>
                 {% endif %}
                 {% if content.phones is defined %}

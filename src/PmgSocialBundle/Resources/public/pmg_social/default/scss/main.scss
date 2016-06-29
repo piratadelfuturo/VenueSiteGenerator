@@ -2313,68 +2313,229 @@ footer{
     
 }
 
-$plazagardeninn_social_site_color:     #a40000;
+$sites-names: (
+    'plazagardeninn_social_site',
+    'challengerpiazza_social_site',
+    'plazavolare_social_site',
+    'la_plaza_social_site',
+    'plazaantique_social_site',
+    'plazacentreville_social_site',
+    'plazagardeninn_social_site'
+    );
 
-$challengerpiazza_social_site_color:   #004ee9;
-
-$plazavolare_social_site_color:        #ce1b45;
-
-$la_plaza_social_site_color:           #de5bea;
-
-$plazaantique_social_site_color:       #ff5a00;
-
-$embassyplaza_social_site_color:       #00e4ff;
-
-$plazacentreville_social_site_color:   #329996;
-
-$plazagardeninn_social_site_color:     #a40000;
+$sites-colors: (
+    #a40000,
+    #004ee9,
+    #ce1b45,
+    #de5bea,
+    #ff5a00,
+    #00e4ff,
+    #329996,
+    #a40000
+    );
 
 
-.plazagardeninn_social_site{
-    .testimonial-section{
-        background: $www_plazagardeninn_com_site_color;        
+
+@each $site-item in $sites-names {
+    $i: index($sites-names,$site-item);
+    $this-color: nth($sites-colors,$i);
+    .#{$site-item}{
+        a{color:inherit}
+        
+        .top-right{
+            a{
+                &:hover{color:$this-color;}
+            }
+        }
+
+        .main-info{
+            h2 {
+                color: $this-color;
+            }
+        }
+
+        .highlight-text-box {
+            span {
+                color: $this-color;
+            }
+
+        }
+
+        .over-menu-section {
+            .check-menu-btn {
+                a{
+                    &:hover{background: $this-color;}
+                }
+            }
+        }
+
+        
+        .testimonial-section{
+            background: $this-color;
+        }
+                
+        .halls-section{
+            .halss-menu-box{
+                &:hover,
+		&.active{
+                    @media (max-width: $iphone-to-ipad) {
+			background:$this-color;
+                    }
+                }
+            }
+        }
+        
+        .menu-bannerimg{
+            &:before{
+                    background:url($pink-cruve-img) no-repeat left bottom;
+            }
+        }
+
+        
+        footer{
+            .footer-nav{
+                ul{
+                    li{
+                        a{
+                            &:hover{color:$this-color;}
+                        }
+                        &.active{
+                            a{
+                                color:$this-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+        
+        .package-section{
+            h2{
+                color:$this-color;
+            }
+            .package-btns{
+                a{
+                    &:hover,&:focus{
+                        background:$this-color; border-color:$this-color;
+                    }
+                }
+            }
+        }
+        
+         .menu-list-section{
+            .menu-listing-box{
+                h2{
+                    color:$this-color;
+                }
+                ul{
+                    li{
+                        a{
+                            &:hover,&:focus{color:$this-color;}
+                        }
+                    }
+                }
+            }
+        }
+        
+        .our-halls-section{
+            .halls-listing-section{
+                .halls-list-box{
+                    .halls-list-info{
+                        .halls-content{
+                            h4{color:$this-color}
+                        }
+                        .more-info-btn{
+                            a{
+                                background:url($pink-ribbion-img) no-repeat left top;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+        
+        .halls-information-section{
+            h2{
+		color:$this-color;
+            }
+        }
+
+        
+        .halls-stup-section{
+            .download-btn{
+                a{background:$this-color;}
+            }
+        }
+        
+        .dimension-section{
+            background:$this-color;
+            .page-heading{
+                h2{
+                    background:$this-color;
+                }
+            }
+            .dimension-content-box{
+                table{
+                    th,td{ border-bottom: 18px solid $this-color;}
+                }
+            }
+        }
+        
+        .contact-page-section{
+            .contact-detail{
+                p{
+                    strong, b{color:$this-color !important;}
+                }
+                
+            }
+        }
+        
+        .tetimonial-section{
+            .page-heading{
+		&:after{
+                    background:$this-color !important;
+                }
+		h2{
+			color:$this-color !important;
+		}
+            }
+            .author-info{
+		.event-info{color:$this-color !important;}
+            }
+            
+        }
+        
+        .black-testimonial{
+            
+            p{
+                strong, b{color:$this-color !important;}
+            }
+
+            .testimonial-img{
+                    img{border-color:$this-color;}
+             }
+             .author-info{
+                    h4{color:$this-color;}
+             }
+        }
+        
+        .pink-testimonial{
+            background:$this-color;
+        }
+        
+        .homebanner{
+            .overlay_ctn{
+                .venue_banner{
+                    .line_ctn{
+                        .line{
+                            background: $pink-line-background;
+                        }
+                    }
+                }
+            }            
+        }        
     }
-
-    .over-menu-section .check-menu-btn a:hover {
-        background: $www_plazagardeninn_com_site_color;
-    }
-    
-}
-
-.challengerpiazza_social_site{
-    .testimonial-section{
-        background: $www_challengerpiazza_com_site_color;        
-    }    
-
-    .over-menu-section .check-menu-btn a:hover {
-        background: $www_challengerpiazza_com_site_color;
-    }
-
-}
-
-.plazavolare_social_site{
-    .testimonial-section{
-        background: $www_plazavolare_com_site_color;        
-    }        
-}
-.la-plaza_social_site{
-    .testimonial-section{
-        background: $www_la_plaza_com_site_color;        
-    }    
-
-}
-.plazaantique_social_site{
-    .testimonial-section{
-        background: $www_plazaantique_com_site_color;        
-    }        
-}
-.embassyplaza_social_site{
-    .testimonial-section{
-        background: $www_embassyplaza_com_site_color;        
-    }    
-}
-.plazacentreville_social_site{
-    .testimonial-section{
-        background: $www_plazacentreville_com_site_color;        
-    }    
 }
