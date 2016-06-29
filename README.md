@@ -7,7 +7,9 @@ php app/webconsole cache:clear -e prod;
 php app/console assets:install public_html -e prod;
 php app/console assetic:dump -e prod;
 php app/console sulu:build prod -e prod -n;
-rsync -avz --exclude 'php.ini' --exclude '.htaccess' public_html/ ../public_html/sitescms/;
+chown plazapmg:plazapmg public_html public_html/*
+chmod 755 public_html public_html/*
+rsync -avz --exclude '.htaccess' public_html/ ../public_html/sitescms/;
 chown plazapmg:plazapmg ../public_html/sitescms/ ../public_html/sitescms/*
 chmod 755 ../public_html/sitescms/ ../public_html/sitescms/*
 
@@ -17,9 +19,9 @@ php -d xcache.var_size=100M app/console sulu:document:fixtures:load --fixtures  
 dev:
 rm -rf app/cache/*;
 php app/console cache:clear -e dev;
-php app/console sulu:build dev;
 php app/console assets:install public_html -e dev;
 php app/console assetic:dump -e dev;
+php app/console sulu:build dev;
 
 
 

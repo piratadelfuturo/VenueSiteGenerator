@@ -4,7 +4,7 @@
           xsi:schemaLocation="http://schemas.sulu.io/webspace/webspace http://schemas.sulu.io/webspace/webspace-1.0.xsd">
 
     <name>la-plaza.ca CORP</name>
-    <key>la_plaza_ca_corp</key>
+    <key>la_plaza_corp</key>
 
 <localizations>
         <localization language="en" />
@@ -39,7 +39,7 @@
         
         <portal>
             <name>la-plaza corp</name>
-            <key>la_plaza_ca_corp_default</key>
+            <key>la_plaza_corp_default</key>
             <resource-locator>
                 <strategy>tree</strategy>
             </resource-locator>
