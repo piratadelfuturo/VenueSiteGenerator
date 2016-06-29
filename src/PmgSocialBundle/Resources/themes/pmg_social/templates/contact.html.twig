@@ -6,7 +6,7 @@
     {% set location = content.location %}
       <div class="banner-section">
     <div id="map_marker" class="banner-img menu-bannerimg">
-    	<iframe src="https://www.google.com/maps/embed/v1/place?key={{'AIzaSyB8XGnzd8Qv06uWV8rRdeIIBoGkEYZ46Ks'}}&center={{content.location.lat~','~content.location.long}}&zoom={{content.location.zoom}}&q={{location.number~' '~location.street~', '~location.town~' '~location.code}}" allowfullscreen></iframe>
+    	<iframe src="https://www.google.com/maps/embed/v1/place?key={{'AIzaSyB8XGnzd8Qv06uWV8rRdeIIBoGkEYZ46Ks'|url_encode}}&center={{location.location.lat|url_encode}},{{location.location.long|url_encode}}&zoom={{location.location.zoom|url_encode}}&q={{location.number~' '~location.street~', '~location.town~' '~location.code||url_encode}}" allowfullscreen></iframe>
     </div>
   </div>
   
@@ -54,7 +54,7 @@
                 {% endif %}
                 {% if content.phones is defined %}
                 <p>
-                    <strong>{{ 'Tel:'|trans }}</strong>
+                    <strong>{% trans %}Tel:{% endtrans %}</strong>
                     {% for phone in content.phones %}
                     {{ phone.phone }}
                     {% endfor %}
@@ -70,7 +70,7 @@
                 {% endif %}
                 {% if content.emails is defined %}
                 <p>
-                    <strong>{{ 'Courriel:'| trans }}</strong>
+                    <strong>{% trans %}E-mail:{% endtrans %}</strong>
                     {% for email in content.emails %}
                     <a href="mailto:{{ email.email|raw }}">{{email.email}}</a>
                     {% endfor %}

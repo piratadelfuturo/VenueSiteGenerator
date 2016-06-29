@@ -60,14 +60,12 @@
       <div class="page-heading">
         <h2>{% trans %}Hall Setup{% endtrans %}</h2>
       </div>
+        {% if content.hall_setup is iterable and content.hall_setup is not empty %}
       <div class="setup-info-box">
-          {% if content.hall_setup is iterable and content.hall_setup[0] is defined %}
            <img src="{{ asset(content.hall_setup[0].url)}}" alt="" />
-          {% else%}
-          <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/setup-img.jpg')}}" alt="" />
-          {% endif %}
       </div>
-      {% set download_link = '' %}
+        {% endif %}
+        {% set download_link = '' %}
       {% if content.download_info is iterable and content.download_info[0] is defined %}
         <div class="download-btn"> <a href="{{ download_link }}" target="_blank">
                 {% trans %}Download the complete hall info{% endtrans %}
@@ -75,7 +73,7 @@
     {% endif %}
     </div>
 </div>
-{% if content.gallery.images is iterable and content.images is not empty%}
+{% if content.gallery is defined and content.gallery is not empty and content.gallery.images is iterable and content.gallery.images is not empty%}
     {% include 'PmgSocialBundle:snippets:gallery.snippet.html.twig' with { 'content' : content.gallery, 'title' : null} %}
 {% endif %}
   <div class="push"></div>

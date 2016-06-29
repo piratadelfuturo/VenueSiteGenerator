@@ -47,9 +47,8 @@ if (SYMFONY_DEBUG) {
 // also using APC.
 
 $apcLoader = new XcacheClassLoader(sha1(__FILE__), $loader);
-$loader->unregister();
 $apcLoader->register(true);
-
+$loader->unregister();
 
 require_once __DIR__ . (EXTERNAL_APP_DIR ?: '/..') . '/app/AdminKernel.php';
 

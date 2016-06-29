@@ -104,6 +104,10 @@ sulu_media:
         path: "%external.web_dir%/uploads/media"
     search:
         enabled: true
+    format_manager:
+        default_imagine_options:
+            jpeg_quality: 95
+            png_compression_level: 9
 
 sulu_websocket:
     server:

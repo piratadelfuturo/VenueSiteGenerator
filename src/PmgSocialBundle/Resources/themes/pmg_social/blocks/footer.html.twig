@@ -1,10 +1,11 @@
+{% set webspace_key = request.webspaceKey %}
 <footer class="home-footer">
   <div class="footer-top-part">
-  	<div class="footer-img"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/footer-img.png') }}" alt="" /></div>
+  	<div class="footer-img"><img src="{{ asset('bundles/pmgsocial/pmg_social/'~webspace_key~'/images/footer-img.png') }}" alt="" /></div>
     <div class="row">
       <div class="col-sm-3 footer-logo">
           <a href="{{ sulu_content_root_path() }}">
-              <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/logo.png') }}" alt="" />
+              <img src="{{ asset('bundles/pmgsocial/pmg_social/'~webspace_key~'/images/logo.png') }}" alt="" />
           </a>
       </div>
       <div class="col-sm-9 footer-right">

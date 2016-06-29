@@ -16,10 +16,10 @@ php -d xcache.var_size=100M app/console sulu:document:fixtures:load --fixtures  
 
 dev:
 rm -rf app/cache/*;
-php -d xcache.var_size=100M app/console cache:clear -e dev;
-php -d xcache.var_size=100M app/console sulu:build dev;
-php -d xcache.var_size=100M app/console assets:install public_html -e dev
-
+php app/console cache:clear -e dev;
+php app/console sulu:build dev;
+php app/console assets:install public_html -e dev;
+php app/console assetic:dump -e dev;
 
 
 
