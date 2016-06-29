@@ -43,8 +43,9 @@
                     {% for item in sulu_navigation_root_tree('main',2) %}
                     <li {% if item.children|length > 0%} class="dropdown mega-dropdown" {% endif %} >
                         <a href="{{ sulu_content_path(item.url,item.webspaceKey) }}"
+                           data-target="{{ sulu_content_path(item.url,item.webspaceKey) }}"
                             title="{{ item.title }}"
-                            {% if item.children|length > 0%} class="dropdown-toggle" data-toggle="dropdown" {% endif %}
+                            {% if item.children|length > 0%} class="dropdown-link" data-toggle="dropdown" {% endif %}
                             >{{ item.title }}</a>
                         {% if item.children|length > 0 %}
                             <ul class="dropdown-menu mega-dropdown-menu row">
