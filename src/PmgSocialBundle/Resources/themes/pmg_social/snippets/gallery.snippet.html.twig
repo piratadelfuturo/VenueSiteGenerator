@@ -11,8 +11,8 @@
         {% if content.images is iterable and content.images is not empty %}
               {% for image in content.images %}
               <div class="gallery-box">
-                  <a data-title="{{ image.name }}" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset(image.url) }}">
-                      <img class="img-responsive" src="{{ asset(image.thumbnails['200x'])}}" alt="{{ image.name }}" />
+                  <a data-title="{{ image.name }}" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset(image.thumbnails['gallery-large']) }}">
+                      <img class="img-responsive" src="{{ asset(image.thumbnails['gallery-thumb'])}}" alt="{{ image.name }}" />
                   </a>
               </div>
               {% endfor %}
