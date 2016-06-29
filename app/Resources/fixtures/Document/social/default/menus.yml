@@ -6,7 +6,7 @@ MEETING PACKAGES:
                 - Tea 
 
         Cold lunch buffet:
-            note: "served in the room"
+            note: "(served in the room)"
             food:
                 - Crispy vegetables and dip 
                 - Three (3) assorted salads 
@@ -46,7 +46,7 @@ MEETING PACKAGES:
                 - Tea
 
         Lunch:
-            note: "served in your salon"
+            note: "(served in your salon)"
             food:
                 - Hot and cold buffet
 
@@ -78,7 +78,7 @@ MEETING PACKAGES:
                 - Coffee
                 - Tea 
         Lunch:
-            note: "served in your salon"
+            note: "(served in your salon)"
             food:
                 - Hot and cold buffet
         Mid-afternoon coffee break:
@@ -107,7 +107,7 @@ MEETING PACKAGES:
                 - Coffee
                 - Tea
         Lunch:
-            note: "served in your salon"
+            note: "(served in your salon)"
             food:
                 - Hot and cold buffet
 
@@ -127,8 +127,8 @@ MEETING PACKAGES:
 "LUNCH MEETING PACKAGE":
     "PLAN B, C & D":
         note: |
-          served private salon
-          one choice per course
+          (served private salon)
+          (one choice per course)
         sub:
             "ENTRÉE":
                 food:
@@ -387,7 +387,7 @@ DINNER:
             - Lamb chops, vert pré garnish
             - Rolls and butter
     DESSERT:
-        Note: "Choice of one (1) dessert"
+        note: "Choice of one (1) dessert"
         food:
             - Homemade ice cream (nocciole, zuppa inglese, bacio, cappuccino)
             - Two chocolate vacherin
@@ -433,20 +433,21 @@ DINNER RECEPTION PACKAGE:
             drinks:
                 - Punch or Sangria
         Entrées:
-          note: Cold or hot entree
-          Cold entrées:
-            food:
-                -  Trilogie parisienne (smoked salmon, prosciutto, terrine of grilled vegetables)
-                - Platter of charcuteries (galantine of chicken, salami, capicolli, mixed vegetables, tomatoes, olives) 
-                - Smoked salmon trio (cognac, pepper, fine herbs) 
-                - Grilled vegetables with shavings of parmesan, balsamic reduction
-          Hot entrées:
-            food:
-                - Cannellonis stuffed with game meat
-                - Duo of pasta (crêpe fiorentina and orecchiette rosée sauce)
-                - Spiedini of scallops and shrimps served on rice with pesto 
-                - Lobster bisque 
-                - Timbale of crêpes, meat sauce and balsamic reduction
+          note: "Cold or hot entree"
+          sub:
+            Cold entrées:
+              food:
+                  -  Trilogie parisienne (smoked salmon, prosciutto, terrine of grilled vegetables)
+                  - Platter of charcuteries (galantine of chicken, salami, capicolli, mixed vegetables, tomatoes, olives) 
+                  - Smoked salmon trio (cognac, pepper, fine herbs) 
+                  - Grilled vegetables with shavings of parmesan, balsamic reduction
+            Hot entrées:
+              food:
+                  - Cannellonis stuffed with game meat
+                  - Duo of pasta (crêpe fiorentina and orecchiette rosée sauce)
+                  - Spiedini of scallops and shrimps served on rice with pesto 
+                  - Lobster bisque 
+                  - Timbale of crêpes, meat sauce and balsamic reduction
         Salads:
           food:
               - Chef’s salad, olive oil and balsamic vinegar
@@ -477,8 +478,7 @@ DINNER RECEPTION PACKAGE:
               - Coffee
               - tea
 DINNER COCKTAIL PACKAGE:
-    Dinner Cocktail Package:
-        note: Choice of three (3) stations
+        note: "Choice of three (3) stations"
         sub:
             Cocktail:
               note: (2hr Service)
