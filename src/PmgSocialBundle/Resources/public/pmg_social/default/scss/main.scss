@@ -1091,7 +1091,7 @@ header{
 	position:relative;
 	
 	.map-part{
-		height:560px;
+		height:660px;
 		@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
 		  height:400px; 
 		}
@@ -1135,7 +1135,7 @@ footer{
 		background:$black; margin-top:0px;
 		
 	}
-	&.home-footer{margin-top:-260px;
+	&.home-footer{margin-top:-310px;
 		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
 			 margin-top:0; 
 		}
@@ -2319,17 +2319,17 @@ img{max-width:100%;}
 
 
 footer{
-    margin-top: -150px;
+
 }
 
 $sites-names: (
-    'plazagardeninn_social_site',
-    'challengerpiazza_social_site',
-    'plazavolare_social_site',
-    'la_plaza_social_site',
-    'plazaantique_social_site',
-    'plazacentreville_social_site',
-    'plazagardeninn_social_site'
+    'plazagardeninn_social',
+    'challengerpiazza_social',
+    'plazavolare_social',
+    'la_plaza_social',
+    'plazaantique_social',
+    'plazacentreville_social',
+    'plazagardeninn_social'
     );
 
 $sites-colors: (
@@ -2348,7 +2348,9 @@ $sites-colors: (
 @each $site-item in $sites-names {
     $i: index($sites-names,$site-item);
     $this-color: nth($sites-colors,$i);
-    .#{$site-item}{
+    $this-cruve-img: '../#{$site-item}/images/pink-banner-cruve.png';
+    $this-ribbion-img: '../#{$site-item}/images/pink-ribbion.png';
+    .#{$site-item}_site{
         a{color:inherit}
         
         .top-right{
@@ -2396,7 +2398,7 @@ $sites-colors: (
         
         .menu-bannerimg{
             &:before{
-                    background:url($pink-cruve-img) no-repeat left bottom;
+                    background:url($this-cruve-img) no-repeat left bottom;
             }
         }
 
@@ -2457,7 +2459,7 @@ $sites-colors: (
                         }
                         .more-info-btn{
                             a{
-                                background:url($pink-ribbion-img) no-repeat left top;
+                                background:url($this-ribbion-img) no-repeat left top;
                             }
                         }
                     }

@@ -1,6 +1,6 @@
 {% set final_title = title ?: content.title %}  
 {% set final_section_class = section_class ?: 'last-section' %}
-<div class="gallery-section {{final_section_class|raw}}">
+<div class="gallery-section {{final_section_class|raw}} last-section">
     {% if final_title is not null %}
     <div class="page-heading">
       <h2>{{ final_title }}</h2>

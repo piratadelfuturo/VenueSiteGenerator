@@ -134,7 +134,7 @@
   <div id="menu-parent">
     <div class="package-section">
       <div class="container-fluid">
-        <h2>choose from our 2 packages</h2>
+        <h2>{{content.selection_phrase}}</h2>
         <div class="package-btns">
             {% for package_name,package_key in menu_index %}
             <a href="#menu-option-{{package_key|raw}}" class="menu-option-{{package_key|raw}}">{{package_name}}</a>
@@ -142,7 +142,7 @@
         </div>
       </div>
     </div>
-    <div class="menu-list-section">
+    <div class="menu-list-section last-section">
       {% for package_key,package_content in menu%}
         {{ _self.package(package_key,package_content,menu_index) }}
       {% endfor %}
