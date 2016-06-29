@@ -1,5 +1,6 @@
 {% set webspace_key = request.webspaceKey %}
-<footer class="home-footer">
+{% set footer_class = footer_parent_class is defined ? footer_parent_class : ''%}
+<footer class="{{footer_class|raw}}">
   <div class="footer-top-part">
   	<div class="footer-img"><img src="{{ asset('bundles/pmgsocial/pmg_social/'~webspace_key~'/images/footer-img.png') }}" alt="" /></div>
     <div class="row">

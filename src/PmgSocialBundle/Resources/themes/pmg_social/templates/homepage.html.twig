@@ -42,20 +42,24 @@
   <div class="over-menu-section">
     <div class="menu-img"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/menu-img.jpg') }}" alt="" /></div>
     <div class="check-menu-btn">
-        <a href="{{ sulu_content_path(menu_link.content.url) }}">{% trans %}Check out our menus{% endtrans %}</a>
+        <a href="{{ sulu_content_path(menu_link.content.url,content.menu_link.webspaceKey) }}">{% trans %}Check out our menus{% endtrans %}</a>
     </div>
   </div>
   {% endif %}
+  
   {% if content.testimonials is defined and content.testimonials is not empty%}
+      {% set testimonialLink = content.testimonials[0] %}
+      {% set testimonialDoc = sulu_content_load(testimonialLink.uuid)%}
+      {% set testimonial = random(testimonialDoc.content.block) %}
     <div class="testimonial-section">
     <div class="container">
       <div class="testimonial-title">
         <h2>{% trans %}Testimonials{% endtrans %}</h2>
-        <div class="read-more-btn"><a href="testimonials.html">{% trans %}Read more{% endtrans %}</a></div>
+        <div class="read-more-btn"><a href="{{ sulu_content_path(testimonialLink.url,testimonialLink.webspaceKey)  }}">{% trans %}Read more{% endtrans %}</a></div>
       </div>
       <div class="testimonial-content">
-        <p> “Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.” </p>
-        <div class="author-name"> - Black Theatre </div>
+        <p> “{{ testimonial.article}}” </p>
+        <div class="author-name">{{ testimonial.title }}</div>
       </div>
     </div>
   </div>
@@ -92,7 +96,7 @@
                 {% endif %}
             <div style="background-image: url({{ asset(hall_image) }} );" class="venue_banner international-room" data-imgsrc="{{ asset(hall_image) }}">
               <div class="line_ctn">
-                <p>{{hall.content.description|nl2br}}</p>
+                <p>{{hall.content.description|slice(1, 45)|nl2br}}</p>
               </div>
             </div> 
             {% endfor %}
@@ -187,4 +191,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 		});
 	});
 </script> 
+{% endblock %}
+
+{% block footer %}
+        {% include "PmgSocialBundle:blocks:footer.html.twig" with {'footer_parent_class':'home-footer'}%}
 {% endblock %}
