@@ -22,3 +22,5 @@ parameters:
 
     websocket_port: 9876
     websocket_url: 'sulu.lo'
+
+    pmg_social.social_profiles: []

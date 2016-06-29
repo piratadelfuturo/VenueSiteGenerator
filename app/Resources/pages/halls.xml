@@ -28,7 +28,27 @@
 
                     <tag name="sulu.rlp.part"/>
                 </property>
-
+                <property name="header_images" type="media_selection">
+                    <meta>
+                        <title lang="fr">Fotos</title>
+                        <title lang="en">Images</title>
+                    </meta>
+                    <params>
+                        <param name="types" value="image"/>
+                        <param name="displayOptions" type="collection">
+                            <param name="leftTop" value="false"/>
+                            <param name="top" value="false"/>
+                            <param name="rightTop" value="false"/>
+                            <param name="left" value="false"/>
+                            <param name="middle" value="false"/>
+                            <param name="right" value="false"/>
+                            <param name="leftBottom" value="false"/>
+                            <param name="bottom" value="false"/>
+                            <param name="rightBottom" value="false"/>
+                        </param>
+                        <param name="defaultDisplayOption" value="middle"/>
+                    </params>
+                </property>
                 <property name="url" type="resource_locator" mandatory="true">
                     <meta>
                         <title lang="fr">Adresse</title>
@@ -37,6 +57,7 @@
 
                     <tag name="sulu.rlp"/>
                 </property>
+
             </properties>
         </section>
 

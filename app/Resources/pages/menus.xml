@@ -29,6 +29,27 @@
                     <tag name="sulu.rlp.part"/>
                 </property>
 
+                <property name="header_images" type="media_selection">
+                    <meta>
+                        <title lang="fr">Fotos</title>
+                        <title lang="en">Images</title>
+                    </meta>
+                    <params>
+                        <param name="types" value="image"/>
+                        <param name="displayOptions" type="collection">
+                            <param name="leftTop" value="false"/>
+                            <param name="top" value="false"/>
+                            <param name="rightTop" value="false"/>
+                            <param name="left" value="false"/>
+                            <param name="middle" value="false"/>
+                            <param name="right" value="false"/>
+                            <param name="leftBottom" value="false"/>
+                            <param name="bottom" value="false"/>
+                            <param name="rightBottom" value="false"/>
+                        </param>
+                        <param name="defaultDisplayOption" value="middle"/>
+                    </params>
+                </property>
                 <property name="url" type="resource_locator" mandatory="true">
                     <meta>
                         <title lang="fr">Adresse</title>
@@ -37,6 +58,7 @@
 
                     <tag name="sulu.rlp"/>
                 </property>
+
             </properties>
         </section>
 
@@ -50,50 +72,5 @@
             </params>
         </property>
 
-
-        <section name="content">
-            <meta>
-                <title lang="fr">Menus</title>
-                <title lang="en">Menus</title>
-
-            </meta>
-            <properties>
-                <block name="packages" default-type="package" minOccurs="0">
-                    <meta>
-                        <title lang="fr">Packages</title>
-                        <title lang="en">Packages</title>
-                    </meta>
-                    <types>
-                        <type name="package">
-                            <meta>
-                                <title lang="fr">Package</title>
-                                <title lang="en">Package</title>
-                            </meta>
-                            <properties>
-                                <property name="name" type="text_line" mandatory="true">
-                                    <meta>
-                                        <title lang="fr">Nom</title>
-                                        <title lang="en">Name</title>
-                                    </meta>
-                                    <params>
-                                        <param name="headline" value="true"/>
-                                    </params>
-                                </property>
-                                <property name="menu_course" type="snippet">
-                                    <meta>
-                                        <title lang="fr">Courses</title>
-                                        <title lang="en">Courses</title>
-                                    </meta>
-
-                                    <params>
-                                        <param name="snippetType" value="menu_course"/>
-                                    </params>
-                                </property>
-                            </properties>
-                        </type>
-                    </types>
-                </block>
-            </properties>
-        </section>
     </properties>
 </template>

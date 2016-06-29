@@ -27,12 +27,18 @@ chown plazapmg:plazapmg -R ../public_html/sitescms/ ../public_html/sitescms/*;
 chmod 755 ../public_html/sitescms/ ../public_html/sitescms/*;
 
 
+DEV:
+
+load translations:
+php app/console translation:extract de --dir=./src/ --output-dir=./app/Resources/translations
+
 load fixtures: // -n erases all database
 php -d xcache.var_size=100M app/console sulu:document:fixtures:load --fixtures  ./src/PmgSocialBundle/Datafixtures/Document/ -e prod -n
 
 dev:
 rm -rf app/cache/*;
 php app/console cache:clear -e dev;
+php app/webconsole cache:clear -e dev;
 php app/console assets:install public_html -e dev;
 php app/console assetic:dump -e dev;
 php app/console sulu:build dev;

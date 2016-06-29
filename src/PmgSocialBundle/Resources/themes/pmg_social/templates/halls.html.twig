@@ -3,9 +3,16 @@
 {% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
 
 {% block content %}
+    {% if content.header_images is defined and content.header_images is not empty %}
+        {% set section_image = random(content.header_images)%}
+        {% set section_image = section_image.thumbnails['section-header']%}
+    {% else %}
+        {% set section_image = 'bundles/pmgsocial/pmg_social/default/images/menu-banner-bg.jpg'%}        
+    {% endif %}
+
 <div class="banner-section">
     <div class="banner-img menu-bannerimg">
-        <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/banner-img.jpg')}}" alt="" /></div>
+        <img src="{{ asset(section_image)}}" alt="" /></div>
   </div>
   <div class="our-halls-section">
     <div class="page-heading">
@@ -20,7 +27,7 @@
         <div class="col-sm-3 halls-list-box">
           <div class="halls-list-img">
               {% if linkContent.header_images is not empty %}
-              <img src="{{ asset(linkContent.header_images[0].thumbnails['150x100'])}}" alt="" />
+              <img src="{{ asset(linkContent.header_images[0].thumbnails['hall-4c'])}}" alt="" />
               {% else %}
               <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/halls-list-1.jpg')}}" alt="" />
               {% endif %}    

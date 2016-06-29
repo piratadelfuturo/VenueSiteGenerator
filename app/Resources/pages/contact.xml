@@ -28,6 +28,14 @@
 
                     <tag name="sulu.rlp.part"/>
                 </property>
+                
+                <property name="header_images" type="media_selection">
+                    <meta>
+                        <title lang="fr">Bilder</title>
+                        <title lang="en">Images</title>
+                    </meta>
+                </property>
+
 
                 <property name="url" type="resource_locator" mandatory="true">
                     <meta>

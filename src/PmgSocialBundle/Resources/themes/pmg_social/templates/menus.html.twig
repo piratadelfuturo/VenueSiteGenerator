@@ -100,12 +100,21 @@
 {% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
 
 {% block content %}
+    {% if content.header_images is defined and content.header_images is not empty %}
+        {% set section_image = random(content.header_images)%}
+        {% set section_image = section_image.thumbnails['section-header']%}
+    {% else %}
+        {% set section_image = 'bundles/pmgsocial/pmg_social/default/images/menu-banner-bg.jpg'%}        
+    {% endif %}
+    
 <div class="banner-section">
-    <div class="banner-img menu-bannerimg"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/menu-banner-bg.jpg')}}" alt="" /></div>
+    <div class="banner-img menu-bannerimg">
+        <img src="{{ asset(section_image)}}" alt="{{ content.title }}" />
+    </div>
   </div>
   <div class="package-section">
     <div class="container">
-      <h2>choose from our 2 packages</h2>
+      <h2>{{ content.selection_phrase }}</h2>
       <div class="package-btns">
           {% for package_name,package_key in menu_index %}
           <a href="#menu-option-{{package_key|raw}}">{{package_name}}</a>

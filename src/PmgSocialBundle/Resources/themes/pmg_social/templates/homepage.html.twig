@@ -3,13 +3,16 @@
 {% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
 
 {% block content %}
+    {% if content.slides is defined and content.slides is not empty %}
+        {% set section_image = random(content.slides)%}
+        {% set section_image = section_image.thumbnails['section-header']%}
+    {% else %}
+        {% set section_image = 'bundles/pmgsocial/pmg_social/default/images/menu-banner-bg.jpg'%}        
+    {% endif %}
+
   <div class="banner-section" vocab="http://schema.org/" typeof="Content">
     <div class="banner-img">
-        {% if content.slides %}
-            <img src="{{ asset(content.slides[0].url) }}" alt="" />
-        {% else %}
-        <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/banner-img.jpg') }}" alt="" />
-        {% endif %}
+            <img src="{{ asset(section_image) }}" alt="{{content.title}}" />
     </div>
     <div class="main-info">
       <div class="row">
@@ -62,7 +65,6 @@
     {% for hall in content.halls_list %}
         {% set hall_content = hall_content|merge({ (loop.index) : sulu_content_load(hall.uuid)})  %}
     {% endfor %}
-
     <div class="halls-section homebanner">
     <div class="row">
       <div class="col-sm-9 halls-title-right">
@@ -73,7 +75,7 @@
       <div class="col-sm-3 halls-menu-left">
         <div class="halls-menu-section venue_set_ctn">
            {% for hall in hall_content %}
-          <div class="halss-menu-box venue_ctn box-{{loop.index}}" data-venue="international-room"> <a href="javascript:void(0)">{{hall.title}}</a> </div>
+          <div class="halss-menu-box venue_ctn box-{{loop.revindex}}" data-venue="international-room"> <a href="javascript:void(0)">{{hall.content.title}}</a> </div>
           {% endfor %}
           <!--
           <div class="halss-menu-box venue_ctn box-2" data-venue="madriad-rio"> <a href="javascript:void(0)">Madrid - Rio</a> </div>
@@ -100,21 +102,22 @@
         </div>
       </div>
     </div> -->
-    
+
     <div class="overlay_ctn">
         {% if hall_content is not empty %}
         {% for hall in hall_content %}
             
             {% set hall_image = 'bundles/pmgsocial/pmg_social/default/images/international-room-img.jpg' %}
-            {% if hall.header_images is not empty and hall.header_images is iterable %}
-                {% set hall_image = random(hall.header_images) %}
-                {% set hall_image = hall_image.url %}
+            
+            {% if hall.content.header_images is defined and hall.content.header_images is not empty and hall.content.header_images is iterable %}
+                {% set hall_image = random(hall.content.header_images) %}
+                {% set hall_image = hall_image.thumbnails['thumbnails'] %}
             {% endif %}
         <div style="background-image: url({{ asset(hall_image) }} );" class="venue_banner international-room" data-imgsrc="{{ asset(hall_image) }}">
           <div class="line_ctn">
-            <p>{{hall.description}}</p>
+            <p>{{hall.content.description}}</p>
           </div>
-        </div>
+        </div> 
         {% endfor %}
         {% endif %}
         <!--
