@@ -54,6 +54,7 @@
                                         <a href="{{ sulu_content_path(child.url,child.webspaceKey) }}" 
                                            title="{{ child.title }}">
                                             {% set child_content = sulu_content_load(child.uuid) %}
+                                            {% set child_content = child_content.content %}
                                             {% if child_content.header_images is defined and child_content.header_images is not empty %}
                                                 {% set section_image = random(child_content.header_images)%}
                                                 {% set section_image = section_image.thumbnails['menu-thumb']%}

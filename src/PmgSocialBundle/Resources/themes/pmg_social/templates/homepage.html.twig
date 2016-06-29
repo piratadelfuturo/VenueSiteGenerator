@@ -105,13 +105,12 @@
 
     <div class="overlay_ctn">
         {% if hall_content is not empty %}
-        {% for hall in hall_content %}
-            
-            {% set hall_image = 'bundles/pmgsocial/pmg_social/default/images/international-room-img.jpg' %}
-            
-            {% if hall.content.header_images is defined and hall.content.header_images is not empty and hall.content.header_images is iterable %}
+        {% for hall in hall_content %}  
+            {% if hall.content.header_images is defined and hall.content.header_images is not empty %}
                 {% set hall_image = random(hall.content.header_images) %}
-                {% set hall_image = hall_image.thumbnails['thumbnails'] %}
+                {% set hall_image = hall_image.thumbnails['section-header'] %}
+            {% else %}
+                {% set hall_image = 'bundles/pmgsocial/pmg_social/default/images/international-room-img.jpg' %}
             {% endif %}
         <div style="background-image: url({{ asset(hall_image) }} );" class="venue_banner international-room" data-imgsrc="{{ asset(hall_image) }}">
           <div class="line_ctn">
