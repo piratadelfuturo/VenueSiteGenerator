@@ -77,108 +77,25 @@
            {% for hall in hall_content %}
           <div class="halss-menu-box venue_ctn box-{{loop.revindex}}" data-venue="international-room"> <a href="javascript:void(0)">{{hall.content.title}}</a> </div>
           {% endfor %}
-          <!--
-          <div class="halss-menu-box venue_ctn box-2" data-venue="madriad-rio"> <a href="javascript:void(0)">Madrid - Rio</a> </div>
-          <div class="halss-menu-box venue_ctn box-3" data-venue="berlin"> <a href="javascript:void(0)">Berlin</a> </div>
-          <div class="halss-menu-box venue_ctn box-4" data-venue="oslo"> <a href="javascript:void(0)">Oslo</a> </div>
-          <div class="halss-menu-box venue_ctn box-5" data-venue="paris-rome"> <a href="javascript:void(0)">Paris - Rome</a> </div>
-          <div class="halss-menu-box venue_ctn box-6" data-venue="venise"> <a href="javascript:void(0)">Venise</a> </div>
-          <div class="halss-menu-box venue_ctn box-7" data-venue="connexion-lounge"> <a href="javascript:void(0)">Connexion Lounge</a> </div>
-          <div class="halss-menu-box venue_ctn box-8" data-venue="restaurant-volare"> <a href="javascript:void(0)">Restaurant Volare</a> </div>
-          <div class="halss-menu-box venue_ctn box-9" data-venue="outdoor-garden"> <a href="javascript:void(0)">The Outdoor Garden</a> </div>
-          <div class="halss-menu-box venue_ctn box-11" data-venue="outdoor-garden-2"> <a href="javascript:void(0)">The Outdoor Garden #2</a> </div>
-          <div class="halss-menu-box venue_ctn box-10" data-venue="the-tent"> <a href="javascript:void(0)">The Tent</a> </div>
-          <div class="halss-menu-box venue_ctn box-12" data-venue="new-york-suite"> <a href="javascript:void(0)">New York Suite</a> </div>
-          -->
         </div>
       </div>
     </div>
-    <!-- <div class="show-hide-box" id="showbox-1">
-      <div class="close-btn">&times;</div>
-      <div class="show-img"> <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/show-box-1.jpg') }}" alt="" /> </div>
-      <div class="halls-show-content">
-        <div class="halls-info">
-          <p> One of the largest halls in the Greater Montreal area, it can easily accommodate 2,000 attendees for events, meetings, conventions and exhibits. With the ability to divide into 4 different sections, this flexible space can easily meet the needs of a variety of simultaneous functions. The uniqueness of the International room is complemented by a 4 seasons 3600 square feet tent, with a 20 foot ceiling, giving your event an exotic environment. </p>
-        </div>
-      </div>
-    </div> -->
-
     <div class="overlay_ctn">
         {% if hall_content is not empty %}
-        {% for hall in hall_content %}  
-            {% if hall.content.header_images is defined and hall.content.header_images is not empty %}
-                {% set hall_image = random(hall.content.header_images) %}
-                {% set hall_image = hall_image.thumbnails['section-header'] %}
-            {% else %}
-                {% set hall_image = 'bundles/pmgsocial/pmg_social/default/images/international-room-img.jpg' %}
-            {% endif %}
-        <div style="background-image: url({{ asset(hall_image) }} );" class="venue_banner international-room" data-imgsrc="{{ asset(hall_image) }}">
-          <div class="line_ctn">
-            <p>{{hall.content.description}}</p>
-          </div>
-        </div> 
-        {% endfor %}
+            {% for hall in hall_content %}  
+                {% if hall.content.header_images is defined and hall.content.header_images is not empty %}
+                    {% set hall_image = random(hall.content.header_images) %}
+                    {% set hall_image = hall_image.thumbnails['section-header'] %}
+                {% else %}
+                    {% set hall_image = 'bundles/pmgsocial/pmg_social/default/images/international-room-img.jpg' %}
+                {% endif %}
+            <div style="background-image: url({{ asset(hall_image) }} );" class="venue_banner international-room" data-imgsrc="{{ asset(hall_image) }}">
+              <div class="line_ctn">
+                <p>{{hall.content.description|nl2br}}</p>
+              </div>
+            </div> 
+            {% endfor %}
         {% endif %}
-        <!--
-            <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/madriad-rio-img.jpg') }} );" class="venue_banner madriad-rio" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/madriad-rio-img.jpg') }}">
-          <div class="line_ctn">
-            <p>The combined rooms cans host smaller groups of 50 to 60 people and be separated for more intimate events. The total space is 2080 square feet.</p>
-          </div>
-        </div>
-        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/berlin-img.jpg') }} );" class="venue_banner berlin" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/berlin-img.jpg') }}">
-          <div class="line_ctn">
-            <p>Each of these rooms cans host between 50 to 70 people. They offer an elegant setting for cocktails and receptions. These rooms are also ideally suited for additional planner office space or a speaker-ready room. </p>
-          </div>
-        </div>
-        
-        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/oslo-img.jpg') }} );" class="venue_banner oslo" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/oslo-img.jpg') }}">
-          <div class="line_ctn">
-            <p>Each of these rooms cans host between 50 to 70 people. They offer an elegant setting for cocktails and receptions. These rooms are also ideally suited for additional planner office space or a speaker-ready room. </p>
-          </div>
-        </div>
-        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/paris-rome-img.jpg') }} );" class="venue_banner paris-rome" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/paris-rome-img.jpg') }}">
-          <div class="line_ctn">
-            <p>The Paris - Rome Ballroom features 3100 square feet of flexible meeting space that can break down into two sections or be used for exhibitions. This ballroom is accompanied by a 2000 square foot foyer for pre-function events, and is conveniently located adjacent to the new exhibit hall. </p>
-          </div>
-        </div>
-        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/venise-img.jpg') }} );" class="venue_banner venise" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/venise-img.jpg') }}">
-          <div class="line_ctn">
-            <p>For groups between 120 and 150 the Venise room features 2380 square feet with 12" ceiling and offers maximum flexibility.</p>
-          </div>
-        </div>
-        
-        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/connexion-lounge-img.jpg') }} );" class="venue_banner connexion-lounge" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/connexion-lounge-img.jpg') }}">
-          <div class="line_ctn">
-            <p>A relaxing area with full bar service. Television and Pool room</p>
-          </div>
-        </div>
-        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/restaurant-volare-img.jpg') }} );" class="venue_banner restaurant-volare" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/restaurant-volare-img.jpg') }}">
-          <div class="line_ctn">
-            <p>Open for breakfast lunch and diner. Can also be used for pre function cocktails and banquet hall. </p>
-          </div>
-        </div>
-        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/outdoor-garden-img.jpg') }} );" class="venue_banner outdoor-garden" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/outdoor-garden-img.jpg') }}">
-          <div class="line_ctn">
-            <p>During the summer extend your event to our garden area. </p>
-          </div>
-        </div>
-        
-        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/outdoor-garden-2-img.jpg') }} );" class="venue_banner outdoor-garden-2" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/outdoor-garden-2-img.jpg') }}">
-          <div class="line_ctn">
-            <p>During the summer extend your event to our garden area. </p>
-          </div>
-        </div>
-        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/the-tent-img.jpg') }} );" class="venue_banner the-tent" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/the-tent-img.jpg') }}">
-          <div class="line_ctn">
-            <p>It’s just a tent where you can have parties!</p>
-          </div>
-        </div>
-        <div style="background-image: url({{ asset('bundles/pmgsocial/pmg_social/default/images/new-york-suite-img.jpg') }} );" class="venue_banner new-york-suite" data-imgsrc="{{ asset('bundles/pmgsocial/pmg_social/default/images/new-york-suite-img.jpg') }}">
-          <div class="line_ctn">
-            <p>or executives and board meetings. This room provides 15 high-black leather chairs around a 12 foot table. </p>
-          </div>
-        </div>
-        -->
       </div>
   </div>
 {% endif %}
