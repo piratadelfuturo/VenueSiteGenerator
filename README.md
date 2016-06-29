@@ -1,17 +1,31 @@
 # prod deploy code:
 
-prod:
+prod initial deploy:
 rm -rf app/cache/*;
 php app/console cache:clear -e prod;
 php app/webconsole cache:clear -e prod;
 php app/console assets:install public_html -e prod;
 php app/console assetic:dump -e prod;
 php app/console sulu:build prod -e prod -n;
-chown plazapmg:plazapmg -R  ./ public_html public_html/*
-chmod 755 public_html public_html/*
-rsync -avz --exclude '.htaccess' public_html/ ../public_html/sitescms/;
-chown plazapmg:plazapmg -R ../public_html/sitescms/ ../public_html/sitescms/*
-chmod 755 ../public_html/sitescms/ ../public_html/sitescms/*
+chown plazapmg:plazapmg -R  ./ public_html public_html/*;
+chmod 755 public_html public_html/*;
+rsync -avz public_html/ ../public_html/sitescms/;
+chown plazapmg:plazapmg -R ../public_html/sitescms/ ../public_html/sitescms/*;
+chmod 755 ../public_html/sitescms/ ../public_html/sitescms/*;
+
+prod update:
+rm -rf app/cache/*;
+php app/console cache:clear -e prod;
+php app/webconsole cache:clear -e prod;
+php app/console assets:install public_html -e prod;
+php app/console assetic:dump -e prod;
+php app/console sulu:build phpcr_migrations -e prod -n;
+chown plazapmg:plazapmg -R  ./ public_html public_html/*;
+chmod 755 public_html public_html/*;
+rsync -avz public_html/ ../public_html/sitescms/;
+chown plazapmg:plazapmg -R ../public_html/sitescms/ ../public_html/sitescms/*;
+chmod 755 ../public_html/sitescms/ ../public_html/sitescms/*;
+
 
 load fixtures: // -n erases all database
 php -d xcache.var_size=100M app/console sulu:document:fixtures:load --fixtures  ./src/PmgSocialBundle/Datafixtures/Document/ -e prod -n
