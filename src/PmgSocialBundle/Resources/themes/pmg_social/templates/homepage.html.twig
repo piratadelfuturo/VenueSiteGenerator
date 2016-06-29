@@ -147,7 +147,7 @@
     {{ parent() }}
     <script>
 {% if content.location is defined and content.location is not empty %}
-{% set location = content.location %}
+{% set location = content.location[0] %}
 
     function initialize()
 {
