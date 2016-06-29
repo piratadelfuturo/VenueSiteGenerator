@@ -74,7 +74,14 @@
                                         <title lang="en">Title</title>
                                     </meta>
                                 </property>
-                                <property name="article" type="text_editor" mandatory="true">
+                                <property name="info" type="text_line" mandatory="true">
+                                    <meta>
+                                        <title lang="fr">Titel</title>
+                                        <title lang="en">Title</title>
+                                    </meta>
+                                </property>
+
+                                <property name="article" type="text_area" mandatory="true">
                                     <meta>
                                         <title lang="fr">Artikel</title>
                                         <title lang="en">Article</title>
@@ -94,13 +101,19 @@
                                         <title lang="en">Title</title>
                                     </meta>
                                 </property>
-                                <property name="article" type="text_editor" mandatory="true">
+                                <property name="info" type="text_line" mandatory="true">
+                                    <meta>
+                                        <title lang="fr">Titel</title>
+                                        <title lang="en">Title</title>
+                                    </meta>
+                                </property>
+                                <property name="article" type="text_area" mandatory="true">
                                     <meta>
                                         <title lang="fr">Artikel</title>
                                         <title lang="en">Article</title>
                                     </meta>
                                 </property>
-                               <property name="image" type="media_selection">
+                               <property name="images" type="media_selection">
                                     <meta>
                                         <title lang="fr">Bilder</title>
                                         <title lang="en">Images</title>
