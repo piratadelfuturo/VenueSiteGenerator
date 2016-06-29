@@ -42,20 +42,18 @@
   <div class="over-menu-section">
     <div class="menu-img"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/menu-img.jpg') }}" alt="" /></div>
     <div class="check-menu-btn">
-        <a href="{{ sulu_content_path(menu_link.content.url,content.menu_link.webspaceKey) }}">{% trans %}Check out our menus{% endtrans %}</a>
+        <a href="{{ sulu_content_path(menu_link.content.url) }}">{% trans %}Check out our menus{% endtrans %}</a>
     </div>
   </div>
   {% endif %}
-  
   {% if content.testimonials is defined and content.testimonials is not empty%}
-      {% set testimonialLink = content.testimonials[0] %}
-      {% set testimonialDoc = sulu_content_load(testimonialLink.uuid)%}
+      {% set testimonialDoc = sulu_content_load(content.testimonials)%}
       {% set testimonial = random(testimonialDoc.content.block) %}
     <div class="testimonial-section">
     <div class="container">
       <div class="testimonial-title">
         <h2>{% trans %}Testimonials{% endtrans %}</h2>
-        <div class="read-more-btn"><a href="{{ sulu_content_path(testimonialLink.url,testimonialLink.webspaceKey)  }}">{% trans %}Read more{% endtrans %}</a></div>
+        <div class="read-more-btn"><a href="{{ sulu_content_path(testimonialDoc.content.url)  }}">{% trans %}Read more{% endtrans %}</a></div>
       </div>
       <div class="testimonial-content">
         <p> “{{ testimonial.article}}” </p>
@@ -190,7 +188,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 			$('.'+venue).removeClass('active');
 		});
 	});
-</script> 
+</script>
 {% endblock %}
 
 {% block footer %}
