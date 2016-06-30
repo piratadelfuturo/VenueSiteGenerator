@@ -266,7 +266,7 @@ header{
 	}
 	
 }
-.top-right{float:right;  margin-bottom:5px;
+.top-right{float:right;  margin-bottom:5px; position: relative; z-index: 1;
 	
 	@media (max-width: $iphone-to-ipad) {
 		float:left; margin-top:10px;
