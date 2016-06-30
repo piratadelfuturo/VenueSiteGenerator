@@ -1,5 +1,5 @@
 # prod deploy code:
-
+// ERRASES EVERYTHING
 prod initial deploy:
 rm -rf app/cache/*;
 php app/console cache:clear -e prod;
@@ -13,6 +13,7 @@ rsync -avz public_html/ ../public_html/sitescms/;
 chown plazapmg:plazapmg -R ../public_html/sitescms/ ../public_html/sitescms/*;
 chmod 755 ../public_html/sitescms/ ../public_html/sitescms/*;
 
+// ERRASES NOTHING
 prod update:
 rm -rf app/cache/*;
 php app/console cache:clear -e prod;

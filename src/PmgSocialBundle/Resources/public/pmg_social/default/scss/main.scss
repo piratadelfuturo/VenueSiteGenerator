@@ -1534,7 +1534,7 @@ footer{
 	}
 	.package-btns{
 		margin-top:30px; display:inline-block;
-		a{border:2px solid $light-text-color; padding:15px 30px; color:$light-grey-color-text; font-size:18px; text-transform:uppercase; text-decoration:none; display:inline-block; margin:10px 20px;
+		a{border:2px solid $light-text-color; padding:15px 30px !important ; color:$light-grey-color-text; font-size:18px !important; text-transform:uppercase; text-decoration:none; display:inline-block; margin:10px 20px;
 			&:hover,&:focus{
 				background:$pink-color; color:$white; border-color:$pink-color;
 			}
@@ -2357,7 +2357,17 @@ $sites-colors: (
     $this-cruve-img: '../#{$site-item}/images/pink-banner-cruve.png';
     $this-ribbion-img: '../#{$site-item}/images/pink-ribbion.png';
     .#{$site-item}_site{
-        a{color:inherit}
+        a{color:inherit;}
+        
+        .navbar-default{
+            .navbar-toggle{
+                border-color:$this-color;
+            }
+        }
+
+        .navbar-toggle{
+            background-color: $this-color;
+        }
         
         .top-right{
             a{
