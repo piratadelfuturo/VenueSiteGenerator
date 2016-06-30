@@ -48,6 +48,7 @@
   {% endif %}
   {% if content.testimonials is defined and content.testimonials is not empty%}
       {% set testimonialDoc = sulu_content_load(content.testimonials)%}
+      {% if testimonialDoc.content.block is not empty %}
       {% set testimonial = random(testimonialDoc.content.block) %}
     <div class="testimonial-section">
     <div class="container">
@@ -61,6 +62,7 @@
       </div>
     </div>
   </div>
+        {% endif %}
 {% endif %}
 
 {% if content.halls_list is defined and content.halls_list is not empty %}
