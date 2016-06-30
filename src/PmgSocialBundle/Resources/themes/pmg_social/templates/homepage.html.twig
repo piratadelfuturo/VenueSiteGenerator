@@ -94,7 +94,7 @@
                 {% endif %}
             <div style="background-image: url({{ asset(hall_image) }} );" class="venue_banner international-room" data-imgsrc="{{ asset(hall_image) }}">
               <div class="line_ctn">
-                <p>{{hall.content.description|slice(0, 45)|nl2br}}</p>
+                <p>{{hall.content.description|slice(0, 255)|nl2br}}</p>
               </div>
             </div> 
             {% endfor %}
