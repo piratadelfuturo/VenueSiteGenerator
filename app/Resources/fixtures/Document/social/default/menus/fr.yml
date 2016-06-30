@@ -1,0 +1,673 @@
+"FORFAITS RÉUNION":
+    "PLAN A":
+        Pause-café du matin: 
+            drinks:
+                - Café
+                - Thé 
+
+        "Déjeuner buffet froid":
+            note: "servi dans le salon"
+            food:
+                - Crudités et trempette 
+                - Trois (3) salades composes 
+                - Salade verte et vinaigrettes 
+                - Sandwichs assortis 
+                - Desserts assortis 
+            drinks:
+                - Café
+                - Thé
+                - Boissons gazeuses
+                - Eau minérale 
+
+        "Pause-café de l’après-midi": 
+            food:
+                - Plateau de fruits frais tranchés 
+                - Biscuits maison assortis
+            drinks:
+                - Café
+                - Thé
+                - Boissons gazeuses
+                - Eau minérale 
+    "PLAN B":
+        "Petit-déjeuner continental":
+            food:
+                - Croissants
+                - Danoises
+                - Chocolatines 
+            drinks:
+                - Jus de fruits assortis
+                - Café
+                - Thé
+                - Lait 
+
+        "Pause-café du matin": 
+            drinks:
+                - Café
+                - Thé
+
+        "Déjeuner":
+            note: "(servi dans votre salon)"
+            food:
+                - Buffet chaud et froid
+
+        Pause-café de l’après-midi:
+            food:
+                - Plateau de fruits frais tranchés 
+                - Biscuits maison assortis 
+            drinks:
+                - Café
+                - Thé
+                - Boissons gazeuses
+                - Eau minérale
+    "PLAN C":
+        Petit-déjeuner continental de luxe :
+            food:
+                - Croissants
+                - Danoises
+                - Chocolatines 
+                - Yogourts assortis
+                - Plateau de fruits frais tranchés 
+            drinks:
+                - Jus de fruits assortis
+                - Café
+                - Thé
+                - Lait 
+
+        "Pause-café du matin ":
+            drinks:
+                - Café
+                - Thé 
+        Déjeuner:
+            note: "servi dans votre salon"
+            food:
+                - Buffet chaud et froid 
+        Pause-café de l’après-midi :
+            food:
+                - Plateau de fruits frais tranchés 
+                - Biscuits maison assortis
+            drinks:
+                - Café
+                - Thé
+                - Boissons gazeuses
+                - Eau minérale 
+    "PLAN D":
+        Petit-déjeuner continental :
+            food:
+                - Croissants
+                - Danoises
+                - Chocolatines 
+            drinks:
+                - Jus de fruits assortis
+                - Café
+                - Thé
+                - Lait 
+
+        "Pause-café du matin ":
+            drinks:
+                - Café
+                - Thé
+        Déjeuner:
+            note: "servi dans votre salon"
+            food:
+                - Buffet chaud et froid 
+
+        Pause-café de l’après-midi : 
+            food:
+                - Crudités et trempette  
+                - Plateau de fromages canadiens et fruits frais
+                - Pains et biscottes 
+                - Biscuits maison assortis 
+            drinks:
+                - Café
+                - Thé
+                - Boissons gazeuses
+                - Eau minérale 
+
+"DÉJEUNERS FORFAITS RÉUNION":
+    "PLAN B, C & D":
+        note: |
+          (served private salon)
+          (one choice per course)
+        sub:
+            "ENTRÉE":
+                food:
+                    - Crème de légumes
+                    - Soupe Soupe Minestronep
+                    - "Salade verte, vinaigrette balsamique"
+                    - Salade César 
+            "PLAT PRINCIPAL":
+                food:
+                    - Penne Primavera
+                    - Escalope de poulet sauce au citron et vin blanc
+                    - Rôti de veau aux fines herbes
+                    - "Saumon poché ou grillé, sauce au beurre blanc"
+                    - Servi avec légumes du jour
+                    - Pommes de terre ou riz
+                    - Petits pains et beurre
+            "DESSERT":
+                food:
+                    - Salade de fruits frais
+                    - Gâteau mousse au chocolat
+                    - "Crème glacée maison (nocciole, bacio, cappuccino)"
+                    - Tiramisu en coupe
+        drinks:
+                - Café
+                - Thé
+LES PETITS-DÉJEUNERSAJOUTS:
+    LE CONTINENTAL:
+        food:
+            - Croissants
+            - Danoises
+            - Chocolatines 
+            - Beurre et confitures 
+        drinks:
+            - Jus de fruits assortis
+            - Café
+            - Thé
+            - Lait 
+
+    LE CONTINENTAL DE LUXE:
+        food:
+            - Croissants
+            - Danoises
+            - Chocolatines 
+            - Beurre et confitures
+            - Yogourts assortis
+            - Plateau de fruits frais tranchés
+        drinks:
+            - Jus de fruits assortis
+            - Café
+            - Thé
+            - Lait 
+
+    LE SANTÉ:
+        food:
+            - Yogourts allégés 
+            - "Muffins au son et raisins, pain aux bananes"
+            - Plateau de fruits frais tranchéss and Fromage cottage
+        drinks:
+            - Jus de fruits assortis
+            - Café
+            - décaféiné
+            - Thé
+            - Tisanes
+            - "Lait 2%"
+
+    L’AMÉRICAIN:
+        food:
+            - Fruits frais tranchés 
+            - Assortiment de viennoiseries
+            - "Croissants, Danoises and chocolatines" 
+            - Oeufs brouillés 
+            - "Bacon, jambon, saucisses"
+            - Sautéed potatoes
+            - Beurre et confitures 
+        drinks:
+            - Jus de fruits assortis 
+            - Café
+            - Thé
+            - Lait
+"Café BREAKS":
+    "LE TROIS HEURES":
+        food:
+            - Biscuits maison assortis
+            - Plateau de fruits frais tranchés 
+        drinks:
+            - Boissons gazeuses
+            - Eau minérale 
+            - Café
+            - Thé 
+
+    "L’ÉNERGISANTE":
+        food:
+            - Pain aux bananes 
+            - Brownies 
+            - Plateau de fruits frais tranchés 
+        drinks:
+            - Boissons gazeuses
+            - Eau minérale 
+            - Café
+            - Thé 
+
+    LE SANTÉ:
+        food:
+            - Pain aux bananes 
+            - Biscuits maison assortis 
+            - Plateau de fruits frais tranchés 
+        drinks:
+            - Fruit juices
+            - Eau minérale 
+            - Café
+            - Thé
+            - tisanes
+    LA DE LUXE:
+        food:
+            - Crudités et trempette  
+            - Plateau de fromages canadiens et fruits frais 
+            - Pains
+            - Biscottes
+            - Biscuits maison assortis
+        drinks:
+            - Boissons gazeuses
+            - Eau minérale 
+            - Café
+            - Thé
+"Déjeuner":
+    "entrée":
+        note: "1 choix"
+        food:
+            - Crème de légumes 
+            - Soupe Minestrone 
+            - Salade de saison 
+            - Salade César 
+    "Plats principaux":
+        note: "** Tous les plats sont servis avec bouquetière de légumes et pommes de terre ou riz du jour ** Petits pains et beurre"
+        food:
+            - "Pennine primavera"
+            - "Escalope de poulet sauce citronné"
+            - "Filet de saumon sauce au beurre "
+            - "Rôti de veau aux fines herbes"
+            - "Entrecôte de boeuf"
+    dessert:
+        note: "1 choix"
+        food:
+            - Salade de fruits frais 
+            - Gâteau mousse au chocolat 
+            - Pêche melba 
+        drinks:
+            - Café
+            - Thé 
+"DÉJEUNERS BUFFET RÉUNION":
+    "BUFFET FROID #1":
+        food:
+            - Crudités et trempette  
+            - Trois (3) salades composées 
+            - Salade verte et vinaigrettes 
+            - Plateau de sandwichs assortis 
+            - Desserts assortis 
+            - Plateau de fruits frais tranchés 
+        drinks:
+            - Café
+            - Thé
+            - Boissons gazeuses
+            - Eau minérale
+    "BUFFET FROID #2":
+        food:
+            - Crudités et trempette  
+            - Trois (3) salades composées 
+            - Assortiment de légumes grillés 
+            - Salade verte et vinaigrettes
+            - Plateau de sandwichs assortis 
+            - Plateau de fromages canadiens 
+            - Plateau de fruits frais tranchés 
+            - Desserts assortis
+        drinks:
+            - Café
+            - Thé
+            - Boissons gazeuses
+            - Eau minérale
+    "BUFFET FROID ET CHAUD":
+        note: "(min. 50 personnes)"
+        food:
+            - Crudités et trempette  
+            - Potage du jour 
+            - Trois (3) salades composées 
+            - Salade verte et vinaigrettes 
+            - Charcuteries et pâtés
+            - Bouquetière de legumes 
+            - Riz pilaf et pommes de terre
+            - Petits pains et beurre  
+            - Desserts assortiss 
+            - Plateau de fruits frais tranchéss
+        drinks:
+            - Café
+            - Thé
+            - Boissons gazeuses 
+        sub:
+            Repas Chaudes:
+                note: |
+                    ** Choix de deux (2) plats chauds  **
+                    (autres plats chauds disponibles sur demande)
+                food:
+                    - Tortellini à la Gigi 
+                    - Roast veal 
+                    - Poulet Cacciatore 
+                    - Poached salmon  
+BRUNCH:
+    BRUNCH:
+        food:
+            - Jus de fruits assortis 
+            - Assorted viennoiseries 
+            - Crudités et trempette  
+            - "Platter of FROIDS cuts, pâtés and cheeses" 
+            - Quatre (4) salades composées 
+            - Salade verte et vinaigrettes 
+            - Oeufs Mimosa 
+            - Marinades 
+
+    "plats chauds":
+        food:
+            - Oeufs brouillés 
+            - "Bacon, jambon et saucisses" 
+            - Pain doré et crêpes au sirop d’érable 
+            - Fèves au lard maison
+        sub:
+            repaas chaudes:
+                note: "** Choix de deux (2) plats chauds  **"
+                food:
+                    - Poulet Cacciatore
+                    - Tortellini sauce rosée 
+                    - "Saumon poché, sauce au beurre blanc"
+                    - Rôti de veau sauce au poivre vert 
+                    - "Pommes de terre sautées, légumes et riz pilaf"
+                    - Petits pains et beurre 
+    DESSERTS:
+        food:
+            - Plateau de fruits frais tranchés 
+            - Fromage cottage 
+            - Desserts assortiss 
+            - Céréales froides assorties 
+            - Yogurts 
+        drinks:
+            - Café
+            - Thé
+DÎNER:
+    DÎNER:
+        note: |
+            Choix d’une (1) entrée
+            **Tous les plats sont servis avec bouquetière de légumes et pommes de terre ou riz du jour**
+        food:
+            - Consommé Mille Fanti
+            - Penne et coulis aux tomates 
+            - Salade César  
+            - "Gnocchis farcis au veau, sauce tomates basilic"
+            - Tournedos de poulet bonne femme
+            - Escalope de veau caprice du chef (crevettes sautés et sauce au vin blanc) 
+            - "Fillet of turbot ‘en papillotte’, white wine sauce" 
+            - "Contre-ﬁlet de boeuf rôti, sauce poivrade" 
+            - "Côtelette d’agneau dans le filet, garniture vert pré"
+            - Petits pains et beurre 
+    DESSERT:
+        note: "Choix d’un (1) dessert"
+        food:
+            - "Glace maison (nocciole, zuppa inglese, bacio, cappuccino)"
+            - Vacherin aux deux chocolats
+            - Cannoli au ricotta et glace maison 
+            - Pochette Casino (mousse framboise recouverte de chocolat)
+            - Café et Thé 
+RECEPTION DÎNER:
+    DISHES:
+        note: |
+            Choix d’une (1) entré
+            **Tous les plats sont servis avec bouquetière de légumes et pommes de terre ou riz du jour** 
+        food:
+            - Fazzolettis farci de fromage a chèvre et épinards
+            - Gnocchis farci de viande dans un coulis de tomate 
+            - Crêpe de crabe “gratiné”
+            - Brochette de crevette servie avec riz pesto 
+            - Baluchon (3) trois fromages, sauce rosé 
+            - Mélange Mesclun 
+            - Salade César 
+            - Crème d’asperges ou Soupe aux légumes ou Tortellini “brodo”
+            - Poulet Suprême « à l` Américaine » 
+            - Filet de truite « Grenobloise » 
+            - Poulet Cordon Bleu, dans une sauce madère 
+            - Médaillions de porc, sauce aux prunes 
+            - Escalope de veau, sauce champignons 
+            - Duo de filet mignon et crevettes grillées 
+    DESSERT:
+        note: Petits pains et beurre  Choix d’un (1) dessert 
+        food:
+            - Coupe de gelato stracciatella (gelato à la vanille servie avec copeaux et croquant de chocolat)
+            - Mousse de truffe au chocolat 
+            - Cannolli farci avec fromage ricotta et gelato amaretto 
+        drinks:
+            - Café
+            - Thé 
+FORFAITS RÉCEPTION DÎNER:
+    note: S.V.P. FAITE UN (1) CHOIX POUR CHAQUE SERVICE
+    sub:
+        Cocktail: 
+            note: |
+                "Une (1) heure de service: "Canapés chauds - service au plateau"
+                Deux (2) bouteilles de vin maison par table de 10 personnes
+                Boissons gazeuses, eau minérale à volonté 
+                **Tous nos plats sont garnis avec légumes et pommes de terre Petits pains et beurre**                
+            drinks:
+             - Punch ou Sangria
+        Entrées: 
+            note: Froides ou chaud
+            sub:
+                Entrées froides:
+                    food:
+                       - "Saumon fumé avec câpres & oignons"
+                       - Bocconcini Caprese 
+                       - "Smoked salmon trio (cognac, pepper, fine herbs)" 
+                       - "Grilled vegetables with shavings of parmesan, balsamic reduction"
+                Entrées chaudes:
+                    food:
+                       - "Crêpe Florentine & Fusilli, sauce Napolitaine"
+                       - "Rizotto aux champignons sur un nid de radicchio"
+
+        Salades:
+            food:
+               - Salade d’épinards et poires tranchées
+               - Salade exotique - l’huile d’olive et vinaigre balsamique
+               - Avec canneberges ou noix de pins rôtis
+               - Salade César
+        Plats principaux: 
+            food:
+               - "Ballottine de poulet avec riz sauvage, sauce forestière" 
+               - "Médaillons de boeuf, sauce Bordelaise" 
+               - "Côte de boeuf (8oz.) grillé, champignons sautée" 
+               - "Jarret de veau braisé, alla Milanaise" 
+               - "Tresse de la mer (saumon & sole) sauce au vin blanc citronné"
+               - Veal scallopini bolognese served with penne sauce napolitana 
+               - Filet of sole and shrimps “à la nage” sauce pizzaiolla
+        Plats végetariens: 
+            food:
+               - Aubergine parmeggiana 
+               - Champignon Portobello farci
+               - Baluchon de légumes        
+        Desserts: 
+            food:
+               - Profiterole et mousse de chocolat en coupe 
+               - Gâteau lava au chocolat avec cerises maracchino 
+               - Mousse de framboises avec copeaux de chocolats
+               - Tulip de Gelato Tiramisu
+            drinks:
+               - Café 
+               - Thé
+FORFAITS COCKTAIL DÎNATOIRE:
+        note: Choix de trois (3) stations
+        sub:
+            Cocktail:
+                note: (Service de 2hrs)
+                food:
+                   - Canapés chauds; service au plateau
+                   - Vin Maison (rouge et blanc)
+                   - Bières domestiques
+                   - Boissons gazeuses & Eau minérale 
+            Station Déli:
+                food:
+                    - Boeuf fumé
+                    - Dinde fumée
+                    - Pain de seigle
+                    - Frites
+                    - Salade de chou, cornichons et moutarde 
+            Station Asiatique:
+                food:
+                    - Sushi & Makis
+                    - Dumplings
+                    - Rouleaux impériaux
+                    - Légumes tempuraStation
+            Station Italienne:
+                food:
+                    - Assortiment de pizza et foccacias
+                    - Mirror de prosciutto et charcuteries
+                    - Plateau de fromages
+                    - Légumes grillés
+                    - Pates sauce au choix
+                    - Assortiment de marinades et olives
+            Station Mexicaine:
+                food:
+                    - Nachos et Salsa
+                    - Guacamole
+                    - Fijitas au beouf et poulet, oignons et poivrons
+            Service de Bar:
+                Numéro 1:
+                    drinks:
+                        - Vin Maison (rouge et blanc)
+                        - Bières domestiques
+                        - Boissons gazeuses et eau minérale
+                Numéro 2:
+                    drinks:
+                        - Boissons fortes
+                        - Vin Maison (rouge et blanc)
+                        - Bières domestiques
+                        - Boissons gazeuses & Eau minérale
+            Stations Supplémentaires:
+                Table à café:
+                    food: 
+                        - Biscuits assortis
+                        - Fruits frais tranchés
+                    drinks:
+                        - Café & Thé 
+                Tables de douceur:
+                    food:
+                        - Gateaux assortis
+                        - Pâtisseries
+                        - Fontaine de chocolat et brochettede fruits
+                        - Paninis assortis
+                        - Pizzas
+                        - Café & Thé 
+                Sur Le Grill:
+                    food:
+                        - Côtelettes d’agneau
+                        - Saucisses italiennes
+                        - Poulet grillé
+                Station de Fruits de Mer:
+                    food:
+                        - Miroir de saumon fumé
+                        - Crevettes
+                        - Salade de fruits de mer 
+CANAPÉS:
+    SELECTION A:
+        FROIDS:
+            food:
+                - Bruschetta aux légumes 
+                - Crevettes de matane 
+                - Mousse of pâté
+                - Céleri et fromage à la crème
+                - Mousse de saumon
+                - Concombres farcis aux oeuf 
+        CHAUDS:
+            food:
+                - Mini quiches aux légumes 
+                - Boulettes de viande avec sauce épicée
+                - Tiropita 
+                - Bouchées au poulet 
+                - Mini rouleaux impériaux 
+                - Croquettes de poisson
+                - Bâtonnets de zucchini 
+
+
+    SELECTION B:
+        FROIDS:
+            food: 
+                - Huîtres fumées 
+                - Brie et raisins frais 
+                - Bruschetta aux tomates séchées et bocconcini 
+                - Prosciutto et melon 
+                - Concombres farcis aux crevettes
+                - Saumon fumé 
+                - Mini pâtes feuilletées farcies au thon
+        CHAUDS:
+            food: 
+                - Craquelins aux fruits de mer au gratin
+                - Ailes de poulet épicées 
+                - Spanakopita 
+                - Fondue au fromage 
+                - Mini brochettes de poulet
+                - Mini brochettes de boeuf enveloppées de bacon 
+                - Crevettes au beurre à l’ail
+                - Mini pizza 
+FORFAIT COCKTAILS:
+    "FORFAIT COCKTAIL #1":
+        note: Service de deux (2) heures
+        food: |
+            Service au plateau : Canapés chauds et froids
+            (Sélection du Chef)
+        drinks:
+            - "Bar service : House wine (red and white)"
+            - Bières domestiquess
+            - Boissons gazeuses
+            - Eau minérale
+    "FORFAIT COCKTAIL #2":
+        food:
+            - |
+                Service au plateau: Canapés chauds et froids
+                (Sélection du Chef)
+        drinks:
+            - "Service de bar : Vin maison (rouge et blanc)"
+            - Vin maison (rouge et blanc)
+            - Bières domestiques
+            - Boissons gazeuses
+            - Eau minérale
+        note: |
+            Service de deux (2) heures
+            Agrémentez votre cocktail en ajoutant des stations:
+            Station Déli : Boeuf fumée, dinde fumée, pain de seigle,frites, salade de chou, cornichons et moutarde
+            Station Italienne : Assortiment de pizzas et foccacias, miroir de prosciutto et charcuteries, fromages, légumesgrillés,assortiment de marinades et olives
+            Station de sushis : Assortiment de sushis et rouleaux maki 
+            Station de desserts : Mini pâtisseries assorties, fontaine de chocolat avec brochettes de fruits, biscuits assortis,plateau de fruits frais tranchés, café, thé
+
+WINE LIST:
+    WHITE WINES:
+        drinks:
+            - House wine (1 litre)
+            - Chardonnay, Laroche – France
+            - Chardonnay Woodbridge, Mondavi – California
+            - Chardonnay Semillon, Jacob’s Creek- Australia
+            - Chardonnay Errazuriz Casablanca – Chili
+            - Pinot Grigio Della Venezie – Italy
+            - Hermanos Lurton Rueda – Spain
+            - Chardonnay EXP Toasted Head – California
+            - Chablis Albert BicCHAUDS – France
+    RED WINES:
+        drinks:
+            - House wine (1 litre)
+            - Pinot Noir vdp d’Oc, Laroche – France 
+            - Cabernet Sauvignon Yellow Label – Australia
+            - Cabernet Shiraz, Jacob’s Creek – Australia
+            - Sangiovese i.g.t. Borgo di Colloredo – Italy
+            - Campofiorin v.d.t., Masi Agricola – Italy
+            - Cabernet Sauvignon, Liberty School-California
+            - Chianti Classico, Villa Antinori – Italy
+            - Chianti Classico Riser. Ducale Ruffino-Italy 
+    ROSÉ:
+        drinks:
+            - Ernest & Julio Zinfadel
+
+
+"BITS & PIECES":
+    food:
+        - Danoises, croissants, chocolatines
+        - Homemade cookies
+        - Muffins or Pain aux bananes or brownies
+        - Assorted pastries (for 12 personnes)
+        - Plateau de fruits frais tranchés (for 10 personnes)
+        - Nachos with salsa
+        - Chips (for 8 personnes)
+        - Pretzels (for 8 personnes)
+        - Peanuts (for 8 personnes)
+        - Assorted Crudités et trempette  (for 8 personnes)
+        - Assorted sandwiches with crispy vegetables (for 8 personnes)
+        - Canadian cheeses, Biscottes and fresh fruit
+        - Imported and Canadian cheeses, Biscottes and fresh fruit
+    drinks:
+        - Eau minérale
+        - Boissons gazeuses
+        - Fruit juices
+        - Café
+        - Thé (30 cups)

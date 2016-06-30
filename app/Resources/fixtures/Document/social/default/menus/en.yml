@@ -254,7 +254,7 @@ COFFEE BREAKS:
             - Tea
 LUNCH:
     "entrée":
-        limited_choice: 1
+        note: "limited to 1 choice"
         food:
             - Cream of vegetables 
             - Minestrone 
@@ -269,7 +269,7 @@ LUNCH:
             - "Roast veal with fine"
             - "Rib steak"
     dessert:
-        limited_choice: 1
+        note: "limited to 1 choice"
         food:
             - Fresh fruit salad 
             - Chocolate mousse cake 

@@ -77,8 +77,10 @@ class DefaultController extends BaseController
     public function menusAction(StructureInterface $structure, $preview = false, $partial = false)
     {
                 
-        $directoryPath = $this->container->getParameter('kernel.root_dir');        
-        $contentFilePattern = $directoryPath.'/Resources/fixtures/Document/social/default/menus.yml';
+        $request = $this->container->get('request_stack')->getCurrentRequest();
+        
+        $directoryPath = $this->container->getParameter('kernel.root_dir');
+        $contentFilePattern = $directoryPath.'/Resources/fixtures/Document/social/default/menus/'.$request->getLocale().'.yml';
 
         $menuData = Yaml::parse(file_get_contents($contentFilePattern));
         
