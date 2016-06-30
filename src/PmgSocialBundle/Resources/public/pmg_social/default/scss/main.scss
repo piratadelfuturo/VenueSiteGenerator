@@ -2320,8 +2320,9 @@ img{max-width:100%;}
 
 footer{
     .footer-logo{
+        bottom: 0px !important;
         img{
-            max-height: 146px !important;
+            max-height: 125px !important;
         }
     }
 

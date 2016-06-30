@@ -137,7 +137,7 @@
                     <parameter name="x">1200</parameter>
                     <parameter name="y">1200</parameter>
                     <parameter name="forceRatio">true</parameter>
-                    <parameter name="mode">inbound</parameter>
+                    <parameter name="mode">outbound</parameter>
                 </parameters>
             </command>
         </commands>

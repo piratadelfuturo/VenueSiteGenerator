@@ -16,9 +16,7 @@
     </div>
   </div>
         {% if content.gallery is iterable and content.gallery is not empty%}
-            {% for gallery in content.gallery %}
-            {% include 'PmgSocialBundle:snippets:gallery.snippet.html.twig' with { 'content' : gallery, 'title' : content.title , 'section_class' : ''} %}
-            {% endfor %}
+        {% include 'PmgSocialBundle:snippets:gallery.snippet.html.twig' with { 'content' : content.gallery, 'title' : content.title, 'final_section_class' : true} %}
         {% endif %}
       <div class="push"></div>
 {% endblock %}

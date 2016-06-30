@@ -76,8 +76,8 @@
     {% endif %}
     </div>
 </div>
-{% if content.gallery is defined and content.gallery is not empty and content.gallery.images is iterable and content.gallery.images is not empty%}
-    {% include 'PmgSocialBundle:snippets:gallery.snippet.html.twig' with { 'content' : content.gallery, 'title' : null} %}
+{% if content.gallery is defined and content.gallery is not empty %}
+    {% include 'PmgSocialBundle:snippets:gallery.snippet.html.twig' with { 'content' : content.gallery , 'final_section_class' : true , 'title' : null} %}
 {% endif %}
   <div class="push"></div>
 {% endblock %}

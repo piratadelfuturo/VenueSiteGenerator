@@ -1,6 +1,17 @@
-{% set final_title = title ?: content.title %}  
-{% set final_section_class = section_class ?: 'last-section' %}
-<div class="gallery-section {{final_section_class|raw}} last-section">
+{% for gallery in content %}
+    {% set final_title = null %}
+    {% if loop.last == true and final_section_class is defined and final_section_class == true %}
+        {% set section_class = 'last-section'%}
+    {% else %}
+        {% set section_class = ''%}
+    {% endif %}
+    {% if loop.first == true %}
+        {% set final_title = title is defined ? title : gallery.title %}
+    {% else %}
+        {% set final_title = null%}
+    {% endif %}
+    
+<div class="gallery-section {{section_class|raw}}">
     {% if final_title is not null %}
     <div class="page-heading">
       <h2>{{ final_title }}</h2>
@@ -8,8 +19,8 @@
     {% endif %}
     <div class="gallery-list-section">
       <div class="row">
-        {% if content.images is iterable and content.images is not empty %}
-              {% for image in content.images %}
+        {% if gallery.images is not empty %}
+              {% for image in gallery.images %}
               <div class="gallery-box">
                   <a data-title="{{ image.name }}" data-gallery="multiimages" data-toggle="lightbox" href="{{ asset(image.thumbnails['gallery-large']) }}">
                       <img class="img-responsive" src="{{ asset(image.thumbnails['gallery-thumb'])}}" alt="{{ image.name }}" />
@@ -20,3 +31,4 @@
       </div>
     </div>
   </div>
+{% endfor %}
