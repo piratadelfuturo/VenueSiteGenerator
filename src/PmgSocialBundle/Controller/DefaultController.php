@@ -33,19 +33,19 @@ class DefaultController extends BaseController
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+                $name = $form->get('name')->getData().' '.$form->get('last_name')->getData();
                 $message = \Swift_Message::newInstance()
-                    ->setSubject('Website contact')
-                    ->setFrom($form->get('email')->getData())
+                    ->setSubject('Website contact: '.$name )
+                    ->setFrom(array($form->get('email')->getData() => $name ))
                     ->setTo('daniel@nviba.com')
                     ->setBody($form->get('message')->getData());
 
                 $this->get('mailer')->send($message);
 
-                $this->addFlash('success_form', 'Your email has been sent! Thanks!');
+                $this->addFlash('success_form', true);
                 unset($form);
                 $form = $this->createForm(new ContactType());
         }
-        
         
         $response = $this->renderStructure(
             $structure,

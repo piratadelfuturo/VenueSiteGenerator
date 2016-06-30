@@ -29,14 +29,13 @@
         	<div class="col-sm-7 contact-form">
                 {{ form_errors(contact_form) }}
                 {% if app.session.flashBag is defined %}
-                {% for flash_message in app.session.flashBag.get('success_form') %}
-                    <div class="flash-notice">
-                        {{ flash_message }}
-                    </div>
-                {% endfor %}
+                    {% for flash_message in app.session.flashBag.get('success_form') %}
+                        <div class="page-heading">
+                            <h2>{% trans %}Your email has been sent! Thanks!{% endtrans %}</h2>
+                        </div>
+                    {% endfor %}
                 {% endif %}
                 
-                {# form_start(contact_form,{'action': path('pmg_social_send_contact',{'prefix': request.routeParameters.prefix, 'host' : request.routeParameters.host}) }) #}
                 {{ form_start(contact_form) }}
                 
                     <div class="row">
@@ -51,6 +50,9 @@
                         </div>
                         <div class="col-sm-12">
                                 {{ form_widget(contact_form.message) }}
+                        </div>
+                        <div class="col-sm-12">
+                                {{ form_widget(contact_form.send) }}
                         </div>
                     </div>
                 {{ form_end(contact_form) }}
@@ -74,7 +76,7 @@
                         {% endfor %}
                     </p>
                     {% endif %}
-                    {% if content.faxes is defined %}
+                    {% if location.faxes is defined %}
                     <p>
                         <strong>{{ 'Fax:'|trans }}</strong>
                         {% for fax in location.faxes %}
@@ -86,7 +88,7 @@
                         {% endfor %}
                     </p>
                     {% endif %}
-                    {% if content.emails is defined %}
+                    {% if location.emails is defined %}
                     <p>
                         <strong>{% trans %}E-mail:{% endtrans %}</strong>
                         {% for email in location.emails %}

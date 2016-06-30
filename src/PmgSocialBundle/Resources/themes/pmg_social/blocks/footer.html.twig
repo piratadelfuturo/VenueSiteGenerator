@@ -10,18 +10,7 @@
           </a>
       </div>
       <div class="col-sm-9 footer-right">
-        {% if pmg_social is defined and pmg_social.social_profiles[webspace_key] is defined and pmg_social.social_profiles[webspace_key] is not empty %}
-            {% set social_profiles = pmg_social.social_profiles[webspace_key] %}
-        <div class="social-media">
-            {% set facebook_link = social_profiles.facebook is defined ? social_profiles.facebook : 'https://www.facebook.com/LaPlazaPMG'%}
-            {% set twitter_link = social_profiles.twitter is defined ? social_profiles.twitter : ' https://twitter.com/plazapmg'%}
-            {% set instagram_link = social_profiles.instagram is defined ? social_profiles.instagram : '  https://www.instagram.com/pmg.group/'%}
-            
-            <a href="{{ social_profiles.facebook }}"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/fb-icon.png') }}" alt="" /></a>
-            <a href="{{ social_profiles.twitter }}"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/twitter-icon.png') }}" alt="" /></a>
-            <a href="{{social_profiles.linkedin}}"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/linked-icon.png') }}" alt="" /></a>
-        </div>
-        {% endif %}          
+          {% include 'PmgSocialBundle:blocks:social.html.twig' %}
         <div class="footer-nav">
           <ul>
             <li><a href="{{ sulu_content_root_path() }}">{% trans %} HOME {% endtrans %}</a></li>

@@ -73,14 +73,9 @@
         <jms:reference-file line="24">./src/PmgSocialBundle/Resources/themes/pmg_social/blocks/header.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="3efccba1a7c798cab2e90035739cf65e8d98c4ac" resname="Dimensions &amp; Capacity">
-        <source><![CDATA[Dimensions & Capacités]]></source>
-        <target state="new"><![CDATA[Dimensions & Capacity]]></target>
+        <source><![CDATA[& Capacity]]></source>
+        <target state="new"><![CDATA[Dimensions & Capacités]]></target>
         <jms:reference-file line="23">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/hall_single.html.twig</jms:reference-file>
-      </trans-unit>
-      <trans-unit id="0a87f986d2137dac4895e666cb44259060d37f7f" resname="Dimensions &amp; Capacity ">
-        <source><![CDATA[Dimensions & Capacity ]]></source>
-        <target state="new"><![CDATA[Dimensions & Capacity ]]></target>
-        <jms:reference-file line="23">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="8cded449d2c29ca931225c998da3069185f0de10" resname="Dimensions (ft)">
         <source>Dimensions (ft)</source>
