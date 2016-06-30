@@ -14,11 +14,14 @@
                 <img src="{{ asset('bundles/pmgsocial/pmg_social/'~webspace_key~'/images/logo.png') }}" alt="" />
             </a>
         </div>
+        {% if pmg_social is defined and pmg_social.social_profiles[webspace_key] is not empty %}
+            {% set social_profiles = pmg_social.social_profiles[webspace_key] %}
         <div class="social-media">
-            <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/fb-icon.png') }}" alt="" /></a>
-            <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/twitter-icon.png') }}" alt="" /></a>
-            <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/linked-icon.png') }}" alt="" /></a>
+            {% if social_profiles.facebook is defined%}<a href="{{ social_profiles.facebook }}"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/fb-icon.png') }}" alt="" /></a>{% endif %}
+            {% if social_profiles.twitter is defined%}<a href="{{ social_profiles.twitter }}"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/twitter-icon.png') }}" alt="" /></a>{% endif %}
+            {% if social_profiles.linkedin is defined%}<a href="{{social_profiles.linkedin}}"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/linked-icon.png') }}" alt="" /></a>{% endif %}
         </div>
+        {% endif %}
       </div>
       <div class="col-md-9 header-right-part">
         <div class="top-right"> <a href="{{ sulu_content_path('/',alter_webspace_key)}}">{% trans %}Corporate{% endtrans %}</a>
