@@ -10,7 +10,7 @@
           </a>
       </div>
       <div class="col-sm-9 footer-right">
-        {% if pmg_social is defined and pmg_social.social_profiles[webspace_key] is not empty %}
+        {% if pmg_social is defined and pmg_social.social_profiles[webspace_key] is defined and pmg_social.social_profiles[webspace_key] is not empty %}
             {% set social_profiles = pmg_social.social_profiles[webspace_key] %}
         <div class="social-media">
             {% if social_profiles.facebook is defined%}<a href="{{ social_profiles.facebook }}"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/fb-icon.png') }}" alt="" /></a>{% endif %}

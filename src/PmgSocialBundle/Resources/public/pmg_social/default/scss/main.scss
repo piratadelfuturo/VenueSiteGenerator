@@ -865,80 +865,80 @@ header{
 			
 		}
 		
-		&.box-1{left:0;top:0;}
-		&.box-2{left:-110px;top:110px;}
-		&.box-3{left:-220px;top:220px;}
-		&.box-4{left:220px;top:0px;}
-		&.box-5{left:110px;top:110px;}
-		&.box-6{left:0;top:220px;}
-		&.box-7{left:-110px;top:330px;}
-		&.box-8{left:442px;top:0px;}
-		&.box-9{left:330px;top:110px;}
-		&.box-10{left:220px;top:220px;}
-		&.box-11{left:110px;top:330px;}
-		&.box-12{left:0px;top:440px;}
+		&.box-12{left:0;top:0;}
+		&.box-11{left:-110px;top:110px;}
+		&.box-10{left:-220px;top:220px;}
+		&.box-9{left:220px;top:0px;}
+		&.box-8{left:110px;top:110px;}
+		&.box-7{left:0;top:220px;}
+		&.box-6{left:-110px;top:330px;}
+		&.box-5{left:442px;top:0px;}
+		&.box-4{left:330px;top:110px;}
+		&.box-3{left:220px;top:220px;}
+		&.box-2{left:110px;top:330px;}
+		&.box-1{left:0px;top:440px;}
 		
 		@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
   			width:155px; height:155px;
 			
-			&.box-2{left:-80px;top:80px;}
-			&.box-3{left:-160px;top:160px;}
-			&.box-4{left:160px;top:0px;}
-			&.box-5{left:80px;top:80px;}
-			&.box-6{left:0;top:160px;}
+			&.box-12{left:-80px;top:80px;}
+			&.box-11{left:-160px;top:160px;}
+			&.box-10{left:160px;top:0px;}
+			&.box-9{left:80px;top:80px;}
+			&.box-8{left:0;top:160px;}
 			&.box-7{left:-80px;top:240px;}
-			&.box-8{left:320px;top:0px;}
-			&.box-9{left:240px;top:80px;}
-			&.box-10{left:160px;top:160px;}
-			&.box-11{left:80px;top:240px;}
-			&.box-12{left:0px;top:320px;}
+			&.box-6{left:320px;top:0px;}
+			&.box-5{left:240px;top:80px;}
+			&.box-4{left:160px;top:160px;}
+			&.box-3{left:80px;top:240px;}
+			&.box-2{left:0px;top:320px;}
 		}
 		
 		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 			width:155px; height:155px;
 			
-			&.box-2{left:-80px;top:80px;}
-			&.box-3{left:-160px;top:160px;}
-			&.box-4{left:160px;top:0px;}
-			&.box-5{left:80px;top:80px;}
-			&.box-6{left:0;top:160px;}
+			&.box-12{left:-80px;top:80px;}
+			&.box-11{left:-160px;top:160px;}
+			&.box-10{left:160px;top:0px;}
+			&.box-9{left:80px;top:80px;}
+			&.box-8{left:0;top:160px;}
 			&.box-7{left:-80px;top:240px;}
-			&.box-8{left:320px;top:0px;}
-			&.box-9{left:240px;top:80px;}
-			&.box-10{left:160px;top:160px;}
-			&.box-11{left:80px;top:240px;}
-			&.box-12{left:0px;top:320px;}
+			&.box-6{left:320px;top:0px;}
+			&.box-5{left:240px;top:80px;}
+			&.box-4{left:160px;top:160px;}
+			&.box-3{left:80px;top:240px;}
+			&.box-2{left:0px;top:320px;}
 		  
 		}
 		@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
 		width:155px; height:155px;
 			
-			&.box-2{left:-80px;top:80px;}
-			&.box-3{left:-160px;top:160px;}
-			&.box-4{left:160px;top:0px;}
-			&.box-5{left:80px;top:80px;}
-			&.box-6{left:0;top:160px;}
+			&.box-12{left:-80px;top:80px;}
+			&.box-11{left:-160px;top:160px;}
+			&.box-10{left:160px;top:0px;}
+			&.box-9{left:80px;top:80px;}
+			&.box-8{left:0;top:160px;}
 			&.box-7{left:-80px;top:240px;}
-			&.box-8{left:320px;top:0px;}
-			&.box-9{left:240px;top:80px;}
-			&.box-10{left:160px;top:160px;}
-			&.box-11{left:80px;top:240px;}
-			&.box-12{left:0px;top:320px;}
+			&.box-6{left:320px;top:0px;}
+			&.box-5{left:240px;top:80px;}
+			&.box-4{left:160px;top:160px;}
+			&.box-3{left:80px;top:240px;}
+			&.box-2{left:0px;top:320px;}
 		}
 		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
 		 width:120px; height:120px;
 			
-			&.box-2{left:-65px;top:65px;}
-			&.box-3{left:-130px;top:130px;}
-			&.box-4{left:130px;top:0px;}
-			&.box-5{left:65px;top:65px;}
-			&.box-6{left:0;top:130px;}
+			&.box-12{left:-65px;top:65px;}
+			&.box-11{left:-130px;top:130px;}
+			&.box-10{left:130px;top:0px;}
+			&.box-9{left:65px;top:65px;}
+			&.box-8{left:0;top:130px;}
 			&.box-7{left:-65px;top:195px;}
-			&.box-8{left:260px;top:0px;}
-			&.box-9{left:195px;top:65px;}
-			&.box-10{left:130px;top:130px;}
-			&.box-11{left:65px;top:195px;}
-			&.box-12{left:0px;top:260px;}
+			&.box-6{left:260px;top:0px;}
+			&.box-5{left:195px;top:65px;}
+			&.box-4{left:130px;top:130px;}
+			&.box-3{left:65px;top:195px;}
+			&.box-2{left:0px;top:260px;}
 		}
 		@media (max-width: $iphone-to-ipad) {
 		  position:initial; background:$black; width:30%; height:auto; margin:5px 1%; display:inline-block;
