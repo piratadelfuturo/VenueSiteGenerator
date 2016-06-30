@@ -56,7 +56,7 @@
         <div class="read-more-btn"><a href="{{ sulu_content_path(testimonialDoc.content.url)  }}">{% trans %}Read more{% endtrans %}</a></div>
       </div>
       <div class="testimonial-content">
-        <p> “{{ testimonial.article}}” </p>
+        <p> “{{ testimonial.article|nl2br}}” </p>
         <div class="author-name">{{ testimonial.title }}</div>
       </div>
     </div>

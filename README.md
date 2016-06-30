@@ -6,7 +6,7 @@ php app/console cache:clear -e prod;
 php app/webconsole cache:clear -e prod;
 php app/console assets:install public_html -e prod;
 php app/console assetic:dump -e prod;
-php app/console sulu:build prod -e prod -n;
+php app/console sulu:build phpcr_migrations -e prod -n;
 chown plazapmg:plazapmg -R  ./ public_html public_html/*;
 chmod 755 public_html public_html/*;
 rsync -avz public_html/ ../public_html/sitescms/;
