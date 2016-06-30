@@ -2317,6 +2317,16 @@ img{max-width:100%;}
 	
 }
 
+header{
+    min-height: 275px;
+    .brand-image{
+        a{
+            img{
+                max-height: 200px;
+            }
+        } 
+    }
+}
 
 footer{
     .footer-logo{
