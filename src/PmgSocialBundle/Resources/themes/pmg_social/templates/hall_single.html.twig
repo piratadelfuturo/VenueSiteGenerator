@@ -68,9 +68,9 @@
            <img src="{{ asset(content.hall_setup[0].url)}}" alt="" />
       </div>
         {% endif %}
-        {% set download_link = '' %}
-      {% if content.download_info is iterable and content.download_info[0] is defined %}
-        <div class="download-btn"> <a href="{{ download_link }}" target="_blank">
+      {% if content.download_info is not empty%}
+        {% set download_link = content.download_info[0].url %}
+          <div class="download-btn"> <a href="{{ download_link }}" target="_blank">
                 {% trans %}Download the complete hall info{% endtrans %}
           </a> </div>
     {% endif %}
