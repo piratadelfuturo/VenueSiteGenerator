@@ -2365,6 +2365,7 @@ $sites-colors: (
                 border-color:$this-color;
                 &:hover,&:focus{
                     border-color:$this-color;
+                    background-color: $this-color;
                 }
             }
         }
