@@ -2356,12 +2356,16 @@ $sites-colors: (
     $this-color: nth($sites-colors,$i);
     $this-cruve-img: '../#{$site-item}/images/pink-banner-cruve.png';
     $this-ribbion-img: '../#{$site-item}/images/pink-ribbion.png';
+    $this-halls-menu-active-bg: '../#{$site-item}/images/halls-menu-active-bg.png';
     .#{$site-item}_site{
         a{color:inherit;}
         
         .navbar-default{
             .navbar-toggle{
                 border-color:$this-color;
+                &:hover,&:focus{
+                    border-color:$this-color;
+                }
             }
         }
 
@@ -2405,10 +2409,12 @@ $sites-colors: (
             .halss-menu-box{
                 &:hover,
 		&.active{
+                    background:url($this-halls-menu-active-bg) no-repeat left top;
                     @media (max-width: $iphone-to-ipad) {
 			background:$this-color;
                     }
                 }
+                
             }
         }
         

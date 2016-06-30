@@ -35,7 +35,7 @@
           <div class="halls-list-info">
             <div class="halls-content">
               <h4>{{ linkContent.title }}</h4>
-              <p> {{ linkContent.description |slice(1, 45) }} </p>
+              <p> {{ linkContent.description |slice(0, 45) }} </p>
             </div>
             <div class="more-info-btn"> <a href="{{ sulu_content_path(link.url,link.webspaceKey) }}">&plus;</a> </div>
           </div>

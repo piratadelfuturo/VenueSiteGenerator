@@ -78,7 +78,7 @@
       <div class="col-sm-3 halls-menu-left">
         <div class="halls-menu-section venue_set_ctn">
            {% for hall in hall_content %}
-          <div class="halss-menu-box venue_ctn box-{{loop.revindex}}" data-venue="international-room"> <a href="javascript:void(0)">{{hall.content.title}}</a> </div>
+          <div class="halss-menu-box venue_ctn box-{{loop.revindex}}" data-venue="international-room"> <a href="{{ sulu_content_path(hall.content.url) }}">{{hall.content.title}}</a> </div>
           {% endfor %}
         </div>
       </div>
@@ -94,7 +94,7 @@
                 {% endif %}
             <div style="background-image: url({{ asset(hall_image) }} );" class="venue_banner international-room" data-imgsrc="{{ asset(hall_image) }}">
               <div class="line_ctn">
-                <p>{{hall.content.description|slice(1, 45)|nl2br}}</p>
+                <p>{{hall.content.description|slice(0, 45)|nl2br}}</p>
               </div>
             </div> 
             {% endfor %}
