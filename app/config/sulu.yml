@@ -113,6 +113,7 @@ sulu_websocket:
     server:
         http_host: "%websocket_url%"
         port: "%websocket_port%"
+        ip: "%websocket_ip%"
 
 sulu_content:
     preview:
