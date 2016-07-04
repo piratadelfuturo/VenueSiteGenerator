@@ -53,17 +53,6 @@
                     </meta>
                     <params>
                         <param name="types" value="image"/>
-                        <param name="displayOptions" type="collection">
-                            <param name="leftTop" value="false"/>
-                            <param name="top" value="false"/>
-                            <param name="rightTop" value="false"/>
-                            <param name="left" value="false"/>
-                            <param name="middle" value="false"/>
-                            <param name="right" value="false"/>
-                            <param name="leftBottom" value="false"/>
-                            <param name="bottom" value="false"/>
-                            <param name="rightBottom" value="false"/>
-                        </param>
                         <param name="defaultDisplayOption" value="middle"/>
                     </params>
                 </property>
@@ -122,7 +111,7 @@
                                         <title lang="en">Title</title>
                                     </meta>
                                 </property>
-                                <property name="link" type="internal_link" mandatory="true">
+                                <property name="link" type="single_internal_link" mandatory="true">
                                     <meta>
                                         <title lang="fr">Link</title>
                                         <title lang="en">Link</title>
@@ -141,18 +130,6 @@
                         </type>
                     </types>
                 </block>
-                <property name="menu" type="single_internal_link">
-                    <meta>
-                        <title lang="fr">Menu</title>
-                        <title lang="en">Menu</title>
-                    </meta>
-                </property>
-                <property name="gallery" type="single_internal_link">
-                    <meta>
-                        <title lang="fr">Galllery</title>
-                        <title lang="en">Gallery</title>
-                    </meta>
-                </property>
             </properties>
         </section>
     </properties>

@@ -14,7 +14,7 @@
     <theme>
         <key>pmg_corp</key>
         <default-templates>
-            <default-template type="homepage">homepage</default-template>
+            <default-template type="homepage">homepage_corp</default-template>
             <default-template type="page">complex</default-template>
         </default-templates>
 
