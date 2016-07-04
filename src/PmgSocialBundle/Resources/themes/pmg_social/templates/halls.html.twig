@@ -52,8 +52,9 @@
     <div class="check-menu-btn"> <a href="{{ sulu_content_path(menu_link.content.url) }}">{% trans %}Check out our menus{% endtrans %}</a> </div>
   </div>
   {% endif %}
-    {% if content.gallery is iterable and content.gallery is not empty%}
-        {% include 'PmgSocialBundle:snippets:gallery.snippet.html.twig' with { 'content' : content.gallery, 'final_section_class' : true } %}
+    {% if content.gallery is defined and content.gallery is not empty%}
+        {% set gallery_link = content.gallery_link is defined ? content.gallery_link : '' %}
+        {% include 'PmgSocialBundle:snippets:gallery.snippet.html.twig' with { 'content' : content.gallery, 'final_section_class' : true , 'gallery_link' : gallery_link  , 'title' : 'Gallery'|trans } %}
     {% endif %}
 
   <div class="push"></div>

@@ -138,15 +138,28 @@
                 </property>
             </properties>
         </section>
-        <property name="gallery" type="snippet">
-                <meta>
-                    <title lang="fr">gallery</title>
-                    <title lang="en">gallery</title>
-                </meta>
-                <params>
-                    <param name="snippetType" value="gallery"/>
-                </params>               
-        </property>
+        <section name="gallery_block">
+            <meta>
+                <title lang="fr">Gallerie</title>
+                <title lang="en">Gallery block</title>
+            </meta>
 
+            <properties>
+                <property name="gallery" type="snippet">
+                        <meta>
+                            <title lang="fr">gallery</title>
+                            <title lang="en">gallery</title>
+                        </meta>
+                        <params>
+                            <param name="snippetType" value="gallery"/>
+                        </params>               
+                </property>
+                <property name="gallery_link" type="single_internal_link">
+                    <meta>
+                        <title lang="en">Gallery link</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
     </properties>
 </template>

@@ -41,6 +41,16 @@
         %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
+<!--<script type="text/javascript">
+jQuery(document).ready(function(){
+    $(".dropdown").hover(
+        function() { $('.dropdown-menu', this).fadeIn("fast");
+        },
+        function() { $('.dropdown-menu', this).fadeOut("fast");
+    });
+});
+$('dropdown').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
+</script> --> 
 <script>
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  
@@ -53,44 +63,10 @@ else{
         function() { $('.dropdown-menu', this).fadeOut("fast");
     });
 });
-
-	
 }
 </script> 
-<script>
-$( ".box-1" ).click(function() {
- 	$( "#showbox-1" ).fadeIn( "" );
-	$( ".box-1" ).addClass( "active" );
-	$( ".box-1" ).css( "z-index","12" );
-	
-	
-});
 
-$( ".close-btn" ).click(function() {
- 	$( ".show-hide-box" ).fadeOut( "" );
-	$( ".halss-menu-box" ).removeClass( "active" );
-	$( ".halss-menu-box" ).css( "z-index","10" );
-});
-</script>
-<script>
-	$(function(){
-		var venue, bannerimg;
-		$('[data-imgsrc]').each(function(i, obj) {
-		    bannerimg = $(this).data('imgsrc');
-		    $(this).css('background-image', 'url("'+bannerimg+'")');
-		});
-		$('[data-venue]').hover(function(){
-			venue = $(this).data('venue');
-			$('.venue_ctn').addClass('inactive');
-			$(this).removeClass('inactive');
-			$('.'+venue).addClass('active');
-		}, function(){
-			$('.venue_ctn').removeClass('inactive');
-			$('.'+venue).removeClass('active');
-		});
-	});
-</script> 
-<!-- tab script -->
+<!-- tab script --> 
 <script type="text/javascript">
 
 $(document).ready(function() {
@@ -107,7 +83,7 @@ $(document).ready(function() {
 	});
 });
 
-</script> 
+</script>
 {% endblock %}
     </body>
 </html>

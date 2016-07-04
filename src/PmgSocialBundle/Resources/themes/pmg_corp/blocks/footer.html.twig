@@ -1,11 +1,20 @@
+{% set webspace_key = request.webspaceKey %}
+{% set alter_webspace_key = request.webspaceKey|replace({'_corp' : '_social'} )%}
+{% if request.locale == 'en' %}
+    {% set alter_locale = 'fr' %}
+{% else %}
+    {% set alter_locale = 'en' %}
+{% endif %}
 <footer>
   <div class="col-sm-6 footer-logo">
-  	<a href="{{ sulu_content_root_path() }}"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/footer-logo.png') }}" alt="" /></a>
+  	<a href="{{ sulu_content_root_path() }}">
+            <img src="{{ asset('bundles/pmgsocial/pmg_corp/'~webspace_key~'/images/logo.png') }}" alt="" />
+        </a>
   </div>
   <div class="col-sm-6 footer-right-side">
   	<div class="footer-nav">
     	<ul>
-            <li><a href="{{ sulu_content_root_path() }}">{% trans %} HOME {% endtrans %}</a></li>
+            <li><a href="{{ sulu_content_root_path() }}">{% trans %}HOME{% endtrans %}</a></li>
             {% for item in sulu_navigation_root_tree('main') %}
             <li>
                 <a href="{{ sulu_content_path(item.url) }}" title="{{ item.title }}">{{ item.title }}</a>
@@ -13,14 +22,9 @@
             {% endfor %}
         </ul>
     </div>
-    <div class="social-media">
-    	<ul>
-            <li><a href=""><img alt="" src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/fb-icon.png') }}"></a></li>
-            <li><a href=""><img alt="" src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/twitter-icon.png') }}"></a></li>
-            <li><a href=""><img alt="" src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/linked-icon.png') }}"></a></li>
-        </ul>
-    </div>
+    {% include 'PmgSocialBundle:blocks:social.html.twig' %}
     <div class="sponsor-logos">
+            {#
             <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-1.png') }}" alt="" /></a>
             <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-2.png') }}" alt="" /></a>
             <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-3.png') }}" alt="" /></a>
@@ -29,6 +33,16 @@
             <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-6.png') }}" alt="" /></a>
             <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-7.png') }}" alt="" /></a>
             <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-8.png') }}" alt="" /></a>
+            <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-9.png') }}" alt="" /></a>
+            #}
+            <a href="{{ sulu_content_path('/','plazavolare_corp')}}"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-1.png') }}" alt="" /></a>
+            <a href="{{ sulu_content_path('/','la_plaza_corp')}}"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-2.png') }}" alt="" /></a>
+            <a href="{{ sulu_content_path('/','plazaantique_corp')}}"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-3.png') }}" alt="" /></a>
+            <a href="{{ sulu_content_path('/','embassyplaza_corp')}}"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-4.png') }}" alt="" /></a>
+            {# <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-5.png') }}" alt="" /></a> #}
+            <a href="{{ sulu_content_path('/','plazacentreville_corp')}}"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-6.png') }}" alt="" /></a>
+            <a href="{{ sulu_content_path('/','plazagardeninn_corp')}}"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-7.png') }}" alt="" /></a>
+            {# <a href="{{ sulu_content_path('/','challengerpiazza_social')}}"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-8.png') }}" alt="" /></a> #}
             <a href=""><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/sponsor-logo-9.png') }}" alt="" /></a>
 
         </div>

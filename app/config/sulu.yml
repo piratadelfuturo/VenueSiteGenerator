@@ -115,6 +115,8 @@ sulu_websocket:
         port: "%websocket_port%"
 
 sulu_content:
+    preview:
+        websocket: true
     search:
         mapping:
             Sulu\Bundle\ContentBundle\Document\PageDocument:

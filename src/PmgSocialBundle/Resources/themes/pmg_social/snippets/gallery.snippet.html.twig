@@ -29,6 +29,11 @@
               {% endfor %}
         {% endif%}
       </div>
+      {% if loop.last and gallery_link is defined and gallery_link is not empty %}
+          {% set gallery_link = sulu_content_load(gallery_link) %}
+          {% set gallery_link = gallery_link.content.url %}
+      <div class="see-more-btn"><a href="{{ sulu_content_path(gallery_link) }}">{% trans %}See more photos{% endtrans %}</a></div>
+      {% endif %}
     </div>
   </div>
 {% endfor %}

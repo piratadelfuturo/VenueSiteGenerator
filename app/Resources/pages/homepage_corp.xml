@@ -87,21 +87,70 @@
                 <title lang="fr">Content</title>
                 <title lang="en">Content</title>
             </meta>
-            <properties>        
-                <property name="testimonials" type="internal_links">
+            <properties>
+                <property name="halls_list" type="internal_links">
+                    <meta>
+                        <title lang="fr">Halls</title>
+                        <title lang="en">Halls</title>
+                    </meta>
+                </property>
+                
+                <property name="testimonials" type="single_internal_link">
                     <meta>
                         <title lang="fr">Testimonials</title>
                         <title lang="en">Testimonials</title>
                     </meta>
-
-                    <params>
-                        <param name="snippetType" value="testimonials"/>
-                    </params>
                 </property>
-                <property name="pages" type="internal_links">
+                <block name="link_blocks"
+                       default-type="link_block"
+                       minOccurs="0"
+                       mandatory="false">
                     <meta>
-                        <title lang="fr">Halls</title>
-                        <title lang="en">Halls</title>
+                        <title lang="fr">Block</title>
+                        <title lang="en">Block</title>
+                    </meta>
+                    <types>
+                        <type name="link_block">
+                            <meta>
+                                <title lang="fr">Link Block</title>
+                                <title lang="en">Link Block</title>
+                            </meta>
+                            <properties>
+                                <property name="title" type="text_line" mandatory="true">
+                                    <meta>
+                                        <title lang="fr">Titel</title>
+                                        <title lang="en">Title</title>
+                                    </meta>
+                                </property>
+                                <property name="link" type="internal_link" mandatory="true">
+                                    <meta>
+                                        <title lang="fr">Link</title>
+                                        <title lang="en">Link</title>
+                                    </meta>
+                                </property>
+                               <property name="images" type="media_selection">
+                                    <meta>
+                                        <title lang="fr">Bilder</title>
+                                        <title lang="en">Image</title>
+                                    </meta>
+                                    <params>
+                                        <param name="types" value="image"/>
+                                    </params>
+                                </property>
+                            </properties>
+                        </type>
+                    </types>
+                </block>
+                <property name="menu" type="single_internal_link">
+                    <meta>
+                        <title lang="fr">Menu</title>
+                        <title lang="en">Menu</title>
+                    </meta>
+                </property>
+                <property name="gallery" type="single_internal_link">
+                    <meta>
+                        <title lang="fr">Galllery</title>
+                        <title lang="en">Gallery</title>
                     </meta>
                 </property>
             </properties>

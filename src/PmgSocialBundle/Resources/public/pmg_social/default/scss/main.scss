@@ -1115,7 +1115,7 @@ header{
 }
 
 footer{
-	position:relative;  margin-top:-250px;
+	position:relative;  margin-top:-285px;
 	@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
   		
 	}
@@ -2042,7 +2042,7 @@ footer{
 }
 
 .last-section{
-	padding-bottom:250px; 
+	padding-bottom:285px; 
 	
 	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
 		padding-bottom:30px;	  
@@ -2430,7 +2430,7 @@ $sites-colors: (
             .halss-menu-box{
                 &:hover,
 		&.active{
-                    background:url($this-halls-menu-active-bg) no-repeat left top;
+                    background-image:url($this-halls-menu-active-bg);
                     @media (max-width: $iphone-to-ipad) {
 			background:$this-color;
                     }

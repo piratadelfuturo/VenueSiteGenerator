@@ -42,7 +42,7 @@ php app/console cache:clear -e dev;
 php app/webconsole cache:clear -e dev;
 php app/console assets:install public_html -e dev;
 php app/console assetic:dump -e dev;
-php app/console sulu:build dev;
+php app/console sulu:build phpcr_migrations;
 
 
 

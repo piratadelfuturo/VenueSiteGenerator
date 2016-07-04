@@ -53,17 +53,6 @@
                     </meta>
                     <params>
                         <param name="types" value="image"/>
-                        <param name="displayOptions" type="collection">
-                            <param name="leftTop" value="false"/>
-                            <param name="top" value="false"/>
-                            <param name="rightTop" value="false"/>
-                            <param name="left" value="false"/>
-                            <param name="middle" value="false"/>
-                            <param name="right" value="false"/>
-                            <param name="leftBottom" value="false"/>
-                            <param name="bottom" value="false"/>
-                            <param name="rightBottom" value="false"/>
-                        </param>
                         <param name="defaultDisplayOption" value="middle"/>
                     </params>
                 </property>
