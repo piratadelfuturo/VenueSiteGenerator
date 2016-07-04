@@ -31,7 +31,7 @@ chmod 755 ../public_html/sitescms/ ../public_html/sitescms/*;
 DEV:
 
 load translations:
-php app/console translation:extract de --dir=./src/ --output-dir=./app/Resources/translations
+php app/console translation:extract fr --dir=./src/ --output-dir=./app/Resources/translations
 
 load fixtures: // -n erases all database
 php -d xcache.var_size=100M app/console sulu:document:fixtures:load --fixtures  ./src/PmgSocialBundle/Datafixtures/Document/ -e prod -n

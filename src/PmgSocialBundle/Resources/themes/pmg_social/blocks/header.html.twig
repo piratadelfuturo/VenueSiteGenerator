@@ -34,7 +34,7 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ sulu_content_root_path() }}">{% trans %} HOME {% endtrans %}</a></li>
+                    <li><a href="{{ sulu_content_root_path() }}">{% trans %}HOME{% endtrans %}</a></li>
                     {% if sulu_navigation_root_tree('main') is not empty %}
                     {% for item in sulu_navigation_root_tree('main',2) %}
                     <li {% if item.children|length > 0%} class="dropdown mega-dropdown" {% endif %} >

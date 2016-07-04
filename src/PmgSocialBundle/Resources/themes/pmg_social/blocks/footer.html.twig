@@ -13,7 +13,7 @@
           {% include 'PmgSocialBundle:blocks:social.html.twig' %}
         <div class="footer-nav">
           <ul>
-            <li><a href="{{ sulu_content_root_path() }}">{% trans %} HOME {% endtrans %}</a></li>
+            <li><a href="{{ sulu_content_root_path() }}">{% trans %}HOME{% endtrans %}</a></li>
             {% for item in sulu_navigation_root_tree('main') %}
             <li>
                 <a href="{{ sulu_content_path(item.url) }}" title="{{ item.title }}">{{ item.title }}</a>
