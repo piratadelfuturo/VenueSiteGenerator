@@ -6,7 +6,7 @@
                 - Thé 
 
         "Déjeuner buffet froid":
-            note: "servi dans le salon"
+            note: "(servi dans le salon)"
             food:
                 - Crudités et trempette 
                 - Trois (3) salades composes 
@@ -78,7 +78,7 @@
                 - Café
                 - Thé 
         Déjeuner:
-            note: "servi dans votre salon"
+            note: "(servi dans votre salon)"
             food:
                 - Buffet chaud et froid 
         Pause-café de l’après-midi :
@@ -107,7 +107,7 @@
                 - Café
                 - Thé
         Déjeuner:
-            note: "servi dans votre salon"
+            note: "(servi dans votre salon)"
             food:
                 - Buffet chaud et froid 
 
@@ -123,37 +123,36 @@
                 - Boissons gazeuses
                 - Eau minérale 
 
-"DÉJEUNERS FORFAITS RÉUNION":
+DÉJEUNERS FORFAITS RÉUNION:
     "PLAN B, C & D":
         note: |
-          (served private salon)
-          (one choice per course)
+              (Servi dans votre salon privé)
+              (un choix)
         sub:
-            "ENTRÉE":
+            ENTRÉE: 
                 food:
-                    - Crème de légumes
-                    - Soupe Soupe Minestronep
-                    - "Salade verte, vinaigrette balsamique"
-                    - Salade César 
-            "PLAT PRINCIPAL":
+                    - Crème de légumes
+                    - Soupe Minestrone
+                    - Salade verte, vinaigrette balsamique
+                    - Salade César
+            PLAT PRINCIPAL:
                 food:
                     - Penne Primavera
                     - Escalope de poulet sauce au citron et vin blanc
-                    - Rôti de veau aux fines herbes
-                    - "Saumon poché ou grillé, sauce au beurre blanc"
-                    - Servi avec légumes du jour
+                    - Rôti de veau aux fines herbes
+                    - Saumon poché ou grillé, sauce au beurre blanc
+                    - Servi avec légumes du jour
                     - Pommes de terre ou riz
                     - Petits pains et beurre
-            "DESSERT":
+            DESSERT:
                 food:
                     - Salade de fruits frais
-                    - Gâteau mousse au chocolat
-                    - "Crème glacée maison (nocciole, bacio, cappuccino)"
+                    - Gâteau mousse au chocolat
+                    - Crème glacée maison (nocciole, bacio, cappuccino)
                     - Tiramisu en coupe
-        drinks:
-                - Café
-                - Thé
-LES PETITS-DÉJEUNERSAJOUTS:
+            drinks:
+                - Café et thé
+LES PETITS-DÉJEUNERS:
     LE CONTINENTAL:
         food:
             - Croissants
@@ -207,7 +206,7 @@ LES PETITS-DÉJEUNERSAJOUTS:
             - Café
             - Thé
             - Lait
-"Café BREAKS":
+"LES PAUSES-CAFÉ":
     "LE TROIS HEURES":
         food:
             - Biscuits maison assortis
@@ -254,7 +253,7 @@ LES PETITS-DÉJEUNERSAJOUTS:
             - Thé
 "Déjeuner":
     "entrée":
-        note: "1 choix"
+        note: "(1 choix)"
         food:
             - Crème de légumes 
             - Soupe Minestrone 
@@ -269,7 +268,7 @@ LES PETITS-DÉJEUNERSAJOUTS:
             - "Rôti de veau aux fines herbes"
             - "Entrecôte de boeuf"
     dessert:
-        note: "1 choix"
+        note: "(1 choix)"
         food:
             - Salade de fruits frais 
             - Gâteau mousse au chocolat 
@@ -396,7 +395,7 @@ DÎNER:
             - Pochette Casino (mousse framboise recouverte de chocolat)
             - Café et Thé 
 RECEPTION DÎNER:
-    DISHES:
+    PLATS:
         note: |
             Choix d’une (1) entré
             **Tous les plats sont servis avec bouquetière de légumes et pommes de terre ou riz du jour** 
@@ -599,8 +598,8 @@ FORFAIT COCKTAILS:
             Service au plateau : Canapés chauds et froids
             (Sélection du Chef)
         drinks:
-            - "Bar service : House wine (red and white)"
-            - Bières domestiquess
+            - "Service de bar : Vin maison (rouge et blanc)"
+            - Bières domestiques
             - Boissons gazeuses
             - Eau minérale
     "FORFAIT COCKTAIL #2":
@@ -609,7 +608,7 @@ FORFAIT COCKTAILS:
                 Service au plateau: Canapés chauds et froids
                 (Sélection du Chef)
         drinks:
-            - "Service de bar : Vin maison (rouge et blanc)"
+            - "Service de bar : Boissons fortes"
             - Vin maison (rouge et blanc)
             - Bières domestiques
             - Boissons gazeuses
@@ -622,52 +621,51 @@ FORFAIT COCKTAILS:
             Station de sushis : Assortiment de sushis et rouleaux maki 
             Station de desserts : Mini pâtisseries assorties, fontaine de chocolat avec brochettes de fruits, biscuits assortis,plateau de fruits frais tranchés, café, thé
 
-WINE LIST:
-    WHITE WINES:
+CARTE DES VINS:
+    VINS BLANCS:
         drinks:
-            - House wine (1 litre)
+            - Vin Maison (1 litre) 
             - Chardonnay, Laroche – France
-            - Chardonnay Woodbridge, Mondavi – California
-            - Chardonnay Semillon, Jacob’s Creek- Australia
-            - Chardonnay Errazuriz Casablanca – Chili
-            - Pinot Grigio Della Venezie – Italy
-            - Hermanos Lurton Rueda – Spain
-            - Chardonnay EXP Toasted Head – California
-            - Chablis Albert BicCHAUDS – France
-    RED WINES:
+            - Chardonnay Woodbridge, Mondavi – Californie 
+            - Chardonnay Semillon, Jacob’s Creek- Australie
+            - Chardonnay Errazuriz Casablanca – Chili 
+            - Pinot Grigio Della Venezie – Italie
+            - Hermanos Lurton Rueda – Espagne
+            - Chardonnay EXP Toasted Head – Californie
+            - Chablis Albert Bichot – France
+    VINS ROUGES:
         drinks:
-            - House wine (1 litre)
+            - Vin Maison (1 litre)
             - Pinot Noir vdp d’Oc, Laroche – France 
-            - Cabernet Sauvignon Yellow Label – Australia
-            - Cabernet Shiraz, Jacob’s Creek – Australia
-            - Sangiovese i.g.t. Borgo di Colloredo – Italy
-            - Campofiorin v.d.t., Masi Agricola – Italy
-            - Cabernet Sauvignon, Liberty School-California
-            - Chianti Classico, Villa Antinori – Italy
-            - Chianti Classico Riser. Ducale Ruffino-Italy 
+            - Cabernet Sauvignon Yellow Label – Australie 
+            - Cabernet Shiraz, Jacob’s Creek – Australie
+            - Sangiovese i.g.t. Borgo di Colloredo – Italie 
+            - Campofiorin v.d.t., Masi Agricola – Italie
+            - Cabernet Sauvignon, Liberty School-Californie
+            - Chianti Classico, Villa Antinori – Italie 
+            - Chianti Classico Riser. Ducale Ruffino-Italie  
     ROSÉ:
         drinks:
             - Ernest & Julio Zinfadel
 
 
-"BITS & PIECES":
+"DIVERS":
     food:
-        - Danoises, croissants, chocolatines
-        - Homemade cookies
-        - Muffins or Pain aux bananes or brownies
-        - Assorted pastries (for 12 personnes)
-        - Plateau de fruits frais tranchés (for 10 personnes)
-        - Nachos with salsa
-        - Chips (for 8 personnes)
-        - Pretzels (for 8 personnes)
-        - Peanuts (for 8 personnes)
-        - Assorted Crudités et trempette  (for 8 personnes)
-        - Assorted sandwiches with crispy vegetables (for 8 personnes)
-        - Canadian cheeses, Biscottes and fresh fruit
-        - Imported and Canadian cheeses, Biscottes and fresh fruit
+        - Croissants, Danoises, muffins
+        - Biscuits Frais maison 
+        - Pain aux bananes, muffins ou brownies
+        - Pâtisserie française (pour 12 personnes)
+        - Miroir de Fruits tranchés (10 personnes)
+        - Nachos & Sauce Salsa
+        - Panier de Croustilles (8 personnes)
+        - Panier de Pretzels (8 personnes)
+        - Panier d arachides (8 personnes) 
+        - Plateau de crudités avec trempette maison (8personnes) 
+        - Plateau de sandwichs assortis avec crudités (8 personnes) 
+        - Dégustations des fromages canadiens, craquelins, fruits frais 
+        - Dégustations des fromages importés, craquelins, fruits frais
     drinks:
         - Eau minérale
         - Boissons gazeuses
-        - Fruit juices
-        - Café
-        - Thé (30 cups)
+        - Jus de fruits rafraîchis
+        - Thé, café (30 tasses)

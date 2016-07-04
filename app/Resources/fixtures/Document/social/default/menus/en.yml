@@ -124,19 +124,19 @@ MEETING PACKAGES:
                 - Soft drinks
                 - Mineral water 
 
-"LUNCH MEETING PACKAGE":
+LUNCH MEETING PACKAGE:
     "PLAN B, C & D":
-        note: |
-          (served private salon)
-          (one choice per course)
+        Note: |
+              (served private salon)
+              (one choice per course)
         sub:
-            "ENTRÉE":
+            ENTRÉE: 
                 food:
                     - Cream of vegetables
                     - Minestrone soup
                     - Tossed green salad with balsamic vinaigrette
                     - Ceasar salad
-            "MAIN DISH":
+            MAIN DISH:
                 food:
                     - Penne Primavera
                     - Chicken scallopini with white wine lemon sauce
@@ -145,15 +145,15 @@ MEETING PACKAGES:
                     - Served with vegetables of the day
                     - Potatoes or rice
                     - Rolls and butter
-            "DESSERT":
+            DESSERT:
                 food:
                     - Fresh fruit salad
                     - Chocolate mousse cake
                     - "Homemade ice cream coupe (bacio, nocciole, cappuccino)"
                     - Tiramisu en coupe
-        drinks:
-            - Coffee
-            - Tea
+                drinks:
+                    - Coffee
+                    - Tea
 BREAKFASTS:
     THE CONTINENTAL:
         food:
