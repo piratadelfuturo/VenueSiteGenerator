@@ -2325,11 +2325,11 @@ img{max-width:100%;}
 header{
     @media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
         padding:10px 10px;
-        min-height: 275px;
+        min-height: 185px;
     }
     @media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
         padding:10px 10px;
-         min-height: 275px;
+         min-height: 185px;
     }
 
     .brand-image{
