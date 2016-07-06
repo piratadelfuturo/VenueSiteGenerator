@@ -1,0 +1,19 @@
+{% if hall_setups is defined and hall_setups is not empty%}
+<div class="halls-setup-list">
+    {% for hall_setup in hall_setups%}
+      {% if hall_setup.image is defined and hall_setup.image is not empty %}
+          {% set hall_image = random(hall_setup.image)%}
+          {% set hall_image = hall_image.thumbnails['hall-setup-small']%}
+      {% else %}
+          {% set hall_image = 'bundles/pmgsocial/pmg_corp/images/halls-setup-1.jpg'%}        
+      {% endif %}
+
+        <div class="col-sm-3 halls-setup-box">
+        <div class="halls-setup-img"> <img src="{{ asset(hall_image) }}" alt="{{ hall_setup.title }}" /> </div>
+        <div class="halls-setup-img-title">
+          <h5>{{ hall_setup.title }}</h5>
+        </div>
+      </div>
+    {% endfor %}
+</div>
+{% endif %}

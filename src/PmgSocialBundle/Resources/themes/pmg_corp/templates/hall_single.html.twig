@@ -54,6 +54,7 @@
     </div>
     <div class="halls-setup-section">
       <h2>Hall Setups</h2>
+      {% if content.hall_setups is not empty %}
       <div class="halls-setup-list">
           {% for hall_setup in content.hall_setups%}
             {% if hall_setup.image is defined and hall_setup.image is not empty %}
@@ -71,6 +72,10 @@
         </div>
           {% endfor %}
       </div>
+      {% endif %}
+        {% if content.hall_setup_snippet is defined and content.hall_setup_snippet is not empty %}
+            {% include 'PmgSocialBundle:snippets:hall_setups.snippet.html.twig' with { 'hall_setups' : content.hall_setup_snippet} %}
+        {% endif %}   
       <div class="halls-floor-section">
         <div class="row">
           <div class="equal-table-height">

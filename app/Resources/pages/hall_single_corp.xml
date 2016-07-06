@@ -149,6 +149,15 @@
                         </type>
                     </types>
                 </block>
+                <property name="hall_setup_snippet" type="snippet">
+                        <meta>
+                            <title lang="fr">Hall setups</title>
+                            <title lang="en">Hall setups</title>
+                        </meta>
+                        <params>
+                            <param name="snippetType" value="hall_setups_corp"/>
+                        </params>               
+                </property>
             </properties>
         </section>
         <section name="hall_floor_section">
