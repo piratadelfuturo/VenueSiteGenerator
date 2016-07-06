@@ -46,9 +46,9 @@ if (SYMFONY_DEBUG) {
 // in order to prevent cache key conflicts with other applications
 // also using APC.
 
-$apcLoader = new XcacheClassLoader(sha1(__FILE__), $loader);
-$apcLoader->register(true);
-$loader->unregister();
+//$apcLoader = new XcacheClassLoader(sha1(__FILE__), $loader);
+//$apcLoader->register(true);
+//$loader->unregister();
 
 require_once __DIR__ . (EXTERNAL_APP_DIR ?: '/..') . '/app/AdminKernel.php';
 

@@ -45,9 +45,9 @@ if (SYMFONY_DEBUG) {
 // Change 'sf2' to a unique prefix in order to prevent cache key conflicts
 // with other applications also using APC.
 //
- $apcLoader = new XcacheClassLoader('sf2', $loader);
- $apcLoader->register(true);
- $loader->unregister();
+//$apcLoader = new XcacheClassLoader('sf2', $loader);
+//$apcLoader->register(true);
+//$loader->unregister();
  
 require_once __DIR__ . (EXTERNAL_APP_DIR ?: '/..') . '/app/WebsiteKernel.php';
 
