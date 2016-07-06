@@ -48,11 +48,14 @@
                     <urls>
                         <url>www.plazavolare.com/{localization}</url>
                         <url>sitescms.plazapmg.com/{localization}</url>
-                        <url>www.plazavolare.con/{localization}</url>
                         <url>new.plazavolare.com/{localization}</url>
+                        <url>www.plazavolare.con/{localization}</url>
                         <url>pv-pmg.echo.mx/{localization}</url>
                         <url>pv-pmg.agenciabase.com.mx/{localization}</url>
                     </urls>
+                    <custom-urls>
+                        <custom-url>new.plazavolare.com/*</custom-url>
+                    </custom-urls>
                 </environment>
                 <environment type="stage">
                     <urls>
@@ -66,6 +69,9 @@
                         <url>dev-pv-pmg.echo.mx/{localization}</url>
                         <url>dev-pv-pmg.agenciabase.com.mx/{localization}</url>
                     </urls>
+                    <custom-urls>
+                        <custom-url>plazavolare.dev/*</custom-url>
+                    </custom-urls>
                 </environment>
             </environments>
         </portal>
