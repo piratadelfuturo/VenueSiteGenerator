@@ -1,7 +1,7 @@
 {% if hall_setups is defined and hall_setups is not empty%}
 <div class="halls-setup-list">
     {% for hall_setup_sub in hall_setups%}
-        {% for hall_setup in hall_setup_sub%}
+        {% for hall_setup in hall_setup_sub.setups%}
         {% if hall_setup.image is defined and hall_setup.image is not empty %}
             {% set hall_image = random(hall_setup.image)%}
             {% set hall_image = hall_image.thumbnails['hall-setup-small']%}
