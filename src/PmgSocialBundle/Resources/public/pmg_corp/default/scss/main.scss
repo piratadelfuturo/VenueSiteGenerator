@@ -2868,6 +2868,22 @@ h2.resp-tab-title:last-child {
 		  	font-size:18px; margin:20px 0;
 		}
 	}
+        h5{
+		font-size:24px; font-family: 'open_sansbold'; margin:30px 0;
+		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+			font-size:18px;
+		}
+		@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+			font-size:18px;
+		}
+		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+			font-size:12px; margin:15px 0;
+		}
+		@media (max-width: $iphone-to-ipad) {
+		  	font-size:12px; margin:15px 0;
+		}
+	}
+
 }
 
 .resp-vtabs .resp-tab-content {
@@ -3121,7 +3137,7 @@ $sites-colors: (
         .resp-tabs-list li {
             color: $this-color;
         }
-        
+                
         h2.resp-accordion {
             border-color: $this-color;
             color:$this-color !important;
@@ -3142,8 +3158,8 @@ $sites-colors: (
         }
 
         .resp-vtabs .resp-tabs-container {
-            background-color: $this-color;
             h2{
+                color: $white;
 		&:first-child{
 			@media (max-width: $iphone-to-ipad) {
 				border-top-color: $this-color !important;
