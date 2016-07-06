@@ -78,7 +78,7 @@
                 {% set testimonial = random(testimonialDoc.content.block) %}
                 <div class="testimonial-info">
 
-                    <p>{{ testimonial.article|nl2br}}</p>
+                    <p>{{ testimonial.article|slice(0, 255)|nl2br}}</p>
                </div>
                <div class="more-info-btn">
                     <a href="{{ sulu_content_path(testimonialDoc.content.url)  }}">{%trans%}READ MORE{%endtrans%}</a>
@@ -103,7 +103,7 @@
                     {% else %}
                         {% set link_doc = '' %}
                     {% endif %}
-                    <a href="{{ sulu_content_path(link_doc) }}">{{ link.title }}</a>
+                    <a href="{{ sulu_content_path(link_doc) }}"> {{ link.title }}</a>
                 </div>
             </div>
             {% endfor %}
