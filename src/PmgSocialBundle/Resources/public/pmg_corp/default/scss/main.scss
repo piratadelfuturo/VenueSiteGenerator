@@ -3158,6 +3158,7 @@ $sites-colors: (
         }
 
         .resp-vtabs .resp-tabs-container {
+            background-color: $this-color;
             h2{
                 color: $white;
 		&:first-child{

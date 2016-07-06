@@ -105,7 +105,7 @@
 {% block content %}
     {% if content.header_images is defined and content.header_images is not empty %}
         {% set section_image = random(content.header_images)%}
-        {% set section_image = section_image.thumbnails['section-header']%}
+        {% set section_image = section_image.thumbnails['section-header-corp']%}
     {% else %}
         {% set section_image = 'bundles/pmgsocial/pmg_social/default/images/our-menu-banner.jpg'%}        
     {% endif %}
