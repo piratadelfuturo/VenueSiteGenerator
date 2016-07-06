@@ -16,7 +16,7 @@
               {% for image in gallery.images %}
                 <div class="col-sm-4 gallery-box">
                     <a href="{{ asset(image.thumbnails['gallery-large']) }}">
-                        <img src="{{ asset(image.thumbnails['corp-gallery-thumb']) }}" alt="{{ image.name }}" />
+                        <img src="{{ asset(image.thumbnails['corp-gallery-thumb']) }}" alt="" />
                     </a>
                 </div>
               {% endfor %}
