@@ -1,3 +1,4 @@
+{% set webspace_key = request.webspaceKey %}
 {% extends "PmgSocialBundle:views:master.html.twig" %}
 
 {% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
@@ -6,7 +7,7 @@
     <div class="banner-section">
     <div class="banner-img">
         {% if content.slides %}
-            <img src="{{ asset(content.slides[0].url) }}" alt="" />
+            <img src="{{ asset(content.slides[0].thumbnails['section-header-corp']) }}" alt="" />
         {% else %}
         <img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/home-banner-img.jpg') }}" alt="" />
         {% endif %}
@@ -29,12 +30,12 @@
       <div class="equal-table-height">
         <div class="col-sm-4 halls-tab-left">
           <div class="halls-tab-list">
-            <div class="halls-tab-logo"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/halls-tab-logo.png') }}" alt="" /></div>
+            <div class="halls-tab-logo"><img src="{{ asset('bundles/pmgsocial/pmg_corp/'~webspace_key~'/images/halls-tab-logo.png') }}" alt="" /></div>
             <h3>{% trans %}OUR HALLS{% endtrans %}</h3>
             <ul class="tabs">
               {% for hall in hall_content%}
                 {% set hall_slug = 'hall-'~hall.content.url| replace({'/':'-'}) %}
-              <li {% if loop.first %}class="active"{% endif %} rel="{{ hall_slug|raw }}">{{ hall.title }}</li>
+              <li {% if loop.first %}class="active"{% endif %} rel="{{ hall_slug|raw }}">{{ hall.content.title }}</li>
               {% endfor %}
             </ul>
           </div>
@@ -51,8 +52,8 @@
             {% set hall_slug = 'hall-'~hall.content.url| replace({'/':'-'}) %}
           <div id="{{hall_slug}}" class="halls-detail-part tab_content">
             <div class="halls-tab-detail-content">
-              <h2>{{ hall.title }}</h2>
-              <p>{{ hall.description|slice(0, 255)|nl2br }}</p>
+              <h2>{{ hall.content.title }}</h2>
+              <p>{{ hall.content.description|slice(0, 255)|nl2br }}</p>
               <div class="more-info-btn"><a href="{{ sulu_content_path(hall.content.url) }}">{% trans %}MORE INFO{% endtrans %}</a></div>
             </div>
             <div class="halls-big-img">
@@ -69,20 +70,21 @@
   <div class="testimonial-contact-section">
         <div class="equal-table-height">
             <div class="col-sm-8 testimonial-section">
-        {% if content.testimonials is defined and content.testimonials is not empty %}
-            {% set testimonialDoc = sulu_content_load(content.testimonials)%}
-            {% if testimonialDoc.content.block is not empty %}
-            {% set testimonial = random(testimonialDoc.content.block) %}
         	<div class="testimonial-content">
             	<h3>{% trans %}TESTIMONIALS{% endtrans %}</h3>
+            {% if content.testimonials is defined and content.testimonials is not empty %}
+                {% set testimonialDoc = sulu_content_load(content.testimonials)%}
+                {% if testimonialDoc.content.block is not empty %}
+                {% set testimonial = random(testimonialDoc.content.block) %}
                 <div class="testimonial-info">
-                	<p>{{ testimonial.article|nl2br}}</p>
+
+                    <p>{{ testimonial.article|nl2br}}</p>
                </div>
                <div class="more-info-btn">
                     <a href="{{ sulu_content_path(testimonialDoc.content.url)  }}">{%trans%}READ MORE{%endtrans%}</a>
                 </div>
-            </div>
             {% endif %}
+            </div>
         {% endif %}
         {% if content.link_blocks is defined and content.link_blocks is not empty %}
             {% for link in content.link_blocks %}
@@ -92,11 +94,16 @@
             {% else %}
                 {% set link_image = 'bundles/pmgsocial/pmg_corp/default/images/check-menu-img.jpg' %}
             {% endif %}
-            {% set link_doc = sulu_content_load(link) %}
             <div class="col-sm-6 check-menu">
-            	<img src="{{ asset(link_image) }}" alt="" />
+                <img src="{{ asset(link_image) }}" alt="" />
                 <div class="overlay-nav-text">
-                	<a href="{{ link_doc.content.url}}">{{ link.title }}</a>
+                    {% if link.link is not empty %}
+                        {% set link_doc = sulu_content_load(link.link) %}
+                        {% set link_doc = link_doc.content.url %}
+                    {% else %}
+                        {% set link_doc = '' %}
+                    {% endif %}
+                    <a href="{{ sulu_content_path(link_doc) }}">{{ link.title }}</a>
                 </div>
             </div>
             {% endfor %}

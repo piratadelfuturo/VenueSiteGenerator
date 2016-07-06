@@ -6,12 +6,12 @@
     <key>contact</key>
 
     <view>PmgSocialBundle:templates:contact</view>
-    <controller>PmgSocialBundle:Default:contact</controller>
+    <controller>PmgSocialBundle:Social:contact</controller>
     <cacheLifetime>2400</cacheLifetime>
 
     <meta>
-        <title lang="fr">Contact</title>
-        <title lang="en">Contact</title>
+        <title lang="fr">Contact Social</title>
+        <title lang="en">Contact Social</title>
     </meta>
 
     <properties>

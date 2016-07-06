@@ -1,0 +1,213 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>hall_single_corp</key>
+
+    <view>PmgSocialBundle:templates:hall_single</view>
+    <controller>SuluWebsiteBundle:Default:index</controller>
+    <cacheLifetime>2400</cacheLifetime>
+
+    <meta>
+        <title lang="fr">Hall Single Corp</title>
+        <title lang="en">Hall Single Corp</title>
+    </meta>
+
+    <properties>
+        <section name="highlight">
+            <properties>
+                <property name="title" type="text_line" mandatory="true">
+                    <meta>
+                        <title lang="fr">Titel</title>
+                        <title lang="en">Title</title>
+                    </meta>
+                    <params>
+                        <param name="headline" value="true"/>
+                    </params>
+
+                    <tag name="sulu.rlp.part"/>
+                </property>
+                <property name="header_images" type="media_selection">
+                    <meta>
+                        <title lang="fr">header image</title>
+                        <title lang="en">header image</title>
+                    </meta>
+                    <params>
+                        <param name="types" value="image"/>
+                    </params>               
+                </property>
+                <property name="description" type="text_area">
+                <meta>
+                    <title lang="en">Description</title>
+                    <title lang="en">Description</title>
+                </meta>
+                </property>
+                <property name="url" type="resource_locator" mandatory="true">
+                    <meta>
+                        <title lang="fr">Adresse</title>
+                        <title lang="en">Resourcelocator</title>
+                    </meta>
+
+                    <tag name="sulu.rlp"/>
+                </property>
+            </properties>
+        </section>
+
+        <section name="content">
+            <meta>
+                <title lang="fr">Inhalt</title>
+                <title lang="en">Content</title>
+            </meta>
+            <properties>
+                <block name="rows" default-type="row" minOccurs="0">
+                    <meta>
+                        <title lang="fr">Inhalte</title>
+                        <title lang="en">Dimensions</title>
+                    </meta>
+                    <types>
+                        <type name="row">
+                            <meta>
+                                <title lang="fr">Row</title>
+                                <title lang="en">Row</title>
+                            </meta>
+                            <properties>
+                                <property name="hall" type="text_line">
+                                    <meta>
+                                        <title lang="fr">Hall</title>
+                                        <title lang="en">Hall</title>
+                                    </meta>
+                                </property>
+                                <property name="dimensions" type="text_line">
+                                    <meta>
+                                        <title lang="fr">Dimensions</title>
+                                        <title lang="en">Dimensions</title>
+                                    </meta>
+                                </property>
+                                <property name="sq_feet" type="text_line">
+                                    <meta>
+                                        <title lang="fr">Sq. Feet</title>
+                                        <title lang="en">Sq. Feet</title>
+                                    </meta>
+                                </property>
+                                <property name="height" type="text_line">
+                                    <meta>
+                                        <title lang="fr">Height</title>
+                                        <title lang="en">height</title>
+                                    </meta>
+                                </property>
+                                <property name="reception" type="text_line">
+                                    <meta>
+                                        <title lang="fr">Reception</title>
+                                        <title lang="en">Reception</title>
+                                    </meta>
+                                </property>
+                                <property name="banquet" type="text_line">
+                                    <meta>
+                                        <title lang="fr">Banquet</title>
+                                        <title lang="en">Banquet</title>
+                                    </meta>
+                                </property>
+                                <property name="theater" type="text_line">
+                                    <meta>
+                                        <title lang="fr">Theater</title>
+                                        <title lang="en">Theater</title>
+                                    </meta>
+                                </property>
+                            </properties>
+                        </type>
+                    </types>
+                </block>
+                <block name="hall_setups" default-type="setup" minOccurs="0">
+                    <meta>
+                        <title lang="fr">Hall setups</title>
+                        <title lang="en">Hall setups</title>
+                    </meta>
+                    <types>
+                        <type name="setup">
+                            <meta>
+                                <title lang="fr">Setup</title>
+                                <title lang="en">Setup</title>
+                            </meta>
+                            <properties>
+                                    <property name="image" type="media_selection">
+                                        <meta>
+                                            <title lang="fr">header image</title>
+                                            <title lang="en">header image</title>
+                                        </meta>
+                                        <params>
+                                            <param name="types" value="image"/>
+                                        </params>               
+                                    </property>
+                                    <property name="name" type="text_line">
+                                        <meta>
+                                            <title lang="fr">Name</title>
+                                            <title lang="en">Name</title>
+                                        </meta>
+                                </property>
+                            </properties>
+                        </type>
+                    </types>
+                </block>
+            </properties>
+        </section>
+        <section name="hall_floor_section">
+            <meta>
+                <title lang="fr">Hall Floor</title>
+                <title lang="en">Hall Floor</title>
+            </meta>
+            <properties>
+                <property name="hall_floor_plan_image" type="media_selection">
+                    <meta>
+                        <title lang="fr">Hall Floor Plan Image</title>
+                        <title lang="en">Hall Floor Plan Image</title>
+                    </meta>
+                    <params>
+                        <param name="types" value="image"/>
+                    </params>               
+                </property>
+                <property name="hall_floor_plan_download" type="media_selection">
+                    <meta>
+                        <title lang="fr">Hall Floor Plan Download</title>
+                        <title lang="en">Hall Floor Plan Download</title>
+                    </meta>
+                    <params>
+                        <param name="types" value="image"/>
+                    </params>               
+                </property>
+                <property name="hall_floor_plan_photo" type="media_selection">
+                    <meta>
+                        <title lang="fr">Hall Floor Plan Photo</title>
+                        <title lang="en">Hall Floor Plan Photo</title>
+                    </meta>
+                    <params>
+                        <param name="types" value="image"/>
+                    </params>               
+                </property>
+            </properties>
+        </section>
+        <section name="gallery_block">
+            <meta>
+                <title lang="fr">Gallerie</title>
+                <title lang="en">Gallery Block</title>
+            </meta>
+
+            <properties>
+                <property name="gallery" type="snippet">
+                        <meta>
+                            <title lang="fr">Gallery</title>
+                            <title lang="en">Gallery</title>
+                        </meta>
+                        <params>
+                            <param name="snippetType" value="gallery"/>
+                        </params>               
+                </property>
+                <property name="gallery_link" type="single_internal_link">
+                    <meta>
+                        <title lang="en">Gallery Link</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
+    </properties>
+</template>

@@ -46,24 +46,24 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.challengerpiazza.com/{localization}/corp</url>
-                        <url>www.challengerpiazza.con/{localization}/corp</url>
-                        <url>new.challengerpiazza.com/{localization}/corp</url>
-                        <url>cp-pmg.echo.mx/{localization}/corp</url>
-                        <url>cp-pmg.agenciabase.com.mx/{localization}/corp</url>
+                        <url>www.challengerpiazza.com/corp/{localization}</url>
+                        <url>www.challengerpiazza.con/corp/{localization}</url>
+                        <url>new.challengerpiazza.com/corp/{localization}</url>
+                        <url>cp-pmg.echo.mx/corp/{localization}</url>
+                        <url>cp-pmg.agenciabase.com.mx/corp/{localization}</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>www.challengerpiazza.dev/{localization}/corp</url>
-                        <url>www-cp-pmg.echo.mx/{localization}/corp</url>
+                        <url>www.challengerpiazza.dev/corp/{localization}</url>
+                        <url>www-cp-pmg.echo.mx/corp/{localization}</url>
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
-                        <url>challengerpiazza.dev/{localization}/corp</url>
-                        <url>dev-cp-pmg.echo.mx/{localization}/corp</url>
-                        <url>dev-cp-pmg.agenciabase.com.mx/{localization}/corp</url>
+                        <url>challengerpiazza.dev/corp/{localization}</url>
+                        <url>dev-cp-pmg.echo.mx/corp/{localization}</url>
+                        <url>dev-cp-pmg.agenciabase.com.mx/corp/{localization}</url>
                     </urls>
                 </environment>
             </environments>

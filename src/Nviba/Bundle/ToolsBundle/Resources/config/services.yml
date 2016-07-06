@@ -1,0 +1,9 @@
+parameters:
+    nviba_tools.intl.twig_extension.class: Nviba\Bundle\ToolsBundle\Twig\IntlExtension
+
+services:
+    nviba_tools.intl.twig_extension:
+        class: "%nviba_tools.intl.twig_extension.class%"
+        public: false
+        tags:
+            - { name: twig.extension }

@@ -17,7 +17,7 @@
         {% endstylesheets %}
 <script src="http://maps.googleapis.com/maps/api/js"></script>
     </head>
-<body class="{{webspace_key~'_site'}}">
+<body class="{{webspace_key~'_site'}}" >
 <div class="page-wrapper">
 
         {% block header %}
@@ -38,6 +38,9 @@
         {% javascripts
             '@PmgSocialBundle/Resources/public/pmg_corp/default/js/jquery.js'
             '@PmgSocialBundle/Resources/public/pmg_corp/default/js/bootstrap.min.js'
+            '@PmgSocialBundle/Resources/public/pmg_corp/default/js/lightbox.min.js'
+            '@PmgSocialBundle/Resources/public/pmg_corp/default/js/easyResponsiveTabs.js'
+            '@PmgSocialBundle/Resources/public/pmg_corp/default/js/jquery.magnific-popup.js'
         %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
@@ -84,6 +87,22 @@ $(document).ready(function() {
 });
 
 </script>
+<script type="text/javascript">
+      $(document).ready(function() {
+        $('.popup-gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          tLoading: 'Loading image #%curr%...',
+          mainClass: 'mfp-img-mobile',
+          gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+          },
+        });
+      });
+    </script>
+
 {% endblock %}
     </body>
 </html>

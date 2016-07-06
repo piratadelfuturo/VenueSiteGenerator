@@ -6,12 +6,12 @@
     <key>menus</key>
 
     <view>PmgSocialBundle:templates:menus</view>
-    <controller>PmgSocialBundle:Default:menus</controller>
+    <controller>PmgSocialBundle:Social:menus</controller>
     <cacheLifetime>2400</cacheLifetime>
 
     <meta>
-        <title lang="fr">Manus</title>
-        <title lang="en">Menus</title>
+        <title lang="fr">Manus Social</title>
+        <title lang="en">Menus Social</title>
     </meta>
 
     <properties>
@@ -36,17 +36,6 @@
                     </meta>
                     <params>
                         <param name="types" value="image"/>
-                        <param name="displayOptions" type="collection">
-                            <param name="leftTop" value="false"/>
-                            <param name="top" value="false"/>
-                            <param name="rightTop" value="false"/>
-                            <param name="left" value="false"/>
-                            <param name="middle" value="false"/>
-                            <param name="right" value="false"/>
-                            <param name="leftBottom" value="false"/>
-                            <param name="bottom" value="false"/>
-                            <param name="rightBottom" value="false"/>
-                        </param>
                         <param name="defaultDisplayOption" value="middle"/>
                     </params>
                 </property>

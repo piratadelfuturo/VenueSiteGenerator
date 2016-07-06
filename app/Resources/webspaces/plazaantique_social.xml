@@ -76,24 +76,24 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.plazaantique.com/{localization}/corp</url>
-                        <url>www.plazaantique.con/{localization}/corp</url>
-                        <url>new.plazaantique.com/{localization}/corp</url>
-                        <url>pa-pmg.echo.mx/{localization}/corp</url>
-                        <url>pa-pmg.agenciabase.com.mx/{localization}/corp</url>
+                        <url>www.plazaantique.com/corp/{localization}</url>
+                        <url>www.plazaantique.con/corp/{localization}</url>
+                        <url>new.plazaantique.com/corp/{localization}</url>
+                        <url>pa-pmg.echo.mx/corp/{localization}</url>
+                        <url>pa-pmg.agenciabase.com.mx/corp/{localization}</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>www.plazaantique.dev/{localization}/corp</url>
-                        <url>www-pa-pmg.echo.mx/{localization}/corp</url>
+                        <url>www.plazaantique.dev/corp/{localization}</url>
+                        <url>www-pa-pmg.echo.mx/corp/{localization}</url>
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
-                        <url>plazaantique.dev/{localization}/corp</url>
-                        <url>dev-pa-pmg.echo.mx/{localization}/corp</url>
-                        <url>dev-pa-pmg.agenciabase.com.mx/{localization}/corp</url>
+                        <url>plazaantique.dev/corp/{localization}</url>
+                        <url>dev-pa-pmg.echo.mx/corp/{localization}</url>
+                        <url>dev-pa-pmg.agenciabase.com.mx/corp/{localization}</url>
                     </urls>
                 </environment>
             </environments>

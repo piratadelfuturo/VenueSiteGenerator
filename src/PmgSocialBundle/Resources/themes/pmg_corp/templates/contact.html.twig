@@ -4,90 +4,115 @@
 
 {% block content %}
     {% set location = content.location %}
+    
       <div class="banner-section contact-banner">
     <div class="banner-img">
     	<div class="contact-form-section">
-            	<div class="overlay-content"></div>
+            	<div class="overlay-content">{{ form_errors(contact_form) }}</div>
                 <div class="contact-form">
-                	<h2>CONTACT US</h2>
+                	<h2>{% trans %}CONTACT US{% endtrans %}</h2>
+                    {{ form_start(contact_form) }}
                     <div class="form-row">
-                    	<label>Hello my name is</label>
-                        <input type="text">
+                        {{ form_label(contact_form.name ) }}
+                        {{ form_widget(contact_form.name ) }}
                     </div>
                     <div class="form-row">
-                    	<label>I’m interested in</label>
-                        <input type="text">
+                        {{ form_label(contact_form.interested ) }}
+                        {{ form_widget(contact_form.interested ) }}
                     </div>
                     <div class="form-row">
-                    	<label>Here’s my e-mail</label>
-                        <input type="email">
+                        {{ form_label(contact_form.email ) }}
+                        {{ form_widget(contact_form.email ) }}
                     </div>
                     <div class="form-row">
-                    	<label>I can give you more details</label>
-                       <input type="text" class="width55">
-                       <input type="text" class="width100">
-                       <input type="text" class="width100">
-                       <input type="text" class="width100">
+                        {{ form_label(contact_form.details1 ) }}
+                        {{ form_widget(contact_form.details1 ) }}
+                        {{ form_widget(contact_form.details2 ) }}
+                        {{ form_widget(contact_form.details3 ) }}
+                        {{ form_widget(contact_form.details4 ) }}
+
                     </div>
                     <div class="form-row">
-                    	<input type="submit" value="Send">
+                        {{ form_widget(contact_form.send) }}
                     </div>
                 </div>
-            
+                {{ form_end(contact_form) }}
             </div>
     </div>
   </div>
-  <div class="contact-page-section">
-  	<div class="container">
-    	<div class="row">
-            <div class="equal-table-height">
-                <div class="col-sm-4 contact-address">
-                <div class="contact-address-content">
-                    <h6>Please do not hesitate to contact us should you require further information.</h6>
-                    <p><span class="contact-icon-img"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/location-icon.png') }}" alt="" /></span>
-                    {% if content.location is defined %}
-                    {% set location = content.location %}
-                        {{ location.number~' '~location.street }}<br>
-                        {{ location.town }}<br>
-                        {{ location.code }}. Canada
-                    {% else %} 
-                        6600 Cote-de-Liesse,<br>Saint-Laurent, QC<br>H4T 1E3. Canada
-                    {% endif %}
-
-                    </p>
-                    {% if content.phones is defined %}
-                    <p><span class="contact-icon-img"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/mobile-icon.png') }}" alt="" /></span>
-                        {% for phone in content.phones %}
-                        {{ phone.phone }}
-                        {% endfor %}
-                        
-                    </p>
-                    {% endif %}
-                    {% if content.faxes is defined %}
-                    <p>
-                        <span class="contact-icon-img">
-                            <img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/fax-icon.png') }}" alt="" /></span>
-                            {% for fax in content.faxes %}
-                            {{ fax.phone }}
-                            {% endfor %}
-                    </p>
-
-                    {% endif %}
-                    {% if content.emails is defined %}
-                    <p><span class="contact-icon-img"><img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/email-icon.png') }}" alt="" /></span>
-                        {% for email in content.emails %}
-                        <a href="mailto:{{ email.email|raw }}">{{email.email}}</a>
-                        {% endfor %}                    
-                    </p>
-                    {% endif %}
-                </div>
-            </div>	
-                <div class="col-sm-8 contact-map">
-                <div id="googleMap" class="map-google"></div>
+      <div class="contact-page-section">
+    <div class="container">
+      <div class="row">
+        <div class="equal-table-height">
+          <div class="col-sm-4 contact-address">
+            <div class="contact-address-content">
+              <h6>{% trans %}Please do not hesitate to contact us should you require further information.{% endblock %}</h6>
+              <p><span class="contact-icon-img"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/location-icon.png' }}" alt="" /></span>
+                    {{ location.number~' '~location.street }}<br>
+                    {{ location.town }}<br>
+                    {{ location.code }}. Canada
+              </p>
+            {% if content.phones is defined %}
+              <p><span class="contact-icon-img"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/mobile-icon.png') }}" alt="" /></span>
+                {% for phone in content.phones %}
+                  {{ phone.phone }} {% if loop.last != false %} <br>{% endif %}
+                {% endfor %}
+              </p>
+           {% endif %}
+            {% if content.faxes is defined %}
+              <p><span class="contact-icon-img"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/fax-icon.png') }}" alt="" /></span>
+                {% for fax in content.faxes %}
+                  {{ fax.phone }} {% if loop.last != false %} <br>{% endif %}
+                {% endfor %}
+              </p>
+            {% endif %}
+            {% if content.emails is defined %}
+              <p><span class="contact-icon-img"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/email-icon.png') }}" alt="" /></span>
+                {% for email in content.emails %}
+                  <a href="mailto:{{ email.email|raw }}">{{ email.email }}</a>
+                {% endfor %}
+              </p>
+            {% endif %}
             </div>
-            </div>
+          </div>
+          <div class="col-sm-8 contact-map">
+            <div id="googleMap" class="map-google"></div>
+          </div>
         </div>
+      </div>
     </div>
   </div>
+  <div class="push"></div>    
 
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+<script>
+function initialize()
+{
+    var myLatLng = new google.maps.LatLng({{ location.location.lat|raw }},{{ location.location.long|raw}});
+    var mapProp = {
+        center: myLatLng,
+        zoom:{{location.location.zoom|url_encode}},
+        panControl:false,
+        zoomControl:false,
+        mapTypeControl:false,
+        scaleControl:false,
+        streetViewControl:false,
+        overviewMapControl:false,
+        rotateControl:false,    
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    var marker = new google.maps.Marker({
+              position: myLatLng,
+              map: map,
+              animation: google.maps.Animation.DROP,
+              place: '{{location.location.number~' '~location.location.street~', '~location.location.town~' '~location.location.code }}. Canada'
+            });
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+    
 {% endblock %}

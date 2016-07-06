@@ -83,6 +83,7 @@ abstract class AbstractKernel extends SuluKernel
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\TranslationBundle\JMSTranslationBundle(),
             new Nviba\Bundle\SuluOverridesBundle\NvibaSuluOverridesBundle(),
+            new Nviba\Bundle\ToolsBundle\NvibaToolsBundle()
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'])) {

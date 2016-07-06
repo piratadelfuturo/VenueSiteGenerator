@@ -1,19 +1,32 @@
-  <div class="gallery-section last-section">
-    <div class="page-heading">
-      <h2>Gallery</h2>
+{% for gallery in content %}
+    {% set final_title = null %}
+    {% if loop.first == true %}
+        {% set final_title = title is defined ? title : gallery.title %}
+    {% else %}
+        {% set final_title = null%}
+    {% endif %}
+    
+<div class="gallery-section">
+    <div class="container">
+    {% if final_title is not null %}
+      <h2>{{ final_title }}</h2>
+    {% endif %}
+    <div class="gallery-content-section popup-gallery">
+        {% if gallery.images is not empty %}
+              {% for image in gallery.images %}
+                <div class="col-sm-4 gallery-box">
+                    <a href="{{ asset(image.thumbnails['gallery-large']) }}">
+                        <img src="{{ asset(image.thumbnails['corp-gallery-thumb']) }}" alt="{{ image.name }}" />
+                    </a>
+                </div>
+              {% endfor %}
+        {% endif%}
+      {% if loop.last and gallery_link is defined and gallery_link is not empty %}
+          {% set gallery_link = sulu_content_load(gallery_link) %}
+          {% set gallery_link = gallery_link.content.url %}
+      <div class="see-more-btn"><a href="{{ sulu_content_path(gallery_link) }}">{% trans %}See more photos{% endtrans %}</a></div>
+      {% endif %}
     </div>
-    <div class="gallery-list-section">
-      <div class="row">
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="images/gallery-1.jpg"> <img class="img-responsive" src="images/gallery-1.jpg" alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="images/gallery-2.jpg"> <img class="img-responsive" src="images/gallery-2.jpg" alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="images/gallery-3.jpg"> <img class="img-responsive" src="images/gallery-3.jpg" alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="images/gallery-4.jpg"> <img class="img-responsive" src="images/gallery-4.jpg" alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="images/gallery-5.jpg"> <img class="img-responsive" src="images/gallery-5.jpg" alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="images/gallery-6.jpg"> <img class="img-responsive" src="images/gallery-6.jpg" alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="images/gallery-7.jpg"> <img class="img-responsive" src="images/gallery-7.jpg" alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="images/gallery-8.jpg"> <img class="img-responsive" src="images/gallery-8.jpg" alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="images/gallery-9.jpg"> <img class="img-responsive" src="images/gallery-9.jpg" alt="" /> </a> </div>
-        <div class="gallery-box"> <a data-title="" data-gallery="multiimages" data-toggle="lightbox" href="images/gallery-10.jpg"> <img class="img-responsive" src="images/gallery-10.jpg" alt="" /> </a> </div>
-      </div>
     </div>
   </div>
+{% endfor %}

@@ -1,0 +1,3 @@
+nviba_tools_homepage:
+    path:     /
+    defaults: { _controller: NvibaToolsBundle:Default:index }

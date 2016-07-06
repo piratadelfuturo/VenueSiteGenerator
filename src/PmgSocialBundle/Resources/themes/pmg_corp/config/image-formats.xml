@@ -23,6 +23,27 @@
             </command>
         </commands>
     </format>
+        <format>
+        <name>section-header-corp</name>
+        <commands>
+            <command>
+                <action>scale</action>
+                <parameters>
+                    <parameter name="x">1926</parameter>
+                    <parameter name="y">390</parameter>
+                    <parameter name="forceRatio">true</parameter>
+                    <parameter name="mode">outbound</parameter>
+                </parameters>
+            </command>
+            <command>
+                <action>crop</action>
+                <parameters>
+                    <parameter name="w">1926</parameter>
+                    <parameter name="h">390</parameter>
+                </parameters>
+            </command>
+        </commands>
+    </format>
     <format>
         <name>menu-thumb</name>
         <commands>
@@ -145,6 +166,90 @@
                 <parameters>
                     <parameter name="w">644</parameter>
                     <parameter name="h">309</parameter>
+                </parameters>
+            </command>
+        </commands>
+    </format>
+    <format>
+        <name>hall-setup-small</name>
+        <commands>
+            <command>
+                <action>scale</action>
+                <parameters>
+                    <parameter name="x">381</parameter>
+                    <parameter name="y">251</parameter>
+                    <parameter name="forceRatio">true</parameter>
+                    <parameter name="mode">outbound</parameter>
+                </parameters>
+            </command>
+            <command>
+                <action>crop</action>
+                <parameters>
+                    <parameter name="w">381</parameter>
+                    <parameter name="h">251</parameter>
+                </parameters>
+            </command>
+        </commands>
+    </format>
+    <format>
+        <name>hall-floor-map-small</name>
+        <commands>
+            <command>
+                <action>scale</action>
+                <parameters>
+                    <parameter name="x">1120</parameter>
+                    <parameter name="y">410</parameter>
+                    <parameter name="forceRatio">true</parameter>
+                    <parameter name="mode">outbound</parameter>
+                </parameters>
+            </command>
+            <command>
+                <action>crop</action>
+                <parameters>
+                    <parameter name="w">1120</parameter>
+                    <parameter name="h">410</parameter>
+                </parameters>
+            </command>
+        </commands>
+    </format>
+    <format>
+        <name>hall-floor-photo-small</name>
+        <commands>
+            <command>
+                <action>scale</action>
+                <parameters>
+                    <parameter name="x">745</parameter>
+                    <parameter name="y">613</parameter>
+                    <parameter name="forceRatio">true</parameter>
+                    <parameter name="mode">outbound</parameter>
+                </parameters>
+            </command>
+            <command>
+                <action>crop</action>
+                <parameters>
+                    <parameter name="w">745</parameter>
+                    <parameter name="h">613</parameter>
+                </parameters>
+            </command>
+        </commands>
+    </format>
+    <format>
+        <name>corp-gallery-thumb</name>
+        <commands>
+            <command>
+                <action>scale</action>
+                <parameters>
+                    <parameter name="x">499</parameter>
+                    <parameter name="y">376</parameter>
+                    <parameter name="forceRatio">true</parameter>
+                    <parameter name="mode">outbound</parameter>
+                </parameters>
+            </command>
+            <command>
+                <action>crop</action>
+                <parameters>
+                    <parameter name="w">499</parameter>
+                    <parameter name="h">376</parameter>
                 </parameters>
             </command>
         </commands>

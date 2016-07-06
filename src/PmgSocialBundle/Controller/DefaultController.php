@@ -56,7 +56,7 @@ class DefaultController extends BaseController
 
         return $response;
     }
-    
+
     
     public function sendContactAction(Request $request){
         

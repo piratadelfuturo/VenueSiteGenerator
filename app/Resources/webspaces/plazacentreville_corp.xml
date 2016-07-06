@@ -46,23 +46,23 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.plazacentreville.com/{localization}/corp</url>
-                        <url>www.plazacentreville.con/{localization}/corp</url>
-                        <url>new.plazacentreville.com/{localization}/corp</url>
+                        <url>www.plazacentreville.com/corp/{localization}</url>
+                        <url>www.plazacentreville.con/corp/{localization}</url>
+                        <url>new.plazacentreville.com/corp/{localization}</url>
                         <url>pc-pmg.agenciabase.com.mx/{localization}</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>www.plazacentreville.dev/{localization}/corp</url>
-                        <url>www-pc-pmg.echo.mx/{localization}/corp</url>                        
+                        <url>www.plazacentreville.dev/corp/{localization}</url>
+                        <url>www-pc-pmg.echo.mx/corp/{localization}</url>                        
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
-                        <url>plazacentreville.dev/{localization}/corp</url>
-                        <url>dev-pc-pmg.echo.mx/{localization}/corp</url>
-                        <url>dev-pc-pmg.agenciabase.com.mx/{localization}/corp</url>
+                        <url>plazacentreville.dev/corp/{localization}</url>
+                        <url>dev-pc-pmg.echo.mx/corp/{localization}</url>
+                        <url>dev-pc-pmg.agenciabase.com.mx/corp/{localization}</url>
                     </urls>
                 </environment>
             </environments>

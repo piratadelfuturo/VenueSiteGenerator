@@ -16,10 +16,11 @@
       </div>
       <div class="col-md-6 header-right-part">
         <div class="top-right">
-            <a href="">{%trans%}Social{%endtrans%}</a>
+            <a href="{{ sulu_content_path('/',alter_webspace_key)}}">{%trans%}Social{%endtrans%}</a>
             <span class="flag">
                 <a href="{{ sulu_content_path((urls[alter_locale]?:'/'),request.webspaceKey,alter_locale) }}">
-                    <img src="{{ asset("bundles/pmgsocial/pmg_corp/default/images/"~alter_locale~"-flag.png") }}" alt="{{ alter_locale }}" />
+                    {{alter_locale|nv_language_name}}
+                    {# <img src="{{ asset("bundles/pmgsocial/pmg_corp/default/images/"~alter_locale~"-flag.png") }}" alt="{{ alter_locale }}" /> #}
                 </a>
             </span>
         </div>

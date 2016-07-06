@@ -45,24 +45,24 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.embassyplaza.com/{localization}/corp</url>
-                        <url>www.embassyplaza.con/{localization}/corp</url>
-                        <url>new.embassyplaza.com/{localization}/corp</url>
-                        <url>ep-pmg.echo.mx/{localization}/corp</url>
-                        <url>ep-pmg.agenciabase.com.mx/{localization}/corp</url>
+                        <url>www.embassyplaza.com/corp/{localization}</url>
+                        <url>www.embassyplaza.con/corp/{localization}</url>
+                        <url>new.embassyplaza.com/corp/{localization}</url>
+                        <url>ep-pmg.echo.mx/corp/{localization}</url>
+                        <url>ep-pmg.agenciabase.com.mx/corp/{localization}</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>www.embassyplaza.dev/{localization}/corp</url>
-                        <url>www-ep-pmg.echo.mx/{localization}/corp</url>
+                        <url>www.embassyplaza.dev/corp/{localization}</url>
+                        <url>www-ep-pmg.echo.mx/corp/{localization}</url>
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
-                        <url>embassyplaza.dev/{localization}/corp</url>
-                        <url>dev-ep-pmg.echo.mx/{localization}/corp</url>
-                        <url>dev-ep-pmg.agenciabase.com.mx/{localization}/corp</url>
+                        <url>embassyplaza.dev/corp/{localization}</url>
+                        <url>dev-ep-pmg.echo.mx/corp/{localization}</url>
+                        <url>dev-ep-pmg.agenciabase.com.mx/corp/{localization}</url>
                     </urls>
                 </environment>
             </environments>

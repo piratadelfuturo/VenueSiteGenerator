@@ -47,24 +47,24 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.la-plaza.ca/{localization}/corp</url>
-                        <url>www.la-plaza.con/{localization}/corp</url>
-                        <url>new.la-plaza.ca/{localization}/corp</url>
-                        <url>lp-pmg.echo.mx/{localization}/corp</url>
-                        <url>lp-pmg.agenciabase.com.mx/{localization}/corp</url>
+                        <url>www.la-plaza.ca/corp/{localization}</url>
+                        <url>www.la-plaza.con/corp/{localization}</url>
+                        <url>new.la-plaza.ca/corp/{localization}</url>
+                        <url>lp-pmg.echo.mx/corp/{localization}</url>
+                        <url>lp-pmg.agenciabase.com.mx/corp/{localization}</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>www.la-plaza.dev/{localization}/corp</url>
-                        <url>www-lp-pmg.echo.mx/{localization}/corp</url>
+                        <url>www.la-plaza.dev/corp/{localization}</url>
+                        <url>www-lp-pmg.echo.mx/corp/{localization}</url>
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
-                        <url>la-plaza.dev/{localization}/corp</url>
-                        <url>dev-lp-pmg.echo.mx/{localization}/corp</url>
-                        <url>dev-lp-pmg.agenciabase.com.mx/{localization}/corp</url>
+                        <url>la-plaza.dev/corp/{localization}</url>
+                        <url>dev-lp-pmg.echo.mx/corp/{localization}</url>
+                        <url>dev-lp-pmg.agenciabase.com.mx/corp/{localization}</url>
                     </urls>
                 </environment>
             </environments>

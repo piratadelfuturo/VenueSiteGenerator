@@ -45,24 +45,24 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.plazauniversel.com/{localization}/corp</url>
-                        <url>www.plazauniversel.con/{localization}/corp</url>
-                        <url>new.plazauniversel.com/{localization}/corp</url>
-                        <url>pv-pmg.echo.mx/{localization}/corp</url>
-                        <url>pv-pmg.agenciabase.com.mx/{localization}/corp</url>
+                        <url>www.plazauniversel.com/corp/{localization}</url>
+                        <url>www.plazauniversel.con/corp/{localization}</url>
+                        <url>new.plazauniversel.com/corp/{localization}</url>
+                        <url>pv-pmg.echo.mx/corp/{localization}</url>
+                        <url>pv-pmg.agenciabase.com.mx/corp/{localization}</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>www.plazauniversel.dev/{localization}/corp</url>
-                        <url>www-pv-pmg.echo.mx/{localization}/corp</url>
+                        <url>www.plazauniversel.dev/corp/{localization}</url>
+                        <url>www-pv-pmg.echo.mx/corp/{localization}</url>
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
-                        <url>plazauniversel.dev/{localization}/corp</url>
+                        <url>plazauniversel.dev/corp/{localization}</url>
                         <url>dev-pv-pmg.echo.mx/{localization}</url>
-                        <url>dev-pv-pmg.agenciabase.com.mx/{localization}/corp</url>
+                        <url>dev-pv-pmg.agenciabase.com.mx/corp/{localization}</url>
                     </urls>
                 </environment>
             </environments>

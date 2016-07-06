@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>menus_corp</key>
+
+    <view>PmgSocialBundle:templates:menus</view>
+    <controller>PmgSocialBundle:Social:menus</controller>
+    <cacheLifetime>2400</cacheLifetime>
+
+    <meta>
+        <title lang="fr">Menus Corp</title>
+        <title lang="en">Menus Corp</title>
+    </meta>
+
+    <properties>
+        <section name="highlight">
+            <properties>
+                <property name="title" type="text_line" mandatory="true">
+                    <meta>
+                        <title lang="fr">Titel</title>
+                        <title lang="en">Title</title>
+                    </meta>
+                    <params>
+                        <param name="headline" value="true"/>
+                    </params>
+
+                    <tag name="sulu.rlp.part"/>
+                </property>
+
+                <property name="header_images" type="media_selection">
+                    <meta>
+                        <title lang="fr">Fotos</title>
+                        <title lang="en">Images</title>
+                    </meta>
+                    <params>
+                        <param name="types" value="image"/>
+                        <param name="defaultDisplayOption" value="middle"/>
+                    </params>
+                </property>
+                <property name="url" type="resource_locator" mandatory="true">
+                    <meta>
+                        <title lang="fr">Adresse</title>
+                        <title lang="en">Resourcelocator</title>
+                    </meta>
+
+                    <tag name="sulu.rlp"/>
+                </property>
+
+            </properties>
+        </section>
+
+        <property name="selection_phrase" type="text_line">
+            <meta>
+                <title lang="fr">Choose phrase</title>
+                <title lang="en">Choose phrase</title>
+            </meta>
+            <params>
+                <param name="headline" value="true"/>
+            </params>
+        </property>
+
+    </properties>
+</template>
