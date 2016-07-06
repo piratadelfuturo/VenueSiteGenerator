@@ -81,7 +81,7 @@
         <div class="halls-menu-section venue_set_ctn">
            {% for hall in hall_content %}
                {% set hall_slug = 'hall-'~hall.content.url| replace({'/':'-'}) %}
-          <div class="halss-menu-box venue_ctn box-{{loop.revindex}}" data-venue="{{ hall_slug|raw }}"> <a href="{{ sulu_content_path(hall.content.url) }}">{{hall.content.title}}</a> </div>
+          <div class="halss-menu-box venue_ctn box-{{loop.revindex}}" data-venue="{{ hall_slug|raw }}"> <a href="{{ sulu_content_path(hall.content.url) }}">{{hall.content.title| replace({'/': ' '}}</a> </div>
           {% endfor %}
         </div>
       </div>

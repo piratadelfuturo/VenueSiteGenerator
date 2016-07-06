@@ -19,7 +19,7 @@
             <a href="{{ sulu_content_path('/',alter_webspace_key)}}">{%trans%}Social{%endtrans%}</a>
             <span class="flag">
                 <a href="{{ sulu_content_path((urls[alter_locale]?:'/'),request.webspaceKey,alter_locale) }}">
-                    {{alter_locale|nv_language_name}}
+                    {{alter_locale|nv_language_name|capitalize}}
                     {# <img src="{{ asset("bundles/pmgsocial/pmg_corp/default/images/"~alter_locale~"-flag.png") }}" alt="{{ alter_locale }}" /> #}
                 </a>
             </span>
