@@ -28,6 +28,14 @@
 
                     <tag name="sulu.rlp.part"/>
                 </property>
+                
+                <property name="image" type="media_selection">
+                    <meta>
+                        <title lang="fr">Bilder</title>
+                        <title lang="en">Images</title>
+                    </meta>
+                </property>
+
 
                 <property name="url" type="resource_locator" mandatory="true">
                     <meta>
@@ -39,21 +47,13 @@
                 </property>
             </properties>
         </section>
-
-        <property name="images" type="media_selection">
-            <meta>
-                <title lang="fr">Bilder</title>
-                <title lang="en">Images</title>
-            </meta>
-        </property>
-
         <section name="content">
             <meta>
                 <title lang="fr">Inhalt</title>
                 <title lang="en">Content</title>
             </meta>
             <properties>
-                <block name="block"
+                <block name="testimonials"
                        default-type="only_text"
                        minOccurs="0"
                        mandatory="false">
@@ -70,11 +70,18 @@
                             <properties>
                                 <property name="title" type="text_line" mandatory="true">
                                     <meta>
-                                        <title lang="fr">Titel</title>
-                                        <title lang="en">Title</title>
+                                        <title lang="fr">Author</title>
+                                        <title lang="en">Author</title>
                                     </meta>
                                 </property>
-                                <property name="article" type="text_editor" mandatory="true">
+                                <property name="description" type="text_line" mandatory="true">
+                                    <meta>
+                                        <title lang="fr">Author Title</title>
+                                        <title lang="en">Author Title</title>
+                                    </meta>
+                                </property>
+
+                                <property name="article" type="text_area" mandatory="true">
                                     <meta>
                                         <title lang="fr">Artikel</title>
                                         <title lang="en">Article</title>
