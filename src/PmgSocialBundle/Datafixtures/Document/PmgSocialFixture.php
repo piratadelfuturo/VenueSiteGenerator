@@ -113,10 +113,11 @@ class PmgSocialFixture implements DocumentFixtureInterface, ContainerAwareInterf
                 $homeDocuments[$webspaceKey],
                 $webspaceContent['menus']
                 );
+        /*
         $this->generateTestimonialDocuments(
                 $homeDocuments[$webspaceKey],
                 $webspaceContent['testimonials']
-                );
+                );*/
         $this->generateContactDocuments(
                 $homeDocuments[$webspaceKey],
                 $webspaceContent['contact']

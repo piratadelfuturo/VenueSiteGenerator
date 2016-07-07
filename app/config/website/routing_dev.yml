@@ -13,7 +13,7 @@ _profiler:
 
 _errors:
     resource: "@TwigBundle/Resources/config/routing/errors.xml"
-    prefix:   /admin/_error
+    prefix:   /_error
 
 _main:
     resource: routing.yml
