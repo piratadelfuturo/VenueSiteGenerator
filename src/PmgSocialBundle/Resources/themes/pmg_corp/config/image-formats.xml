@@ -220,7 +220,7 @@
                 <parameters>
                     <parameter name="x">1120</parameter>
                     <parameter name="y">410</parameter>
-                    <parameter name="forceRatio">true</parameter>
+                    <parameter name="forceRatio">false</parameter>
                     <parameter name="mode">inset</parameter>
                 </parameters>
             </command>
