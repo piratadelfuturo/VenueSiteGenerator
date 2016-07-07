@@ -7,7 +7,7 @@
         {% set section_image = random(content.header_images)%}
         {% set section_image = section_image.thumbnails['section-header-corp']%}
     {% else %}
-        {% set section_image = 'bundles/pmgsocial/pmg_corp/images/halls-detail-banner.jpg'%}        
+        {% set section_image = 'bundles/pmgsocial/pmg_corp/default/images/halls-detail-banner.jpg'%}        
     {% endif %}
 
 <div class="banner-section">
@@ -61,7 +61,7 @@
                 {% set hall_image = random(hall_setup.image)%}
                 {% set hall_image = hall_image.thumbnails['hall-setup-small']%}
             {% else %}
-                {% set hall_image = 'bundles/pmgsocial/pmg_corp/images/halls-setup-1.jpg'%}        
+                {% set hall_image = 'bundles/pmgsocial/pmg_corp/default/images/halls-setup-1.jpg'%}        
             {% endif %}
    
           <div class="col-sm-3 halls-setup-box">
@@ -86,7 +86,7 @@
                         {% set hall_floor_image = random(content.hall_floor_plan_image)%}
                         {% set hall_floor_image = hall_floor_image.thumbnails['hall-floor-map-small-inset']%}
                     {% else %}
-                        {% set hall_floor_image = 'bundles/pmgsocial/pmg_corp/images/halls-setup-1.jpg'%}        
+                        {% set hall_floor_image = 'bundles/pmgsocial/pmg_corp/default/images/halls-setup-1.jpg'%}        
                     {% endif %}
                     <img src="{{ asset(hall_floor_image) }}" alt="" /> </div>
                 <div class="download-btn">
@@ -94,7 +94,7 @@
                         {% set hall_floor_download = random(content.hall_floor_plan_download)%}
                         {% set hall_floor_download = hall_floor_download.url%}
                     {% else %}
-                        {% set hall_floor_download = 'bundles/pmgsocial/pmg_corp/images/halls-floor.jpg'%}        
+                        {% set hall_floor_download = 'bundles/pmgsocial/pmg_corp/default/images/halls-floor.jpg'%}        
                     {% endif %}
                     <a href="{{ asset(hall_floor_download) }}" target=_blank">{% trans %}download Complete Hall Info{% endtrans %}</a> </div>
               </div>
@@ -103,7 +103,7 @@
                 {% set hall_floor_photo = random(content.hall_floor_plan_photo)%}
                 {% set hall_floor_photo = hall_floor_photo.thumbnails['hall-floor-photo-small']%}
             {% else %}
-                {% set hall_floor_photo = 'bundles/pmgsocial/pmg_corp/images/halls-floor-right.jpg'%}        
+                {% set hall_floor_photo = 'bundles/pmgsocial/pmg_corp/default/images/halls-floor-right.jpg'%}        
             {% endif %}   
             <div class="col-sm-4 halls-floor-right"> <img src="{{ asset(hall_floor_photo) }}" alt="" /> </div>
           </div>
