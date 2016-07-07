@@ -213,7 +213,7 @@
         </commands>
     </format>
     <format>
-        <name>hall-floor-map-small</name>
+        <name>hall-floor-map-small-inset</name>
         <commands>
             <command>
                 <action>scale</action>
@@ -221,7 +221,7 @@
                     <parameter name="x">1120</parameter>
                     <parameter name="y">410</parameter>
                     <parameter name="forceRatio">true</parameter>
-                    <parameter name="mode">outbound</parameter>
+                    <parameter name="mode">inset</parameter>
                 </parameters>
             </command>
             <command>
@@ -234,7 +234,7 @@
         </commands>
     </format>
     <format>
-        <name>hall-floor-photo-small-inset</name>
+        <name>hall-floor-photo-small</name>
         <commands>
             <command>
                 <action>scale</action>
@@ -242,7 +242,7 @@
                     <parameter name="x">745</parameter>
                     <parameter name="y">613</parameter>
                     <parameter name="forceRatio">true</parameter>
-                    <parameter name="mode">inset</parameter>
+                    <parameter name="mode">outbound</parameter>
                 </parameters>
             </command>
             <command>
