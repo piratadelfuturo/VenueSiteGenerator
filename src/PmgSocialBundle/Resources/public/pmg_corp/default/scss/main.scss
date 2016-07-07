@@ -3076,6 +3076,11 @@ $sites-colors: (
                     }
                 }
             }
+            .footer-logo{
+                img{
+                    max-height: 125px !important;
+                }
+            }
         }
         
         .inner-content-section{
