@@ -1,9 +1,25 @@
 {% extends "PmgSocialBundle:views:master.html.twig" %}
 
-{% block title %}Error {{ status_code }}{% endblock %}
+{% block title %} Resource not found {% endblock %}
 
 {% block content %}
-    <h1>Error {{ status_code }}: {{ status_text }}</h1>
-
-    <p>{{ exception.message }}</p>
+<div class="banner-section last-section" vocab="http://schema.org/" typeof="Content">
+    <div class="banner-img">
+            <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/banner-img.jpg') }}" alt="" />
+    </div>
+    <div class="main-info">
+      <div class="row">
+        <div class="col-md-8 left-info">
+          <h2>{{ request.resourceLocator }}</h2>
+          <p>{% trans %}Something went wrong.{% endtrans %}</p>
+        </div>
+        <div class="col-md-4 right-info">
+          <div class="right-info-content">
+            <div class="highlight-text-box"> <span class="highlighted-text">{{ status_code }}</span> {{status_text|trans}} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="push"></div>
 {% endblock %}

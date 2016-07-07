@@ -1,7 +1,17 @@
 parameters:
     nviba_sulu_overrides.event_listener.set_theme.class: Nviba\Bundle\SuluOverridesBundle\EventListener\SetThemeEventListener
     sulu_location.content.type.location.class: Nviba\Bundle\SuluOverridesBundle\Content\Types\LocationContentType
+    nviba_sulu_overrides.exception.controller.class: Nviba\Bundle\SuluOverridesBundle\Controller\ExceptionController
 services:
+    nviba_sulu_overrides.exception.controller:
+        class: "%nviba_sulu_overrides.exception.controller.class%"
+        arguments:
+            - "@twig"
+            - "%kernel.debug%"
+            - "@sulu_website.resolver.parameter"
+            - "@?sulu_core.webspace.request_analyzer"
+            - "@liip_theme.active_theme"
+    
     nviba_sulu_overrides.event_listener.set_theme:
         class: "%nviba_sulu_overrides.event_listener.set_theme.class%"
         public: true

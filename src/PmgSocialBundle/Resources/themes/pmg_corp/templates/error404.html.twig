@@ -4,15 +4,15 @@
 
 {% block content %}
 <div class="banner-section">
-  <div class="banner-img">
-    <div class="banner-overlay-color"></div>
-    <img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/banner-img.jpg')}}" alt="" />
-    <h1>{%trans%}Resource not found{%endtrans%}</h1>
-  </div>
+    <div class="banner-img">
+        <img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/home-banner-img.jpg') }}" alt="" />
+    </div>
 </div>
-
-<div>
-    <p>The path "<em>{{ request.resourceLocator }}</em>" does not exist.</p>
-</div>
-    <div class="push"></div>
+<div class="comman-section about-section">
+    <div class="container">
+        <h2>{{ status_code~' : '~request.resourceLocator }}</h2>
+        <p> {{status_text|trans }}</p>
+    </div>
+</div>    
+<div class="push"></div>
 {% endblock %}

@@ -4,7 +4,7 @@
 {% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
 
 {% block content %}
-    <div class="banner-section">
+<div class="banner-section">
     <div class="banner-img">
         {% if content.slides %}
             <img src="{{ asset(content.slides[0].thumbnails['section-header-corp']) }}" alt="" />
@@ -12,7 +12,7 @@
         <img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/home-banner-img.jpg') }}" alt="" />
         {% endif %}
     </div>
-  </div>
+</div>
   <div class="comman-section about-section">
   	<div class="container">
           <h2>{{ content.slogan }}</h2>

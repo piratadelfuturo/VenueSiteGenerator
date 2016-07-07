@@ -6,7 +6,7 @@ framework:
 
 # Twig Configuration
 twig:
-    exception_controller: sulu_website.exception.controller:showAction
+    exception_controller: nviba_sulu_overrides.exception.controller:showAction
 
 # Symfony CMF Configuration
 cmf_routing:
