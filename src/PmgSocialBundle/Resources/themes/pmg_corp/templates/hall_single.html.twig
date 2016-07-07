@@ -84,7 +84,7 @@
                 <div class="floor-img">
                     {% if content.hall_floor_plan_image is defined and content.hall_floor_plan_image is not empty %}
                         {% set hall_floor_image = random(content.hall_floor_plan_image)%}
-                        {% set hall_floor_image = hall_floor_image.thumbnails['hall-floor-map-small']%}
+                        {% set hall_floor_image = hall_floor_image.thumbnails['hall-floor-map-small-inset']%}
                     {% else %}
                         {% set hall_floor_image = 'bundles/pmgsocial/pmg_corp/images/halls-setup-1.jpg'%}        
                     {% endif %}
