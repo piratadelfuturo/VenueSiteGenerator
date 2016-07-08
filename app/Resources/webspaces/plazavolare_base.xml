@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webspace xmlns="http://schemas.sulu.io/webspace/webspace"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/webspace/webspace http://schemas.sulu.io/webspace/webspace-1.0.xsd">
+
+    <name>Plaza Volare BASE</name>
+    <key>plazavolare_base</key>
+
+<localizations>
+        <localization language="en" />
+        <localization language="fr" default="true" />
+    </localizations>
+
+    <theme>
+        <key>pmg_base</key>
+        <default-templates>
+            <default-template type="homepage">homepage_base</default-template>
+            <default-template type="page">complex</default-template>
+        </default-templates>
+
+        <error-templates>
+            <error-template default="true">PmgSocialBundle:templates:error.html.twig</error-template>
+            <error-template code="404">PmgSocialBundle:templates:error404.html.twig</error-template>
+        </error-templates>
+    </theme>
+
+    <navigation>
+        <contexts>
+            <context key="main">
+                <meta>
+                    <title lang="fr">Principal navigation</title>
+                    <title lang="en">Main navigation</title>
+                </meta>
+            </context>
+        </contexts>
+    </navigation>
+
+    <portals>
+        <portal>
+            <name>Plaza Volare Base</name>
+            <key>plazavolare_base_default</key>
+            <resource-locator>
+                <strategy>tree</strategy>
+            </resource-locator>
+
+            <environments>
+                <environment type="prod">
+                    <urls>
+                        <url language="fr" >www.plazavolare.com</url>
+                        <url language="fr" >new.plazavolare.com</url>
+                        <url language="fr" >www.plazavolare.con</url>
+                        <url language="en" >www.plazavolare.com/en</url>
+                        <url language="en" >new.plazavolare.com/en</url>
+                        <url language="en" >www.plazavolare.con/en</url>
+                    </urls>
+                </environment>
+                <environment type="stage">
+                    <urls>
+                        <url language="fr" >new.plazavolare.dev/stage</url>
+                        <url language="en" >new.plazavolare.dev/stage/en</url>
+                    </urls>
+                </environment>
+                <environment type="dev">
+                    <urls>
+                        <url >sitescms.plazapmg.com/{localization}</url>
+                        <url language="fr" >plazavolare.dev</url>
+                        <url language="en" >plazavolare.dev/en</url>
+                    </urls>
+                </environment>
+            </environments>
+        </portal>
+    </portals>
+</webspace>

@@ -1,0 +1,32 @@
+{% for gallery in content %}
+    {% set final_title = null %}
+    {% if loop.first == true %}
+        {% set final_title = title is defined ? title : gallery.title %}
+    {% else %}
+        {% set final_title = null%}
+    {% endif %}
+    
+<div class="gallery-section">
+    <div class="container">
+    {% if final_title is not null %}
+      <h2>{{ final_title }}</h2>
+    {% endif %}
+    <div class="gallery-content-section popup-gallery">
+        {% if gallery.images is not empty %}
+              {% for image in gallery.images %}
+                <div class="col-sm-4 gallery-box">
+                    <a href="{{ asset(image.thumbnails['gallery-large']) }}">
+                        <img src="{{ asset(image.thumbnails['corp-gallery-thumb']) }}" alt="" />
+                    </a>
+                </div>
+              {% endfor %}
+        {% endif%}
+      {% if loop.last and gallery_link is defined and gallery_link is not empty %}
+          {% set gallery_link = sulu_content_load(gallery_link) %}
+          {% set gallery_link = gallery_link.content.url %}
+      <div class="see-more-btn"><a href="{{ sulu_content_path(gallery_link) }}">{% trans %}See more photos{% endtrans %}</a></div>
+      {% endif %}
+    </div>
+    </div>
+  </div>
+{% endfor %}

@@ -3,7 +3,7 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://schemas.sulu.io/webspace/webspace http://schemas.sulu.io/webspace/webspace-1.0.xsd">
 
-    <name>plaza centreville CORP</name>
+    <name>Plaza Centreville CORP</name>
     <key>plazacentreville_corp</key>
 
 <localizations>
@@ -37,7 +37,7 @@
 
     <portals>
         <portal>
-            <name>plaza centreville corp</name>
+            <name>Plaza Centreville Corp</name>
             <key>plazacentreville_corp_default</key>
             <resource-locator>
                 <strategy>tree</strategy>
@@ -46,23 +46,19 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.plazacentreville.com/corp/{localization}</url>
-                        <url>www.plazacentreville.con/corp/{localization}</url>
-                        <url>new.plazacentreville.com/corp/{localization}</url>
-                        <url>pc-pmg.agenciabase.com.mx/{localization}</url>
+                        <url>www.plazacentreville.com/{localization}/corp</url>
+                        <url>www.plazacentreville.con/{localization}/corp</url>
+                        <url>new.plazacentreville.com/{localization}/corp</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>www.plazacentreville.dev/corp/{localization}</url>
-                        <url>www-pc-pmg.echo.mx/corp/{localization}</url>                        
+                        <url>new.plazacentreville.dev/{localization}/corp</url>
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
-                        <url>plazacentreville.dev/corp/{localization}</url>
-                        <url>dev-pc-pmg.echo.mx/corp/{localization}</url>
-                        <url>dev-pc-pmg.agenciabase.com.mx/corp/{localization}</url>
+                        <url>plazacentreville.dev/{localization}/corp</url>
                     </urls>
                 </environment>
             </environments>

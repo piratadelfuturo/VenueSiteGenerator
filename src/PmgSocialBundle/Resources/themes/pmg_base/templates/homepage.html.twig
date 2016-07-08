@@ -1,0 +1,22 @@
+{% set webspace_key = request.webspaceKey %}
+{% set social_webspace_key = request.webspaceKey|replace({'_base' : '_social'} )%}
+{% set corp_webspace_key = request.webspaceKey|replace({'_base' : '_corp'} )%}
+{% if request.locale == 'en' %}
+    {% set alter_locale = 'fr' %}
+{% else %}
+    {% set alter_locale = 'en' %}
+{% endif %}
+
+{% extends "PmgSocialBundle:views:master.html.twig" %}
+
+{% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <a href="{{ sulu_content_path('/',social_webspace_key) }}">{%trans%}Social{%endtrans%}</a>
+        <a href="{{ sulu_content_path('/',corp_webspace_key) }}">{%trans%}Corporate{%endtrans%}</a>
+    </div>
+        <script>
+            window.location = '{{sulu_content_path('/',social_webspace_key)|raw}}';
+        </script>
+{% endblock%}

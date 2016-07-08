@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formats xmlns="http://schemas.sulu.io/media/formats"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://schemas.sulu.io/media/formats http://schemas.sulu.io/media/formats-1.0.xsd">
+    <format>
+        <name>section-header</name>
+        <commands>
+            <command>
+                <action>scale</action>
+                <parameters>
+                    <parameter name="x">1929</parameter>
+                    <parameter name="y">726</parameter>
+                    <parameter name="forceRatio">true</parameter>
+                    <parameter name="mode">outbound</parameter>
+                </parameters>
+            </command>
+            <command>
+                <action>crop</action>
+                <parameters>
+                    <parameter name="w">1929</parameter>
+                    <parameter name="h">726</parameter>
+                </parameters>
+            </command>
+        </commands>
+    </format>
+        <format>
+        <name>section-header-corp</name>
+        <commands>
+            <command>
+                <action>scale</action>
+                <parameters>
+                    <parameter name="x">1926</parameter>
+                    <parameter name="y">390</parameter>
+                    <parameter name="forceRatio">true</parameter>
+                    <parameter name="mode">outbound</parameter>
+                </parameters>
+            </command>
+            <command>
+                <action>crop</action>
+                <parameters>
+                    <parameter name="w">1926</parameter>
+                    <parameter name="h">390</parameter>
+                </parameters>
+            </command>
+        </commands>
+    </format>
+    <format>
+        <name>menu-thumb</name>
+        <commands>
+            <command>
+                <action>scale</action>
+                <parameters>
+                    <parameter name="x">222</parameter>
+                    <parameter name="y">148</parameter>
+                    <parameter name="forceRatio">true</parameter>
+                    <parameter name="mode">outbound</parameter>
+                </parameters>
+            </command>
+            <command>
+                <action>crop</action>
+                <parameters>
+                    <parameter name="w">222</parameter>
+                    <parameter name="h">148</parameter>
+                </parameters>
+            </command>
+        </commands>
+    </format>
+    <format>
+        <name>hall-2c</name>
+        <commands>
+            <command>
+                <action>scale</action>
+                <parameters>
+                    <parameter name="x">880</parameter>
+                    <parameter name="y">233</parameter>
+                    <parameter name="forceRatio">true</parameter>
+                    <parameter name="mode">outbound</parameter>
+                </parameters>
+            </command>
+            <command>
+                <action>crop</action>
+                <parameters>
+                    <parameter name="w">880</parameter>
+                    <parameter name="h">233</parameter>
+                </parameters>
+            </command>
+        </commands>
+    </format>
+    <format>
+        <name>hall-3c</name>
+        <commands>
+            <command>
+                <action>scale</action>
+                <parameters>
+                    <parameter name="x">573</parameter>
+                    <parameter name="y">233</parameter>
+                    <parameter name="forceRatio">true</parameter>
+                    <parameter name="mode">outbound</parameter>
+                </parameters>
+            </command>
+            <command>
+                <action>crop</action>
+                <parameters>
+                    <parameter name="w">573</parameter>
+                    <parameter name="h">233</parameter>
+                </parameters>
+            </command>
+        </commands>
+    </format>
+    <format>
+        <name>hall-4c</name>
+        <commands>
+            <command>
+                <action>scale</action>
+                <parameters>
+                    <parameter name="x">433</parameter>
+                    <parameter name="y">233</parameter>
+                    <parameter name="forceRatio">true</parameter>
+                    <parameter name="mode">outbound</parameter>
+                </parameters>
+            </command>
+            <command>
+                <action>crop</action>
+                <parameters>
+                    <parameter name="w">433</parameter>
+                    <parameter name="h">233</parameter>
+                </parameters>
+            </command>
+        </commands>
+    </format>
+    <format>
+        <name>home-hall-preview</name>
+        <commands>
+            <command>
+                <action>scale</action>
+                <parameters>
+                    <parameter name="x">1282</parameter>
+                    <parameter name="y">668</parameter>
+                    <parameter name="forceRatio">true</parameter>
+                    <parameter name="mode">outbound</parameter>
+                </parameters>
+            </command>
+            <command>
+                <action>crop</action>
+                <parameters>
+                    <parameter name="w">1282</parameter>
+                    <parameter name="h">668</parameter>
+                </parameters>
+            </command>
+        </commands>
+    </format>
+    <format>
+        <name>home-link-thumb</name>
+        <commands>
+            <command>
+                <action>scale</action>
+                <parameters>
+                    <parameter name="x">644</parameter>
+                    <parameter name="y">309</parameter>
+                    <parameter name="forceRatio">true</parameter>
+                    <parameter name="mode">outbound</parameter>
+                </parameters>
+            </command>
+            <command>
+                <action>crop</action>
+                <parameters>
+                    <parameter name="w">644</parameter>
+                    <parameter name="h">309</parameter>
+                </parameters>
+            </command>
+        </commands>
+    </format>
+    <format>
+        <name>hall-setup-small</name>
+        <commands>
+            <command>
+                <action>scale</action>
+                <parameters>
+                    <parameter name="x">381</parameter>
+                    <parameter name="y">251</parameter>
+                    <parameter name="forceRatio">true</parameter>
+                    <parameter name="mode">outbound</parameter>
+                </parameters>
+            </command>
+            <command>
+                <action>crop</action>
+                <parameters>
+                    <parameter name="w">381</parameter>
+                    <parameter name="h">251</parameter>
+                </parameters>
+            </command>
+        </commands>
+    </format>
+    <format>
+        <name>hall-floor-map-small</name>
+        <commands>
+            <command>
+                <action>scale</action>
+                <parameters>
+                    <parameter name="x">1120</parameter>
+                    <parameter name="y">410</parameter>
+                    <parameter name="forceRatio">true</parameter>
+                    <parameter name="mode">outbound</parameter>
+                </parameters>
+            </command>
+            <command>
+                <action>crop</action>
+                <parameters>
+                    <parameter name="w">1120</parameter>
+                    <parameter name="h">410</parameter>
+                </parameters>
+            </command>
+        </commands>
+    </format>
+    <format>
+        <name>hall-floor-map-small-inset</name>
+        <commands>
+            <command>
+                <action>scale</action>
+                <parameters>
+                    <parameter name="x">1120</parameter>
+                    <parameter name="y">410</parameter>
+                    <parameter name="forceRatio">false</parameter>
+                    <parameter name="mode">inset</parameter>
+                </parameters>
+            </command>
+            <command>
+                <action>crop</action>
+                <parameters>
+                    <parameter name="w">1120</parameter>
+                    <parameter name="h">410</parameter>
+                </parameters>
+            </command>
+        </commands>
+    </format>
+    <format>
+        <name>hall-floor-photo-small</name>
+        <commands>
+            <command>
+                <action>scale</action>
+                <parameters>
+                    <parameter name="x">745</parameter>
+                    <parameter name="y">613</parameter>
+                    <parameter name="forceRatio">true</parameter>
+                    <parameter name="mode">outbound</parameter>
+                </parameters>
+            </command>
+            <command>
+                <action>crop</action>
+                <parameters>
+                    <parameter name="w">745</parameter>
+                    <parameter name="h">613</parameter>
+                </parameters>
+            </command>
+        </commands>
+    </format>
+    <format>
+        <name>corp-gallery-thumb</name>
+        <commands>
+            <command>
+                <action>scale</action>
+                <parameters>
+                    <parameter name="x">499</parameter>
+                    <parameter name="y">376</parameter>
+                    <parameter name="forceRatio">true</parameter>
+                    <parameter name="mode">outbound</parameter>
+                </parameters>
+            </command>
+            <command>
+                <action>crop</action>
+                <parameters>
+                    <parameter name="w">499</parameter>
+                    <parameter name="h">376</parameter>
+                </parameters>
+            </command>
+        </commands>
+    </format>
+    <format>
+        <name>gallery-thumb</name>
+        <commands>
+            <command>
+                <action>scale</action>
+                <parameters>
+                    <parameter name="x">346</parameter>
+                    <parameter name="y">264</parameter>
+                    <parameter name="forceRatio">true</parameter>
+                    <parameter name="mode">outbound</parameter>
+                </parameters>
+            </command>
+            <command>
+                <action>crop</action>
+                <parameters>
+                    <parameter name="w">346</parameter>
+                    <parameter name="h">264</parameter>
+                </parameters>
+            </command>
+        </commands>
+    </format>
+    <format>
+        <name>gallery-large</name>
+        <commands>
+            <command>
+                <action>scale</action>
+                <parameters>
+                    <parameter name="x">1200</parameter>
+                    <parameter name="y">1200</parameter>
+                    <parameter name="forceRatio">true</parameter>
+                    <parameter name="mode">inset</parameter>
+                </parameters>
+            </command>
+        </commands>
+    </format>
+</formats>

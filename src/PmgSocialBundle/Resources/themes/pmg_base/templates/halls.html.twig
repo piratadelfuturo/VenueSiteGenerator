@@ -1,0 +1,48 @@
+{% extends "PmgSocialBundle:views:master.html.twig" %}
+
+{% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
+
+{% block content %}
+    {% if content.header_images is defined and content.header_images is not empty %}
+        {% set section_image = random(content.header_images)%}
+        {% set section_image = section_image.thumbnails['section-header-corp']%}
+    {% else %}
+        {% set section_image = 'bundles/pmgsocial/pmg_social/default/images/banner-img.jpg'%}        
+    {% endif %}
+    <div class="banner-section">
+        <div class="banner-img"><img src="{{ asset(section_image) }}" alt=""></div>
+    </div>
+  <div class="inner-content-section halls-page-section">
+    <h2>{{ content.title }}</h2>
+    <div class="container">
+        {% if content.halls_list is not empty %}
+      <div class="halls-list-section">
+        <div class="row">
+        {% for link in content.halls_list %}
+            {% set linkDoc = sulu_content_load(link.uuid) %}
+            {% set linkContent = linkDoc.content %}
+          <div class="col-sm-4 halls-list-box">
+            <div class="halls-list-img">
+                <a href="{{ sulu_content_path(link.url,link.webspaceKey) }}">
+                    {% if linkContent.header_images is not empty %}
+                    {% set image_element = random(linkContent.header_images) %}
+                    {% set image_element = image_element.thumbnails['hall-4c']%}
+                {% else %}
+                    {% set image_element = '' %}
+                {% endif %}
+                    <img src="{{ asset(image_element) }}" alt="" />
+                </a>
+            </div>
+            <div class="halls-list-content">
+              <h4><a href="{{ sulu_content_path(link.url,link.webspaceKey) }}">{{ linkContent.title }}</a></h4>
+              <p> {{ linkContent.description |slice(0, 45) }} </p>
+            </div>
+          </div>
+        {% endfor%}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>  
+  <div class="push"></div>
+{% endblock %}

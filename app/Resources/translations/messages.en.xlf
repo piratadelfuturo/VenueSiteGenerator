@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
-  <file date="2016-07-04T19:10:21Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
+  <file date="2016-07-08T17:25:02Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
     <header>
       <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
       <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
@@ -9,7 +9,8 @@
       <trans-unit id="8278d2adba7612cf98a492d21a4ac4c78acb1202" resname=", and">
         <source>, and</source>
         <target>, and</target>
-        <jms:reference-file line="78">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/menus.html.twig</jms:reference-file>
+        <jms:reference-file line="89">./src/PmgSocialBundle/Resources/themes/pmg_base/templates/menus.html.twig</jms:reference-file>
+        <jms:reference-file line="89">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/menus.html.twig</jms:reference-file>
         <jms:reference-file line="100">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/menus.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="fb7e494ba02a21a5e78651b687cdf06e6ad30740" resname="2015 All rights reserved PMG group">
@@ -25,7 +26,8 @@
       <trans-unit id="1f851e954227e686b1fb5a996d78e3aa52dda88f" resname="Banquet">
         <source>Banquet</source>
         <target>Banquet</target>
-        <jms:reference-file line="35">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
+        <jms:reference-file line="36">./src/PmgSocialBundle/Resources/themes/pmg_base/templates/hall_single.html.twig</jms:reference-file>
+        <jms:reference-file line="36">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
         <jms:reference-file line="38">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/hall_single.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="58853b1c161a91adeb937a6df14425c10f2f78a5" resname="Baptisms">
@@ -41,7 +43,10 @@
       <trans-unit id="03848e34035ca7eb655c8f003a0db0f5a3e4de37" resname="CONTACT US">
         <source>CONTACT US</source>
         <target>CONTACT US</target>
-        <jms:reference-file line="118">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="18">./src/PmgSocialBundle/Resources/themes/pmg_base/templates/contact.html.twig</jms:reference-file>
+        <jms:reference-file line="117">./src/PmgSocialBundle/Resources/themes/pmg_base/templates/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="18">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/contact.html.twig</jms:reference-file>
+        <jms:reference-file line="117">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/homepage.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="5e19f7744e95f74a26aa5bb9129872021272bd01" resname="Check out our menus">
         <source>Check out our menus</source>
@@ -54,26 +59,32 @@
         <target>Contact us</target>
         <jms:reference-file line="118">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/homepage.html.twig</jms:reference-file>
       </trans-unit>
+      <trans-unit id="a83ed75221e875c789f78f19697cffcdbc75e73c" resname="Corporate">
+        <source>Corporate</source>
+        <target state="new">Corporate</target>
+        <jms:reference-file line="20">./src/PmgSocialBundle/Resources/themes/pmg_social/blocks/header.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="111f0f03ddde98969d4f481935dce200a7f79b82" resname="DESCRIPTION AND DETAILS">
+        <source>DESCRIPTION AND DETAILS</source>
+        <target state="new">DESCRIPTION AND DETAILS</target>
+        <jms:reference-file line="25">./src/PmgSocialBundle/Resources/themes/pmg_base/templates/hall_single.html.twig</jms:reference-file>
+        <jms:reference-file line="25">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
+      </trans-unit>
       <trans-unit id="3efccba1a7c798cab2e90035739cf65e8d98c4ac" resname="Dimensions &amp; Capacity">
         <source><![CDATA[Dimensions & Capacity]]></source>
         <target><![CDATA[Dimensions & Capacity]]></target>
         <jms:reference-file line="26">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/hall_single.html.twig</jms:reference-file>
       </trans-unit>
-      <trans-unit id="0a87f986d2137dac4895e666cb44259060d37f7f" resname="Dimensions &amp; Capacity ">
-        <source><![CDATA[Dimensions & Capacity ]]></source>
-        <target><![CDATA[Dimensions & Capacity ]]></target>
-        <jms:reference-file line="23">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
-      </trans-unit>
       <trans-unit id="8cded449d2c29ca931225c998da3069185f0de10" resname="Dimensions (ft)">
         <source>Dimensions (ft)</source>
         <target>Dimensions (ft)</target>
-        <jms:reference-file line="31">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
+        <jms:reference-file line="32">./src/PmgSocialBundle/Resources/themes/pmg_base/templates/hall_single.html.twig</jms:reference-file>
+        <jms:reference-file line="32">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
         <jms:reference-file line="34">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/hall_single.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="65c1fe1ee366bdbcb76a45835c3095999fbcd323" resname="Download the complete hall info">
         <source>Download the complete hall info</source>
         <target>Download the complete hall info</target>
-        <jms:reference-file line="73">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
         <jms:reference-file line="74">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/hall_single.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="0d01e2e86669e98441ab4dce5520696c318b7098" resname="E-mail">
@@ -92,40 +103,46 @@
         <jms:reference-file line="81">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/contact.html.twig</jms:reference-file>
         <jms:reference-file line="129">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/homepage.html.twig</jms:reference-file>
       </trans-unit>
-      <trans-unit id="73dcec8d8ed9bea15c018eb44041be1c73b61be5" resname="GALLERY">
-        <source>GALLERY</source>
-        <target>GALLERY</target>
-        <jms:reference-file line="108">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/homepage.html.twig</jms:reference-file>
-      </trans-unit>
       <trans-unit id="9c30a3485a5887f1ba5abd2a291d304a01863e55" resname="Gallery">
         <source>Gallery</source>
-        <target state="new">Gallery</target>
-        <jms:reference-file line="56">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/halls.html.twig</jms:reference-file>
+        <target>Gallery</target>
+        <jms:reference-file line="114">./src/PmgSocialBundle/Resources/themes/pmg_base/templates/hall_single.html.twig</jms:reference-file>
+        <jms:reference-file line="114">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
+        <jms:reference-file line="57">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/halls.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="7731962fb19e09fff22c1be46abc4b02e9ff78eb" resname="HOME">
         <source>HOME</source>
         <target>HOME</target>
+        <jms:reference-file line="17">./src/PmgSocialBundle/Resources/themes/pmg_base/blocks/footer.html.twig</jms:reference-file>
+        <jms:reference-file line="39">./src/PmgSocialBundle/Resources/themes/pmg_base/blocks/header.html.twig</jms:reference-file>
         <jms:reference-file line="17">./src/PmgSocialBundle/Resources/themes/pmg_corp/blocks/footer.html.twig</jms:reference-file>
-        <jms:reference-file line="38">./src/PmgSocialBundle/Resources/themes/pmg_corp/blocks/header.html.twig</jms:reference-file>
+        <jms:reference-file line="39">./src/PmgSocialBundle/Resources/themes/pmg_corp/blocks/header.html.twig</jms:reference-file>
         <jms:reference-file line="16">./src/PmgSocialBundle/Resources/themes/pmg_social/blocks/footer.html.twig</jms:reference-file>
-        <jms:reference-file line="36">./src/PmgSocialBundle/Resources/themes/pmg_social/blocks/header.html.twig</jms:reference-file>
+        <jms:reference-file line="37">./src/PmgSocialBundle/Resources/themes/pmg_social/blocks/header.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="a3b092bbf0dbeaeadf6a1f6b33f42251d4b17d98" resname="Hall">
         <source>Hall</source>
         <target>Hall</target>
-        <jms:reference-file line="30">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
+        <jms:reference-file line="31">./src/PmgSocialBundle/Resources/themes/pmg_base/templates/hall_single.html.twig</jms:reference-file>
+        <jms:reference-file line="31">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
         <jms:reference-file line="33">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/hall_single.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="5a0cbe5e57a47423b083d8bc62a12a2e40a9364a" resname="Hall Setup">
         <source>Hall Setup</source>
         <target>Hall Setup</target>
-        <jms:reference-file line="59">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
         <jms:reference-file line="64">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/hall_single.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="813f35f3988a3705a33d834f897e0038ed6c93eb" resname="Hall Setups">
+        <source>Hall Setups</source>
+        <target state="new">Hall Setups</target>
+        <jms:reference-file line="56">./src/PmgSocialBundle/Resources/themes/pmg_base/templates/hall_single.html.twig</jms:reference-file>
+        <jms:reference-file line="56">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="6a5f7e8866b7e02c514b1d320f8c7a648e3e393d" resname="Height (ft)">
         <source>Height (ft)</source>
         <target>Height (ft)</target>
-        <jms:reference-file line="33">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
+        <jms:reference-file line="34">./src/PmgSocialBundle/Resources/themes/pmg_base/templates/hall_single.html.twig</jms:reference-file>
+        <jms:reference-file line="34">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
         <jms:reference-file line="36">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/hall_single.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="adec36a821f81a6990b1e65d9e4ac5fb8ee2a205" resname="Last name">
@@ -133,10 +150,17 @@
         <target>Last name</target>
         <jms:reference-file line="35">./src/PmgSocialBundle/Form/Type/ContactType.php</jms:reference-file>
       </trans-unit>
+      <trans-unit id="3c49868826b07c14d25f587762b204b6c1da3b1b" resname="Loading image">
+        <source>Loading image</source>
+        <target state="new">Loading image</target>
+        <jms:reference-file line="95">./src/PmgSocialBundle/Resources/themes/pmg_base/views/master.html.twig</jms:reference-file>
+        <jms:reference-file line="95">./src/PmgSocialBundle/Resources/themes/pmg_corp/views/master.html.twig</jms:reference-file>
+      </trans-unit>
       <trans-unit id="7dbf71d53c26c13a54d7d85e9f518b98abd31ef9" resname="MORE INFO">
         <source>MORE INFO</source>
         <target>MORE INFO</target>
-        <jms:reference-file line="56">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="57">./src/PmgSocialBundle/Resources/themes/pmg_base/templates/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="57">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/homepage.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="68f4145fee7dde76afceb910165924ad14cf0d00" resname="Message">
         <source>Message</source>
@@ -155,18 +179,26 @@
       </trans-unit>
       <trans-unit id="a196f43d085d7688082f110c1dea118491703402" resname="OUR HALLS">
         <source>OUR HALLS</source>
-        <target state="new">OUR HALLS</target>
-        <jms:reference-file line="33">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/homepage.html.twig</jms:reference-file>
+        <target>OUR HALLS</target>
+        <jms:reference-file line="34">./src/PmgSocialBundle/Resources/themes/pmg_base/templates/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="34">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/homepage.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="455f4df4287e948e22d237cbb41925365860d49f" resname="Our Halls">
         <source>Our Halls</source>
         <target>Our Halls</target>
         <jms:reference-file line="77">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/homepage.html.twig</jms:reference-file>
       </trans-unit>
+      <trans-unit id="5650406ee97220f93c7d1c35153cb443ba5edba3" resname="Please do not hesitate to contact us should you require further information.">
+        <source>Please do not hesitate to contact us should you require further information.</source>
+        <target state="new">Please do not hesitate to contact us should you require further information.</target>
+        <jms:reference-file line="56">./src/PmgSocialBundle/Resources/themes/pmg_base/templates/contact.html.twig</jms:reference-file>
+        <jms:reference-file line="56">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/contact.html.twig</jms:reference-file>
+      </trans-unit>
       <trans-unit id="78577dbc45db0487df3d202cf18a61577474bf2f" resname="READ MORE">
         <source>READ MORE</source>
         <target>READ MORE</target>
-        <jms:reference-file line="82">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="84">./src/PmgSocialBundle/Resources/themes/pmg_base/templates/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="84">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/homepage.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="ad086cf55b834c375e209972840f1342401d8c41" resname="Read more">
         <source>Read more</source>
@@ -176,29 +208,46 @@
       <trans-unit id="720be6b68c369ea311119597cb14a9c59269c5bf" resname="Reception/Cocktail">
         <source>Reception/Cocktail</source>
         <target>Reception/Cocktail</target>
-        <jms:reference-file line="34">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
+        <jms:reference-file line="35">./src/PmgSocialBundle/Resources/themes/pmg_base/templates/hall_single.html.twig</jms:reference-file>
+        <jms:reference-file line="35">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
         <jms:reference-file line="37">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/hall_single.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9304207874c43708ef47fd4a7668054e10a8c125" resname="See more photos">
+        <source>See more photos</source>
+        <target state="new">See more photos</target>
+        <jms:reference-file line="27">./src/PmgSocialBundle/Resources/themes/pmg_base/snippets/gallery.snippet.html.twig</jms:reference-file>
+        <jms:reference-file line="27">./src/PmgSocialBundle/Resources/themes/pmg_corp/snippets/gallery.snippet.html.twig</jms:reference-file>
+        <jms:reference-file line="35">./src/PmgSocialBundle/Resources/themes/pmg_social/snippets/gallery.snippet.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="9bc2575c3930437e80555f78757b783c842e8e66" resname="Send">
         <source>Send</source>
         <target>Send</target>
         <jms:reference-file line="51">./src/PmgSocialBundle/Form/Type/ContactType.php</jms:reference-file>
+        <jms:reference-file line="52">./src/PmgSocialBundle/Form/Type/CorpContactType.php</jms:reference-file>
       </trans-unit>
       <trans-unit id="41a575086b73bd066149552fde2b8782c43e29ed" resname="Social">
         <source>Social</source>
         <target>Social</target>
+        <jms:reference-file line="19">./src/PmgSocialBundle/Resources/themes/pmg_base/blocks/header.html.twig</jms:reference-file>
         <jms:reference-file line="19">./src/PmgSocialBundle/Resources/themes/pmg_corp/blocks/header.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bee54c9cc30c539ab2ed15c0c936e055cf8ef67e" resname="Something went wrong.">
+        <source>Something went wrong.</source>
+        <target state="new">Something went wrong.</target>
+        <jms:reference-file line="14">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/error.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="2c34787e14a8275525d4bd3ceff3df5fcfec0c84" resname="Sq. Feet">
         <source>Sq. Feet</source>
         <target>Sq. Feet</target>
-        <jms:reference-file line="32">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
+        <jms:reference-file line="33">./src/PmgSocialBundle/Resources/themes/pmg_base/templates/hall_single.html.twig</jms:reference-file>
+        <jms:reference-file line="33">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
         <jms:reference-file line="35">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/hall_single.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="57e8e2d5320cb302757cf5dea2429682b7bfe6ef" resname="TESTIMONIALS">
         <source>TESTIMONIALS</source>
         <target>TESTIMONIALS</target>
-        <jms:reference-file line="77">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="75">./src/PmgSocialBundle/Resources/themes/pmg_base/templates/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="75">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/homepage.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="4df618795a4ea9cdf2cc83b5174eb40d174009e5" resname="Tel:">
         <source>Tel:</source>
@@ -210,17 +259,24 @@
         <target>Testimonials</target>
         <jms:reference-file line="56">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/homepage.html.twig</jms:reference-file>
       </trans-unit>
+      <trans-unit id="48949b5644cffc60261a60414331edc9d3bd94f4" resname="The path does not exist.">
+        <source>The path does not exist.</source>
+        <target state="new">The path does not exist.</target>
+        <jms:reference-file line="14">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/error404.html.twig</jms:reference-file>
+      </trans-unit>
       <trans-unit id="dc051d9d3e75939aa3be34cae937e043b8c5145f" resname="Theater/Classroom">
         <source>Theater/Classroom</source>
         <target>Theater/Classroom</target>
-        <jms:reference-file line="36">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
+        <jms:reference-file line="37">./src/PmgSocialBundle/Resources/themes/pmg_base/templates/hall_single.html.twig</jms:reference-file>
+        <jms:reference-file line="37">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
         <jms:reference-file line="39">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/hall_single.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="1ec0b00d7e4a7ebd7e91c21e91a99ece12fa858a" resname="Toggle navigation">
         <source>Toggle navigation</source>
         <target>Toggle navigation</target>
-        <jms:reference-file line="30">./src/PmgSocialBundle/Resources/themes/pmg_corp/blocks/header.html.twig</jms:reference-file>
-        <jms:reference-file line="31">./src/PmgSocialBundle/Resources/themes/pmg_social/blocks/header.html.twig</jms:reference-file>
+        <jms:reference-file line="31">./src/PmgSocialBundle/Resources/themes/pmg_base/blocks/header.html.twig</jms:reference-file>
+        <jms:reference-file line="31">./src/PmgSocialBundle/Resources/themes/pmg_corp/blocks/header.html.twig</jms:reference-file>
+        <jms:reference-file line="32">./src/PmgSocialBundle/Resources/themes/pmg_social/blocks/header.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="e8f6e50e0af877e7284e8972cb2480fd91aa7e77" resname="Weddings">
         <source>Weddings</source>
@@ -234,8 +290,20 @@
       </trans-unit>
       <trans-unit id="e12d26df9d2375654add6909fad956f064382b6f" resname="clic to close">
         <source>clic to close</source>
-        <target state="new">clic to close</target>
+        <target>clic to close</target>
         <jms:reference-file line="179">./src/PmgSocialBundle/Resources/themes/pmg_social/templates/menus.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="547df30ab94428f434060082aa93e273470556d2" resname="download Complete Hall Info">
+        <source>download Complete Hall Info</source>
+        <target state="new">download Complete Hall Info</target>
+        <jms:reference-file line="99">./src/PmgSocialBundle/Resources/themes/pmg_base/templates/hall_single.html.twig</jms:reference-file>
+        <jms:reference-file line="99">./src/PmgSocialBundle/Resources/themes/pmg_corp/templates/hall_single.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="de04fa0e29f9b35e24905d2e512bedc9bb6e09e4" resname="of">
+        <source>of</source>
+        <target state="new">of</target>
+        <jms:reference-file line="101">./src/PmgSocialBundle/Resources/themes/pmg_base/views/master.html.twig</jms:reference-file>
+        <jms:reference-file line="101">./src/PmgSocialBundle/Resources/themes/pmg_corp/views/master.html.twig</jms:reference-file>
       </trans-unit>
     </body>
   </file>

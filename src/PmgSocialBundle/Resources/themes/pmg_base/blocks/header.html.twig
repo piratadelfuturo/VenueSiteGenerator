@@ -1,0 +1,10 @@
+{% set webspace_key = request.webspaceKey %}
+{% set alter_webspace_key = request.webspaceKey|replace({'_corp' : '_social'} )%}
+{% if request.locale == 'en' %}
+    {% set alter_locale = 'fr' %}
+{% else %}
+    {% set alter_locale = 'en' %}
+{% endif %}
+  <header>
+    
+  </header>

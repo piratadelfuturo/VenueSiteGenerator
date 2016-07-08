@@ -1,0 +1,118 @@
+{% extends "PmgSocialBundle:views:master.html.twig" %}
+
+{% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
+
+{% block content %}
+    {% if content.header_images is defined and content.header_images is not empty %}
+        {% set section_image = random(content.header_images)%}
+        {% set section_image = section_image.thumbnails['section-header-corp']%}
+    {% else %}
+        {% set section_image = 'bundles/pmgsocial/pmg_corp/default/images/halls-detail-banner.jpg'%}        
+    {% endif %}
+
+<div class="banner-section">
+  <div class="banner-img">
+    <div class="banner-overlay-color"></div>
+    <img src="{{ asset(section_image )}}" alt="{{content.title}}" />
+    <h1>{{content.title}}</h1>
+  </div>
+</div>
+  <div class="inner-content-section halls-detail-page-section">
+    <div class="halls-information">
+      <p> {{ content.description }} </p>
+    </div>
+    <div class="dimension-section">
+      <h2>{% trans %}DESCRIPTION AND DETAILS{% endtrans %}</h2>
+      <div class="dimension-content-box">
+        <div class="table-responsive">
+          <table>
+            <tbody>
+              <tr>
+                <th>{% trans %}Hall{% endtrans %}</th>
+                <th>{% trans %}Dimensions (ft){% endtrans %}</th>
+                <th>{% trans %}Sq. Feet{% endtrans %}</th>
+                <th>{% trans %}Height (ft){% endtrans %}</th>
+                <th>{% trans %}Reception/Cocktail{% endtrans %}</th>
+                <th>{% trans %}Banquet{% endtrans %}</th>
+                <th>{% trans %}Theater/Classroom{% endtrans %}</th>
+              </tr>
+            {%for row in content.rows %}
+              <tr>
+                <td>{{row.hall}}</td>
+                <td>{{row.dimensions}}</td>
+                <td>{{row.sq_feet}}</td>
+                <td>{{row.height}}</td>
+                <td>{{row.reception}}</td>
+                <td>{{row.banquet}}</td>
+                <td>{{row.theater}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="halls-setup-section">
+      <h2>{% trans %}Hall Setups{% endtrans %}</h2>
+      {% if content.hall_setups is not empty %}
+      <div class="halls-setup-list">
+          {% for hall_setup in content.hall_setups%}
+            {% if hall_setup.image is defined and hall_setup.image is not empty %}
+                {% set hall_image = random(hall_setup.image)%}
+                {% set hall_image = hall_image.thumbnails['hall-setup-small']%}
+            {% else %}
+                {% set hall_image = 'bundles/pmgsocial/pmg_corp/default/images/halls-setup-1.jpg'%}        
+            {% endif %}
+   
+          <div class="col-sm-3 halls-setup-box">
+          <div class="halls-setup-img"> <img src="{{ asset(hall_image) }}" alt="{{ hall_setup.name }}" /> </div>
+          <div class="halls-setup-img-title">
+            <h5>{{ hall_setup.name }}</h5>
+          </div>
+        </div>
+          {% endfor %}
+      </div>
+      {% endif %}
+        {% if content.hall_setup_snippet is defined and content.hall_setup_snippet is not empty %}
+            {% include 'PmgSocialBundle:snippets:hall_setups.snippet.html.twig' with { 'hall_setups' : content.hall_setup_snippet} %}
+        {% endif %}   
+      <div class="halls-floor-section">
+        <div class="row">
+          <div class="equal-table-height">
+            <div class="col-sm-8 halls-floor-img-section">
+              <div class="floor-content">
+                <div class="floor-img">
+                    {% if content.hall_floor_plan_image is defined and content.hall_floor_plan_image is not empty %}
+                        {% set hall_floor_image = random(content.hall_floor_plan_image)%}
+                        {% set hall_floor_image = hall_floor_image.thumbnails['hall-floor-map-small-inset']%}
+                    {% else %}
+                        {% set hall_floor_image = 'bundles/pmgsocial/pmg_corp/default/images/na_layout.png'%}        
+                    {% endif %}
+                    <img src="{{ asset(hall_floor_image) }}" alt="" /> </div>
+                <div class="download-btn">
+                    {% if content.hall_floor_plan_download is defined and content.hall_floor_plan_download is not empty %}
+                        {% set hall_floor_download = random(content.hall_floor_plan_download)%}
+                        {% set hall_floor_download = hall_floor_download.url%}
+                    {% else %}
+                        {% set hall_floor_download = 'bundles/pmgsocial/pmg_corp/default/images/halls-floor.jpg'%}        
+                    {% endif %}
+                    <a href="{{ asset(hall_floor_download) }}" target=_blank">{% trans %}download Complete Hall Info{% endtrans %}</a> </div>
+              </div>
+            </div>
+            {% if content.hall_floor_plan_photo is defined and content.hall_floor_plan_photo is not empty %}
+                {% set hall_floor_photo = random(content.hall_floor_plan_photo)%}
+                {% set hall_floor_photo = hall_floor_photo.thumbnails['hall-floor-photo-small']%}
+            {% else %}
+                {% set hall_floor_photo = 'bundles/pmgsocial/pmg_corp/default/images/halls-floor-right.jpg'%}        
+            {% endif %}   
+            <div class="col-sm-4 halls-floor-right"> <img src="{{ asset(hall_floor_photo) }}" alt="" /> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% if content.gallery is defined and content.gallery is not empty %}
+        {% include 'PmgSocialBundle:snippets:gallery.snippet.html.twig' with { 'content' : content.gallery , 'title' : 'Gallery'|trans} %}
+    {% endif %}   
+  </div>
+      <div class="push"></div>
+{% endblock %}

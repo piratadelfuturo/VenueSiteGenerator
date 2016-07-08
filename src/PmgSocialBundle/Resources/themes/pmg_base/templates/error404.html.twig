@@ -1,0 +1,18 @@
+{% extends "PmgSocialBundle:views:master.html.twig" %}
+
+{% block title %} Resource not found {% endblock %}
+
+{% block content %}
+<div class="banner-section">
+    <div class="banner-img">
+        <img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/home-banner-img.jpg') }}" alt="" />
+    </div>
+</div>
+<div class="comman-section about-section">
+    <div class="container">
+        <h2>{{ status_code~' : '~request.resourceLocator }}</h2>
+        <p> {{status_text|trans }}</p>
+    </div>
+</div>    
+<div class="push"></div>
+{% endblock %}

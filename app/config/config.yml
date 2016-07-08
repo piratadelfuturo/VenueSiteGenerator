@@ -86,7 +86,7 @@ swiftmailer:
 
 # LIIP Theme Configuration
 liip_theme:
-    themes: ["pmg_social","pmg_corp","default"]
+    themes: ["pmg_base","pmg_social","pmg_corp","default"]
     active_theme: "pmg_social"
     load_controllers: false
     assetic_integration: true

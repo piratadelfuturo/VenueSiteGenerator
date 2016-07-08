@@ -1,0 +1,44 @@
+{% set webspace_key = request.webspaceKey %}
+<!DOCTYPE html>
+<html lang="{{ request.locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block meta %} {% endblock %}
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        {% stylesheets filter="scssphp,cssrewrite" output="css/pmg_base/main.css"
+            'bundles/pmgsocial/pmg_base/default/scss/main.scss'
+        %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+    </head>
+<body class="{{webspace_key~'_site'}}" >
+    {% block header %}
+        {% include "PmgSocialBundle:blocks:header.html.twig" %}
+    {% endblock %}
+
+        <!-- content -->
+            {% block content %}{% endblock %}
+            <!-- /content -->
+        <!-- /container -->
+        
+        <!-- footer -->
+        {% block footer %}
+        {% include "PmgSocialBundle:blocks:footer.html.twig" %}
+        {% endblock %}
+        <!-- /footer -->
+{% block scripts %}
+        {% javascripts
+            '@PmgSocialBundle/Resources/public/pmg_corp/default/js/jquery.js'
+            '@PmgSocialBundle/Resources/public/pmg_corp/default/js/bootstrap.min.js'
+        %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+
+{% endblock %}
+    </body>
+</html>

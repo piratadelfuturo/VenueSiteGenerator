@@ -3,7 +3,7 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://schemas.sulu.io/webspace/webspace http://schemas.sulu.io/webspace/webspace-1.0.xsd">
 
-    <name>plaza volare SOCIAL</name>
+    <name>Plaza Volare SOCIAL</name>
     <key>plazavolare_social</key>
 
 <localizations>
@@ -29,7 +29,7 @@
             <context key="main">
                 <meta>
                     <title lang="fr">Principal navigation</title>
-                    <title lang="en">Main navigation</title>
+                    <title lang="en">Main Navigation</title>
                 </meta>
             </context>
         </contexts>
@@ -37,7 +37,7 @@
 
     <portals>
         <portal>
-            <name>plaza volare social</name>
+            <name>Plaza Volare Social</name>
             <key>plazavolare_social_default</key>
             <resource-locator>
                 <strategy>tree</strategy>
@@ -46,32 +46,21 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.plazavolare.com/{localization}</url>
-                        <url>sitescms.plazapmg.com/{localization}</url>
-                        <url>new.plazavolare.com/{localization}</url>
-                        <url>www.plazavolare.con/{localization}</url>
-                        <url>pv-pmg.echo.mx/{localization}</url>
-                        <url>pv-pmg.agenciabase.com.mx/{localization}</url>
+                        <url>www.plazavolare.com/{localization}/social</url>
+                        <url>new.plazavolare.com/{localization}/social</url>
+                        <url>www.plazavolare.con/{localization}/social</url>
                     </urls>
-                    <custom-urls>
-                        <custom-url>new.plazavolare.com/*</custom-url>
-                    </custom-urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>www.plazavolare.dev/{localization}</url>
-                        <url>www-pv-pmg.echo.mx/{localization}</url>
+                        <url>new.plazavolare.dev/stage/{localization}/social</url>
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
-                        <url>plazavolare.dev/{localization}</url>
-                        <url>dev-pv-pmg.echo.mx/{localization}</url>
-                        <url>dev-pv-pmg.agenciabase.com.mx/{localization}</url>
+                        <url>sitescms.plazapmg.com/{localization}/social</url>
+                        <url>plazavolare.dev/{localization}/social</url>
                     </urls>
-                    <custom-urls>
-                        <custom-url>plazavolare.dev/*</custom-url>
-                    </custom-urls>
                 </environment>
             </environments>
         </portal>

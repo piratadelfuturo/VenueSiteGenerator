@@ -1,0 +1,129 @@
+{% if content.location is not empty %}
+    {% set content_location = content.location|first %}
+{% else %}
+    {% set content_location = null%}
+{% endif %}
+
+{% extends "PmgSocialBundle:views:master.html.twig" %}
+
+{% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
+
+{% block content %}
+    
+<div class="banner-section contact-banner">
+    <div class="banner-img">
+    	<div class="contact-form-section">
+            	<div class="overlay-content">{{ form_errors(contact_form) }}</div>
+                <div class="contact-form">
+                	<h2>{% trans %}CONTACT US{% endtrans %}</h2>
+                    {{ form_start(contact_form) }}
+                    <div class="form-row">
+                        {{ form_label(contact_form.name ) }}
+                        {{ form_widget(contact_form.name ) }}
+                    </div>
+                    <div class="form-row">
+                        {{ form_label(contact_form.interested ) }}
+                        {{ form_widget(contact_form.interested ) }}
+                    </div>
+                    <div class="form-row">
+                        {{ form_label(contact_form.email ) }}
+                        {{ form_widget(contact_form.email ) }}
+                    </div>
+                    <div class="form-row">
+                        {{ form_label(contact_form.details1 ) }}
+                        {{ form_widget(contact_form.details1 ) }}
+                        {{ form_widget(contact_form.details2 ) }}
+                        {{ form_widget(contact_form.details3 ) }}
+                        {{ form_widget(contact_form.details4 ) }}
+
+                    </div>
+                    <div class="form-row">
+                        {{ form_widget(contact_form.send) }}
+                    </div>
+                </div>
+                {{ form_end(contact_form) }}
+            </div>
+    </div>
+  </div>
+
+{% if content_location != null  %}
+<div class="contact-page-section">
+    <div class="container">
+      <div class="row">
+        <div class="equal-table-height">
+          <div class="col-sm-4 contact-address">
+            <div class="contact-address-content">
+              <h6>{% trans %}Please do not hesitate to contact us should you require further information.{% endtrans %}</h6>
+              <p><span class="contact-icon-img"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/location-icon.png') }}" alt="" /></span>
+                    {{ content_location.location.number~' '~content_location.location.street }}<br>
+                    {{ content_location.location.town }}<br>
+                    {{ content_location.location.code }}. Canada
+              </p>
+            {% if content_location.phones is defined %}
+              <p><span class="contact-icon-img"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/mobile-icon.png') }}" alt="" /></span>
+                {% for phone in content_location.phones %}
+                  {{ phone.phone }} {% if loop.last != false %} <br>{% endif %}
+                {% endfor %}
+              </p>
+           {% endif %}
+            {% if content_location.faxes is defined %}
+              <p><span class="contact-icon-img"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/fax-icon.png') }}" alt="" /></span>
+                {% for fax in content_location.faxes %}
+                  {{ fax.phone }} {% if loop.last != false %} <br>{% endif %}
+                {% endfor %}
+              </p>
+            {% endif %}
+            {% if content_location.emails is defined %}
+              <p><span class="contact-icon-img"><img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/email-icon.png') }}" alt="" /></span>
+                {% for email in content_location.emails %}
+                  <a href="mailto:{{ email.email|raw }}">{{ email.email }}</a>
+                {% endfor %}
+              </p>
+            {% endif %}
+            </div>
+          </div>
+          <div class="col-sm-8 contact-map">
+            <div id="googleMap" class="map-google"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+            
+  <div class="push"></div>    
+
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    {% if content_location != null  %}
+    <script>
+function initialize()
+{
+    var myLatLng = new google.maps.LatLng({{ content_location.location.lat|raw }},{{ content_location.location.long|raw}});
+    var mapProp = {
+        center: myLatLng,
+        zoom:{{content_location.location.zoom|raw}},
+        panControl:false,
+        zoomControl:false,
+        mapTypeControl:false,
+        scaleControl:false,
+        streetViewControl:false,
+        overviewMapControl:false,
+        rotateControl:false,    
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    var marker = new google.maps.Marker({
+              position: myLatLng,
+              map: map,
+              animation: google.maps.Animation.DROP,
+              place: '{{content_location.location.number~' '~content_location.location.street~', '~content_location.location.town~' '~content_location.location.code }}. Canada'
+            });
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+{% endif %}
+    
+{% endblock %}

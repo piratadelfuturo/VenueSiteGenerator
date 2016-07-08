@@ -3,7 +3,7 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://schemas.sulu.io/webspace/webspace http://schemas.sulu.io/webspace/webspace-1.0.xsd">
 
-    <name>embassy plaza SOCIAL</name>
+    <name>Embassy Plaza SOCIAL</name>
     <key>embassyplaza_social</key>
 
 <localizations>
@@ -37,7 +37,7 @@
 
     <portals>
         <portal>
-            <name>embassy plaza social</name>
+            <name>Embassy Plaza Social</name>
             <key>embassyplaza_social_default</key>
             <resource-locator>
                 <strategy>tree</strategy>
@@ -46,24 +46,19 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.embassyplaza.com/{localization}</url>
-                        <url>www.embassyplaza.con/{localization}</url>
-                        <url>new.embassyplaza.com/{localization}</url>
-                        <url>ep-pmg.echo.mx/{localization}</url>
-                        <url>ep-pmg.agenciabase.com.mx/{localization}</url>
+                        <url>www.embassyplaza.com/{localization}/social</url>
+                        <url>www.embassyplaza.con/{localization}/social</url>
+                        <url>new.embassyplaza.com/{localization}/social</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>www.embassyplaza.dev/{localization}</url>
-                        <url>www-ep-pmg.echo.mx/{localization}</url>
+                        <url>www.embassyplaza.dev/{localization}/social</url>
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
-                        <url>embassyplaza.dev/{localization}</url>
-                        <url>dev-ep-pmg.echo.mx/{localization}</url>
-                        <url>dev-ep-pmg.agenciabase.com.mx/{localization}</url>
+                        <url>embassyplaza.dev/{localization}/social</url>
                     </urls>
                 </environment>
             </environments>

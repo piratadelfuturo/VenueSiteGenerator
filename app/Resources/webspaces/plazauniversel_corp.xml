@@ -3,7 +3,7 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://schemas.sulu.io/webspace/webspace http://schemas.sulu.io/webspace/webspace-1.0.xsd">
 
-    <name>plaza universel CORP</name>
+    <name>Plaza Universel CORP</name>
     <key>plazauniversel_corp</key>
 
 <localizations>
@@ -36,7 +36,7 @@
 
     <portals>
         <portal>
-            <name>plaza universel corp</name>
+            <name>Plaza Universel Corp</name>
             <key>plazauniversel_corp_default</key>
             <resource-locator>
                 <strategy>tree</strategy>
@@ -45,24 +45,19 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.plazauniversel.com/corp/{localization}</url>
-                        <url>www.plazauniversel.con/corp/{localization}</url>
-                        <url>new.plazauniversel.com/corp/{localization}</url>
-                        <url>pv-pmg.echo.mx/corp/{localization}</url>
-                        <url>pv-pmg.agenciabase.com.mx/corp/{localization}</url>
+                        <url>www.plazauniversel.com/{localization}/corp</url>
+                        <url>new.plazauniversel.com/{localization}/corp</url>
+                        <url>www.plazauniversel.con/{localization}/corp</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>www.plazauniversel.dev/corp/{localization}</url>
-                        <url>www-pv-pmg.echo.mx/corp/{localization}</url>
+                        <url>new.plazauniversel.dev/stage/{localization}/corp</url>
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
-                        <url>plazauniversel.dev/corp/{localization}</url>
-                        <url>dev-pv-pmg.echo.mx/{localization}</url>
-                        <url>dev-pv-pmg.agenciabase.com.mx/corp/{localization}</url>
+                        <url>plazauniversel.dev/{localization}/corp</url>
                     </urls>
                 </environment>
             </environments>

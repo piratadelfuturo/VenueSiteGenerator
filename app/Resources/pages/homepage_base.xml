@@ -1,0 +1,105 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>homepage_base</key>
+
+    <view>PmgSocialBundle:templates:homepage</view>
+    <controller>SuluWebsiteBundle:Default:index</controller>
+    <cacheLifetime>2400</cacheLifetime>
+
+    <meta>
+        <title lang="fr">*Homepage BASE</title>
+        <title lang="en">*Homepage BASE</title>
+    </meta>
+
+    <properties>
+        <section name="highlight">
+            <meta>
+                <title lang="fr">Header</title>
+                <title lang="en">Header</title>
+            </meta>
+            <properties>
+                <property name="title" type="text_line" mandatory="true">
+                    <meta>
+                        <title lang="fr">Titre</title>
+                        <title lang="en">Title</title>
+                    </meta>
+                    <params>
+                        <param name="headline" value="true"/>
+                    </params>
+
+                    <tag name="sulu.search.field" role="title"/>
+
+                    <tag name="sulu.rlp.part"/>
+                </property>
+                <property name="image" type="media_selection">
+                    <meta>
+                        <title lang="fr">Foto</title>
+                        <title lang="en">Image</title>
+                    </meta>
+                    <params>
+                        <param name="types" value="image"/>
+                        <param name="defaultDisplayOption" value="middle"/>
+                    </params>
+                </property>
+                <property name="url" type="resource_locator" mandatory="true">
+                    <meta>
+                        <title lang="fr">Adresse</title>
+                        <title lang="en">Resourcelocator</title>
+                    </meta>
+
+                    <tag name="sulu.rlp"/>
+                </property>
+            </properties>
+        </section>
+        <section name="blocks_section">
+            <meta>
+                <title lang="fr">Blocks Section</title>
+                <title lang="en">Blocks Section</title>
+            </meta>
+            <properties>
+                <block name="blocks" default-type="simple_block" minOccurs="0">
+                    <meta>
+                        <title lang="fr">Block</title>
+                        <title lang="en">Block</title>
+                    </meta>
+                    <types>
+                        <type name="simple_block">
+                            <meta>
+                                <title lang="fr">Simple Block</title>
+                                <title lang="en">Simple Block</title>
+                            </meta>
+                            <properties>
+                                <property name="title" type="text_line" mandatory="true">
+                                    <meta>
+                                        <title lang="fr">Titre</title>
+                                        <title lang="en">Title</title>
+                                    </meta>
+                                </property>
+                                <property name="url" type="url">
+                                    <meta>
+                                        <title lang="en">URL</title>
+                                    </meta>
+                                </property>
+                                <property name="link" type="single_internal_link">
+                                    <meta>
+                                        <title lang="fr">Internal Link</title>
+                                        <title lang="en">Internal Link</title>
+                                    </meta>
+                                </property>
+                                <property name="image" type="media_selection" colspan="3">
+                                    <meta>
+                                        <title lang="fr">Images</title>
+                                        <title lang="en">Images</title>
+                                    </meta>
+                                </property>
+                            </properties>
+                        </type>
+                    </types>
+                </block>                
+            </properties>
+        </section>
+    </properties>
+</template>
