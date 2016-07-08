@@ -37,7 +37,7 @@ class SocialController extends DefaultController
         $request = $this->container->get('request_stack')->getCurrentRequest();
         
         $directoryPath = $this->container->getParameter('kernel.root_dir');
-        $contentFilePattern = $directoryPath.'/Resources/fixtures/Document/social/default/menus/'.$request->getLocale().'.yml';
+        $contentFilePattern = $directoryPath.'/Resources/documents/pmg_social/default/menus/'.$request->getLocale().'.yml';
 
         $menuData = Yaml::parse(file_get_contents($contentFilePattern));
         
