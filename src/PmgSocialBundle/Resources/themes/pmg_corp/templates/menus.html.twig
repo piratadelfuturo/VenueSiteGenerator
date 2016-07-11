@@ -6,7 +6,7 @@
     <div class="our-menu-content-list">
                 <h2>{{ title }}</h2>
         {% if content.food is defined or content.drinks is defined %}
-            {{ _self.dishes(null,content) }}
+            {{ _self.dishes(content) }}
         {% else %}
             {% if content.sub is defined %}
                 {% set display_content = content.sub%}
@@ -19,7 +19,7 @@
             {% else %}
                 {% set sub_note = null %}
             {% endif %}
-            
+
             {% for meal_title,meal_content in display_content %}
                 {{ _self.plan(meal_title,meal_content,sub_note) }}
             {% endfor %}
@@ -29,30 +29,34 @@
 {% endmacro %}
 
 {% macro plan(title,content,note) %}
-        <article class="ourmenu-content">
-            {% if title != null and title is not empty %}
-            <h4>{{ title }}</h4>
-            {% endif %}
-            {% if note is not null %}
-                <p><em>{{ note }}</em></p>
-            {% endif %}
+    <article class="ourmenu-content">
+        {% if title != null and title is not empty %}
+        <h4>{{ title }}</h4>
+        {% endif %}
 
-            {% if content.food is defined or content.drinks is defined%}
-                {{ _self.dishes(content) }}
-            {% endif %}
-            
-            {% if content.sub is defined %}
-                {% set display_content = content.sub%}
-            {% else %}
-                {% set display_content = content%}
-            {% endif %}
+        {% if note is not null %}
+            <p><em>{{ note }}</em></p>
+        {% endif %}
 
-            
+        {% if content.food is defined or content.drinks is defined %}
+            {{ _self.dishes(content) }}
+        {% endif %}
+
+        {% if content.sub is defined %}
+            {% set display_content = content.sub %}
+        {% elseif content.food is not defined and content.drinks is not defined %}
+            {% set display_content = content%}
+        {% else %}
+            {% set display_content = null %}
+        {% endif %}
+        
+
+        {% if display_content != null  %}
             {% for meal_title,meal_content in display_content %}
                 {{ _self.meal(meal_title,meal_content)}}
             {% endfor %}
+        {% endif %}
       </article>
-
 {% endmacro %}
 
 {% macro meal(title,content)%}
@@ -60,7 +64,7 @@
     <h5>{{title}}</h5>
     {% if content.sub is defined %}
         {% for sub_title,sub_content in content.sub %}
-        {{ _self.meal(sub_title,sub_content) }}
+            {{ _self.meal(sub_title,sub_content) }}
         {% endfor %}
     {% else %}
             {{ _self.dishes(content) }}
