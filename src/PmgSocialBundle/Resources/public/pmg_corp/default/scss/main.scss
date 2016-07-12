@@ -1141,7 +1141,7 @@ header{
 					}
 					
 				 }	
-				input{background:none; border:none; border-bottom:1px solid $white; font-size:18px; float:right; width:70%; margin-bottom:30px; border-radius:0px;
+				input,button{background:none; border:none; border-bottom:1px solid $white; font-size:18px; float:right; width:70%; margin-bottom:30px; border-radius:0px;
 					@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
 					  	width:65%; margin-bottom:20px;
 					}
@@ -1197,7 +1197,7 @@ header{
 					}
 					&:focus{outline:none;}
 				}
-				input[type="submit"]{
+				[type="submit"]{
 					width:auto; border:none; padding:10px 30px; font-size:25px; font-family: 'playfair_displaybold'; text-transform:uppercase; color:$white; text-decoration:none; background:$pink-color;
 					@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
 						font-size:18px;
@@ -1648,7 +1648,7 @@ footer{
 					}
 					
 				 }	
-				input{background:none; border:none; border-bottom:1px solid $white; font-size:18px; float:right; width:78%; margin-bottom:30px; border-radius:0px;
+				input,button{background:none; border:none; border-bottom:1px solid $white; font-size:18px; float:right; width:78%; margin-bottom:30px; border-radius:0px;
 					
 					@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 						font-size:16px;  margin-bottom:20px;
@@ -1687,7 +1687,7 @@ footer{
 					&.width100{width:100%;}
 					&:focus{outline:none;}
 				}
-				input[type="submit"]{
+				[type="submit"]{
 					width:auto; border:none; padding:10px 30px; font-size:25px; font-family: 'playfair_displaybold'; text-transform:uppercase; color:$white; text-decoration:none; background:$pink-color; margin-bottom:0px;
 					@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
 						font-size:18px;
@@ -3054,7 +3054,7 @@ $sites-colors: (
         .testimonial-contact-section{
             .contact-section{
                 .contact-form{
-                    input[type="submit"]{
+                    [type="submit"]{
                         background-color: $this-color;
                     }
                 }
@@ -3103,7 +3103,7 @@ $sites-colors: (
         .contact-banner{
             .contact-form-section{
                 .contact-form{
-                    input[type="submit"]{
+                    [type="submit"]{
                         background-color: $this-color;
                     }
                 }
