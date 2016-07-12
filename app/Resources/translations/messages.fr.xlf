@@ -264,6 +264,23 @@
         <target>of</target>
         <jms:reference-file line="101">./src/PmgSocialBundle/Resources/themes/pmg_corp/views/master.html.twig</jms:reference-file>
       </trans-unit>
+    <trans-unit resname="contact_form.name">
+        <source>contact_form.name</source>
+        <target state="new">Hello my name is</target>
+      </trans-unit>
+      <trans-unit resname="contact_form.interested">
+        <source>contact_form.interested</source>
+        <target state="new">I’m interested in</target>
+      </trans-unit>
+      <trans-unit resname="contact_form.email">
+        <source>contact_form.email</source>
+        <target state="new">Here’s my e-mail</target>
+      </trans-unit>
+      <trans-unit resname="contact_form.details1">
+        <source>contact_form.name</source>
+        <target state="new">I can give you more details</target>
+      </trans-unit>
+
     </body>
   </file>
 </xliff>

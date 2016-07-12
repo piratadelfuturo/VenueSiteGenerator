@@ -70,9 +70,9 @@
   <div class="testimonial-contact-section">
         <div class="equal-table-height">
             <div class="col-sm-8 testimonial-section">
-        	<div class="testimonial-content">
-                {% if content.testimonials is defined and content.testimonials is not empty %}
+                <div class="testimonial-content">
             	<h3>{% trans %}TESTIMONIALS{% endtrans %}</h3>
+                {% if content.testimonials is defined and content.testimonials is not empty %}
                 {% set testimonialDoc = sulu_content_load(content.testimonials)%}
                 {% if testimonialDoc.content.testimonials is not empty %}
                 {% set testimonial = random(testimonialDoc.content.testimonials) %}
@@ -84,6 +84,14 @@
                     <a href="{{ sulu_content_path(testimonialDoc.content.url)  }}">{%trans%}READ MORE{%endtrans%}</a>
                 </div>
                 {% endif %}
+                {% else %}
+                <div class="testimonial-info">
+                    <p>{% trans%}Comming soon..{% endtrans %}</p>
+               </div>
+               <div class="more-info-btn">
+                    <a href="">{%trans%}COMMING SOON{%endtrans%}</a>
+                </div>
+                    
                 {% endif %}
                 </div>
         {% if content.link_blocks is defined and content.link_blocks is not empty %}
