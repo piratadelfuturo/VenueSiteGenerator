@@ -1,25 +1,29 @@
+<div class="overlay-content">{{ form_errors(contact_form) }}</div>
+{{ form_start(contact_form) }}
 <div class="contact-form">
-    <h2>CONTACT US</h2>
+        <h2>{% trans %}CONTACT US{% endtrans %}</h2>
     <div class="form-row">
-      <label>Hello my name is</label>
-      <input type="text">
+        {{ form_label(contact_form.name ) }}
+        {{ form_widget(contact_form.name ) }}
     </div>
     <div class="form-row">
-      <label>I’m interested in</label>
-      <input type="text">
+        {{ form_label(contact_form.interested ) }}
+        {{ form_widget(contact_form.interested ) }}
     </div>
     <div class="form-row">
-      <label>Here’s my e-mail</label>
-      <input type="email">
+        {{ form_label(contact_form.email ) }}
+        {{ form_widget(contact_form.email ) }}
     </div>
     <div class="form-row">
-      <label>I can give you more details</label>
-      <input type="text" class="width55">
-      <input type="text" class="width100">
-      <input type="text" class="width100">
-      <input type="text" class="width100">
+        {{ form_label(contact_form.details1 ) }}
+        {{ form_widget(contact_form.details1, { 'class': 'width55' }) }}
+        {{ form_widget(contact_form.details2, { 'class': 'width100' } ) }}
+        {{ form_widget(contact_form.details3, { 'class': 'width100' } ) }}
+        {{ form_widget(contact_form.details4, { 'class': 'width100' } ) }}
+
     </div>
     <div class="form-row">
-      <input type="submit" value="Send">
+        {{ form_widget(contact_form.send) }}
     </div>
 </div>
+{{ form_end(contact_form) }}

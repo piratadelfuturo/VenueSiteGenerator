@@ -13,35 +13,7 @@
 <div class="banner-section contact-banner">
     <div class="banner-img">
     	<div class="contact-form-section">
-            	<div class="overlay-content">{{ form_errors(contact_form) }}</div>
-                <div class="contact-form">
-                	<h2>{% trans %}CONTACT US{% endtrans %}</h2>
-                    {{ form_start(contact_form) }}
-                    <div class="form-row">
-                        {{ form_label(contact_form.name ) }}
-                        {{ form_widget(contact_form.name ) }}
-                    </div>
-                    <div class="form-row">
-                        {{ form_label(contact_form.interested ) }}
-                        {{ form_widget(contact_form.interested ) }}
-                    </div>
-                    <div class="form-row">
-                        {{ form_label(contact_form.email ) }}
-                        {{ form_widget(contact_form.email ) }}
-                    </div>
-                    <div class="form-row">
-                        {{ form_label(contact_form.details1 ) }}
-                        {{ form_widget(contact_form.details1 ) }}
-                        {{ form_widget(contact_form.details2 ) }}
-                        {{ form_widget(contact_form.details3 ) }}
-                        {{ form_widget(contact_form.details4 ) }}
-
-                    </div>
-                    <div class="form-row">
-                        {{ form_widget(contact_form.send) }}
-                    </div>
-                </div>
-                {{ form_end(contact_form) }}
+                {{ render(controller('PmgSocialBundle:Corp:contactForm')) }}
             </div>
     </div>
   </div>

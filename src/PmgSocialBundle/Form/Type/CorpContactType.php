@@ -38,16 +38,16 @@ class CorpContactType extends AbstractType{
                 'attr' => array()
             ))
             ->add('details1', TextType::class, array(
-                'attr' => array()
+                'attr' => array( 'class' => 'width55')
             ))
             ->add('details2', TextType::class, array(
-                'attr' => array()
+                'attr' => array( 'class' => 'width100')
             ))
             ->add('details3', TextType::class, array(
-                'attr' => array()
+                'attr' => array( 'class' => 'width100')
             ))
             ->add('details4', TextType::class, array(
-                'attr' => array()
+                'attr' => array( 'class' => 'width100' )
             ))
             ->add('send', SubmitType::class, array('label' => 'Send'));
     }

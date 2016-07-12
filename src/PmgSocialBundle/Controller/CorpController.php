@@ -30,7 +30,7 @@ class CorpController extends DefaultController
         $request = $this->container->get('request_stack')->getCurrentRequest();
         
         $form = $this->createForm(new CorpContactType());
-
+        
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
                 $name = $form->get('name')->getData().' '.$form->get('last_name')->getData();
@@ -56,5 +56,36 @@ class CorpController extends DefaultController
 
         return $response;
     }
+    
+    public function contactFormAction(Request $request){
+         
+        $form = $this->createForm(new CorpContactType());
+        
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+                $name = $form->get('name')->getData().' '.$form->get('last_name')->getData();
+                $message = \Swift_Message::newInstance()
+                    ->setSubject('Website contact: '.$name )
+                    ->setFrom(array($form->get('email')->getData() => $name ))
+                    ->setTo('daniel@nviba.com')
+                    ->setBody($form->get('message')->getData());
+
+                $this->get('mailer')->send($message);
+
+                $this->addFlash('success_form', true);
+                unset($form);
+                $form = $this->createForm(new CorpContactType());
+        }
+        
+        return $this->render(
+                'PmgSocialBundle:blocks:contact.html.twig',
+                [
+                    'contact_form' => $form->createView()
+                ]
+                );
+        
+                
+    }
+    
 
 }
