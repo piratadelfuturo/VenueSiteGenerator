@@ -90,6 +90,12 @@
                         <title lang="en">Testimonials</title>
                     </meta>
                 </property>
+                <property name="contact" type="single_internal_link">
+                    <meta>
+                        <title lang="fr">Contact</title>
+                        <title lang="en">Contact</title>
+                    </meta>
+                </property>
                 <block name="link_blocks"
                        default-type="link_block"
                        minOccurs="0"

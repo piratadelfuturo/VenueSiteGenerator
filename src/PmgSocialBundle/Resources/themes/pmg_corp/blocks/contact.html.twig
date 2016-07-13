@@ -1,5 +1,16 @@
-<div class="overlay-content">{{ form_errors(contact_form) }}</div>
-{{ form_start(contact_form) }}
+    {% set form_params = {} %}
+{% if form_url is defined%}
+    {% set form_params = {'action' : form_url} %}
+{% endif %}
+<div class="overlay-content">
+    {{ form_errors(contact_form) }}
+{% for flash_message in app.session.flashBag.get('contact.success_form') %}
+    <div class="flash-notice">
+        {{ flash_message }}
+    </div>
+{% endfor %}
+</div>
+{{ form_start(contact_form,form_params) }}
 <div class="contact-form">
         <h2>{% trans %}CONTACT US{% endtrans %}</h2>
     <div class="form-row">

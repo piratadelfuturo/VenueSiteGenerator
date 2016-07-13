@@ -14,76 +14,43 @@ use PmgSocialBundle\Controller\DefaultController;
 
 class CorpController extends DefaultController
 {
-    /**
-     * Loads the content from the request (filled by the route provider) and creates a response with this content and
-     * the appropriate cache headers.
-     *
-     * @param \Sulu\Component\Content\Compat\StructureInterface $structure
-     * @param bool $preview
-     * @param bool $partial
-     *
-     * @return Response
-     */
-    public function contactAction(StructureInterface $structure, $preview = false, $partial = false)
-    {
+    
+    public function contactSendAction(Request $request){
+ 
+        $render_params = [];
         
-        $request = $this->container->get('request_stack')->getCurrentRequest();
+        $masterRequest = $this->container->get('request_stack')->getMasterRequest();
         
-        $form = $this->createForm(new CorpContactType());
-        
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-                $name = $form->get('name')->getData().' '.$form->get('last_name')->getData();
-                $message = \Swift_Message::newInstance()
-                    ->setSubject('Website contact: '.$name )
-                    ->setFrom(array($form->get('email')->getData() => $name ))
-                    ->setTo('daniel@nviba.com')
-                    ->setBody($form->get('message')->getData());
-
-                $this->get('mailer')->send($message);
-
-                $this->addFlash('success_form', true);
-                unset($form);
-                $form = $this->createForm(new CorpContactType());
+        if($masterRequest->get('_sulu')){
+            $request = $masterRequest;
         }
         
-        $response = $this->renderStructure(
-            $structure,
-            [ 'contact_form' => $form->createView()],
-            $preview,
-            $partial
-        );
-
-        return $response;
+        $form = $this->contactForm($request);
+        $render_params['contact_form'] = $form->createView();
+        
+        return $this->render('PmgSocialBundle:blocks:contact.html.twig',$render_params);
     }
     
-    public function contactFormAction(Request $request){
-         
+    private function contactForm(Request $request){
         $form = $this->createForm(new CorpContactType());
-        
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-                $name = $form->get('name')->getData().' '.$form->get('last_name')->getData();
+                var_dump($form->isSubmitted());
+                $name = $form->get('name')->getData();
                 $message = \Swift_Message::newInstance()
-                    ->setSubject('Website contact: '.$name )
+                    ->setSubject('Website contact: '.$name.' - '.$form->get('interested')->getData() )
                     ->setFrom(array($form->get('email')->getData() => $name ))
                     ->setTo('daniel@nviba.com')
-                    ->setBody($form->get('message')->getData());
+                    ->setBody($form->get('details1')->getData());
 
                 $this->get('mailer')->send($message);
 
-                $this->addFlash('success_form', true);
+                $this->addFlash('contact.success_form', true);
                 unset($form);
                 $form = $this->createForm(new CorpContactType());
         }
         
-        return $this->render(
-                'PmgSocialBundle:blocks:contact.html.twig',
-                [
-                    'contact_form' => $form->createView()
-                ]
-                );
-        
+        return $form;        
                 
     }
     

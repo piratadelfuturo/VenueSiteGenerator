@@ -117,13 +117,13 @@
             {% endfor %}
         {% endif %}            
         </div>
-        
-        <div class="col-sm-4 contact-section">
-            <div class="contact-form-section">
-                {{ render(controller('PmgSocialBundle:Corp:contactForm')) }}
+        {# {% if content.contact is defined and content.contact is not empty %} #}
+            <div class="col-sm-4 contact-section">
+                <div class="contact-form-section">
+                    {{ render(controller('PmgSocialBundle:Corp:contactSend')) }}
+                </div>
             </div>
-            
-        </div>
+        {# {% endif %} #}
         </div>
     
   </div>

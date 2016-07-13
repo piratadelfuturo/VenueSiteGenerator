@@ -1,5 +1,8 @@
-pmg_social_send_contact:
-    path:     /send_contact
-    defaults:
-        _controller: PmgSocialBundle:Default:sendContact
-        methods: [POST]
+pmg_social_social:
+    resource: routing/routing_social.yml
+
+pmg_social_corp:
+    resource: routing/routing_corp.yml
+
+pmg_social_base:
+    resource: routing/routing_base.yml

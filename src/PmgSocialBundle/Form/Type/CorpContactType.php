@@ -42,7 +42,8 @@ class CorpContactType extends AbstractType{
             ))
             ->add('details1', TextType::class, array(
                 'attr' => array( 'class' => 'width55'),
-                'label' => 'contact_form.details1'
+                'label' => 'contact_form.details1',
+                'required' => false
             ))
             ->add('details2', TextType::class, array(
                 'attr' => array( 'class' => 'width100'),
