@@ -12,11 +12,23 @@
 {% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
 
 {% block content %}
-    <div class="row">
-        <a href="{{ sulu_content_path('/',social_webspace_key) }}">{%trans%}Social{%endtrans%}</a>
-        <a href="{{ sulu_content_path('/',corp_webspace_key) }}">{%trans%}Corporate{%endtrans%}</a>
+<div class="container-fluid">
+    <div class="row home-section">
+        <div class="col-md-6 no-float big-block social">
+            <img src="" />
+            <a href="{{ sulu_content_path('/',social_webspace_key) }}">
+                <span class="text">{%trans%}Social{%endtrans%}</span>
+            </a>
+        </div>
+        <div class="col-md-6 no-float big-block corp">
+            <img src="" />
+            <a href="{{ sulu_content_path('/',corp_webspace_key) }}">
+                <span class="text">{%trans%}Corporate{%endtrans%}</span>
+            </a>
+        </div>
     </div>
-        <script>
-            window.location = '{{sulu_content_path('/',social_webspace_key)|raw}}';
-        </script>
+</div>
+<script>
+    //window.location = '{{sulu_content_path('/',social_webspace_key)|raw}}';
+</script>
 {% endblock%}

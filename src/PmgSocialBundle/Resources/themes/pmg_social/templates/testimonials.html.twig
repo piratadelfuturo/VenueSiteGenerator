@@ -70,6 +70,22 @@
     </div>
   </div>
   {% endfor %}
+  {% else %}
+    <div class="tetimonial-section last-section">
+  	<div class="container">
+    	<div class="page-heading">
+          	<h2>{{ content.title}}</h2>
+        </div>
+    	<div class="row">
+            <div class="col-sm-8 testimonial-info">
+            	<p></p>
+            </div>
+            <div class="author-info">
+                	<h4>{%trans%}Coming soon{%endtrans%}</h4>
+            </div>
+        </div>
+    </div>
+  </div>
   {% endif%}
   
   <div class="push"></div>

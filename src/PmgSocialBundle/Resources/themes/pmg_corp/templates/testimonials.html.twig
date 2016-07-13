@@ -21,7 +21,7 @@
       <div class="testimonial-list-section">
         {% if content.testimonials is defined and content.testimonials is not empty%}
             {% for testimonial in content.testimonials %}
-          <article class="testimonial-list-box">
+        <article class="testimonial-list-box">
           <div class="testimonial-list-content">
               <p>{{ testimonial.article|nl2br}}</p>
           </div>
@@ -31,6 +31,16 @@
           </div>
         </article>
             {% endfor %}
+        {% else %}
+        <article class="testimonial-list-box">
+          <div class="testimonial-list-content">
+              <p>{%trans%}Coming soon{%endtrans%}</p>
+          </div>
+          <div class="testimonial-author-part">
+            <h6>{%trans%}Coming soon{%endtrans%}</h6>
+            <h6></h6>
+          </div>
+        </article>        
         {% endif %}
       </div>
     </div>
