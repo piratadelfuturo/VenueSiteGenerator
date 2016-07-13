@@ -436,7 +436,11 @@ header{
 	.banner-img{
 		position:relative;
 		.banner-overlay-color{background:$banner-overlay-color; position:absolute; top:0; left:0; height:100%; width:100%;}
-		img{width:100%;}
+		img{
+                    width:100%;
+                    -webkit-filter: brightness(.7);
+                    filter: brightness(.7);
+                }
 		h1{
 			position:absolute; top:50%; left:50%; z-index:1;  transform:translate(-50%,-50%); -moz-transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%);
 			width:100%; text-align:center;
