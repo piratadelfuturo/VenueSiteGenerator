@@ -49,12 +49,17 @@ class BaseController extends DefaultController
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-                $name = $form->get('name')->getData().' '.$form->get('last_name')->getData();
+                $name = $form->get('name')->getData();
                 $message = \Swift_Message::newInstance()
-                    ->setSubject('Website contact: '.$name )
+                    ->setSubject('Website contact: '.$name.', '.$form->get('interested')->getData() )
                     ->setFrom(array($form->get('email')->getData() => $name ))
                     ->setTo('daniel@nviba.com')
-                    ->setBody($form->get('message')->getData());
+                    ->setBody(
+                            $form->get('details1')->getData().
+                            $form->get('details2')->getData().
+                            $form->get('details3')->getData().
+                            $form->get('details4')->getData()
+                            );
 
                 $this->get('mailer')->send($message);
 
