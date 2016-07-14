@@ -12,23 +12,22 @@
 {% block meta %}{% include "PmgSocialBundle:blocks:meta.html.twig" %}{% endblock %}
 
 {% block content %}
-<div class="container-fluid">
-    <div class="row home-section">
-        <div class="col-md-6 no-float big-block social">
-            <img src="" />
-            <a href="{{ sulu_content_path('/',social_webspace_key) }}">
-                <span class="text">{%trans%}Social{%endtrans%}</span>
-            </a>
+<div class="landing-page-wrapper">
+	<div class="logo-section">
+    	<img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/logo.png') }}" alt="" />
+    </div>
+	<div class="common-section social-section">
+    	<div class="overlay-white"></div>
+        <div class="social-image-section">
+    		<a href="{{ sulu_content_path('/',social_webspace_key) }}">{%trans%}Social{%endtrans%}</a>
         </div>
-        <div class="col-md-6 no-float big-block corp">
-            <img src="" />
-            <a href="{{ sulu_content_path('/',corp_webspace_key) }}">
-                <span class="text">{%trans%}Corporate{%endtrans%}</span>
-            </a>
+    </div>
+    <div class="common-section corporate-section">
+    	<div class="overlay-black"></div>
+    	<div class="corporate-image-section">
+        	<a href="{{ sulu_content_path('/',corp_webspace_key) }}">{%trans%}Corporate{%endtrans%}</a>
         </div>
     </div>
 </div>
-<script>
-    //window.location = '{{sulu_content_path('/',social_webspace_key)|raw}}';
-</script>
 {% endblock%}
+

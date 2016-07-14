@@ -1,18 +1,26 @@
 {% extends "PmgSocialBundle:views:master.html.twig" %}
 
-{% block title %} Resource not found {% endblock %}
-
 {% block content %}
-<div class="banner-section">
-    <div class="banner-img">
-        <img src="{{ asset('bundles/pmgsocial/pmg_corp/default/images/home-banner-img.jpg') }}" alt="" />
+<div class="landing-page-wrapper">
+	<div class="logo-section">
+    	<img src="{{ asset('bundles/pmgsocial/pmg_social/default/images/logo.png') }}" alt="" />
+    </div>
+	<div class="common-section social-section">
+    	<div class="overlay-white"></div>
+        <div class="social-image-section">
+    		<div class="error-title">
+            	<h2>{{status_code}}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="common-section corporate-section">
+    	<div class="overlay-black"></div>
+    	<div class="corporate-image-section">
+        	<div class="error-message">
+            	<h3>{%trans%}Opps, sorry we can't find that page!{%endtrans%}</h3>
+            	<p>{%trans%}Either something went wrong or the page doesn't exit anymore.{%endtrans%}</p>
+            </div>
+        </div>
     </div>
 </div>
-<div class="comman-section about-section">
-    <div class="container">
-        <h2>{{ status_code~' : '~request.resourceLocator }}</h2>
-        <p> {{status_text|trans }}</p>
-    </div>
-</div>    
-<div class="push"></div>
 {% endblock %}
