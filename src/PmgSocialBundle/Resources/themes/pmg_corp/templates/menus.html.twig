@@ -69,7 +69,7 @@
     {% else %}
             {{ _self.dishes(content) }}
     {% endif %}
-    <div/>
+    </div>
 {% endmacro %}
 
 {% macro dishes(content) %}
@@ -115,8 +115,10 @@
     {% endif %}
     
 <div class="banner-section">
-    <div class="banner-img"><img src="{{ asset(section_image)}}" alt="" /></div>
+    <div class="banner-img">
+        <img src="{{ asset(section_image)}}" alt="" />
           <h1>{{ content.title }}</h1>
+    </div>
   </div>
   
   <div class="inner-content-section ourmenu-page-section">
