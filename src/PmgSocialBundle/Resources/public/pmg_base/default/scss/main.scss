@@ -240,25 +240,25 @@ a{color:$pink-color;
 	background:url($logo-bg-img) no-repeat left top; width:451px; height:402px;  text-align:center; background-size:100%;
 	
 	img{
-		 max-width:75%; position:absolute; top:50%; left:50%;
+		 max-width:55%; position:absolute; top:50%; left:50%;
 		 transform:translate(-50%,-60%); -moz-transform:translate(-50%,-60%); -webkit-transform:translate(-50%,-60%); -ms-transform:translate(-50%,-60%);		
 		 	@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
-				width:70%;
+				width:50%;
 			}
 			@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
-				width:70%;
+				width:50%;
 			}
 		 	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-				width:70%;
+				width:50%;
 			}
 			@media (max-width: $iphone-to-ipad) {
-				width:70%;
+				width:50%;
 			}
 			@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
-				width:70%;
+				width:50%;
 			}
 		 	@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-				width:70%;
+				width:50%;
 			}
 		 	
 	} 
