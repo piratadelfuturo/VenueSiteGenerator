@@ -76,14 +76,19 @@ h6{font-size:18px;}
 a{color:$pink-color;
 	&:hover{color:$black;}
 }
-.landing-page-wrapper{position:absolute; width:100%; height:100%; display:table;}
+.landing-page-wrapper{position:absolute; width:100%; height:100%; display:table;
+	@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+		display:inline;
+	}
+}
 
 .common-section{
 	 width:50%; height:100%; display:table-cell; vertical-align:top; position:relative;
 	 
 	 a{
-	 	position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); -moz-transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%); z-index:5;
+	 	position:absolute;  z-index:5;
 		font-size:72px; font-family: 'playfair_displayitalic'; text-decoration:none; 
+		display:block; width:100%; height:100%;
 		
 		&:hover{
 			color:$pink-color;
@@ -112,6 +117,12 @@ a{color:$pink-color;
 		@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
 			font-size:36px;
 		}
+		
+		&:focus{outline:none;}
+		
+		span{
+			position:absolute; left:50%; top:50%;
+		}
 	}
 	
 	
@@ -123,26 +134,28 @@ a{color:$pink-color;
 }
 .social-section{ left:0; border-right:3px solid $black;
 	a{
-	  	transform:translate(-20%,-50%); -moz-transform:translate(-20%,-50%); -webkit-transform:translate(-20%,-50%); -ms-transform:translate(-20%,-50%);
+	  	
 		color:$black;
-		
-		@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
-		  	transform:translate(-60%,-50%); -moz-transform:translate(-60%,-50%); -webkit-transform:translate(-60%,-50%); -ms-transform:translate(-60%,-50%);
-		}
-		@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
-		 	transform:translate(-60%,-50%); -moz-transform:translate(-60%,-50%); -webkit-transform:translate(-60%,-50%); -ms-transform:translate(-60%,-50%);
-		}
-		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-		  	transform:translate(-60%,-50%); -moz-transform:translate(-60%,-50%); -webkit-transform:translate(-60%,-50%); -ms-transform:translate(-60%,-50%);	
-		}
-		@media (max-width: $iphone-to-ipad) {
-		  transform:translate(-60%,-50%); -moz-transform:translate(-60%,-50%); -webkit-transform:translate(-60%,-50%); -ms-transform:translate(-60%,-50%);	
-		}
-		@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
-			transform:translate(-70%,-50%); -moz-transform:translate(-70%,-50%); -webkit-transform:translate(-70%,-50%); -ms-transform:translate(-70%,-50%);	
-		}
-		@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-			transform:translate(-50%,-50%); -moz-transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%);			
+		span{
+			transform:translate(-20%,-50%); -moz-transform:translate(-20%,-50%); -webkit-transform:translate(-20%,-50%); -ms-transform:translate(-20%,-50%);
+			@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+				transform:translate(-60%,-50%); -moz-transform:translate(-60%,-50%); -webkit-transform:translate(-60%,-50%); -ms-transform:translate(-60%,-50%);
+			}
+			@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+				transform:translate(-60%,-50%); -moz-transform:translate(-60%,-50%); -webkit-transform:translate(-60%,-50%); -ms-transform:translate(-60%,-50%);
+			}
+			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+				transform:translate(-60%,-50%); -moz-transform:translate(-60%,-50%); -webkit-transform:translate(-60%,-50%); -ms-transform:translate(-60%,-50%);	
+			}
+			@media (max-width: $iphone-to-ipad) {
+			  transform:translate(-60%,-50%); -moz-transform:translate(-60%,-50%); -webkit-transform:translate(-60%,-50%); -ms-transform:translate(-60%,-50%);	
+			}
+			@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+				transform:translate(-70%,-50%); -moz-transform:translate(-70%,-50%); -webkit-transform:translate(-70%,-50%); -ms-transform:translate(-70%,-50%);	
+			}
+			@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+				transform:translate(-50%,-50%); -moz-transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%);			
+			}
 		}
 		
 	 }
@@ -150,34 +163,43 @@ a{color:$pink-color;
 	 @media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
 			border-right:0px solid $black; border-bottom:3px solid $black;
 		}
+		
+	&:hover{
+		.overlay-white{
+			background:rgba(255,255,255,0.9);
+		}
+	}
 	 
 }
-.corporate-section{border-left:3px solid $black;ight:0;
+.corporate-section{border-left:3px solid $black; right:0;
 	
 	a{
-	  	transform:translate(-60%,-50%); -moz-transform:translate(-60%,-50%); -webkit-transform:translate(-60%,-50%); -ms-transform:translate(-60%,-50%);
+	  	
 		color:$white;
-		
-		@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
-		  	transform:translate(-20%,-50%); -moz-transform:translate(-20%,-50%); -webkit-transform:translate(-20%,-50%); -ms-transform:translate(-20%,-50%);
-		}
-		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
-		 transform:translate(-50%,-50%); -moz-transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%);
-		}
-		@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
-		 	transform:translate(-20%,-50%); -moz-transform:translate(-20%,-50%); -webkit-transform:translate(-20%,-50%); -ms-transform:translate(-20%,-50%);
-		}
-		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-		  	 transform:translate(-20%,-50%); -moz-transform:translate(-20%,-50%); -webkit-transform:translate(-20%,-50%); -ms-transform:translate(-20%,-50%);
-		}
-		@media (max-width: $iphone-to-ipad) {
-		  transform:translate(-20%,-50%); -moz-transform:translate(-20%,-50%); -webkit-transform:translate(-20%,-50%); -ms-transform:translate(-20%,-50%);
-		}
-		@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
-			transform:translate(-10%,-50%); -moz-transform:translate(-10%,-50%); -webkit-transform:translate(-10%,-50%); -ms-transform:translate(-10%,-50%);	
-		}
-		@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-			transform:translate(-50%,-50%); -moz-transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%);			
+		span{
+			transform:translate(-60%,-50%); -moz-transform:translate(-60%,-50%); -webkit-transform:translate(-60%,-50%); -ms-transform:translate(-60%,-50%);
+			
+			@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+				transform:translate(-20%,-50%); -moz-transform:translate(-20%,-50%); -webkit-transform:translate(-20%,-50%); -ms-transform:translate(-20%,-50%);
+			}
+			@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+			 transform:translate(-50%,-50%); -moz-transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%);
+			}
+			@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+				transform:translate(-20%,-50%); -moz-transform:translate(-20%,-50%); -webkit-transform:translate(-20%,-50%); -ms-transform:translate(-20%,-50%);
+			}
+			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+				 transform:translate(-20%,-50%); -moz-transform:translate(-20%,-50%); -webkit-transform:translate(-20%,-50%); -ms-transform:translate(-20%,-50%);
+			}
+			@media (max-width: $iphone-to-ipad) {
+			  transform:translate(-20%,-50%); -moz-transform:translate(-20%,-50%); -webkit-transform:translate(-20%,-50%); -ms-transform:translate(-20%,-50%);
+			}
+			@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+				transform:translate(-10%,-50%); -moz-transform:translate(-10%,-50%); -webkit-transform:translate(-10%,-50%); -ms-transform:translate(-10%,-50%);	
+			}
+			@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+				transform:translate(-50%,-50%); -moz-transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%);			
+			}
 		}
 	 }
 	 
@@ -185,7 +207,11 @@ a{color:$pink-color;
 			border-left:0px solid $black; border-top:3px solid $black;
 		}
 	
-
+	&:hover{
+		.overlay-black{
+			background:rgba(0,0,0,0.7);
+		}
+	}
 }
 
 .overlay-white{
@@ -210,28 +236,49 @@ a{color:$pink-color;
 }
 
 .logo-section{
-	position:absolute; z-index:5; left:50%; top:50%; transform:translate(-50%,-50%); -moz-transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%);
+	position:absolute; z-index:10; left:50%; top:50%; transform:translate(-50%,-50%); -moz-transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%);
+	background:url($logo-bg-img) no-repeat left top; width:451px; height:402px;  text-align:center; background-size:100%;
 	
 	img{
-		width:100%;
-	}
+		 max-width:75%; position:absolute; top:50%; left:50%;
+		 transform:translate(-50%,-60%); -moz-transform:translate(-50%,-60%); -webkit-transform:translate(-50%,-60%); -ms-transform:translate(-50%,-60%);		
+		 	@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+				width:70%;
+			}
+			@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+				width:70%;
+			}
+		 	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+				width:70%;
+			}
+			@media (max-width: $iphone-to-ipad) {
+				width:70%;
+			}
+			@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+				width:70%;
+			}
+		 	@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+				width:70%;
+			}
+		 	
+	} 
 	@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
-	  width:30%;
+	 	width:280px; height:250px;	
 	}
 	@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
-	 	width:35%;
+	 	width:280px; height:250px;
 	}
 	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-	  	width:35%;
+	  	width:250px; height:223px;
 	}
 	@media (max-width: $iphone-to-ipad) {
-		width:35%;
+		width:200px; height:178px;
 	}
 	@media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
-		width:35%;	
+		width:180px; height:160px;
 	}
 	@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
-		width:60%;
+		width:200px; height:178px;
 		
 	}	
 }
