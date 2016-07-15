@@ -117,7 +117,7 @@ sulu_websocket:
 
 sulu_content:
     preview:
-        websocket: true
+        websocket: false
     search:
         mapping:
             Sulu\Bundle\ContentBundle\Document\PageDocument:
