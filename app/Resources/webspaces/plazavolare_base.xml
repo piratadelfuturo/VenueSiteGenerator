@@ -49,9 +49,11 @@
                         <url language="fr" >www.plazavolare.com</url>
                         <url language="fr" >new.plazavolare.com</url>
                         <url language="fr" >www.plazavolare.con</url>
+                        <url language="fr" >sitescms.plazapmg.com</url>
                         <url language="en" >www.plazavolare.com/en</url>
                         <url language="en" >new.plazavolare.com/en</url>
                         <url language="en" >www.plazavolare.con/en</url>
+                        <url language="en" >sitescms.plazapmg.com/en</url>
                     </urls>
                 </environment>
                 <environment type="stage">
