@@ -2322,6 +2322,9 @@ img{max-width:100%;}
 	
 }
 
+/** THEME CHANGES **/
+
+
 header{
     @media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
         padding:10px 10px;
@@ -2361,7 +2364,7 @@ $sites-names: (
     'plazauniversel_social'
     );
 
-$sites-colors: (
+/*$sites-colors: (
     #a40000,
     #ce1b45,
     #de5bea,
@@ -2369,13 +2372,23 @@ $sites-colors: (
     #329996,
     #00e4ff,
     #004ee9
-    );
+    );*/
 
+$sites-colors: (
+    #828282,
+    #828282,
+    #828282,
+    #828282,
+    #828282,
+    #828282,
+    #828282
+    );
 
 
 @each $site-item in $sites-names {
     $i: index($sites-names,$site-item);
     $this-color: nth($sites-colors,$i);
+
     $this-cruve-img: '../#{$site-item}/images/pink-banner-cruve.png';
     $this-ribbion-img: '../#{$site-item}/images/pink-ribbion.png';
     $this-halls-menu-active-bg: '../#{$site-item}/images/halls-menu-active-bg.png';
@@ -2404,13 +2417,15 @@ $sites-colors: (
 
         .main-info{
             h2 {
-                color: $this-color;
+                /*color: $this-color;*/
+                color: #ffffff;
             }
         }
 
         .highlight-text-box {
             span {
-                color: $this-color;
+                /*color: $this-color;*/
+                color: #ffffff;
             }
 
         }

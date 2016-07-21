@@ -3010,7 +3010,7 @@ $sites-names: (
     'plazauniversel_corp'
     );
 
-$sites-colors: (
+/*$sites-colors: (
     #a40000,
     #ce1b45,
     #de5bea,
@@ -3018,6 +3018,16 @@ $sites-colors: (
     #329996,
     #00e4ff,
     #004ee9
+    );*/
+
+$sites-colors: (
+    #828282,
+    #828282,
+    #828282,
+    #828282,
+    #828282,
+    #828282,
+    #828282
     );
 
     
@@ -3037,7 +3047,8 @@ $sites-colors: (
         }
         
         .about-section{
-            h2{color:$this-color;}
+            /*h2{color:$this-color;}*/
+            h2{color:#000000;}
         }
         
         .halls-section{
@@ -3054,7 +3065,11 @@ $sites-colors: (
             }
         }
         
-        
+        .inner-content-section{
+            /*h2{color:$this-color;}*/
+            h2{color:#000000 !important;}
+        }
+
         .testimonial-contact-section{
             .contact-section{
                 .contact-form{
