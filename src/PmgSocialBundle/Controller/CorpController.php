@@ -38,7 +38,7 @@ class CorpController extends DefaultController
                 $name = $form->get('name')->getData();
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Website contact: '.$name.' - '.$form->get('interested')->getData() )
-                    ->setFrom(array($form->get('email')->getData() => $name ))
+                    ->setFrom(array('info@casaderamo.com'))
                     ->setTo('daniel@nviba.com')
                     ->setBody($form->get('details1')->getData());
                 $this->get('mailer')->send($message);
