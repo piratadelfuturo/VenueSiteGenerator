@@ -27,25 +27,43 @@ class ContactType extends AbstractType{
             ->add('name', TextType::class, array(
                 'attr' => array(
                     'placeholder' => 'Name',
-                    'pattern'     => '.{2,}' //minlength
+                    'pattern'     => '.{2,}', //minlength
+                ),
+                'constraints' => array(
+                    new NotBlank(array('message' => 'Name should not be blank.')),
+                    new Length(array('min' => 2))
                 )
             ))
             ->add('last_name', TextType::class, array(
                 'attr' => array(
                     'placeholder' => 'Last name',
-                    'pattern'     => '.{2,}' //minlength
+                    'pattern'     => '.{2,}', //minlength
+                ),
+                'constraints' => array(
+                        new NotBlank(array('message' => 'Last name should not be blank.')),
+                        new Length(array('min' => 3))
                 )
+
             ))
             ->add('email', EmailType::class, array(
                 'attr' => array(
                     'placeholder' => 'E-mail'
-                )
+                ),
+                'constrainst' => array(
+                    new NotBlank(array('message' => 'Email should not be blank.')),
+                    new Email(array('message' => 'Invalid email address.'))
+                ),
+
             ))
             ->add('message', TextareaType::class, array(
                 'attr' => array(
                     'cols' => 90,
                     'rows' => 10,
                     'placeholder' => 'Message'
+                ),
+                'constraints' => array(
+                    new NotBlank(array('message' => 'Message should not be blank.')),
+                    new Length(array('min' => 5))
                 )
             ))
             ->add('send', SubmitType::class, array('label' => 'Send'));

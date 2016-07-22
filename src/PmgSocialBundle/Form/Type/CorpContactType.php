@@ -28,17 +28,29 @@ class CorpContactType extends AbstractType{
                 'attr' => array(
                     'pattern'     => '.{2,}' //minlength
                 ),
-                'label' => 'contact_form.name'
+                'label' => 'contact_form.name',
+                'constraints' => array(
+                    new NotBlank(array('message' => 'Name should not be blank.')),
+                    new Length(array('min' => 2))
+                )
             ))
             ->add('interested', TextType::class, array(
                 'attr' => array(
                     'pattern'     => '.{2,}' //minlength
                 ),
-                'label' => 'contact_form.interested'
+                'label' => 'contact_form.interested',
+                'constraints' => array(
+                    new NotBlank(array('message' => 'Last name should not be blank.')),
+                    new Length(array('min' => 3))
+                )
             ))
             ->add('email', EmailType::class, array(
                 'attr' => array(),
-                'label' => 'contact_form.email'
+                'label' => 'contact_form.email',
+                'constraints' => array(
+                    new NotBlank(array('message' => 'Email should not be blank.')),
+                    new Email(array('message' => 'Invalid email address.'))
+                )
             ))
             ->add('details1', TextType::class, array(
                 'attr' => array( 'class' => 'width55'),
@@ -71,11 +83,10 @@ class CorpContactType extends AbstractType{
                 new NotBlank(array('message' => 'Name should not be blank.')),
                 new Length(array('min' => 2))
             ),
-            'insterested' => array(
+            'interested' => array(
                 new NotBlank(array('message' => 'Last name should not be blank.')),
                 new Length(array('min' => 3))
             ),
-
             'email' => array(
                 new NotBlank(array('message' => 'Email should not be blank.')),
                 new Email(array('message' => 'Invalid email address.'))

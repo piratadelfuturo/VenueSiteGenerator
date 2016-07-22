@@ -31,11 +31,10 @@ class CorpController extends DefaultController
         return $this->render('PmgSocialBundle:blocks:contact.html.twig',$render_params);
     }
     
-    private function contactForm(Request $request){
-        $form = $this->createForm(new CorpContactType());
+    protected function contactForm(Request $request){
+        $form = $this->createForm(CorpContactType::class);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-                var_dump($form->isSubmitted());
                 $name = $form->get('name')->getData();
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Website contact: '.$name.' - '.$form->get('interested')->getData() )
@@ -47,7 +46,7 @@ class CorpController extends DefaultController
 
                 $this->addFlash('contact.success_form', true);
                 unset($form);
-                $form = $this->createForm(new CorpContactType());
+                $form = $this->createForm(CorpContactType::class);
         }
         
         return $form;        
