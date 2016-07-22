@@ -46,14 +46,14 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.embassyplaza.com/{localization}/social</url>
-                        <url>www.embassyplaza.con/{localization}/social</url>
-                        <url>new.embassyplaza.com/{localization}/social</url>
+                        <url language="fr">www.embassyplaza.com/fr/social</url>
+                        <url language="en">www.embassyplaza.com/en/social</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>www.embassyplaza.dev/{localization}/social</url>
+                        <url language="fr">new.embassyplaza.com/fr/social</url>
+                        <url language="en">new.embassyplaza.com/en/social</url>
                     </urls>
                 </environment>
                 <environment type="dev">

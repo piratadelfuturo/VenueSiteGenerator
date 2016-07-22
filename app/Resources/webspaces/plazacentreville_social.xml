@@ -46,14 +46,14 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.plazacentreville.com/{localization}/social</url>
-                        <url>new.plazacentreville.com/{localization}/social</url>
-                        <url>www.plazacentreville.con/{localization}/social</url>
+                        <url language="fr" >www.plazacentreville.com/fr/social</url>
+                        <url language="en" >www.plazacentreville.com/en/social</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>www.plazacentreville.dev/stage/{localization}/social</url>
+                        <url language="fr" >new.plazacentreville.com/fr/social</url>
+                        <url language="en" >new.plazacentreville.com/en/social</url>
                     </urls>
                 </environment>
                 <environment type="dev">

@@ -44,21 +44,22 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.plazavolare.com/{localization}/corp</url>
-                        <url>new.plazavolare.com/{localization}/corp</url>
-                        <url>www.plazavolare.con/{localization}/corp</url>
-                        <url>sitescms.plazapmg.com/{localization}/corp</url>
+                        <url language="fr" >www.plazavolare.com/fr/corp</url>
+                        <url language="en" >www.plazavolare.com/en/corp</url>
+                        <url>www.sitescms.plazapmg.com/{localization}/corp</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>new.plazavolare.dev/stage/{localization}/corp</url>
+                        <url language="fr" >new.plazavolare.com/fr/corp</url>
+                        <url language="en" >new.plazavolare.com/en/corp</url>
+                        <url>sitescms.plazapmg.com/{localization}/corp</url>
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
-                        <url>sitescms.plazapmg.com/{localization}/corp</url>
-                        <url>plazavolare.dev/{localization}/corp</url>
+                        <url language="fr" >plazavolare.dev/fr/corp</url>
+                        <url language="en" >plazavolare.dev/en/corp</url>
                     </urls>
                 </environment>
             </environments>

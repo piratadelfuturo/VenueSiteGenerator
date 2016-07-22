@@ -47,17 +47,13 @@
                 <environment type="prod">
                     <urls>
                         <url language="fr" >www.embassyplaza.com</url>
-                        <url language="fr" >www.embassyplaza.con</url>
-                        <url language="fr" >new.embassyplaza.com</url>
                         <url language="en" >www.embassyplaza.com/en</url>
-                        <url language="en" >www.embassyplaza.con/en</url>
-                        <url language="en" >new.embassyplaza.com/en</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url language="fr" >www.embassyplaza.dev</url>
-                        <url language="en" >www.embassyplaza.dev/fr</url>
+                        <url language="fr" >new.embassyplaza.com</url>
+                        <url language="en" >new.embassyplaza.com/en</url>
                     </urls>
                 </environment>
                 <environment type="dev">

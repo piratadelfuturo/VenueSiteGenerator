@@ -45,14 +45,14 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.plazagardeninn.com/{localization}/social</url>
-                        <url>www.plazagardeninn.con/{localization}/social</url>
-                        <url>new.plazagardeninn.com/{localization}/social</url>
+                        <url language="fr">www.plazagardeninn.com/fr/social</url>
+                        <url language="en">www.plazagardeninn.com/en/social</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>www.plazagardeninn.dev/stage/{localization}/social</url>
+                        <url language="fr">new.plazagardeninn.com/fr/social</url>
+                        <url language="en">new.plazagardeninn.com/en/social</url>
                     </urls>
                 </environment>
                 <environment type="dev">
