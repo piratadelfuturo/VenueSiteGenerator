@@ -60,22 +60,52 @@ class CorpContactType extends AbstractType{
             ->add('details2', TextType::class, array(
                 'attr' => array( 'class' => 'width100'),
                 'label' => 'contact_form.details2',
-                'required' => false
+                'required' => false,
+                'constraints' => array()
             ))
             ->add('details3', TextType::class, array(
                 'attr' => array( 'class' => 'width100'),
                 'label' => 'contact_form.details3',
-                'required' => false
+                'required' => false,
+                'constraints' => array()
             ))
             ->add('details4', TextType::class, array(
                 'attr' => array( 'class' => 'width100' ),
                 'label' => 'contact_form.details4',
-                'required' => false
+                'required' => false,
+                'constraints' => array()
             ))
             ->add('send', SubmitType::class, array('label' => 'Send'));
     }
 
-    
+    public function configureOptions(OptionsResolver $resolver)
+    {
+                
+        $collectionConstraint = new Collection(array(
+            'name' => array(
+                new NotBlank(array('message' => 'Name should not be blank.')),
+                new Length(array('min' => 2))
+            ),
+            'interested' => array(
+                new NotBlank(array('message' => 'Last name should not be blank.')),
+                new Length(array('min' => 3))
+            ),
+            'email' => array(
+                new NotBlank(array('message' => 'Email should not be blank.')),
+                new Email(array('message' => 'Invalid email address.'))
+            ),
+            'details1' => array(),
+            'details2' => array(),
+            'details3' => array(),
+            'details4' => array()
+        ));
+
+        $resolver->setDefaults(array(
+            'constraints' => $collectionConstraint
+        ));
+        
+        
+    }
     
     public function getBlockPrefix()
     {

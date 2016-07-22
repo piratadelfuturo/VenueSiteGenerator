@@ -24,7 +24,7 @@ class CorpController extends DefaultController
         if($masterRequest->get('_sulu')){
             $request = $masterRequest;
         }
-        
+
         $form = $this->contactForm($request);
         $render_params['contact_form'] = $form->createView();
         
@@ -41,6 +41,7 @@ class CorpController extends DefaultController
                     ->setFrom(array($form->get('email')->getData() => $name ))
                     ->setTo('daniel@nviba.com')
                     ->setBody($form->get('details1')->getData());
+                $this->get('mailer')->send($message);
 
                 $this->addFlash('contact.success_form', true);
                 unset($form);
