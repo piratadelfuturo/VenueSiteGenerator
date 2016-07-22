@@ -42,8 +42,6 @@ class CorpController extends DefaultController
                     ->setTo('daniel@nviba.com')
                     ->setBody($form->get('details1')->getData());
 
-                $this->get('mailer')->send($message);
-
                 $this->addFlash('contact.success_form', true);
                 unset($form);
                 $form = $this->createForm(CorpContactType::class);

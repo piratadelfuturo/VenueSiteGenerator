@@ -69,37 +69,7 @@ class ContactType extends AbstractType{
             ->add('send', SubmitType::class, array('label' => 'Send'));
     }
 
-    public function configureOptions(OptionsResolver $resolver)
-    {
-                
-        $collectionConstraint = new Collection(array(
-            'name' => array(
-                new NotBlank(array('message' => 'Name should not be blank.')),
-                new Length(array('min' => 2))
-            ),
-            'last_name' => array(
-                new NotBlank(array('message' => 'Last name should not be blank.')),
-                new Length(array('min' => 3))
-            ),
-
-            'email' => array(
-                new NotBlank(array('message' => 'Email should not be blank.')),
-                new Email(array('message' => 'Invalid email address.'))
-            ),
-            'message' => array(
-                new NotBlank(array('message' => 'Message should not be blank.')),
-                new Length(array('min' => 5))
-            )
-        ));
-
-        $resolver->setDefaults(array(
-            'constraints' => $collectionConstraint
-        ));
-        
-        
-    }
-    
-    public function getName()
+    public function getBlockPrefix()
     {
         return 'contact';
     }

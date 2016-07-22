@@ -31,6 +31,8 @@ rm -rf app/cache/*;
 php app/console cache:clear -e prod;
 php app/webconsole cache:clear -e prod;
 php app/console sulu:build phpcr_migrations -e prod -n;
+php app/console cache:warmup -e prod;
+php app/webconsole cache:warmup -e prod;
 php app/console assets:install public_html -e prod;
 php app/console assetic:dump -e prod;
 chown plazapmg:plazapmg -R  ./ public_html public_html/*;
@@ -75,6 +77,10 @@ php app/console assetic:dump -e dev;
 php app/console sulu:build phpcr_migrations -n;
 
 ```
+
+To apply the vhost config file changes in easy apache use:
+
+/scripts/ensure_vhost_includes --user=username
 
 
 

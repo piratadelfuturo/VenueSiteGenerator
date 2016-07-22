@@ -5,7 +5,7 @@
 <div class="overlay-content">
 {% for flash_message in app.session.flashBag.get('contact.success_form') %}
     <div class="flash-notice">
-        {{ flash_message }}
+        {{'contact.success_form'|trans}}
     </div>
 {% endfor %}
 </div>
