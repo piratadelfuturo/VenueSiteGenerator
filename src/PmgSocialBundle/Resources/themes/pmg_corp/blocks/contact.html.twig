@@ -3,7 +3,6 @@
     {% set form_params = {'action' : form_url} %}
 {% endif %}
 <div class="overlay-content">
-    {{ form_errors(contact_form) }}
 {% for flash_message in app.session.flashBag.get('contact.success_form') %}
     <div class="flash-notice">
         {{ flash_message }}
@@ -14,18 +13,22 @@
 <div class="contact-form">
         <h2>{% trans %}CONTACT US{% endtrans %}</h2>
     <div class="form-row">
+        {{ form_errors(contact_form.name ) }}
         {{ form_label(contact_form.name ) }}
         {{ form_widget(contact_form.name ) }}
     </div>
     <div class="form-row">
+        {{ form_errors(contact_form.interested ) }}
         {{ form_label(contact_form.interested ) }}
         {{ form_widget(contact_form.interested ) }}
     </div>
     <div class="form-row">
+        {{ form_errors(contact_form.email ) }}
         {{ form_label(contact_form.email ) }}
         {{ form_widget(contact_form.email ) }}
     </div>
     <div class="form-row">
+        {{ form_errors(contact_form) }}
         {{ form_label(contact_form.details1 ) }}
         {{ form_widget(contact_form.details1, { 'class': 'width55' }  ) }}
         {{ form_widget(contact_form.details2, { 'class': 'width100' } ) }}
