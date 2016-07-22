@@ -48,14 +48,16 @@
                     <urls>
                         <url language="fr" >www.plazavolare.com</url>
                         <url language="en" >www.plazavolare.com/en</url>
-                        <url>www.sitescms.plazapmg.com/{localization}</url>
+                        <url language="fr" >www.sitescms.plazapmg.com</url>
+                        <url language="en" >www.sitescms.plazapmg.com/en</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url language="fr" >new.plazavolare.com/</url>
+                        <url language="fr" >new.plazavolare.com</url>
                         <url language="en" >new.plazavolare.com/en</url>
-                        <url>sitescms.plazapmg.com/{localization}</url>
+                        <url language="fr" >sitescms.plazapmg.com</url>
+                        <url language="en" >sitescms.plazapmg.com/en</url>
                     </urls>
                 </environment>
                 <environment type="dev">
