@@ -49,7 +49,7 @@ class ContactType extends AbstractType{
                 'attr' => array(
                     'placeholder' => 'E-mail'
                 ),
-                'constrainst' => array(
+                'constraints' => array(
                     new NotBlank(array('message' => 'Email should not be blank.')),
                     new Email(array('message' => 'Invalid email address.'))
                 ),
