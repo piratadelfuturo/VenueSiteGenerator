@@ -968,7 +968,7 @@ header{
 				@media (max-width: $iphone-to-ipad) {
 					background-size:60px; padding:10px 30px 0;
 				}
-				p{font-size:18px; font-family: 'robotoregular';
+				p{font-size:18px; font-family: 'open_sansregular';
 					@media (max-width: $iphone-to-ipad) {
 						font-size:16px;
 					}
@@ -1551,8 +1551,8 @@ footer{
 			@media (max-width: $iphone-to-ipad) {
 			  	padding:15px;
 			}
-			h6{font-family: 'robotoitalic'; color:$testimonial-content-color;}
-			p{font-size:14px; font-family: 'robotoitalic'; color:$testimonial-content-color; margin-bottom:30px; line-height:24px;
+			h6{font-family: 'open_sansregular'; color:$testimonial-content-color;}
+			p{font-size:14px; font-family: 'open_sansregular'; color:$testimonial-content-color; margin-bottom:30px; line-height:24px;
 				&:last-child{margin-bottom:0px;}
 				@media (max-width: $iphone-to-ipad) {
 					margin-bottom:20px;
@@ -1563,7 +1563,7 @@ footer{
 		.testimonial-author-part{
 			margin-top:40px; text-align:right; padding-right:5px;
 			h6{
-				color:$pink-color; font-family: 'robotobold_italic'; margin-bottom:10px;
+				color:$pink-color; font-family: 'open_sansbold'; margin-bottom:10px;
 				@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
 					font-size:16px;				
 				}
