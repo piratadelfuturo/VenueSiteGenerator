@@ -13,8 +13,11 @@
   <div class="banner-section">
     <div class="banner-img menu-bannerimg">
     	<img src="{{ asset(section_image) }}" alt="" />
-              <h1>{{ content.title }}</h1>
+              
     </div>
+  </div>
+  <div class="inner-content-section">
+  <h2>{{ content.title }}</h2>
   </div>
         {% if content.gallery is iterable and content.gallery is not empty%}
         {% include 'PmgSocialBundle:snippets:gallery.snippet.html.twig' with { 'content' : content.gallery, 'title' : null} %}

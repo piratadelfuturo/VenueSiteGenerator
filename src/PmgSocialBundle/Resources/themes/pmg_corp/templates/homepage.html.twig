@@ -109,7 +109,14 @@
                 {% set link_image = 'bundles/pmgsocial/pmg_corp/default/images/check-menu-img.jpg' %}
             {% endif %}
             <div class="col-sm-6 check-menu">
-                <img src="{{ asset(link_image) }}" alt="" />
+              {% if link.link is not empty %}
+                        {% set link_doc = sulu_content_load(link.link) %}
+                        {% set link_doc = link_doc.content.url %}
+                    {% else %}
+                        {% set link_doc = '' %}
+                    {% endif %}
+                    <a href="{{ sulu_content_path(link_doc) }}"> <img src="{{ asset(link_image) }}" alt="" /></a>
+                
                 <div class="overlay-nav-text">
                     {% if link.link is not empty %}
                         {% set link_doc = sulu_content_load(link.link) %}

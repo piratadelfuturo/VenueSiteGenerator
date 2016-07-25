@@ -2438,9 +2438,20 @@ $sites-colors: (
             }
         }
 
-        
+        .halls-information{
+        	p{
+        		font-size: 16px;
+        	}
+        }
+
         .testimonial-section{
             background: $this-color;
+            p{
+            	font-size: 16px;
+            }
+            .author-name{
+            	font-size: 24px;
+            }
         }
                 
         .halls-section{
@@ -2530,7 +2541,7 @@ $sites-colors: (
         
         .halls-information-section{
             h2{
-		color:$this-color;
+				color:$this-color;
             }
         }
 
@@ -2574,7 +2585,7 @@ $sites-colors: (
 		}
             }
             .author-info{
-		.event-info{color:$this-color !important;}
+				.event-info{color:$this-color !important;}
             }
             
         }
@@ -2602,7 +2613,11 @@ $sites-colors: (
                 .venue_banner{
                     .line_ctn{
                         .line{
-                            background: $pink-line-background;
+                            background: $pink-line-background;                            
+                        }
+                        p{
+                            	background: rgba(24, 24, 24, 0.78);
+                            	padding: 5px;
                         }
                     }
                 }

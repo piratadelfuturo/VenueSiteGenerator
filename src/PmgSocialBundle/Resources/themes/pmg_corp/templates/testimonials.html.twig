@@ -13,10 +13,11 @@
     
    <div class="banner-section">
     <div class="banner-img"><img src="{{ asset(section_image) }}" alt="" />
-      <h1>{{ content.title }}</h1>
+    
     </div>
   </div>
   <div class="inner-content-section testimonial-page-section">
+      <h2>{{ content.title }}</h2>
     <div class="container">
       <div class="testimonial-list-section">
         {% if content.testimonials is defined and content.testimonials is not empty%}

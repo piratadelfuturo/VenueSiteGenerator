@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
 
 $custom-font-path: "../fonts/";
 
@@ -272,13 +273,21 @@ body{background:$body-color; color:$white; font-size:24px;  font-family: 'open_s
 
 }
 
-h1,h2,h3,h4,h5,h6{margin:0 0 20px 0; padding:0; font-family: 'playfair_displaybold'; color:$white;}
-h1{font-size:60px;}
+//h1,h2,h3,h4,h5,h6{margin:0 0 20px 0; padding:0; font-family: 'playfair_displaybold'; color:$white;}
+h1,h2,h3,h4,h5,h6{margin:0 0 20px 0; padding:0; font-family:'Julius Sans One', sans-serif; color:$white;}
+/*h1{font-size:60px;}
 h2{font-size:44px;}
 h3{font-size:36px;}
 h4{font-size:30px;}
 h5{font-size:24px;}
-h6{font-size:18px;}
+h6{font-size:18px;}*/
+
+h1{font-size:44px;}
+h2{font-size:36px;}
+h3{font-size:30px;}
+h4{font-size:24px;}
+h5{font-size:18px;}
+h6{font-size:12px;}
 
 a{color:$pink-color;
 	&:hover{color:$black;}
@@ -288,6 +297,7 @@ a{color:$pink-color;
 header{
 	padding:15px 50px 50px;
 	position:relative;
+    background-color: $black;
 	
 	@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
 		padding:10px 10px;
@@ -320,7 +330,7 @@ header{
 			  height:300px;
 			}
 		@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
-		  	height:280px;
+		  	height:85;
 		}
 		@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
 		 	height:280px;
@@ -353,22 +363,22 @@ header{
 		
 		img {
 			@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
-				max-width:320px;
+				max-width:85%;
 			}
 			@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
-				max-width:280px;
+				max-width:85%;
 			}
 			@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
-				max-width:280px;
+				max-width:85%;
 			}
 			@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
-			  max-width:280px; 
+			  max-width:85%;
 			}
 			@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-				 max-width:280px;  padding:10px; 
+				 max-width:85%; padding:10px; 
 			}
 			@media (max-width: $iphone-to-ipad) {
-			  max-width:250px;   padding:10px;
+			  max-width:85%;   padding:10px;
 			}
 		}
 	}
@@ -435,11 +445,11 @@ header{
 	
 	.banner-img{
 		position:relative;
-		.banner-overlay-color{background:$banner-overlay-color; position:absolute; top:0; left:0; height:100%; width:100%;}
+		/*.banner-overlay-color{background:$banner-overlay-color; position:absolute; top:0; left:0; height:100%; width:100%;}*/
 		img{
                     width:100%;
-                    -webkit-filter: brightness(.7);
-                    filter: brightness(.7);
+                    /*-webkit-filter: brightness(.7);*/
+                    /*filter: brightness(.7);*/
                 }
 		h1{
 			position:absolute; top:50%; left:50%; z-index:1;  transform:translate(-50%,-50%); -moz-transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%);
@@ -579,7 +589,7 @@ header{
 		width:96%;
 	}
 	h2{
-		font-size:60px; color:$pink-color; font-family: 'playfair_displaybold'; text-transform:uppercase;
+		font-size:50px; color:$pink-color; font-family:'Julius Sans One', sans-serif; text-transform:uppercase;
 		
 		@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
   
@@ -609,7 +619,7 @@ header{
 		}
 	}
 	p{
-		color:$common-text-color; margin-bottom:0px;
+		color:$common-text-color; margin-bottom:0px;font-size: 18px;
 		
 		
 	}
@@ -691,14 +701,11 @@ header{
 			}
 			.halls-tab-logo{
 				position:absolute; bottom:90px; left:4%; right:4%;
-				
-
-				
 				img{opacity:0.2;}
 			}	
 			
 			ul{
-				list-style:none; margin:0px; padding:0px;
+				list-style:none; width: 80%; margin:0 auto; padding:10px;
 				li{
 					font-size:30px; font-family: 'open_sanssemibold'; padding-left:45px; position:relative; margin-bottom:4px; cursor:pointer;
 					
@@ -805,12 +812,13 @@ header{
 		 
 		.halls-detail-part{
 			position:relative;
-			&:before{content:""; background:url($halls-shape-bg) no-repeat left top; position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; background-size:100%;
+			&:before{
+                content:""; background:$halls-mobile-background;; position:absolute; top:0; left:0; width:100%; height:45%; z-index:1; background-size:60%;
 				@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
-				  background:$halls-mobile-background; height:60%;
+				  background:$halls-mobile-background; height:45%;
 				}
 				@media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
-					background:$halls-mobile-background; height:60%;
+					background:$halls-mobile-background; height:45%;
 				}	
 				@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
 				  content:none;
@@ -846,7 +854,7 @@ header{
 					}
 				
 				p{
-					font-size:18px; font-family: 'open_sansbold'; margin-bottom:20px;
+					font-size:18px; margin-bottom:20px;
 					@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
 					  font-size:16px;
 					}
@@ -899,7 +907,7 @@ header{
 			}
 			.halls-big-img{
 				position:relative;
-				.overlay-color{position:absolute; top:0; left:0; height:100%; width:100%; background:$overlay-color-bg;}
+				/*.overlay-color{position:absolute; top:0; left:0; height:100%; width:100%; background:$overlay-color-bg;}*/
 				img{width:100%;}
 			}
 		}
@@ -1418,7 +1426,7 @@ footer{
 	margin-top:30px;
 	
 	.halls-list-box{
-		padding:0px;
+		padding:5px;
 		position:relative; cursor:pointer;
 		@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
 		  	width:50%;
@@ -1855,7 +1863,7 @@ footer{
 					font-size:14px;	padding:15px 5px; min-width:130px;		
 				}
 			}
-			td{background:$table-td-background-color; color:$white; text-align:center; font-size:24px; padding:15px; vertical-align:top; min-height:80px; border-bottom:18px solid $pink-color; height:80px;
+			td{background: rgba(0, 0, 0, 0.5); color:$white; text-align:center; font-size:24px; padding:15px; vertical-align:top; min-height:80px; border-bottom:18px solid $pink-color; height:80px;
 				@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 				  font-size:16px; padding:15px 10px;
 				}
@@ -2073,8 +2081,11 @@ footer{
 		}
 	}
 	.gallery-content-section{
-		max-width:1490px; margin:0 auto;
-		
+		max-width:1490px; margin:0 auto;		
+        img{
+            width: 98%;
+            margin-top: 2%;
+        }
 		.gallery-box{
 			padding:0px;
 			
@@ -2760,6 +2771,7 @@ h2.resp-tab-title:last-child {
     
 	float:right;
 	max-width:520px;
+    text-align: right;
 	
 }
 
@@ -2769,8 +2781,8 @@ h2.resp-tab-title:last-child {
     cursor: pointer;
     float: none;
 	position:relative;
-	
-	padding:0 80px 0 10px;
+	text-align: right;
+	padding:0 40px 0 10px;
 	
 	@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
 		font-size:18px; padding-right:80px;
@@ -2902,9 +2914,10 @@ h2.resp-tab-title:last-child {
 	margin-right: -1px !important;
 	margin-bottom: 20px !important;
 	font-family: 'open_sansbold';
+    color: $black;
 	
 	&:after{
-		background:url($ourmenu-selected) no-repeat right center; content:""; width:15px; height:26px; position:absolute; right:-14px; 
+		background:url($ourmenu-selected) no-repeat right center; content:""; width:15px; height:26px; position:absolute; right:-14px; margin-top: 7px;
 	}
 	
 }
@@ -3043,20 +3056,35 @@ $sites-colors: (
         .top-right{
             a{
                 &:hover{color:$this-color;}
+                color:$white;
             }
         }
         
         .about-section{
             /*h2{color:$this-color;}*/
-            h2{color:#000000;}
+            h2{color:#000000;}    
+            p{
+                font-size: 16px;
+            }        
         }
         
         .halls-section{
             .halls-tab-left{
                 .halls-tab-list{
                     background:$this-color;
-                }
-            }
+                    h3{
+                        margin-left: 8%;
+                    }
+                    ul{
+                        margin: 0 auto;
+                        width: 70%;
+                        li{
+                            font-family: 'open_sansregular';
+                            margin-bottom: 10px !important;
+                        }
+                    }            
+                }   
+            }   
         }
         .more-info-btn{
             a{
@@ -3067,7 +3095,20 @@ $sites-colors: (
         
         .inner-content-section{
             /*h2{color:$this-color;}*/
-            h2{color:#000000 !important;}
+            h2{color:$black !important;
+            font-size: 40px;           
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: 10px;
+            font-family:'Julius Sans One', sans-serif;
+            }
+            .halls-information{
+                padding: 10px 15px;
+                padding-bottom: 30px;
+                p{
+                    font-size: 16px;
+                }
+            }
         }
 
         .testimonial-contact-section{
@@ -3185,14 +3226,20 @@ $sites-colors: (
             background-color: $this-color;
             h2{
                 color: $white;
+                font-family: 'Julius Sans One', sans-serif;
+                font-size: 46px;
+                text-align: left;
 		&:first-child{
 			@media (max-width: $iphone-to-ipad) {
 				border-top-color: $this-color !important;
 			}
                 }
             }
+            h4{
+                background-color: $black;
+            }
             .title-heading{
-		color:$this-color;
+		      color:$this-color;
             }
         }
         
@@ -3216,6 +3263,9 @@ $sites-colors: (
             }
             .resp-vtabs .resp-tabs-container {
                 color: $this-color;
+                h4{
+                    background-color: $black;
+                }
             }
             
             .resp-vtabs .resp-tab-content:last-child {
@@ -3226,6 +3276,9 @@ $sites-colors: (
         
         .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
             color: $this-color;
+        }
+        .navbar-default .navbar-nav > li > a{
+            color: $white !important;
         }
 
         
