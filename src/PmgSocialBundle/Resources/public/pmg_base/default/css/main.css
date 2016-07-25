@@ -8029,8 +8029,26 @@ a:hover {
     display: inline;
   }
 }
+/* line 84, ../scss/main.scss */
+.landing-page-wrapper:before {
+  background: black;
+  content: "";
+  height: 100%;
+  left: 50%;
+  margin-left: -3px;
+  position: absolute;
+  top: 0;
+  width: 6px;
+  z-index: 5;
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  /* line 84, ../scss/main.scss */
+  .landing-page-wrapper:before {
+    content: none;
+  }
+}
 
-/* line 85, ../scss/main.scss */
+/* line 100, ../scss/main.scss */
 .common-section {
   width: 50%;
   height: 100%;
@@ -8038,7 +8056,7 @@ a:hover {
   vertical-align: top;
   position: relative;
 }
-/* line 88, ../scss/main.scss */
+/* line 103, ../scss/main.scss */
 .common-section a {
   position: absolute;
   z-index: 5;
@@ -8049,70 +8067,70 @@ a:hover {
   width: 100%;
   height: 100%;
 }
-/* line 93, ../scss/main.scss */
+/* line 108, ../scss/main.scss */
 .common-section a:hover {
   color: #ce1b45;
 }
 @media (min-width: 1600px) and (max-width: 1919px) {
-  /* line 88, ../scss/main.scss */
+  /* line 103, ../scss/main.scss */
   .common-section a {
     font-size: 50px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1599px) {
-  /* line 88, ../scss/main.scss */
+  /* line 103, ../scss/main.scss */
   .common-section a {
     font-size: 44px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1199px) {
-  /* line 88, ../scss/main.scss */
+  /* line 103, ../scss/main.scss */
   .common-section a {
     font-size: 40px;
   }
 }
 @media (min-width: 992px) and (max-width: 1024px) {
-  /* line 88, ../scss/main.scss */
+  /* line 103, ../scss/main.scss */
   .common-section a {
     font-size: 40px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 88, ../scss/main.scss */
+  /* line 103, ../scss/main.scss */
   .common-section a {
     font-size: 30px;
   }
 }
 @media (max-width: 767px) {
-  /* line 88, ../scss/main.scss */
+  /* line 103, ../scss/main.scss */
   .common-section a {
     font-size: 30px;
   }
 }
 @media (min-width: 480px) and (max-width: 639px) {
-  /* line 88, ../scss/main.scss */
+  /* line 103, ../scss/main.scss */
   .common-section a {
     font-size: 24px;
   }
 }
 @media (min-width: 320px) and (max-width: 479px) {
-  /* line 88, ../scss/main.scss */
+  /* line 103, ../scss/main.scss */
   .common-section a {
     font-size: 36px;
   }
 }
-/* line 121, ../scss/main.scss */
+/* line 136, ../scss/main.scss */
 .common-section a:focus {
   outline: none;
 }
-/* line 123, ../scss/main.scss */
+/* line 138, ../scss/main.scss */
 .common-section a span {
   position: absolute;
   left: 50%;
   top: 50%;
 }
 @media (min-width: 320px) and (max-width: 479px) {
-  /* line 85, ../scss/main.scss */
+  /* line 100, ../scss/main.scss */
   .common-section {
     height: 50%;
     display: inherit;
@@ -8120,16 +8138,16 @@ a:hover {
   }
 }
 
-/* line 135, ../scss/main.scss */
+/* line 152, ../scss/main.scss */
 .social-section {
   left: 0;
-  border-right: 3px solid black;
+  border-right: 0px solid black;
 }
-/* line 136, ../scss/main.scss */
+/* line 153, ../scss/main.scss */
 .social-section a {
   color: black;
 }
-/* line 139, ../scss/main.scss */
+/* line 156, ../scss/main.scss */
 .social-section a span {
   transform: translate(-20%, -50%);
   -moz-transform: translate(-20%, -50%);
@@ -8137,7 +8155,7 @@ a:hover {
   -ms-transform: translate(-20%, -50%);
 }
 @media (min-width: 1200px) and (max-width: 1599px) {
-  /* line 139, ../scss/main.scss */
+  /* line 156, ../scss/main.scss */
   .social-section a span {
     transform: translate(-60%, -50%);
     -moz-transform: translate(-60%, -50%);
@@ -8146,7 +8164,7 @@ a:hover {
   }
 }
 @media (min-width: 992px) and (max-width: 1024px) {
-  /* line 139, ../scss/main.scss */
+  /* line 156, ../scss/main.scss */
   .social-section a span {
     transform: translate(-60%, -50%);
     -moz-transform: translate(-60%, -50%);
@@ -8155,7 +8173,7 @@ a:hover {
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 139, ../scss/main.scss */
+  /* line 156, ../scss/main.scss */
   .social-section a span {
     transform: translate(-60%, -50%);
     -moz-transform: translate(-60%, -50%);
@@ -8164,7 +8182,7 @@ a:hover {
   }
 }
 @media (max-width: 767px) {
-  /* line 139, ../scss/main.scss */
+  /* line 156, ../scss/main.scss */
   .social-section a span {
     transform: translate(-60%, -50%);
     -moz-transform: translate(-60%, -50%);
@@ -8173,7 +8191,7 @@ a:hover {
   }
 }
 @media (min-width: 480px) and (max-width: 639px) {
-  /* line 139, ../scss/main.scss */
+  /* line 156, ../scss/main.scss */
   .social-section a span {
     transform: translate(-70%, -50%);
     -moz-transform: translate(-70%, -50%);
@@ -8182,7 +8200,7 @@ a:hover {
   }
 }
 @media (min-width: 320px) and (max-width: 479px) {
-  /* line 139, ../scss/main.scss */
+  /* line 156, ../scss/main.scss */
   .social-section a span {
     transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -8191,27 +8209,27 @@ a:hover {
   }
 }
 @media (min-width: 320px) and (max-width: 479px) {
-  /* line 135, ../scss/main.scss */
+  /* line 152, ../scss/main.scss */
   .social-section {
     border-right: 0px solid black;
     border-bottom: 3px solid black;
   }
 }
-/* line 168, ../scss/main.scss */
+/* line 185, ../scss/main.scss */
 .social-section:hover .overlay-white {
   background: rgba(255, 255, 255, 0.9);
 }
 
-/* line 174, ../scss/main.scss */
+/* line 191, ../scss/main.scss */
 .corporate-section {
-  border-left: 3px solid black;
+  border-left: 0px solid black;
   right: 0;
 }
-/* line 176, ../scss/main.scss */
+/* line 193, ../scss/main.scss */
 .corporate-section a {
   color: white;
 }
-/* line 179, ../scss/main.scss */
+/* line 196, ../scss/main.scss */
 .corporate-section a span {
   transform: translate(-60%, -50%);
   -moz-transform: translate(-60%, -50%);
@@ -8219,7 +8237,7 @@ a:hover {
   -ms-transform: translate(-60%, -50%);
 }
 @media (min-width: 1200px) and (max-width: 1599px) {
-  /* line 179, ../scss/main.scss */
+  /* line 196, ../scss/main.scss */
   .corporate-section a span {
     transform: translate(-20%, -50%);
     -moz-transform: translate(-20%, -50%);
@@ -8228,7 +8246,7 @@ a:hover {
   }
 }
 @media (min-width: 1025px) and (max-width: 1199px) {
-  /* line 179, ../scss/main.scss */
+  /* line 196, ../scss/main.scss */
   .corporate-section a span {
     transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -8237,7 +8255,7 @@ a:hover {
   }
 }
 @media (min-width: 992px) and (max-width: 1024px) {
-  /* line 179, ../scss/main.scss */
+  /* line 196, ../scss/main.scss */
   .corporate-section a span {
     transform: translate(-20%, -50%);
     -moz-transform: translate(-20%, -50%);
@@ -8246,7 +8264,7 @@ a:hover {
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 179, ../scss/main.scss */
+  /* line 196, ../scss/main.scss */
   .corporate-section a span {
     transform: translate(-20%, -50%);
     -moz-transform: translate(-20%, -50%);
@@ -8255,7 +8273,7 @@ a:hover {
   }
 }
 @media (max-width: 767px) {
-  /* line 179, ../scss/main.scss */
+  /* line 196, ../scss/main.scss */
   .corporate-section a span {
     transform: translate(-20%, -50%);
     -moz-transform: translate(-20%, -50%);
@@ -8264,7 +8282,7 @@ a:hover {
   }
 }
 @media (min-width: 480px) and (max-width: 639px) {
-  /* line 179, ../scss/main.scss */
+  /* line 196, ../scss/main.scss */
   .corporate-section a span {
     transform: translate(-10%, -50%);
     -moz-transform: translate(-10%, -50%);
@@ -8273,7 +8291,7 @@ a:hover {
   }
 }
 @media (min-width: 320px) and (max-width: 479px) {
-  /* line 179, ../scss/main.scss */
+  /* line 196, ../scss/main.scss */
   .corporate-section a span {
     transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -8282,18 +8300,18 @@ a:hover {
   }
 }
 @media (min-width: 320px) and (max-width: 479px) {
-  /* line 174, ../scss/main.scss */
+  /* line 191, ../scss/main.scss */
   .corporate-section {
     border-left: 0px solid black;
     border-top: 3px solid black;
   }
 }
-/* line 211, ../scss/main.scss */
+/* line 228, ../scss/main.scss */
 .corporate-section:hover .overlay-black {
   background: rgba(0, 0, 0, 0.7);
 }
 
-/* line 217, ../scss/main.scss */
+/* line 234, ../scss/main.scss */
 .overlay-white {
   position: absolute;
   width: 100%;
@@ -8302,7 +8320,7 @@ a:hover {
   z-index: 2;
 }
 
-/* line 220, ../scss/main.scss */
+/* line 237, ../scss/main.scss */
 .overlay-black {
   position: absolute;
   width: 100%;
@@ -8311,17 +8329,17 @@ a:hover {
   z-index: 2;
 }
 
-/* line 223, ../scss/main.scss */
+/* line 240, ../scss/main.scss */
 .image-section {
   position: absolute;
   height: 100%;
 }
-/* line 225, ../scss/main.scss */
+/* line 242, ../scss/main.scss */
 .image-section img {
   height: 100%;
 }
 
-/* line 230, ../scss/main.scss */
+/* line 247, ../scss/main.scss */
 .social-image-section {
   background: url("../images/social-img.jpg") no-repeat left bottom;
   background-size: cover;
@@ -8330,7 +8348,7 @@ a:hover {
   height: 100%;
 }
 
-/* line 234, ../scss/main.scss */
+/* line 254, ../scss/main.scss */
 .corporate-image-section {
   background: url("../images/corporate-img.jpg") no-repeat left top;
   background-size: cover;
@@ -8339,7 +8357,7 @@ a:hover {
   height: 100%;
 }
 
-/* line 238, ../scss/main.scss */
+/* line 261, ../scss/main.scss */
 .logo-section {
   position: absolute;
   z-index: 10;
@@ -8355,7 +8373,7 @@ a:hover {
   text-align: center;
   background-size: 100%;
 }
-/* line 242, ../scss/main.scss */
+/* line 265, ../scss/main.scss */
 .logo-section img {
   max-width: 100%;
   position: absolute;
@@ -8367,85 +8385,123 @@ a:hover {
   -ms-transform: translate(-50%, -60%);
 }
 @media (min-width: 1025px) and (max-width: 1199px) {
-  /* line 242, ../scss/main.scss */
+  /* line 265, ../scss/main.scss */
   .logo-section img {
     width: 50%;
   }
 }
 @media (min-width: 992px) and (max-width: 1024px) {
-  /* line 242, ../scss/main.scss */
+  /* line 265, ../scss/main.scss */
   .logo-section img {
     width: 50%;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 242, ../scss/main.scss */
+  /* line 265, ../scss/main.scss */
   .logo-section img {
     width: 50%;
   }
 }
 @media (max-width: 767px) {
-  /* line 242, ../scss/main.scss */
+  /* line 265, ../scss/main.scss */
   .logo-section img {
     width: 50%;
   }
 }
 @media (min-width: 480px) and (max-width: 639px) {
-  /* line 242, ../scss/main.scss */
+  /* line 265, ../scss/main.scss */
   .logo-section img {
     width: 50%;
   }
 }
 @media (min-width: 320px) and (max-width: 479px) {
-  /* line 242, ../scss/main.scss */
+  /* line 265, ../scss/main.scss */
   .logo-section img {
     width: 50%;
   }
 }
 @media (min-width: 1025px) and (max-width: 1199px) {
-  /* line 238, ../scss/main.scss */
+  /* line 261, ../scss/main.scss */
   .logo-section {
     width: 280px;
     height: 250px;
   }
 }
 @media (min-width: 992px) and (max-width: 1024px) {
-  /* line 238, ../scss/main.scss */
+  /* line 261, ../scss/main.scss */
   .logo-section {
     width: 280px;
     height: 250px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 238, ../scss/main.scss */
+  /* line 261, ../scss/main.scss */
   .logo-section {
     width: 250px;
     height: 223px;
   }
 }
 @media (max-width: 767px) {
-  /* line 238, ../scss/main.scss */
+  /* line 261, ../scss/main.scss */
   .logo-section {
     width: 200px;
     height: 178px;
   }
 }
 @media (min-width: 480px) and (max-width: 639px) {
-  /* line 238, ../scss/main.scss */
+  /* line 261, ../scss/main.scss */
   .logo-section {
     width: 180px;
     height: 160px;
   }
 }
 @media (min-width: 320px) and (max-width: 479px) {
-  /* line 238, ../scss/main.scss */
+  /* line 261, ../scss/main.scss */
   .logo-section {
     width: 200px;
     height: 178px;
   }
 }
 
-/* line 286, ../scss/main.scss */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* line 311, ../scss/main.scss */
+  body {
+    overflow: hidden;
+  }
+
+  /* line 318, ../scss/main.scss */
+  .social-image-section {
+    position: relative;
+  }
+  /* line 323, ../scss/main.scss */
+  .corporate-image-section {
+    position: relative;
+  }
+}
+@media screen and (-ms-high-contrast: active) and (min-width: 320px) and (max-width: 479px), (-ms-high-contrast: none) and (min-width: 320px) and (max-width: 479px) {
+  /* line 313, ../scss/main.scss */
+  .common-section {
+    width: 100%;
+    height: 50%;
+    display: table;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 320px) and (max-width: 479px), (-ms-high-contrast: none) and (min-width: 320px) and (max-width: 479px) {
+  /* line 318, ../scss/main.scss */
+  .social-image-section {
+    position: absolute;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 320px) and (max-width: 479px), (-ms-high-contrast: none) and (min-width: 320px) and (max-width: 479px) {
+  /* line 323, ../scss/main.scss */
+  .corporate-image-section {
+    position: absolute;
+  }
+}
+
+/* line 334, ../scss/main.scss */
 .error-title {
   position: absolute;
   top: 50%;
@@ -8460,7 +8516,7 @@ a:hover {
   text-align: center;
 }
 @media (min-width: 1600px) and (max-width: 1919px) {
-  /* line 286, ../scss/main.scss */
+  /* line 334, ../scss/main.scss */
   .error-title {
     transform: translate(-60%, -50%);
     -moz-transform: translate(-60%, -50%);
@@ -8469,7 +8525,7 @@ a:hover {
   }
 }
 @media (min-width: 1200px) and (max-width: 1599px) {
-  /* line 286, ../scss/main.scss */
+  /* line 334, ../scss/main.scss */
   .error-title {
     transform: translate(-65%, -50%);
     -moz-transform: translate(-65%, -50%);
@@ -8478,7 +8534,7 @@ a:hover {
   }
 }
 @media (min-width: 1025px) and (max-width: 1199px) {
-  /* line 286, ../scss/main.scss */
+  /* line 334, ../scss/main.scss */
   .error-title {
     transform: translate(-65%, -50%);
     -moz-transform: translate(-65%, -50%);
@@ -8487,7 +8543,7 @@ a:hover {
   }
 }
 @media (min-width: 992px) and (max-width: 1024px) {
-  /* line 286, ../scss/main.scss */
+  /* line 334, ../scss/main.scss */
   .error-title {
     transform: translate(-65%, -50%);
     -moz-transform: translate(-65%, -50%);
@@ -8496,7 +8552,7 @@ a:hover {
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 286, ../scss/main.scss */
+  /* line 334, ../scss/main.scss */
   .error-title {
     transform: translate(-65%, -50%);
     -moz-transform: translate(-65%, -50%);
@@ -8505,7 +8561,7 @@ a:hover {
   }
 }
 @media (max-width: 767px) {
-  /* line 286, ../scss/main.scss */
+  /* line 334, ../scss/main.scss */
   .error-title {
     transform: translate(-65%, -50%);
     -moz-transform: translate(-65%, -50%);
@@ -8514,7 +8570,7 @@ a:hover {
   }
 }
 @media (min-width: 480px) and (max-width: 639px) {
-  /* line 286, ../scss/main.scss */
+  /* line 334, ../scss/main.scss */
   .error-title {
     transform: translate(-70%, -50%);
     -moz-transform: translate(-70%, -50%);
@@ -8523,7 +8579,7 @@ a:hover {
   }
 }
 @media (min-width: 320px) and (max-width: 479px) {
-  /* line 286, ../scss/main.scss */
+  /* line 334, ../scss/main.scss */
   .error-title {
     transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -8531,7 +8587,7 @@ a:hover {
     -ms-transform: translate(-50%, -50%);
   }
 }
-/* line 315, ../scss/main.scss */
+/* line 363, ../scss/main.scss */
 .error-title h2 {
   color: black;
   font-family: 'open_sansbold';
@@ -8540,49 +8596,49 @@ a:hover {
   margin-bottom: 0px;
 }
 @media (min-width: 1200px) and (max-width: 1599px) {
-  /* line 315, ../scss/main.scss */
+  /* line 363, ../scss/main.scss */
   .error-title h2 {
     font-size: 50px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1199px) {
-  /* line 315, ../scss/main.scss */
+  /* line 363, ../scss/main.scss */
   .error-title h2 {
     font-size: 50px;
   }
 }
 @media (min-width: 992px) and (max-width: 1024px) {
-  /* line 315, ../scss/main.scss */
+  /* line 363, ../scss/main.scss */
   .error-title h2 {
     font-size: 50px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 315, ../scss/main.scss */
+  /* line 363, ../scss/main.scss */
   .error-title h2 {
     font-size: 36px;
   }
 }
 @media (max-width: 767px) {
-  /* line 315, ../scss/main.scss */
+  /* line 363, ../scss/main.scss */
   .error-title h2 {
     font-size: 32px;
   }
 }
 @media (min-width: 480px) and (max-width: 639px) {
-  /* line 315, ../scss/main.scss */
+  /* line 363, ../scss/main.scss */
   .error-title h2 {
     font-size: 24px;
   }
 }
 @media (min-width: 320px) and (max-width: 479px) {
-  /* line 315, ../scss/main.scss */
+  /* line 363, ../scss/main.scss */
   .error-title h2 {
     font-size: 36px;
   }
 }
 
-/* line 344, ../scss/main.scss */
+/* line 392, ../scss/main.scss */
 .error-message {
   position: absolute;
   top: 50%;
@@ -8596,7 +8652,7 @@ a:hover {
   color: white;
   width: 60%;
 }
-/* line 351, ../scss/main.scss */
+/* line 399, ../scss/main.scss */
 .error-message h3 {
   font-size: 26px;
   font-family: 'open_sansbold';
@@ -8605,84 +8661,84 @@ a:hover {
   line-height: normal;
 }
 @media (min-width: 1600px) and (max-width: 1919px) {
-  /* line 351, ../scss/main.scss */
+  /* line 399, ../scss/main.scss */
   .error-message h3 {
     font-size: 24px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1599px) {
-  /* line 351, ../scss/main.scss */
+  /* line 399, ../scss/main.scss */
   .error-message h3 {
     font-size: 24px;
   }
 }
 @media (min-width: 992px) and (max-width: 1024px) {
-  /* line 351, ../scss/main.scss */
+  /* line 399, ../scss/main.scss */
   .error-message h3 {
     font-size: 24px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 351, ../scss/main.scss */
+  /* line 399, ../scss/main.scss */
   .error-message h3 {
     font-size: 18px;
   }
 }
 @media (max-width: 767px) {
-  /* line 351, ../scss/main.scss */
+  /* line 399, ../scss/main.scss */
   .error-message h3 {
     font-size: 16px;
   }
 }
 @media (min-width: 480px) and (max-width: 639px) {
-  /* line 351, ../scss/main.scss */
+  /* line 399, ../scss/main.scss */
   .error-message h3 {
     font-size: 18px;
   }
 }
 @media (min-width: 320px) and (max-width: 479px) {
-  /* line 351, ../scss/main.scss */
+  /* line 399, ../scss/main.scss */
   .error-message h3 {
     font-size: 18px;
   }
 }
-/* line 374, ../scss/main.scss */
+/* line 422, ../scss/main.scss */
 .error-message p {
   font-size: 18px;
   font-family: 'open_sansregular';
 }
 @media (min-width: 1600px) and (max-width: 1919px) {
-  /* line 374, ../scss/main.scss */
+  /* line 422, ../scss/main.scss */
   .error-message p {
     font-size: 16px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 374, ../scss/main.scss */
+  /* line 422, ../scss/main.scss */
   .error-message p {
     font-size: 15px;
   }
 }
 @media (max-width: 767px) {
-  /* line 374, ../scss/main.scss */
+  /* line 422, ../scss/main.scss */
   .error-message p {
     font-size: 15px;
   }
 }
 @media (min-width: 480px) and (max-width: 639px) {
-  /* line 374, ../scss/main.scss */
+  /* line 422, ../scss/main.scss */
   .error-message p {
     font-size: 15px;
   }
 }
 @media (min-width: 320px) and (max-width: 479px) {
-  /* line 374, ../scss/main.scss */
+  /* line 422, ../scss/main.scss */
   .error-message p {
     font-size: 15px;
   }
 }
 @media (min-width: 1600px) and (max-width: 1919px) {
-  /* line 344, ../scss/main.scss */
+  /* line 392, ../scss/main.scss */
   .error-message {
     width: 65%;
     transform: translate(-30%, -50%);
@@ -8692,7 +8748,7 @@ a:hover {
   }
 }
 @media (min-width: 1200px) and (max-width: 1599px) {
-  /* line 344, ../scss/main.scss */
+  /* line 392, ../scss/main.scss */
   .error-message {
     width: 50%;
     transform: translate(-20%, -50%);
@@ -8702,7 +8758,7 @@ a:hover {
   }
 }
 @media (min-width: 1025px) and (max-width: 1199px) {
-  /* line 344, ../scss/main.scss */
+  /* line 392, ../scss/main.scss */
   .error-message {
     transform: translate(-25%, -50%);
     -moz-transform: translate(-25%, -50%);
@@ -8711,7 +8767,7 @@ a:hover {
   }
 }
 @media (min-width: 992px) and (max-width: 1024px) {
-  /* line 344, ../scss/main.scss */
+  /* line 392, ../scss/main.scss */
   .error-message {
     transform: translate(-20%, -50%);
     -moz-transform: translate(-20%, -50%);
@@ -8720,7 +8776,7 @@ a:hover {
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 344, ../scss/main.scss */
+  /* line 392, ../scss/main.scss */
   .error-message {
     transform: translate(-25%, -50%);
     -moz-transform: translate(-25%, -50%);
@@ -8729,7 +8785,7 @@ a:hover {
   }
 }
 @media (max-width: 767px) {
-  /* line 344, ../scss/main.scss */
+  /* line 392, ../scss/main.scss */
   .error-message {
     transform: translate(-25%, -50%);
     -moz-transform: translate(-25%, -50%);
@@ -8738,7 +8794,7 @@ a:hover {
   }
 }
 @media (min-width: 480px) and (max-width: 639px) {
-  /* line 344, ../scss/main.scss */
+  /* line 392, ../scss/main.scss */
   .error-message {
     transform: translate(-25%, -50%);
     -moz-transform: translate(-25%, -50%);
@@ -8747,7 +8803,7 @@ a:hover {
   }
 }
 @media (min-width: 320px) and (max-width: 479px) {
-  /* line 344, ../scss/main.scss */
+  /* line 392, ../scss/main.scss */
   .error-message {
     width: 90%;
     transform: translate(-50%, -20%);
