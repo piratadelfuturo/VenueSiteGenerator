@@ -46,17 +46,13 @@
                 <environment type="prod">
                     <urls>
                         <url language="fr" >www.plazaantique.com</url>
-                        <url language="fr" >new.plazaantique.com</url>
-                        <url language="fr" >www.plazaantique.con</url>
                         <url language="en" >www.plazaantique.com/en</url>
-                        <url language="en" >new.plazaantique.com/en</url>
-                        <url language="en" >www.plazaantique.con/en</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url language="fr" >www.plazaantique.dev</url>
-                        <url language="en" >www.plazaantique.dev/en</url>
+                        <url language="fr" >new.plazaantique.com</url>
+                        <url language="en" >new.plazaantique.com/en</url>
                     </urls>
                 </environment>
                 <environment type="dev">

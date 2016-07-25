@@ -47,19 +47,20 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.la-plaza.ca/{localization}/corp</url>
-                        <url>new.la-plaza.ca/{localization}/corp</url>
-                        <url>www.la-plaza.con/{localization}/corp</url>
+                        <url language="fr" >www.la-plaza.ca/fr/corp</url>
+                        <url language="en" >www.la-plaza.ca/en/corp</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>www.la-plaza.dev/stage/{localization}/corp</url>
+                        <url language="fr" >new.la-plaza.ca/fr/corp</url>
+                        <url language="en" >new.la-plaza.ca/en/corp</url>
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
-                        <url>la-plaza.dev/{localization}/corp</url>
+                        <url language="fr">la-plaza.dev/fr/corp</url>
+                        <url language="en">la-plaza.dev/en/corp</url>
                     </urls>
                 </environment>
             </environments>

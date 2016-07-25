@@ -45,14 +45,14 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.plazaantique.com/{localization}/social</url>
-                        <url>new.plazaantique.com/{localization}/social</url>
-                        <url>www.plazaantique.con/{localization}/social</url>
+                        <url language="fr">www.plazaantique.com/fr/social</url>
+                        <url language="fr">www.plazaantique.com/en/social</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>www.plazaantique.dev/{localization}/social</url>
+                        <url language="fr">new.plazaantique.com/fr/social</url>
+                        <url language="fr">new.plazaantique.com/en/social</url>
                     </urls>
                 </environment>
                 <environment type="dev">

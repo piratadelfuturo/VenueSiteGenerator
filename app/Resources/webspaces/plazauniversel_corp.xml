@@ -45,14 +45,14 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.plazauniversel.com/{localization}/corp</url>
-                        <url>new.plazauniversel.com/{localization}/corp</url>
-                        <url>www.plazauniversel.con/{localization}/corp</url>
+                        <url language="fr" >www.plazauniversel.com/fr/corp</url>
+                        <url language="en" >www.plazauniversel.com/en/corp</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>new.plazauniversel.dev/stage/{localization}/corp</url>
+                        <url language="fr" >new.plazauniversel.com/fr/corp</url>
+                        <url language="en" >new.plazauniversel.com/en/corp</url>
                     </urls>
                 </environment>
                 <environment type="dev">

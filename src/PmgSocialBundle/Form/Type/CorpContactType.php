@@ -28,17 +28,29 @@ class CorpContactType extends AbstractType{
                 'attr' => array(
                     'pattern'     => '.{2,}' //minlength
                 ),
-                'label' => 'contact_form.name'
+                'label' => 'contact_form.name',
+                'constraints' => array(
+                    new NotBlank(array('message' => 'Name should not be blank.')),
+                    new Length(array('min' => 2))
+                )
             ))
             ->add('interested', TextType::class, array(
                 'attr' => array(
                     'pattern'     => '.{2,}' //minlength
                 ),
-                'label' => 'contact_form.interested'
+                'label' => 'contact_form.interested',
+                'constraints' => array(
+                    new NotBlank(array('message' => 'Last name should not be blank.')),
+                    new Length(array('min' => 3))
+                )
             ))
             ->add('email', EmailType::class, array(
                 'attr' => array(),
-                'label' => 'contact_form.email'
+                'label' => 'contact_form.email',
+                'constraints' => array(
+                    new NotBlank(array('message' => 'Email should not be blank.')),
+                    new Email(array('message' => 'Invalid email address.'))
+                )
             ))
             ->add('details1', TextType::class, array(
                 'attr' => array( 'class' => 'width55'),
@@ -48,17 +60,20 @@ class CorpContactType extends AbstractType{
             ->add('details2', TextType::class, array(
                 'attr' => array( 'class' => 'width100'),
                 'label' => 'contact_form.details2',
-                'required' => false
+                'required' => false,
+                'constraints' => array()
             ))
             ->add('details3', TextType::class, array(
                 'attr' => array( 'class' => 'width100'),
                 'label' => 'contact_form.details3',
-                'required' => false
+                'required' => false,
+                'constraints' => array()
             ))
             ->add('details4', TextType::class, array(
                 'attr' => array( 'class' => 'width100' ),
                 'label' => 'contact_form.details4',
-                'required' => false
+                'required' => false,
+                'constraints' => array()
             ))
             ->add('send', SubmitType::class, array('label' => 'Send'));
     }
@@ -71,15 +86,18 @@ class CorpContactType extends AbstractType{
                 new NotBlank(array('message' => 'Name should not be blank.')),
                 new Length(array('min' => 2))
             ),
-            'insterested' => array(
+            'interested' => array(
                 new NotBlank(array('message' => 'Last name should not be blank.')),
                 new Length(array('min' => 3))
             ),
-
             'email' => array(
                 new NotBlank(array('message' => 'Email should not be blank.')),
                 new Email(array('message' => 'Invalid email address.'))
-            )
+            ),
+            'details1' => array(),
+            'details2' => array(),
+            'details3' => array(),
+            'details4' => array()
         ));
 
         $resolver->setDefaults(array(
@@ -89,7 +107,7 @@ class CorpContactType extends AbstractType{
         
     }
     
-    public function getName()
+    public function getBlockPrefix()
     {
         return 'corp_contact';
     }

@@ -80,12 +80,27 @@ a{color:$pink-color;
 	@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
 		display:inline;
 	}
+	
+	&:before{
+		 background: $black;
+		content: "";
+		height: 100%;
+		left: 50%;
+		margin-left: -3px;
+		position: absolute;
+		top: 0;
+		width: 6px;
+		z-index: 5;
+		@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+			content:none;
+		}
+	}
 }
 
 .common-section{
 	 width:50%; height:100%; display:table-cell; vertical-align:top; position:relative;
-	 
-	 a{
+	
+		 a{
 	 	position:absolute;  z-index:5;
 		font-size:72px; font-family: 'playfair_displayitalic'; text-decoration:none; 
 		display:block; width:100%; height:100%;
@@ -132,7 +147,9 @@ a{color:$pink-color;
 		}
 	
 }
-.social-section{ left:0; border-right:3px solid $black;
+
+
+.social-section{ left:0; border-right:0px solid $black;
 	a{
 	  	
 		color:$black;
@@ -171,7 +188,7 @@ a{color:$pink-color;
 	}
 	 
 }
-.corporate-section{border-left:3px solid $black; right:0;
+.corporate-section{border-left:0px solid $black; right:0;
 	
 	a{
 	  	
@@ -229,18 +246,24 @@ a{color:$pink-color;
 
 .social-image-section{
 	background:url($social-image-section-bg) no-repeat left bottom; background-size:cover; position:absolute; width:100%; height:100%;
+	
+	
+	
 }
 
 .corporate-image-section{
-	background:url($corporate-image-section-bg) no-repeat left top; background-size:cover; position:absolute; width:100%; height:100%;
+	background:url($corporate-image-section-bg) no-repeat left top; background-size:cover; position:absolute;  width:100%; height:100%;
+	
+	
 }
+
 
 .logo-section{
 	position:absolute; z-index:10; left:50%; top:50%; transform:translate(-50%,-50%); -moz-transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%);
 	background:url($logo-bg-img) no-repeat left top; width:451px; height:402px;  text-align:center; background-size:100%;
 	
 	img{
-		 max-width:55%; position:absolute; top:50%; left:50%;
+		 max-width:100%; position:absolute; top:50%; left:50%;
 		 transform:translate(-50%,-60%); -moz-transform:translate(-50%,-60%); -webkit-transform:translate(-50%,-60%); -ms-transform:translate(-50%,-60%);		
 		 	@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 				width:50%;
@@ -282,6 +305,31 @@ a{color:$pink-color;
 		
 	}	
 }
+
+
+ @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+ 	body{overflow:hidden;}
+ 	
+	.common-section{
+		@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+			width:100%; height:50%; display:table;
+		}
+	}
+	.social-image-section { position:relative;
+		@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+			position:absolute;
+		}
+	}
+	.corporate-image-section{position:relative;
+		@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+			position:absolute;
+		}
+	}
+	 
+	
+ }
+
+
 	
 .error-title{
 	position:absolute; top:50%; left:50%; z-index:5;	
@@ -418,37 +466,4 @@ a{color:$pink-color;
 }
 
 
-$sites-names: (
-    'plazagardeninn_base',
-    'plazavolare_base',
-    'la_plaza_base',
-    'plazaantique_base',
-    'plazacentreville_base',
-    'embassyplaza_base',
-    'plazauniversel_base'
-    );
 
-$sites-colors: (
-    #a40000,
-    #ce1b45,
-    #de5bea,
-    #ff5a00,
-    #329996,
-    #00e4ff,
-    #004ee9
-    );
-
-    
-@each $site-item in $sites-names {
-    $i: index($sites-names,$site-item);
-    $this-color: nth($sites-colors,$i);
-    .common-section{
-        a{
-            &:hover{
-                color: $this-color;
-            }
-        }
-    }
-
-
-}

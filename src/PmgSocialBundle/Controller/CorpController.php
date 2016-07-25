@@ -24,30 +24,28 @@ class CorpController extends DefaultController
         if($masterRequest->get('_sulu')){
             $request = $masterRequest;
         }
-        
+
         $form = $this->contactForm($request);
         $render_params['contact_form'] = $form->createView();
         
         return $this->render('PmgSocialBundle:blocks:contact.html.twig',$render_params);
     }
     
-    private function contactForm(Request $request){
-        $form = $this->createForm(new CorpContactType());
+    protected function contactForm(Request $request){
+        $form = $this->createForm(CorpContactType::class);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-                var_dump($form->isSubmitted());
                 $name = $form->get('name')->getData();
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Website contact: '.$name.' - '.$form->get('interested')->getData() )
-                    ->setFrom(array($form->get('email')->getData() => $name ))
+                    ->setFrom(array('info@casaderamo.com'))
                     ->setTo('daniel@nviba.com')
                     ->setBody($form->get('details1')->getData());
-
                 $this->get('mailer')->send($message);
 
                 $this->addFlash('contact.success_form', true);
                 unset($form);
-                $form = $this->createForm(new CorpContactType());
+                $form = $this->createForm(CorpContactType::class);
         }
         
         return $form;        

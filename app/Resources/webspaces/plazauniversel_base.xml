@@ -47,23 +47,18 @@
                 <environment type="prod">
                     <urls>
                         <url language="fr" >www.plazauniversel.com</url>
-                        <url language="fr" >new.plazauniversel.com</url>
-                        <url language="fr" >www.plazauniversel.con</url>
                         <url language="en" >www.plazauniversel.com/en</url>
-                        <url language="en" >new.plazauniversel.com/en</url>
-                        <url language="en" >www.plazauniversel.con/en</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url language="fr" >new.plazauniversel.dev/stage</url>
-                        <url language="en" >new.plazauniversel.dev/stage/en</url>
+                        <url language="fr" >new.plazauniversel.com</url>
+                        <url language="en" >new.plazauniversel.com/en</url>
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
-                        <url language="fr" >plazauniversel.dev</url>
-                        <url language="en" >plazauniversel.dev/en</url>
+                        <url>plazauniversel.dev/{localization}</url>
                     </urls>
                 </environment>
             </environments>

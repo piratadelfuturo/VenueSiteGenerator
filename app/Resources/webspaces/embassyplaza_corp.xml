@@ -45,14 +45,14 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.embassyplaza.com/{localization}/corp</url>
-                        <url>www.embassyplaza.con/{localization}/corp</url>
-                        <url>new.embassyplaza.com/{localization}/corp</url>
+                        <url language="fr">www.embassyplaza.com/fr/corp</url>
+                        <url language="en">www.embassyplaza.com/en/corp</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>www.embassyplaza.dev/stage/{localization}/corp</url>
+                        <url language="fr">new.embassyplaza.com/fr/corp</url>
+                        <url language="en">new.embassyplaza.com/en/corp</url>
                     </urls>
                 </environment>
                 <environment type="dev">

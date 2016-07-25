@@ -46,14 +46,14 @@
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url>www.plazagardeninn.com/{localization}/corp</url>
-                        <url>new.plazagardeninn.com/{localization}/corp</url>
-                        <url>www.plazagardeninn.con/{localization}/corp</url>
+                        <url language="fr">www.plazagardeninn.com/fr/corp</url>
+                        <url language="en">www.plazagardeninn.com/en/corp</url>
                     </urls>
                 </environment>
                 <environment type="stage">
                     <urls>
-                        <url>new.plazagardeninn.dev/stage/{localization}/corp</url>
+                        <url language="fr">new.plazagardeninn.com/fr/corp</url>
+                        <url language="en">new.plazagardeninn.com/en/corp</url>
                     </urls>
                 </environment>
                 <environment type="dev">
