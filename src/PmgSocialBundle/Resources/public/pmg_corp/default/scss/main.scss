@@ -1026,7 +1026,7 @@ header{
 					}
 				
 				a{
-					font-size:40px; color:$white; text-decoration:none; text-transform:uppercase; font-family: 'playfair_displaybold';
+					font-size:40px; color:$white; text-decoration:none; text-transform:uppercase;
 					&:hover{color:$black;}
 					@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
 						font-size:30px;
@@ -1863,7 +1863,7 @@ footer{
 					font-size:14px;	padding:15px 5px; min-width:130px;		
 				}
 			}
-			td{background: rgba(0, 0, 0, 0.5); color:$white; text-align:center; font-size:24px; padding:15px; vertical-align:top; min-height:80px; border-bottom:18px solid $pink-color; height:80px;
+			td{background: rgba(0, 0, 0, 0.5); color:$white; text-align:center; font-size:18px; padding:15px; vertical-align:top; min-height:80px; border-bottom:18px solid $pink-color; height:80px;
 				@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 				  font-size:16px; padding:15px 10px;
 				}
@@ -3062,9 +3062,36 @@ $sites-colors: (
         
         .about-section{
             /*h2{color:$this-color;}*/
-            h2{color:#000000;}    
+            h2{color:#000000;font-size: 40px;text-align: center;
+                @media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
+  
+                }
+                
+                @media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
+                  
+                }
+                
+                @media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
+                  font-size:40px;
+                }
+                @media (min-width: $desktop_min-width) and (max-width: $desktop-width) {
+                    font-size:40px;
+                }
+                @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+                  font-size:36px;
+                }
+                @media (max-width: $iphone-to-ipad) {
+                  font-size:36px;
+                }
+                @media (min-width: $iphone-landscape-min-width) and (max-width: $iphone-landscape-max-width) {
+                    font-size:30px;
+                }
+                @media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
+                    font-size:30x;
+                }
+            }    
             p{
-                font-size: 16px;
+                font-size: 16px;text-align: center;
             }        
         }
         
@@ -3103,10 +3130,10 @@ $sites-colors: (
             font-family:'Julius Sans One', sans-serif;
             }
             .halls-information{
-                padding: 10px 15px;
-                padding-bottom: 30px;
+                padding: 10px 15px;                
                 p{
                     font-size: 16px;
+                    padding-bottom: 20px;
                 }
             }
         }
@@ -3118,6 +3145,9 @@ $sites-colors: (
                         background-color: $this-color;
                     }
                 }
+            }
+            .testimonial-section a{
+                font-family:'Julius Sans One', sans-serif;
             }
         }
         
