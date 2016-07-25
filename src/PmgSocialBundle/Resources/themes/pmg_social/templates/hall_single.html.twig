@@ -58,7 +58,13 @@
       </div>
     </div>
   </div>
-  <div class="halls-stup-section">
+  {% if content.gallery is defined and content.gallery is empty%}
+  {% set halls_setup_class = 'last-section' %}
+    {% else %}
+  {% set halls_setup_class = '' %}
+{% endif %}
+
+  <div class="halls-stup-section {{ halls_setup_class | raw }}">
     <div class="setup-content">
       <div class="page-heading">
         <h2>{% trans %}Hall Setup{% endtrans %}</h2>
@@ -75,10 +81,12 @@
           </a> </div>
     {% endif %}
     </div>
+  }
 </div>
 {% if content.gallery is defined and content.gallery is not empty %}
     {% include 'PmgSocialBundle:snippets:gallery.snippet.html.twig' with { 'content' : content.gallery , 'final_section_class' : true , 'title' : null} %}
-{% endif %}
-  <div class="push"></div>
+{% endif %} 
+
+<div class="push"></div>
 {% endblock %}
 
