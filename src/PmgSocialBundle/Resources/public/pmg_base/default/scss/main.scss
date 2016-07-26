@@ -263,7 +263,7 @@ a{color:$pink-color;
 	background:url($logo-bg-img) no-repeat left top; width:451px; height:402px;  text-align:center; background-size:100%;
 	
 	img{
-		 max-width:60%; position:absolute; top:50%; left:50%;
+		 max-width:70%; position:absolute; top:50%; left:50%;
 		 transform:translate(-50%,-60%); -moz-transform:translate(-50%,-60%); -webkit-transform:translate(-50%,-60%); -ms-transform:translate(-50%,-60%);		
 		 	@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 				width:50%;
