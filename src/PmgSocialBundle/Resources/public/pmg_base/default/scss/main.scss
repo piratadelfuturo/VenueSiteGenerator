@@ -74,7 +74,7 @@ h5{font-size:24px;}
 h6{font-size:18px;}
 
 a{color:$pink-color;
-	&:hover{color:$black;}
+	&:hover{color:#828282;}
 }
 .landing-page-wrapper{position:absolute; width:100%; height:100%; display:table;
 	@media (min-width: $iphone-min-width) and (max-width: $iphone-max-width) {
@@ -106,7 +106,7 @@ a{color:$pink-color;
 		display:block; width:100%; height:100%;
 		
 		&:hover{
-			color:$pink-color;
+			color:#828282;
 		}
 		@media (min-width: $desktop-min-full-width) and (max-width: $desktop-max-full-width) {
 		  	font-size:50px;
@@ -245,14 +245,14 @@ a{color:$pink-color;
 }
 
 .social-image-section{
-	background:url($social-image-section-bg) no-repeat left bottom; background-size:cover; position:absolute; width:100%; height:100%;
+	//background:url($social-image-section-bg) no-repeat left bottom; background-size:cover; position:absolute; width:100%; height:100%;
 	
 	
 	
 }
 
 .corporate-image-section{
-	background:url($corporate-image-section-bg) no-repeat left top; background-size:cover; position:absolute;  width:100%; height:100%;
+	//background:url($corporate-image-section-bg) no-repeat left top; background-size:cover; position:absolute;  width:100%; height:100%;
 	
 	
 }
@@ -263,7 +263,7 @@ a{color:$pink-color;
 	background:url($logo-bg-img) no-repeat left top; width:451px; height:402px;  text-align:center; background-size:100%;
 	
 	img{
-		 max-width:100%; position:absolute; top:50%; left:50%;
+		 max-width:60%; position:absolute; top:50%; left:50%;
 		 transform:translate(-50%,-60%); -moz-transform:translate(-50%,-60%); -webkit-transform:translate(-50%,-60%); -ms-transform:translate(-50%,-60%);		
 		 	@media (min-width: $desktop-large-width) and (max-width: $screen-lg-max) {
 				width:50%;
