@@ -811,6 +811,7 @@ header{
 		&.active
 		{
 			 background:url($halls-menu-active-bg) no-repeat left top;
+			 color:$black;
 			 
 			@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
 	  			width:155px; height:155px; background-size:100%;
@@ -1739,7 +1740,7 @@ footer{
 				.more-info-btn{
 					position:absolute; right:-1px; bottom:-1px;
 					a{
-						color:$white; text-decoration:none; font-size:48px;  font-family: 'open_sansbold'; background:url($pink-ribbion-img) no-repeat left top; width:113px; height:113px; display:inline-block;
+						color:$black; text-decoration:none; font-size:48px;  font-family: 'open_sansbold'; background:url($pink-ribbion-img) no-repeat left top; width:113px; height:113px; display:inline-block;
 						text-align:center; padding:40px 0 0 45px;
 						@media (min-width: $desktop-full-width) and (max-width: $desktop-medium-width) {
 							 width:90px; height:90px; font-size:42px;					  
@@ -2241,6 +2242,7 @@ img{max-width:100%;}
 		
 		&:hover .moreinfo {
 			top: 10px; opacity: 1;
+			color: $black !important;
 		}
 		
 		
@@ -2451,9 +2453,17 @@ $sites-colors: (
                 
         .halls-section{
             .halss-menu-box{
+            	&:hover{
+            		a{
+            			color:black;
+            		}
+            	}
+            }
+        	a{
                 &:hover,
-		&.active{
+				&.active{
                     background-image:url($this-halls-menu-active-bg);
+                    color:$black !important;
                     @media (max-width: $iphone-to-ipad) {
 			background:$this-color;
                     }

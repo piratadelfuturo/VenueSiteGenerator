@@ -266,19 +266,19 @@
       </trans-unit>
     <trans-unit resname="contact_form.name">
         <source>contact_form.name</source>
-        <target state="new">Hello my name is</target>
+        <target state="new">Bonjour, mon nom est</target>
       </trans-unit>
       <trans-unit resname="contact_form.interested">
         <source>contact_form.interested</source>
-        <target state="new">I’m interested in</target>
+        <target state="new">Je m'intéresse à</target>
       </trans-unit>
       <trans-unit resname="contact_form.email">
         <source>contact_form.email</source>
-        <target state="new">Here’s my e-mail</target>
+        <target state="new">Voici mon email</target>
       </trans-unit>
       <trans-unit resname="contact_form.details1">
         <source>contact_form.name</source>
-        <target state="new">I can give you more details</target>
+        <target state="new">Je peux vous donner plus de détails</target>
       </trans-unit>
 
     </body>

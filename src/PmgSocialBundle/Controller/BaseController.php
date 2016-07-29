@@ -53,7 +53,7 @@ class BaseController extends DefaultController
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Website contact: '.$name.', '.$form->get('interested')->getData() )
                     ->setFrom(array($form->get('email')->getData() => $name ))
-                    ->setTo('daniel@nviba.com')
+                    ->setTo(array('daniel@nviba.com', 'info@centreville.com'))
                     ->setBody(
                             $form->get('details1')->getData().
                             $form->get('details2')->getData().
