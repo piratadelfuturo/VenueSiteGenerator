@@ -47,7 +47,7 @@
                 <environment type="prod">
                     <urls>
                         <url language="fr" >www.la-plaza.ca/fr/social</url>
-                        <url language="en" >www.la-plaza.con/en/social</url>
+                        <url language="en" >www.la-plaza.ca/en/social</url>
                     </urls>
                 </environment>
                 <environment type="stage">

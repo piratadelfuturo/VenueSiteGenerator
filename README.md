@@ -78,10 +78,37 @@ php app/console sulu:build phpcr_migrations -n;
 
 ```
 
-To apply the vhost config file changes in easy apache use:
+# Steps to point a hostname to the sitescms.plazapmg.com document root folder
+
+Find the filename of the document to edit to add the new hostname to be read by sitescms.plazapmg.com virtualhost in the Apache config file.
+
+Apache config file: nano /etc/httpd/conf/httpd.conf
+
+File that adds configuration parameters to sitescms.plazapmg.com virtualhost configuration
+/usr/local/apache/conf/userdata/std/2_4/plazapmg/sitescms.plazapmg.com/*.conf
+
+After editing the file mentioned above, to apply the vhost config file changes in easy apache use the following command, replacing username with the plazapmg username:
 
 /scripts/ensure_vhost_includes --user=username
 
+If the hostname is already configured for another user in the Apache config file, you have to override the same way the user Apache configfile in a similar way as above:
+/usr/local/apache/conf/userdata/std/2_4/USERNAME/DOMAIN.COM/*.conf
+
+With the following rules:
+
+#
+
+ServerAlias old.plazacentreville.com
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^/(.*) http://www\.%{HTTP_HOST}/$1 [R=301,L]
+
+```
+
+
+And then run the script to include the file that changes the virtualhost configuration for the user that hosts the hostname your want to modify:
+/scripts/ensure_vhost_includes --user=username
 
 
 # Sulu - Content Management
