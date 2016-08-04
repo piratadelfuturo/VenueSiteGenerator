@@ -14,6 +14,10 @@ use Symfony\Component\ClassLoader\XcacheClassLoader;
 use Symfony\Component\Debug\Debug;
 use Symfony\Component\HttpFoundation\Request;
 
+if(isset($_SERVER['HTTP_HOST']) && strpos($_SERVER['HTTP_HOST'],'www') === 0){
+    define('SYMFONY_ENV','prod');
+}
+
 //define project ex//define project external folder
 defined('EXTERNAL_PATH') || define('EXTERNAL_PATH', getenv('EXTERNAL_PATH') ?: false);
 defined('EXTERNAL_APP_DIR') || define('EXTERNAL_APP_DIR', EXTERNAL_PATH !== false ? '/../'.EXTERNAL_PATH : '');
